@@ -1,145 +1,527 @@
-<!-- WhatsApp Channel Popup -->
-<div id="whatsappPopup" class="popup-overlay">
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
 
-  <div class="popup-box">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <button class="close-popup" onclick="closeWhatsAppPopup()">×</button>
+  <title>Digital Dreams Pega | CSC & Digital Services in Pega Haryana</title>
 
-    <div class="popup-icon">💬</div>
+  <meta name="description" content="Digital Dreams Pega, Pega Haryana का CSC और Digital Service Center. Family ID, PAN Card, Voter ID, Police Verification, Online Forms, Govt Jobs और अन्य डिजिटल सेवाओं में सहायता।">
 
-    <h2>WhatsApp Channel Join करें</h2>
+  <meta name="keywords" content="Digital Dreams Pega, Digital Dreams, Pega CSC, CSC Pega, Pega Haryana, Digital Services Pega, Online Form Pega, Govt Jobs Pega, Family ID Pega, PAN Card Pega, Voter ID Pega">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://mohitcsc98.github.io/digital-dreams-pega/">
+
+  <meta property="og:title" content="Digital Dreams Pega | CSC & Digital Services">
+
+  <meta property="og:description" content="Pega Haryana में CSC, Online Forms, Family ID, PAN Card, Voter ID, Police Verification और Digital Services की सहायता।">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url" content="https://mohitcsc98.github.io/digital-dreams-pega/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 15px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b3d91, #087fce);
+      color: white;
+      padding: 80px 5%;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #ffd700;
+    }
+
+    .hero p {
+      max-width: 750px;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .call {
+      background: white;
+      color: #0b3d91;
+    }
+
+    section {
+      padding: 60px 5%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .title h2 {
+      font-size: 32px;
+      color: #0b3d91;
+    }
+
+    .title p {
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #0b3d91;
+      margin-bottom: 8px;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-box p {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    .contact {
+      background: #0b3d91;
+      color: white;
+    }
+
+    .contact .title h2 {
+      color: white;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-item {
+      background: rgba(255,255,255,0.1);
+      padding: 22px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    footer {
+      background: #061f49;
+      color: white;
+      text-align: center;
+      padding: 25px 5%;
+    }
+
+    .notice {
+      margin-top: 25px;
+      padding: 18px;
+      background: #fff8d8;
+      border-left: 5px solid #f0b400;
+      color: #333;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div>
+      <div class="logo">DIGITAL DREAMS PEGA</div>
+      <div class="tagline">CSC & Digital Services | Pega, Haryana</div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#jobs">Govt Jobs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <h1>
+      DIGITAL DREAMS <span>PEGA</span>
+    </h1>
 
     <p>
-      Digital Dreams Pega की Latest Govt Jobs,
-      Online Forms और Digital Services की updates
-      पाने के लिए हमारा WhatsApp Channel Join करें।
+      Pega, Haryana में CSC और Digital Services के लिए
+      आपका स्थानीय सहायता केंद्र।
+      Family ID, PAN Card, Voter ID, Police Verification,
+      Online Forms, Government Jobs और अन्य डिजिटल सेवाओं
+      के लिए सहायता प्राप्त करें।
     </p>
 
-    <a
-      href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-      target="_blank"
-      class="join-btn">
-      🟢 Join WhatsApp Channel
+    <a class="btn whatsapp"
+       href="https://wa.me/917056657645">
+       💬 WhatsApp करें
     </a>
 
-    <button
-      class="later-btn"
-      onclick="closeWhatsAppPopup()">
-      बाद में
-    </button>
+    <a class="btn call"
+       href="tel:+917056657645">
+       📞 Call Now
+    </a>
+
+  </div>
+</section>
+
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="title">
+      <h2>हमारी Digital Services</h2>
+      <p>Digital Dreams Pega पर उपलब्ध प्रमुख सेवाएँ</p>
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">👨‍👩‍👧</div>
+        <h3>Family ID</h3>
+        <p>
+          Family ID से संबंधित online assistance और correction
+          services के लिए सहायता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🪪</div>
+        <h3>PAN Card</h3>
+        <p>
+          PAN Card application और संबंधित online services
+          में सहायता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🗳️</div>
+        <h3>Voter ID</h3>
+        <p>
+          Voter ID application, correction और अन्य voter
+          services में सहायता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👮</div>
+        <h3>Police Verification</h3>
+        <p>
+          Police Verification और संबंधित online form
+          assistance।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>Online Forms</h3>
+        <p>
+          Government और educational online forms भरने तथा
+          documents upload करने में सहायता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>Government Jobs</h3>
+        <p>
+          सरकारी नौकरी की vacancy, application, admit card
+          और result updates की जानकारी।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏦</div>
+        <h3>Banking Services</h3>
+        <p>
+          उपलब्ध banking और digital payment services के लिए
+          सहायता।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Other Digital Services</h3>
+        <p>
+          विभिन्न online citizen services और digital
+          assistance।
+        </p>
+      </div>
+
+    </div>
 
   </div>
 
-</div>
+</section>
 
 
-<style>
+<section id="jobs">
 
-.popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  z-index: 99999;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
+  <div class="container">
 
-.popup-box {
-  background: white;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 18px;
-  padding: 30px 25px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-  animation: popupShow 0.25s ease;
-}
+    <div class="title">
+      <h2>Government Jobs & Updates</h2>
+      <p>Latest सरकारी नौकरी और online form updates</p>
+    </div>
 
-@keyframes popupShow {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+    <div class="notice">
 
-.popup-icon {
-  font-size: 55px;
-  margin-bottom: 10px;
-}
+      <strong>📢 Latest Updates</strong>
 
-.popup-box h2 {
-  color: #075e54;
-  margin-bottom: 12px;
-}
+      <p>
+        Digital Dreams Pega पर Government Jobs, Vacancy,
+        Admit Card, Result और Online Form से संबंधित
+        जानकारी समय-समय पर जोड़ी जा सकती है।
+      </p>
 
-.popup-box p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
+    </div>
 
-.close-popup {
-  position: absolute;
-  right: 12px;
-  top: 8px;
-  border: none;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
-  color: #555;
-}
+  </div>
 
-.join-btn {
-  display: block;
-  background: #25D366;
-  color: white;
-  padding: 13px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.later-btn {
-  border: none;
-  background: #eee;
-  padding: 10px 25px;
-  border-radius: 7px;
-  cursor: pointer;
-}
-
-</style>
+</section>
 
 
-<script>
+<section class="about" id="about">
 
-const whatsappPopup = document.getElementById("whatsappPopup");
+  <div class="container">
 
-document.querySelectorAll(".service-card").forEach(function(card) {
+    <div class="title">
+      <h2>About Digital Dreams Pega</h2>
+    </div>
 
-  card.addEventListener("click", function() {
-    whatsappPopup.style.display = "flex";
-  });
+    <div class="about-box">
 
-});
+      <p>
+        <strong>Digital Dreams Pega</strong> Pega, Haryana में
+        online और digital services की जानकारी तथा सहायता
+        उपलब्ध कराने के उद्देश्य से बनाई गई website है।
+      </p>
 
-function closeWhatsAppPopup() {
-  whatsappPopup.style.display = "none";
-}
+      <p>
+        यहाँ Family ID, PAN Card, Voter ID, Police Verification,
+        Online Forms, Government Jobs और अन्य digital services
+        से संबंधित सहायता प्राप्त की जा सकती है।
+      </p>
 
-whatsappPopup.addEventListener("click", function(e) {
+      <p>
+        📍 <strong>Location:</strong> Pega, Haryana
+      </p>
 
-  if (e.target === whatsappPopup) {
-    closeWhatsAppPopup();
-  }
+      <p>
+        👤 <strong>Owner / Operator:</strong> Mohit
+      </p>
 
-});
+    </div>
 
-</script>
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="title">
+      <h2>Contact Digital Dreams Pega</h2>
+      <p>किसी भी digital service के लिए संपर्क करें</p>
+    </div>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        <h3>📞 Mobile</h3>
+        <p>
+          <a href="tel:+917056657645">
+            7056657645
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-item">
+        <h3>💬 WhatsApp</h3>
+        <p>
+          <a href="https://wa.me/917056657645">
+            WhatsApp पर संपर्क करें
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-item">
+        <h3>✉️ Email</h3>
+        <p>
+          <a href="mailto:mayankhr82@gmail.com">
+            mayankhr82@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-item">
+        <h3>📍 Address</h3>
+        <p>Pega, Haryana</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <h3>DIGITAL DREAMS PEGA</h3>
+
+  <p>
+    CSC & Digital Services | Pega, Haryana
+  </p>
+
+  <p>
+    © 2026 Digital Dreams Pega. All Rights Reserved.
+  </p>
+
+  <small>
+    यह एक स्वतंत्र digital service website है।
+    यह किसी सरकारी विभाग की official website नहीं है।
+  </small>
+
+</footer>
+
+
+</body>
+</html>
+
