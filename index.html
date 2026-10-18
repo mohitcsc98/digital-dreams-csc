@@ -30,7 +30,136 @@
       padding: 0;
     }
 
-    body {
+    body{
+      <!-- WhatsApp Channel Popup -->
+
+<div id="whatsappPopup" class="popup-overlay">
+
+  <div class="popup-box">
+
+    <button class="close-popup" onclick="closeWhatsAppPopup()">×</button>
+
+    <div class="popup-icon">💬</div>
+
+    <h2>WhatsApp Channel Join करें</h2>
+
+    <p>
+      Digital Dreams Pega की Latest Govt Jobs,
+      Online Forms और Digital Services की updates
+      पाने के लिए हमारा WhatsApp Channel Join करें।
+    </p>
+
+    <a
+      href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
+      target="_blank"
+      class="join-btn">
+      🟢 Join WhatsApp Channel
+    </a>
+
+    <button
+      class="later-btn"
+      onclick="closeWhatsAppPopup()">
+      बाद में
+    </button>
+
+  </div>
+
+</div>
+
+<style>
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-box {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-icon {
+  font-size: 50px;
+}
+
+.popup-box h2 {
+  color: #075e54;
+  margin-bottom: 12px;
+}
+
+.popup-box p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.close-popup {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.join-btn {
+  display: block;
+  background: #25D366;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.later-btn {
+  border: none;
+  background: #eee;
+  padding: 10px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+
+const whatsappPopup = document.getElementById("whatsappPopup");
+
+document.querySelectorAll(".service-card").forEach(function(card) {
+
+  card.addEventListener("click", function() {
+    whatsappPopup.style.display = "flex";
+  });
+
+});
+
+function closeWhatsAppPopup() {
+  whatsappPopup.style.display = "none";
+}
+
+whatsappPopup.addEventListener("click", function(e) {
+
+  if (e.target === whatsappPopup) {
+    closeWhatsAppPopup();
+  }
+
+});
+
+</script>
       font-family: Arial, sans-serif;
       line-height: 1.6;
       background: #f5f7fb;
