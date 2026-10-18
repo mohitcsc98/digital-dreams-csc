@@ -1,953 +1,1050 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Digital Dreams Pega | CSC & Digital Services</title>
-
-  <meta name="description"
-        content="Digital Dreams Pega, Pega Haryana में CSC और Digital Services की जानकारी। Family ID, PAN Card, Voter ID, Police Verification, Online Forms और Government Jobs की जानकारी।">
-
-  <meta name="robots" content="index, follow">
-
-  <link rel="canonical"
-        href="https://mohitcsc98.github.io/digital-dreams-pega/">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    /* HEADER */
-
-    header {
-      background: #0b3d91;
-      color: white;
-      padding: 15px 5%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .tagline {
-      font-size: 13px;
-      opacity: 0.9;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* HERO */
-
-    .hero {
-      background: linear-gradient(135deg, #0b3d91, #087fce);
-      color: white;
-      padding: 75px 5%;
-    }
-
-    .hero-content {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .hero h1 span {
-      color: #ffd700;
-    }
-
-    .hero-description {
-      max-width: 760px;
-      font-size: 19px;
-      margin-bottom: 25px;
-    }
-
-    /* BUTTONS */
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp {
-      background: #25d366;
-      color: white;
-    }
-
-    .call {
-      background: white;
-      color: #0b3d91;
-    }
-
-    /* WHATSAPP CHANNEL LINE */
-
-    .channel-box {
-      margin-top: 25px;
-      max-width: 800px;
-      background: white;
-      color: #222;
-      padding: 18px 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.15);
-      font-size: 17px;
-    }
-
-    .channel-link {
-      color: #128c7e;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .channel-link:hover {
-      color: #075e54;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 60px 5%;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .title h2 {
-      color: #0b3d91;
-      font-size: 32px;
-    }
-
-    .title p {
-      color: #555;
-      margin-top: 8px;
-    }
-
-    /* SERVICES */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 9px 25px rgba(0,0,0,0.15);
-    }
-
-    .icon {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .card h3 {
-      color: #0b3d91;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .official {
-      display: inline-block;
-      background: #0b3d91;
-      color: white;
-      padding: 8px 13px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    /* JOBS */
-
-    .jobs-box {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .jobs-box h3 {
-      color: #0b3d91;
-      margin-bottom: 10px;
-    }
-
-    .job-btn {
-      display: inline-block;
-      background: #0b3d91;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: white;
-    }
-
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about-box p {
-      margin: 12px 0;
-      font-size: 17px;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: #0b3d91;
-      color: white;
-    }
-
-    .contact .title h2,
-    .contact .title p {
-      color: white;
-    }
-
-    .contact-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .contact-item {
-      background: rgba(255,255,255,0.1);
-      padding: 22px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .contact-item a {
-      color: white;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #061f49;
-      color: white;
-      text-align: center;
-      padding: 30px 5%;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer small {
-      display: block;
-      margin-top: 12px;
-      opacity: 0.85;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        padding: 55px 5%;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .title h2 {
-        font-size: 27px;
-      }
-
-      .channel-box {
-        font-size: 16px;
-        padding: 15px;
-      }
-
-    }
-
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Dreams Pega | CSC & Digital Services</title>
+
+<meta name="description"
+content="Digital Dreams Pega, Pega Haryana में CSC और Digital Services की जानकारी। Family ID, PAN Card, Voter ID, Police Verification, Online Forms और Government Jobs की जानकारी।">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://mohitcsc98.github.io/digital-dreams-pega/">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+background:#0b3d91;
+color:white;
+padding:15px 5%;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.tagline{
+font-size:13px;
+opacity:.9;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+background:linear-gradient(135deg,#0b3d91,#087fce);
+color:white;
+padding:75px 5%;
+}
+
+.hero-content{
+max-width:1100px;
+margin:auto;
+}
+
+.hero h1{
+font-size:46px;
+margin-bottom:15px;
+}
+
+.hero h1 span{
+color:#ffd700;
+}
+
+.hero-description{
+max-width:760px;
+font-size:19px;
+margin-bottom:25px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin-right:10px;
+margin-bottom:10px;
+}
+
+.channel-main-btn{
+background:#25d366;
+color:white;
+}
+
+.channel-main-btn:hover{
+background:#1ebe5d;
+}
+
+
+/* =========================
+   CHANNEL LINE
+========================= */
+
+.channel-box{
+margin-top:25px;
+max-width:800px;
+background:white;
+color:#222;
+padding:18px 20px;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,.15);
+font-size:17px;
+}
+
+.channel-link{
+color:#128c7e;
+font-weight:bold;
+text-decoration:underline;
+}
+
+.channel-link:hover{
+color:#075e54;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+padding:60px 5%;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+margin-bottom:35px;
+}
+
+.title h2{
+color:#0b3d91;
+font-size:32px;
+}
+
+.title p{
+color:#555;
+margin-top:8px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 9px 25px rgba(0,0,0,.15);
+}
+
+.icon{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.card h3{
+color:#0b3d91;
+margin-bottom:8px;
+}
+
+.card p{
+color:#555;
+margin-bottom:15px;
+}
+
+.official{
+display:inline-block;
+background:#0b3d91;
+color:white;
+padding:8px 13px;
+border-radius:6px;
+font-size:13px;
+font-weight:bold;
+}
+
+
+/* =========================
+   JOBS
+========================= */
+
+.jobs-box{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.jobs-box h3{
+color:#0b3d91;
+margin-bottom:10px;
+}
+
+.job-btn{
+display:inline-block;
+background:#0b3d91;
+color:white;
+padding:12px 20px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+margin-top:15px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+background:white;
+}
+
+.about-box{
+max-width:850px;
+margin:auto;
+text-align:center;
+}
+
+.about-box p{
+margin:12px 0;
+font-size:17px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+background:#0b3d91;
+color:white;
+}
+
+.contact .title h2,
+.contact .title p{
+color:white;
+}
+
+.contact-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.contact-item{
+background:rgba(255,255,255,.1);
+padding:22px;
+border-radius:10px;
+text-align:center;
+}
+
+.contact-item a{
+color:white;
+text-decoration:none;
+word-break:break-word;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+background:#061f49;
+color:white;
+text-align:center;
+padding:30px 5%;
+}
+
+footer p{
+margin:5px 0;
+}
+
+footer small{
+display:block;
+margin-top:12px;
+opacity:.85;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+nav{
+display:none;
+}
+
+.hero{
+padding:55px 5%;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero-description{
+font-size:16px;
+}
+
+.title h2{
+font-size:27px;
+}
+
+.channel-box{
+font-size:16px;
+padding:15px;
+}
+
+.channel-main-btn{
+font-size:14px;
+padding:12px 15px;
+}
+
+}
+
+</style>
 
 </head>
+
 
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-  <div class="nav">
+<div class="nav">
 
-    <div>
+<div>
 
-      <div class="logo">
-        DIGITAL DREAMS PEGA
-      </div>
+<div class="logo">
+DIGITAL DREAMS PEGA
+</div>
 
-      <div class="tagline">
-        CSC & Digital Services | Pega, Haryana
-      </div>
+<div class="tagline">
+CSC & Digital Services | Pega, Haryana
+</div>
 
-    </div>
+</div>
 
-    <nav>
 
-      <a href="#home">Home</a>
+<nav>
 
-      <a href="#services">Services</a>
+<a href="#home">
+Home
+</a>
 
-      <a href="#jobs">Govt Jobs</a>
+<a href="#services">
+Services
+</a>
 
-      <a href="#about">About</a>
+<a href="#jobs">
+Govt Jobs
+</a>
 
-      <a href="#contact">Contact</a>
+<a href="#about">
+About
+</a>
 
-    </nav>
+<a href="#contact">
+Contact
+</a>
 
-  </div>
+</nav>
+
+</div>
 
 </header>
 
 
-<!-- HOME -->
+
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
-  <div class="hero-content">
-
-    <h1>
-      DIGITAL DREAMS <span>PEGA</span>
-    </h1>
-
-    <p class="hero-description">
-
-      Pega, Haryana में CSC और Digital Services के लिए आपका
-      स्थानीय सहायता केंद्र। Family ID, PAN Card, Voter ID,
-      Police Verification, Online Forms, Government Jobs और
-      अन्य Digital Services की जानकारी प्राप्त करें।
-
-    </p>
+<div class="hero-content">
 
 
-    <!-- WHATSAPP CONTACT -->
+<h1>
 
-    <a
-      class="btn whatsapp"
-      href="https://wa.me/917056657645"
-      target="_blank"
-      rel="noopener noreferrer">
+DIGITAL DREAMS
+<span>
+PEGA
+</span>
 
-      💬 WhatsApp करें
-
-    </a>
+</h1>
 
 
-    <!-- CALL -->
+<p class="hero-description">
 
-    <a
-      class="btn call"
-      href="tel:+917056657645">
+Pega, Haryana में CSC और Digital Services के लिए आपका
+स्थानीय सहायता केंद्र। Family ID, PAN Card, Voter ID,
+Police Verification, Online Forms, Government Jobs और
+अन्य Digital Services की जानकारी प्राप्त करें।
 
-      📞 Call Now
-
-    </a>
-
-
-    <!-- WHATSAPP CHANNEL LINE -->
-
-    <div class="channel-box">
-
-      📢
-
-      <strong>
-        ज्यादा अपडेट पाने के लिए हमारे WhatsApp Channel को Join करें —
-      </strong>
-
-      <a
-        class="channel-link"
-        href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        WhatsApp Channel Link
-
-      </a>
-
-    </div>
+</p>
 
 
-  </div>
+<!-- MAIN WHATSAPP CHANNEL BUTTON -->
+
+<a
+class="btn channel-main-btn"
+href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
+target="_blank"
+rel="noopener noreferrer">
+
+📢 हमारे WhatsApp Channel को Join करें
+
+</a>
+
+
+<!-- CHANNEL INFORMATION -->
+
+<div class="channel-box">
+
+📢
+
+<strong>
+ज्यादा अपडेट पाने के लिए हमारे WhatsApp Channel को Join करें —
+</strong>
+
+<a
+class="channel-link"
+href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
+target="_blank"
+rel="noopener noreferrer">
+
+WhatsApp Channel Link
+
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
-  <div class="container">
+<div class="container">
 
 
-    <div class="title">
+<div class="title">
 
-      <h2>
-        हमारी Digital Services
-      </h2>
+<h2>
+हमारी Digital Services
+</h2>
 
-      <p>
-        किसी भी Service पर Click करके उसकी Official Website खोलें
-      </p>
+<p>
+किसी भी Service पर Click करके उसकी Official Website खोलें
+</p>
 
-    </div>
+</div>
 
 
-    <div class="services">
+<div class="services">
 
 
-      <!-- FAMILY ID -->
+<!-- FAMILY ID -->
 
-      <div
-        class="card"
-        onclick="openSite('https://meraparivar.haryana.gov.in/')">
+<div
+class="card"
+onclick="openSite('https://meraparivar.haryana.gov.in/')">
 
-        <div class="icon">
-          👨‍👩‍👧
-        </div>
+<div class="icon">
+👨‍👩‍👧
+</div>
 
-        <h3>
-          Family ID
-        </h3>
+<h3>
+Family ID
+</h3>
 
-        <p>
-          Haryana Family ID / Parivar Pehchan Patra की
-          Official Website खोलें।
-        </p>
+<p>
+Haryana Family ID / Parivar Pehchan Patra की
+Official Website खोलें।
+</p>
 
-        <span class="official">
-          Official Website ↗
-        </span>
+<span class="official">
+Official Website ↗
+</span>
 
-      </div>
+</div>
 
 
-      <!-- PAN CARD -->
 
-      <div
-        class="card"
-        onclick="openSite('https://www.incometax.gov.in/iec/foportal/')">
+<!-- PAN CARD -->
 
-        <div class="icon">
-          🪪
-        </div>
+<div
+class="card"
+onclick="openSite('https://www.incometax.gov.in/iec/foportal/')">
 
-        <h3>
-          PAN Card
-        </h3>
+<div class="icon">
+🪪
+</div>
 
-        <p>
-          PAN Card और Income Tax से संबंधित
-          Official Portal खोलें।
-        </p>
+<h3>
+PAN Card
+</h3>
 
-        <span class="official">
-          Official Website ↗
-        </span>
+<p>
+PAN Card और Income Tax से संबंधित Official Portal खोलें।
+</p>
 
-      </div>
+<span class="official">
+Official Website ↗
+</span>
 
+</div>
 
-      <!-- VOTER ID -->
 
-      <div
-        class="card"
-        onclick="openSite('https://voters.eci.gov.in/')">
 
-        <div class="icon">
-          🗳️
-        </div>
+<!-- VOTER ID -->
 
-        <h3>
-          Voter ID
-        </h3>
+<div
+class="card"
+onclick="openSite('https://voters.eci.gov.in/')">
 
-        <p>
-          New Voter Registration, Correction और
-          Voter Services का Official Portal खोलें।
-        </p>
+<div class="icon">
+🗳️
+</div>
 
-        <span class="official">
-          Official Website ↗
-        </span>
+<h3>
+Voter ID
+</h3>
 
-      </div>
+<p>
+New Voter Registration, Correction और
+Voter Services का Official Portal खोलें।
+</p>
 
+<span class="official">
+Official Website ↗
+</span>
 
-      <!-- POLICE VERIFICATION -->
+</div>
 
-      <div
-        class="card"
-        onclick="openSite('https://haryanapolice.gov.in/')">
 
-        <div class="icon">
-          👮
-        </div>
 
-        <h3>
-          Police Verification
-        </h3>
+<!-- POLICE VERIFICATION -->
 
-        <p>
-          Haryana Police की Official Website और
-          Citizen Services खोलें।
-        </p>
+<div
+class="card"
+onclick="openSite('https://haryanapolice.gov.in/')">
 
-        <span class="official">
-          Official Website ↗
-        </span>
+<div class="icon">
+👮
+</div>
 
-      </div>
+<h3>
+Police Verification
+</h3>
 
+<p>
+Haryana Police की Official Website और
+Citizen Services खोलें।
+</p>
 
-      <!-- SARAL HARYANA -->
+<span class="official">
+Official Website ↗
+</span>
 
-      <div
-        class="card"
-        onclick="openSite('https://saralharyana.gov.in/')">
+</div>
 
-        <div class="icon">
-          📝
-        </div>
 
-        <h3>
-          SARAL Haryana
-        </h3>
 
-        <p>
-          Haryana Government की Online Citizen Services के लिए
-          SARAL Portal खोलें।
-        </p>
+<!-- SARAL HARYANA -->
 
-        <span class="official">
-          Official Website ↗
-        </span>
+<div
+class="card"
+onclick="openSite('https://saralharyana.gov.in/')">
 
-      </div>
+<div class="icon">
+📝
+</div>
 
+<h3>
+SARAL Haryana
+</h3>
 
-      <!-- GOVERNMENT JOBS -->
+<p>
+Haryana Government की Online Citizen Services के लिए
+SARAL Portal खोलें।
+</p>
 
-      <div
-        class="card"
-        onclick="openSite('https://www.hssc.gov.in/')">
+<span class="official">
+Official Website ↗
+</span>
 
-        <div class="icon">
-          💼
-        </div>
+</div>
 
-        <h3>
-          Government Jobs
-        </h3>
-
-        <p>
-          HSSC की Vacancy, Recruitment और Result के लिए
-          Official Website खोलें।
-        </p>
-
-        <span class="official">
-          HSSC Website ↗
-        </span>
-
-      </div>
-
-
-      <!-- HARYANA GOVERNMENT -->
-
-      <div
-        class="card"
-        onclick="openSite('https://www.haryana.gov.in/')">
-
-        <div class="icon">
-          🏛️
-        </div>
-
-        <h3>
-          Haryana Government
-        </h3>
-
-        <p>
-          Haryana Government की Official State Website खोलें।
-        </p>
-
-        <span class="official">
-          Official Website ↗
-        </span>
-
-      </div>
-
-
-      <!-- DIGITAL INDIA -->
-
-      <div
-        class="card"
-        onclick="openSite('https://www.digitalindia.gov.in/')">
-
-        <div class="icon">
-          💻
-        </div>
-
-        <h3>
-          Digital India
-        </h3>
-
-        <p>
-          Digital India की Official Website खोलें।
-        </p>
-
-        <span class="official">
-          Official Website ↗
-        </span>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
 
 
 <!-- GOVERNMENT JOBS -->
 
-<section id="jobs">
+<div
+class="card"
+onclick="openSite('https://www.hssc.gov.in/')">
 
-  <div class="container">
+<div class="icon">
+💼
+</div>
 
-    <div class="title">
+<h3>
+Government Jobs
+</h3>
 
-      <h2>
-        Government Jobs & Updates
-      </h2>
+<p>
+HSSC की Vacancy, Recruitment और Result के लिए
+Official Website खोलें।
+</p>
 
-      <p>
-        Haryana Government Recruitment Updates
-      </p>
+<span class="official">
+HSSC Website ↗
+</span>
 
-    </div>
+</div>
 
 
-    <div class="jobs-box">
 
-      <h3>
-        📢 Haryana Government Jobs
-      </h3>
+<!-- HARYANA GOVERNMENT -->
 
-      <p>
-        HSSC की Latest Vacancy, Recruitment Notice,
-        Admit Card और Result के लिए Official Website देखें।
-      </p>
+<div
+class="card"
+onclick="openSite('https://www.haryana.gov.in/')">
 
-      <a
-        class="job-btn"
-        href="https://www.hssc.gov.in/"
-        target="_blank"
-        rel="noopener noreferrer">
+<div class="icon">
+🏛️
+</div>
 
-        HSSC Official Website ↗
+<h3>
+Haryana Government
+</h3>
 
-      </a>
+<p>
+Haryana Government की Official State Website खोलें।
+</p>
 
-    </div>
+<span class="official">
+Official Website ↗
+</span>
 
-  </div>
+</div>
+
+
+
+<!-- DIGITAL INDIA -->
+
+<div
+class="card"
+onclick="openSite('https://www.digitalindia.gov.in/')">
+
+<div class="icon">
+💻
+</div>
+
+<h3>
+Digital India
+</h3>
+
+<p>
+Digital India की Official Website खोलें।
+</p>
+
+<span class="official">
+Official Website ↗
+</span>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     GOVERNMENT JOBS
+========================= -->
+
+<section id="jobs">
+
+<div class="container">
+
+
+<div class="title">
+
+<h2>
+Government Jobs & Updates
+</h2>
+
+<p>
+Haryana Government Recruitment Updates
+</p>
+
+</div>
+
+
+<div class="jobs-box">
+
+<h3>
+📢 Haryana Government Jobs
+</h3>
+
+<p>
+HSSC की Latest Vacancy, Recruitment Notice,
+Admit Card और Result के लिए Official Website देखें।
+</p>
+
+
+<a
+class="job-btn"
+href="https://www.hssc.gov.in/"
+target="_blank"
+rel="noopener noreferrer">
+
+HSSC Official Website ↗
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="about">
 
-  <div class="container">
-
-    <div class="title">
-
-      <h2>
-        About Digital Dreams Pega
-      </h2>
-
-    </div>
+<div class="container">
 
 
-    <div class="about-box">
+<div class="title">
 
-      <p>
+<h2>
+About Digital Dreams Pega
+</h2>
 
-        <strong>
-          Digital Dreams Pega
-        </strong>
-
-        Pega, Haryana में Online और Digital Services की जानकारी
-        तथा सहायता उपलब्ध कराने के उद्देश्य से बनाई गई Website है।
-
-      </p>
+</div>
 
 
-      <p>
-
-        यहाँ Family ID, PAN Card, Voter ID,
-        Police Verification, Government Jobs और
-        अन्य Digital Services से संबंधित जानकारी
-        प्राप्त की जा सकती है।
-
-      </p>
+<div class="about-box">
 
 
-      <p>
+<p>
 
-        📍 <strong>Location:</strong>
-        Pega, Haryana
+<strong>
+Digital Dreams Pega
+</strong>
 
-      </p>
+Pega, Haryana में Online और Digital Services की जानकारी
+तथा सहायता उपलब्ध कराने के उद्देश्य से बनाई गई Website है।
+
+</p>
 
 
-      <p>
+<p>
 
-        👤 <strong>Owner / Operator:</strong>
-        Mohit
+यहाँ Family ID, PAN Card, Voter ID,
+Police Verification, Government Jobs और
+अन्य Digital Services से संबंधित जानकारी
+प्राप्त की जा सकती है।
 
-      </p>
+</p>
 
-    </div>
 
-  </div>
+<p>
+
+📍
+<strong>
+Location:
+</strong>
+
+Pega, Haryana
+
+</p>
+
+
+<p>
+
+👤
+<strong>
+Owner / Operator:
+</strong>
+
+Mohit
+
+</p>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
-  <div class="container">
+<div class="container">
 
 
-    <div class="title">
+<div class="title">
 
-      <h2>
-        Contact Digital Dreams Pega
-      </h2>
+<h2>
+Contact Digital Dreams Pega
+</h2>
 
-      <p>
-        किसी भी Digital Service के लिए संपर्क करें
-      </p>
+<p>
+किसी भी Digital Service के लिए संपर्क करें
+</p>
 
-    </div>
-
-
-    <div class="contact-box">
+</div>
 
 
-      <!-- MOBILE -->
-
-      <div class="contact-item">
-
-        <h3>
-          📞 Mobile
-        </h3>
-
-        <p>
-
-          <a href="tel:+917056657645">
-            7056657645
-          </a>
-
-        </p>
-
-      </div>
+<div class="contact-box">
 
 
-      <!-- WHATSAPP -->
+<div class="contact-item">
 
-      <div class="contact-item">
+<h3>
+📞 Mobile
+</h3>
 
-        <h3>
-          💬 WhatsApp
-        </h3>
+<p>
 
-        <p>
+<a href="tel:+917056657645">
 
-          <a
-            href="https://wa.me/917056657645"
-            target="_blank"
-            rel="noopener noreferrer">
+7056657645
 
-            WhatsApp पर संपर्क करें
+</a>
 
-          </a>
+</p>
 
-        </p>
-
-      </div>
+</div>
 
 
-      <!-- EMAIL -->
 
-      <div class="contact-item">
+<div class="contact-item">
 
-        <h3>
-          ✉️ Email
-        </h3>
+<h3>
+💬 WhatsApp Channel
+</h3>
 
-        <p>
+<p>
 
-          <a href="mailto:mayankhr82@gmail.com">
+<a
+href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
+target="_blank"
+rel="noopener noreferrer">
 
-            mayankhr82@gmail.com
+Channel Join करें
 
-          </a>
+</a>
 
-        </p>
+</p>
 
-      </div>
-
-
-      <!-- ADDRESS -->
-
-      <div class="contact-item">
-
-        <h3>
-          📍 Address
-        </h3>
-
-        <p>
-          Pega, Haryana
-        </p>
-
-      </div>
+</div>
 
 
-    </div>
 
-  </div>
+<div class="contact-item">
+
+<h3>
+✉️ Email
+</h3>
+
+<p>
+
+<a href="mailto:mayankhr82@gmail.com">
+
+mayankhr82@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<h3>
+📍 Address
+</h3>
+
+<p>
+Pega, Haryana
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-  <h3>
-    DIGITAL DREAMS PEGA
-  </h3>
+<h3>
+DIGITAL DREAMS PEGA
+</h3>
 
-  <p>
-    CSC & Digital Services | Pega, Haryana
-  </p>
+<p>
+CSC & Digital Services | Pega, Haryana
+</p>
 
-  <p>
-    © 2026 Digital Dreams Pega. All Rights Reserved.
-  </p>
+<p>
+© 2026 Digital Dreams Pega. All Rights Reserved.
+</p>
 
-  <small>
+<small>
 
-    यह एक स्वतंत्र Digital Service Website है।
-    यह किसी सरकारी विभाग की Official Website नहीं है।
+यह एक स्वतंत्र Digital Service Website है।
+यह किसी सरकारी विभाग की Official Website नहीं है।
 
-  </small>
+</small>
 
 </footer>
 
 
-<!-- JAVASCRIPT -->
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-function openSite(url) {
-  window.open(url, "_blank");
+function openSite(url){
+
+window.open(
+url,
+"_blank"
+);
+
 }
 
 </script>
 
 
 </body>
+
 </html>
