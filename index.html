@@ -6,11 +6,6 @@
 
 <title>Digital Dreams Pega | CSC & Digital Services</title>
 
-<meta name="description"
-content="Digital Dreams Pega, Pega Haryana में CSC और Digital Services की जानकारी। Family ID, PAN Card, Voter ID, Police Verification, Online Forms और Government Jobs की जानकारी।">
-
-<meta name="robots" content="index, follow">
-
 <style>
 *{
     margin:0;
@@ -55,7 +50,6 @@ header{
 
 .tagline{
     font-size:13px;
-    opacity:.9;
 }
 
 nav a{
@@ -63,10 +57,6 @@ nav a{
     text-decoration:none;
     margin-left:20px;
     font-weight:bold;
-}
-
-nav a:hover{
-    text-decoration:underline;
 }
 
 /* HERO */
@@ -97,47 +87,34 @@ nav a:hover{
     margin-bottom:25px;
 }
 
-/* BUTTON */
-
 .btn{
     display:inline-block;
     padding:13px 22px;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
-    margin-right:10px;
-    margin-bottom:10px;
 }
 
-.channel-main-btn{
+.whatsapp{
     background:#25d366;
     color:white;
 }
-
-.channel-main-btn:hover{
-    background:#1ebe5d;
-}
-
-/* WHATSAPP CHANNEL */
 
 .channel-box{
     margin-top:25px;
     max-width:800px;
     background:white;
     color:#222;
-    padding:18px 20px;
+    padding:18px;
     border-radius:10px;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
-    font-size:17px;
 }
 
 .channel-link{
     color:#128c7e;
     font-weight:bold;
-    text-decoration:underline;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
     padding:60px 5%;
@@ -160,7 +137,6 @@ section{
 
 .title p{
     color:#555;
-    margin-top:8px;
 }
 
 /* SERVICES */
@@ -182,7 +158,6 @@ section{
 
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 9px 25px rgba(0,0,0,.15);
 }
 
 .icon{
@@ -201,13 +176,11 @@ section{
 }
 
 .official{
-    display:inline-block;
     background:#0b3d91;
     color:white;
     padding:8px 13px;
     border-radius:6px;
     font-size:13px;
-    font-weight:bold;
 }
 
 /* JOBS */
@@ -218,11 +191,6 @@ section{
     border-radius:12px;
     text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-.jobs-box h3{
-    color:#0b3d91;
-    margin-bottom:10px;
 }
 
 .job-btn{
@@ -281,7 +249,6 @@ section{
 .contact-item a{
     color:white;
     text-decoration:none;
-    word-break:break-word;
 }
 
 /* FOOTER */
@@ -290,17 +257,7 @@ footer{
     background:#061f49;
     color:white;
     text-align:center;
-    padding:30px 5%;
-}
-
-footer p{
-    margin:5px 0;
-}
-
-footer small{
-    display:block;
-    margin-top:12px;
-    opacity:.85;
+    padding:30px;
 }
 
 /* MOBILE */
@@ -309,10 +266,6 @@ footer small{
 
     nav{
         display:none;
-    }
-
-    .hero{
-        padding:55px 5%;
     }
 
     .hero h1{
@@ -325,16 +278,6 @@ footer small{
 
     .title h2{
         font-size:27px;
-    }
-
-    .channel-box{
-        font-size:16px;
-        padding:15px;
-    }
-
-    .channel-main-btn{
-        font-size:14px;
-        padding:12px 15px;
     }
 }
 </style>
@@ -373,7 +316,7 @@ CSC & Digital Services | Pega, Haryana
 </header>
 
 
-<!-- HERO -->
+<!-- HOME -->
 
 <section class="hero" id="home">
 
@@ -393,10 +336,9 @@ Police Verification, Online Forms, Government Jobs और
 </p>
 
 <a
-class="btn channel-main-btn"
+class="btn whatsapp"
 href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 
 📢 हमारे WhatsApp Channel को Join करें
 
@@ -404,17 +346,14 @@ rel="noopener noreferrer">
 
 <div class="channel-box">
 
-📢
-
-<strong>
+📢 <strong>
 ज्यादा अपडेट पाने के लिए हमारे WhatsApp Channel को Join करें —
 </strong>
 
 <a
 class="channel-link"
 href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 
 WhatsApp Channel Link
 
@@ -438,13 +377,15 @@ WhatsApp Channel Link
 <h2>हमारी Digital Services</h2>
 
 <p>
-किसी भी Service पर Click करके उसकी Official Website खोलें
+किसी भी Service पर Click करके Official Website खोलें
 </p>
 
 </div>
 
 <div class="services">
 
+
+<!-- FAMILY ID -->
 
 <div class="card"
 onclick="openSite('https://meraparivar.haryana.gov.in/')">
@@ -454,7 +395,8 @@ onclick="openSite('https://meraparivar.haryana.gov.in/')">
 <h3>Family ID</h3>
 
 <p>
-Haryana Family ID / Parivar Pehchan Patra की Official Website खोलें।
+Haryana Family ID / Parivar Pehchan Patra
+की Official Website खोलें।
 </p>
 
 <span class="official">
@@ -463,6 +405,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- PAN -->
 
 <div class="card"
 onclick="openSite('https://www.incometax.gov.in/iec/foportal/')">
@@ -472,7 +416,8 @@ onclick="openSite('https://www.incometax.gov.in/iec/foportal/')">
 <h3>PAN Card</h3>
 
 <p>
-PAN Card और Income Tax से संबंधित Official Portal खोलें।
+PAN Card और Income Tax से संबंधित
+Official Portal खोलें।
 </p>
 
 <span class="official">
@@ -481,6 +426,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- VOTER -->
 
 <div class="card"
 onclick="openSite('https://voters.eci.gov.in/')">
@@ -490,7 +437,8 @@ onclick="openSite('https://voters.eci.gov.in/')">
 <h3>Voter ID</h3>
 
 <p>
-New Voter Registration, Correction और Voter Services का Official Portal खोलें।
+New Voter Registration, Correction और
+Voter Services का Official Portal।
 </p>
 
 <span class="official">
@@ -499,6 +447,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- POLICE -->
 
 <div class="card"
 onclick="openSite('https://haryanapolice.gov.in/')">
@@ -508,7 +458,8 @@ onclick="openSite('https://haryanapolice.gov.in/')">
 <h3>Police Verification</h3>
 
 <p>
-Haryana Police की Official Website और Citizen Services खोलें।
+Haryana Police की Official Website और
+Citizen Services।
 </p>
 
 <span class="official">
@@ -517,6 +468,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- SARAL -->
 
 <div class="card"
 onclick="openSite('https://saralharyana.gov.in/')">
@@ -526,7 +479,8 @@ onclick="openSite('https://saralharyana.gov.in/')">
 <h3>SARAL Haryana</h3>
 
 <p>
-Haryana Government की Online Citizen Services के लिए SARAL Portal खोलें।
+Haryana Government की Online Citizen
+Services के लिए SARAL Portal।
 </p>
 
 <span class="official">
@@ -535,6 +489,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- JOBS -->
 
 <div class="card"
 onclick="openSite('https://www.hssc.gov.in/')">
@@ -544,7 +500,7 @@ onclick="openSite('https://www.hssc.gov.in/')">
 <h3>Government Jobs</h3>
 
 <p>
-HSSC की Vacancy, Recruitment और Result के लिए Official Website खोलें।
+HSSC Vacancy, Recruitment और Result।
 </p>
 
 <span class="official">
@@ -554,6 +510,8 @@ HSSC Website ↗
 </div>
 
 
+<!-- HARYANA -->
+
 <div class="card"
 onclick="openSite('https://www.haryana.gov.in/')">
 
@@ -562,7 +520,8 @@ onclick="openSite('https://www.haryana.gov.in/')">
 <h3>Haryana Government</h3>
 
 <p>
-Haryana Government की Official State Website खोलें।
+Haryana Government की Official
+State Website।
 </p>
 
 <span class="official">
@@ -571,6 +530,8 @@ Official Website ↗
 
 </div>
 
+
+<!-- DIGITAL INDIA -->
 
 <div class="card"
 onclick="openSite('https://www.digitalindia.gov.in/')">
@@ -580,7 +541,7 @@ onclick="openSite('https://www.digitalindia.gov.in/')">
 <h3>Digital India</h3>
 
 <p>
-Digital India की Official Website खोलें।
+Digital India की Official Website।
 </p>
 
 <span class="official">
@@ -589,6 +550,7 @@ Official Website ↗
 
 </div>
 
+
 </div>
 
 </div>
@@ -596,7 +558,7 @@ Official Website ↗
 </section>
 
 
-<!-- GOVERNMENT JOBS -->
+<!-- JOBS -->
 
 <section id="jobs">
 
@@ -604,7 +566,9 @@ Official Website ↗
 
 <div class="title">
 
-<h2>Government Jobs & Updates</h2>
+<h2>
+Government Jobs & Updates
+</h2>
 
 <p>
 Haryana Government Recruitment Updates
@@ -628,8 +592,7 @@ Admit Card और Result के लिए Official Website देखें।
 <a
 class="job-btn"
 href="https://www.hssc.gov.in/"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 
 HSSC Official Website ↗
 
@@ -661,16 +624,16 @@ About Digital Dreams Pega
 <p>
 
 <strong>Digital Dreams Pega</strong>
-Pega, Haryana में Online और Digital Services की जानकारी तथा सहायता
-उपलब्ध कराने के उद्देश्य से बनाई गई Website है।
+Pega, Haryana में Online और Digital Services की
+जानकारी तथा सहायता उपलब्ध कराने के उद्देश्य से बनाई गई Website है।
 
 </p>
 
 <p>
 
-यहाँ Family ID, PAN Card, Voter ID, Police Verification,
-Government Jobs और अन्य Digital Services से संबंधित जानकारी
-प्राप्त की जा सकती है।
+यहाँ Family ID, PAN Card, Voter ID,
+Police Verification, Government Jobs और
+अन्य Digital Services की जानकारी प्राप्त की जा सकती है।
 
 </p>
 
@@ -709,6 +672,7 @@ Contact Digital Dreams Pega
 
 <div class="contact-box">
 
+
 <div class="contact-item">
 
 <h3>📞 Mobile</h3>
@@ -726,16 +690,13 @@ Contact Digital Dreams Pega
 
 <div class="contact-item">
 
-<h3>
-💬 WhatsApp Channel
-</h3>
+<h3>💬 WhatsApp Channel</h3>
 
 <p>
 
 <a
 href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-target="_blank"
-rel="noopener noreferrer">
+target="_blank">
 
 Channel Join करें
 
@@ -771,6 +732,7 @@ Pega, Haryana
 
 </div>
 
+
 </div>
 
 </div>
@@ -794,12 +756,10 @@ CSC & Digital Services | Pega, Haryana
 © 2026 Digital Dreams Pega. All Rights Reserved.
 </p>
 
-<small>
-
+<p>
 यह एक स्वतंत्र Digital Service Website है।
 यह किसी सरकारी विभाग की Official Website नहीं है।
-
-</small>
+</p>
 
 </footer>
 
@@ -809,7 +769,9 @@ CSC & Digital Services | Pega, Haryana
 <script>
 
 function openSite(url){
+
     window.open(url,"_blank");
+
 }
 
 </script>
