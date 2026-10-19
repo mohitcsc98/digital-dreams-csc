@@ -24,8 +24,6 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
-
 header{
     background:#0b3d91;
     color:white;
@@ -58,8 +56,6 @@ nav a{
     margin-left:20px;
     font-weight:bold;
 }
-
-/* HERO */
 
 .hero{
     background:linear-gradient(135deg,#0b3d91,#087fce);
@@ -114,8 +110,6 @@ nav a{
     font-weight:bold;
 }
 
-/* SECTION */
-
 section{
     padding:60px 5%;
 }
@@ -138,8 +132,6 @@ section{
 .title p{
     color:#555;
 }
-
-/* SERVICES */
 
 .services{
     display:grid;
@@ -183,13 +175,10 @@ section{
     font-size:13px;
 }
 
-/* JOBS */
-
 .jobs-box{
     background:white;
     padding:30px;
     border-radius:12px;
-    text-align:center;
     box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
@@ -204,7 +193,37 @@ section{
     margin-top:15px;
 }
 
-/* ABOUT */
+.job-list{
+    display:grid;
+    gap:15px;
+    margin-top:25px;
+}
+
+.job-item{
+    background:#f8faff;
+    border-left:5px solid #0b3d91;
+    padding:20px;
+    border-radius:8px;
+}
+
+.job-item h3{
+    color:#0b3d91;
+    margin-bottom:8px;
+}
+
+.job-item p{
+    margin:5px 0;
+}
+
+.job-item a{
+    display:inline-block;
+    margin-top:10px;
+    background:#0b3d91;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    text-decoration:none;
+}
 
 .about{
     background:white;
@@ -220,8 +239,6 @@ section{
     margin:12px 0;
     font-size:17px;
 }
-
-/* CONTACT */
 
 .contact{
     background:#0b3d91;
@@ -251,8 +268,6 @@ section{
     text-decoration:none;
 }
 
-/* FOOTER */
-
 footer{
     background:#061f49;
     color:white;
@@ -260,7 +275,63 @@ footer{
     padding:30px;
 }
 
-/* MOBILE */
+.admin-section{
+    background:#eef3ff;
+}
+
+.admin-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.admin-box input,
+.admin-box textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0 15px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:15px;
+}
+
+.admin-box button{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:11px 18px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+.admin-box .logout{
+    background:#d32f2f;
+}
+
+.admin-status{
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.admin-job{
+    background:#f5f7fb;
+    padding:15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.admin-job button{
+    margin-top:8px;
+}
+
+.hidden{
+    display:none;
+}
 
 @media(max-width:700px){
 
@@ -285,14 +356,11 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
 <div class="nav">
 
 <div>
-
 <div class="logo">
 DIGITAL DREAMS PEGA
 </div>
@@ -300,7 +368,6 @@ DIGITAL DREAMS PEGA
 <div class="tagline">
 CSC & Digital Services | Pega, Haryana
 </div>
-
 </div>
 
 <nav>
@@ -309,14 +376,13 @@ CSC & Digital Services | Pega, Haryana
 <a href="#jobs">Govt Jobs</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+<a href="#admin">Admin</a>
 </nav>
 
 </div>
 
 </header>
 
-
-<!-- HOME -->
 
 <section class="hero" id="home">
 
@@ -327,12 +393,10 @@ DIGITAL DREAMS <span>PEGA</span>
 </h1>
 
 <p class="hero-description">
-
 Pega, Haryana में CSC और Digital Services के लिए आपका
 स्थानीय सहायता केंद्र। Family ID, PAN Card, Voter ID,
 Police Verification, Online Forms, Government Jobs और
 अन्य Digital Services की जानकारी प्राप्त करें।
-
 </p>
 
 <a
@@ -366,8 +430,6 @@ WhatsApp Channel Link
 </section>
 
 
-<!-- SERVICES -->
-
 <section id="services">
 
 <div class="container">
@@ -383,9 +445,6 @@ WhatsApp Channel Link
 </div>
 
 <div class="services">
-
-
-<!-- FAMILY ID -->
 
 <div class="card"
 onclick="openSite('https://meraparivar.haryana.gov.in/')">
@@ -406,8 +465,6 @@ Official Website ↗
 </div>
 
 
-<!-- PAN -->
-
 <div class="card"
 onclick="openSite('https://www.incometax.gov.in/iec/foportal/')">
 
@@ -426,8 +483,6 @@ Official Website ↗
 
 </div>
 
-
-<!-- VOTER -->
 
 <div class="card"
 onclick="openSite('https://voters.eci.gov.in/')">
@@ -448,8 +503,6 @@ Official Website ↗
 </div>
 
 
-<!-- POLICE -->
-
 <div class="card"
 onclick="openSite('https://haryanapolice.gov.in/')">
 
@@ -468,8 +521,6 @@ Official Website ↗
 
 </div>
 
-
-<!-- SARAL -->
 
 <div class="card"
 onclick="openSite('https://saralharyana.gov.in/')">
@@ -490,8 +541,6 @@ Official Website ↗
 </div>
 
 
-<!-- JOBS -->
-
 <div class="card"
 onclick="openSite('https://www.hssc.gov.in/')">
 
@@ -509,8 +558,6 @@ HSSC Website ↗
 
 </div>
 
-
-<!-- HARYANA -->
 
 <div class="card"
 onclick="openSite('https://www.haryana.gov.in/')">
@@ -531,8 +578,6 @@ Official Website ↗
 </div>
 
 
-<!-- DIGITAL INDIA -->
-
 <div class="card"
 onclick="openSite('https://www.digitalindia.gov.in/')">
 
@@ -550,15 +595,12 @@ Official Website ↗
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
 
-
-<!-- JOBS -->
 
 <section id="jobs">
 
@@ -571,7 +613,7 @@ Government Jobs & Updates
 </h2>
 
 <p>
-Haryana Government Recruitment Updates
+Latest Recruitment और Government Updates
 </p>
 
 </div>
@@ -579,15 +621,16 @@ Haryana Government Recruitment Updates
 <div class="jobs-box">
 
 <h3>
-📢 Haryana Government Jobs
+📢 Latest Job Updates
 </h3>
 
-<p>
+<div id="jobList" class="job-list">
 
-HSSC की Latest Vacancy, Recruitment Notice,
-Admit Card और Result के लिए Official Website देखें।
+<p>Updates loading...</p>
 
-</p>
+</div>
+
+<br>
 
 <a
 class="job-btn"
@@ -604,8 +647,6 @@ HSSC Official Website ↗
 
 </section>
 
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -652,8 +693,6 @@ Police Verification, Government Jobs और
 </section>
 
 
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
 
 <div class="container">
@@ -672,17 +711,14 @@ Contact Digital Dreams Pega
 
 <div class="contact-box">
 
-
 <div class="contact-item">
 
 <h3>📞 Mobile</h3>
 
 <p>
-
 <a href="tel:+917056657645">
 7056657645
 </a>
-
 </p>
 
 </div>
@@ -732,7 +768,6 @@ Pega, Haryana
 
 </div>
 
-
 </div>
 
 </div>
@@ -740,7 +775,107 @@ Pega, Haryana
 </section>
 
 
-<!-- FOOTER -->
+<!-- ADMIN -->
+
+<section class="admin-section" id="admin">
+
+<div class="container">
+
+<div class="title">
+
+<h2>🔐 Admin Panel</h2>
+
+<p>Job Updates Manage करें</p>
+
+</div>
+
+<div class="admin-box">
+
+<div id="loginBox">
+
+<h3>Admin Login</h3>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Admin Email">
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Password">
+
+<button onclick="loginAdmin()">
+Login
+</button>
+
+<p id="loginMessage" class="admin-status"></p>
+
+</div>
+
+
+<div id="adminPanel" class="hidden">
+
+<h3>➕ Add / Edit Job Update</h3>
+
+<input
+type="text"
+id="jobTitle"
+placeholder="Job Title">
+
+<input
+type="text"
+id="jobPost"
+placeholder="Post / Vacancy">
+
+<input
+type="text"
+id="jobLastDate"
+placeholder="Last Date">
+
+<input
+type="text"
+id="jobQualification"
+placeholder="Qualification">
+
+<input
+type="url"
+id="jobLink"
+placeholder="Official Link">
+
+<textarea
+id="jobDescription"
+rows="4"
+placeholder="Short Description"></textarea>
+
+<button onclick="saveJob()">
+Save Update
+</button>
+
+<button onclick="cancelEdit()">
+Cancel
+</button>
+
+<button class="logout" onclick="logoutAdmin()">
+Logout
+</button>
+
+<p id="adminMessage" class="admin-status"></p>
+
+<hr>
+
+<h3>📋 Existing Updates</h3>
+
+<div id="adminJobList"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <footer>
 
@@ -764,15 +899,608 @@ CSC & Digital Services | Pega, Haryana
 </footer>
 
 
-<!-- JAVASCRIPT -->
+<script type="module">
 
-<script>
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 
-function openSite(url){
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    updateDoc,
+    deleteDoc,
+    doc,
+    query,
+    orderBy
+}
+from "https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js";
+
+import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js";
+
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+
+    authDomain: "digital-dreams-pegan.firebaseapp.com",
+
+    projectId: "digital-dreams-pegan",
+
+    storageBucket: "digital-dreams-pegan.firebasestorage.app",
+
+    messagingSenderId: "1053549608341",
+
+    appId: "1:1053549608341:web:bb602038ebda2732830a9c",
+
+    measurementId: "G-6EKZP1D3XQ"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+const auth = getAuth(app);
+
+
+let editingJobId = null;
+
+
+window.openSite = function(url){
 
     window.open(url,"_blank");
 
+};
+
+
+/* LOGIN */
+
+window.loginAdmin = async function(){
+
+    const email =
+        document.getElementById("loginEmail").value.trim();
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+    const message =
+        document.getElementById("loginMessage");
+
+    if(!email || !password){
+
+        message.textContent =
+        "Email और Password डालें।";
+
+        return;
+    }
+
+    try{
+
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        message.textContent =
+        "Login successful ✅";
+
+    }catch(error){
+
+        console.error(error);
+
+        message.textContent =
+        "Login failed: " + error.message;
+
+    }
+
+};
+
+
+/* LOGOUT */
+
+window.logoutAdmin = async function(){
+
+    await signOut(auth);
+
+};
+
+
+/* AUTH STATE */
+
+onAuthStateChanged(auth,(user)=>{
+
+    const loginBox =
+        document.getElementById("loginBox");
+
+    const adminPanel =
+        document.getElementById("adminPanel");
+
+    if(user){
+
+        loginBox.classList.add("hidden");
+
+        adminPanel.classList.remove("hidden");
+
+        loadAdminJobs();
+
+    }else{
+
+        loginBox.classList.remove("hidden");
+
+        adminPanel.classList.add("hidden");
+
+    }
+
+});
+
+
+/* SAVE JOB */
+
+window.saveJob = async function(){
+
+    const user = auth.currentUser;
+
+    if(!user){
+
+        alert("पहले Admin Login करें।");
+
+        return;
+    }
+
+    const title =
+        document.getElementById("jobTitle").value.trim();
+
+    const post =
+        document.getElementById("jobPost").value.trim();
+
+    const lastDate =
+        document.getElementById("jobLastDate").value.trim();
+
+    const qualification =
+        document.getElementById("jobQualification").value.trim();
+
+    const link =
+        document.getElementById("jobLink").value.trim();
+
+    const description =
+        document.getElementById("jobDescription").value.trim();
+
+    if(!title){
+
+        alert("Job Title डालें।");
+
+        return;
+    }
+
+    try{
+
+        if(editingJobId){
+
+            await updateDoc(
+                doc(db,"updates",editingJobId),
+                {
+                    title,
+                    post,
+                    lastDate,
+                    qualification,
+                    link,
+                    description,
+                    updatedAt:new Date().toISOString()
+                }
+            );
+
+            document.getElementById("adminMessage")
+            .textContent =
+            "Update successfully edit हो गया ✅";
+
+        }else{
+
+            await addDoc(
+                collection(db,"updates"),
+                {
+                    title,
+                    post,
+                    lastDate,
+                    qualification,
+                    link,
+                    description,
+                    createdAt:new Date().toISOString()
+                }
+            );
+
+            document.getElementById("adminMessage")
+            .textContent =
+            "Job Update successfully add हो गया ✅";
+
+        }
+
+        clearForm();
+
+        await loadAdminJobs();
+
+        await loadPublicJobs();
+
+    }catch(error){
+
+        console.error(error);
+
+        document.getElementById("adminMessage")
+        .textContent =
+        "Error: " + error.message;
+
+    }
+
+};
+
+
+/* LOAD PUBLIC JOBS */
+
+async function loadPublicJobs(){
+
+    const jobList =
+        document.getElementById("jobList");
+
+    try{
+
+        const snapshot =
+            await getDocs(
+                collection(db,"updates")
+            );
+
+        jobList.innerHTML = "";
+
+        if(snapshot.empty){
+
+            jobList.innerHTML =
+            "<p>अभी कोई Job Update उपलब्ध नहीं है।</p>";
+
+            return;
+        }
+
+        snapshot.forEach((item)=>{
+
+            const data = item.data();
+
+            const div =
+                document.createElement("div");
+
+            div.className = "job-item";
+
+            div.innerHTML = `
+
+                <h3>📢 ${escapeHtml(data.title || "")}</h3>
+
+                <p><strong>Post:</strong>
+                ${escapeHtml(data.post || "-")}</p>
+
+                <p><strong>Last Date:</strong>
+                ${escapeHtml(data.lastDate || "-")}</p>
+
+                <p><strong>Qualification:</strong>
+                ${escapeHtml(data.qualification || "-")}</p>
+
+                <p>
+                ${escapeHtml(data.description || "")}
+                </p>
+
+                ${
+                    data.link
+                    ?
+                    `<a href="${safeUrl(data.link)}"
+                    target="_blank"
+                    rel="noopener">
+                    Official Notification ↗
+                    </a>`
+                    :
+                    ""
+                }
+
+            `;
+
+            jobList.appendChild(div);
+
+        });
+
+    }catch(error){
+
+        console.error(error);
+
+        jobList.innerHTML =
+        "<p>Updates load नहीं हो पाए।</p>";
+
+    }
+
 }
+
+
+/* LOAD ADMIN JOBS */
+
+async function loadAdminJobs(){
+
+    const list =
+        document.getElementById("adminJobList");
+
+    list.innerHTML =
+    "Loading...";
+
+    try{
+
+        const snapshot =
+            await getDocs(
+                collection(db,"updates")
+            );
+
+        list.innerHTML = "";
+
+        if(snapshot.empty){
+
+            list.innerHTML =
+            "<p>अभी कोई update नहीं है।</p>";
+
+            return;
+        }
+
+        snapshot.forEach((item)=>{
+
+            const data = item.data();
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "admin-job";
+
+            div.innerHTML = `
+
+                <strong>
+                ${escapeHtml(data.title || "")}
+                </strong>
+
+                <br>
+
+                <small>
+                Last Date:
+                ${escapeHtml(data.lastDate || "-")}
+                </small>
+
+                <br>
+
+                <button
+                onclick="editJob('${item.id}')">
+                Edit
+                </button>
+
+                <button
+                onclick="deleteJob('${item.id}')">
+                Delete
+                </button>
+
+            `;
+
+            list.appendChild(div);
+
+        });
+
+    }catch(error){
+
+        console.error(error);
+
+        list.innerHTML =
+        "<p>Admin updates load नहीं हो पाए।</p>";
+
+    }
+
+}
+
+
+/* EDIT JOB */
+
+window.editJob = async function(id){
+
+    try{
+
+        const snapshot =
+            await getDocs(
+                collection(db,"updates")
+            );
+
+        let found = null;
+
+        snapshot.forEach((item)=>{
+
+            if(item.id === id){
+
+                found = {
+                    id:item.id,
+                    ...item.data()
+                };
+
+            }
+
+        });
+
+        if(!found){
+
+            alert("Update नहीं मिला।");
+
+            return;
+        }
+
+        editingJobId = id;
+
+        document.getElementById("jobTitle").value =
+            found.title || "";
+
+        document.getElementById("jobPost").value =
+            found.post || "";
+
+        document.getElementById("jobLastDate").value =
+            found.lastDate || "";
+
+        document.getElementById("jobQualification").value =
+            found.qualification || "";
+
+        document.getElementById("jobLink").value =
+            found.link || "";
+
+        document.getElementById("jobDescription").value =
+            found.description || "";
+
+        document.getElementById("adminMessage")
+        .textContent =
+        "Edit mode चालू है।";
+
+        window.location.hash = "admin";
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(error.message);
+
+    }
+
+};
+
+
+/* DELETE JOB */
+
+window.deleteJob = async function(id){
+
+    const user = auth.currentUser;
+
+    if(!user){
+
+        alert("पहले Admin Login करें।");
+
+        return;
+    }
+
+    const confirmDelete =
+        confirm(
+            "क्या आप यह Job Update delete करना चाहते हैं?"
+        );
+
+    if(!confirmDelete){
+
+        return;
+    }
+
+    try{
+
+        await deleteDoc(
+            doc(db,"updates",id)
+        );
+
+        document.getElementById("adminMessage")
+        .textContent =
+        "Update delete हो गया ✅";
+
+        await loadAdminJobs();
+
+        await loadPublicJobs();
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "Delete error: " +
+            error.message
+        );
+
+    }
+
+};
+
+
+/* CANCEL EDIT */
+
+window.cancelEdit = function(){
+
+    editingJobId = null;
+
+    clearForm();
+
+    document.getElementById("adminMessage")
+    .textContent = "";
+
+};
+
+
+/* CLEAR FORM */
+
+function clearForm(){
+
+    editingJobId = null;
+
+    document.getElementById("jobTitle").value = "";
+
+    document.getElementById("jobPost").value = "";
+
+    document.getElementById("jobLastDate").value = "";
+
+    document.getElementById("jobQualification").value = "";
+
+    document.getElementById("jobLink").value = "";
+
+    document.getElementById("jobDescription").value = "";
+
+}
+
+
+/* BASIC HTML ESCAPE */
+
+function escapeHtml(value){
+
+    return String(value)
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* URL CHECK */
+
+function safeUrl(url){
+
+    try{
+
+        const parsed =
+            new URL(url);
+
+        if(
+            parsed.protocol === "http:" ||
+            parsed.protocol === "https:"
+        ){
+
+            return parsed.href;
+
+        }
+
+    }catch(e){}
+
+    return "#";
+
+}
+
+
+/* INITIAL LOAD */
+
+loadPublicJobs();
 
 </script>
 
