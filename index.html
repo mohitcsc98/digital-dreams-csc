@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Dreams Pega | Government Jobs & CSC Services</title>
+<title>PeganCSC | Government Jobs, Results, Admit Card & CSC Services</title>
 
 <style>
 *{
@@ -38,8 +38,8 @@ header{
 }
 
 header h1{
-  font-size:32px;
-  margin-bottom:5px;
+  font-size:34px;
+  margin-bottom:6px;
 }
 
 nav{
@@ -59,7 +59,9 @@ nav a{
   font-size:14px;
 }
 
-nav a:hover{background:#b30000;}
+nav a:hover{
+  background:#b30000;
+}
 
 .container{
   width:94%;
@@ -67,7 +69,7 @@ nav a:hover{background:#b30000;}
   margin:auto;
 }
 
-/* TICKER */
+/* ================= TICKER ================= */
 
 .ticker{
   display:flex;
@@ -84,6 +86,7 @@ nav a:hover{background:#b30000;}
   padding:12px;
   font-weight:bold;
   white-space:nowrap;
+  z-index:2;
 }
 
 .ticker-content{
@@ -97,7 +100,7 @@ nav a:hover{background:#b30000;}
   display:inline-block;
   color:#b30000;
   font-weight:bold;
-  animation:ticker 20s linear infinite;
+  animation:ticker 22s linear infinite;
 }
 
 @keyframes ticker{
@@ -105,7 +108,7 @@ nav a:hover{background:#b30000;}
   100%{transform:translateX(-100%);}
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
 
 .search-box{
   display:flex;
@@ -119,6 +122,7 @@ nav a:hover{background:#b30000;}
   flex:1;
   padding:12px;
   border:1px solid #aaa;
+  font-size:15px;
 }
 
 .search-box button{
@@ -130,7 +134,7 @@ nav a:hover{background:#b30000;}
   cursor:pointer;
 }
 
-/* WHATSAPP */
+/* ================= WHATSAPP ================= */
 
 .whatsapp{
   text-align:center;
@@ -146,7 +150,7 @@ nav a:hover{background:#b30000;}
   font-weight:bold;
 }
 
-/* CATEGORY BUTTONS */
+/* ================= CATEGORY ================= */
 
 .category-grid{
   display:grid;
@@ -156,13 +160,19 @@ nav a:hover{background:#b30000;}
 }
 
 .category-card{
-  padding:20px 8px;
+  padding:21px 8px;
   color:white;
   text-align:center;
   font-size:17px;
   font-weight:bold;
-  border-radius:4px;
+  border-radius:5px;
   cursor:pointer;
+  transition:.2s;
+}
+
+.category-card:hover{
+  transform:translateY(-3px);
+  opacity:.9;
 }
 
 .red{background:#c62828;}
@@ -174,7 +184,7 @@ nav a:hover{background:#b30000;}
 .pink{background:#ad1457;}
 .dark{background:#37474f;}
 
-/* UPDATE BOXES */
+/* ================= UPDATES ================= */
 
 .update-grid{
   display:grid;
@@ -197,7 +207,7 @@ nav a:hover{background:#b30000;}
 }
 
 .update-list{
-  min-height:160px;
+  min-height:170px;
   padding:10px 17px 18px;
 }
 
@@ -224,7 +234,7 @@ nav a:hover{background:#b30000;}
   margin-left:5px;
 }
 
-/* SECTION */
+/* ================= TITLES ================= */
 
 .section-title{
   background:#b30000;
@@ -234,7 +244,7 @@ nav a:hover{background:#b30000;}
   margin:30px 0 15px;
 }
 
-/* ONLINE SERVICES */
+/* ================= SERVICES ================= */
 
 .services-grid{
   display:grid;
@@ -268,7 +278,7 @@ nav a:hover{background:#b30000;}
   margin-top:12px;
 }
 
-/* ADMIN */
+/* ================= ADMIN ================= */
 
 .admin-wrap{
   margin:40px 0;
@@ -282,7 +292,8 @@ nav a:hover{background:#b30000;}
   margin:auto;
 }
 
-input,textarea,select{
+input,
+textarea{
   width:100%;
   padding:12px;
   margin:7px 0 14px;
@@ -309,7 +320,9 @@ textarea{
 .btn-orange{background:#ef6c00;}
 .btn-green{background:#188038;}
 
-.hidden{display:none !important;}
+.hidden{
+  display:none !important;
+}
 
 /* ADMIN DASHBOARD */
 
@@ -328,6 +341,7 @@ textarea{
   font-weight:bold;
   cursor:pointer;
   border-radius:5px;
+  transition:.2s;
 }
 
 .admin-menu:hover{
@@ -370,11 +384,7 @@ textarea{
   margin:0;
 }
 
-.admin-search button{
-  white-space:nowrap;
-}
-
-/* MODAL */
+/* ================= MODAL ================= */
 
 .modal{
   display:none;
@@ -433,6 +443,8 @@ textarea{
   border-radius:4px;
 }
 
+/* ================= FOOTER ================= */
+
 footer{
   background:#111;
   color:#fff;
@@ -442,7 +454,10 @@ footer{
   margin-top:30px;
 }
 
+/* ================= RESPONSIVE ================= */
+
 @media(max-width:900px){
+
   .category-grid{
     grid-template-columns:repeat(2,1fr);
   }
@@ -461,7 +476,10 @@ footer{
 }
 
 @media(max-width:600px){
-  header h1{font-size:24px;}
+
+  header h1{
+    font-size:25px;
+  }
 
   nav a{
     font-size:12px;
@@ -489,6 +507,14 @@ footer{
   .search-box button{
     padding:12px;
   }
+
+  .ticker{
+    display:block;
+  }
+
+  .ticker-title{
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -496,12 +522,12 @@ footer{
 <body>
 
 <div class="topbar">
-  Government Jobs • Results • Admit Card • CSC Services
+  Government Jobs • Results • Admit Card • CSC Online Services
 </div>
 
 <header id="home">
-  <h1>🇮🇳 DIGITAL DREAMS PEGA</h1>
-  <p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • ऑनलाइन सेवाएँ</p>
+  <h1>🇮🇳 PEGAN CSC</h1>
+  <p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • CSC ऑनलाइन सेवाएँ</p>
 </header>
 
 <nav>
@@ -515,21 +541,26 @@ footer{
 
 <div class="container">
 
-<!-- TICKER -->
+<!-- ================= TICKER ================= -->
 
 <div class="ticker">
-  <div class="ticker-title">🔥 Latest Updates</div>
+
+  <div class="ticker-title">
+    🔥 Latest Updates
+  </div>
 
   <div class="ticker-content">
     <div class="ticker-text" id="tickerText">
       Latest updates loading...
     </div>
   </div>
+
 </div>
 
-<!-- SEARCH -->
+<!-- ================= SEARCH ================= -->
 
 <div class="search-box">
+
   <input
     id="publicSearch"
     type="text"
@@ -539,19 +570,24 @@ footer{
   <button onclick="searchPublic()">
     🔎 Search
   </button>
+
 </div>
 
+<!-- ================= WHATSAPP ================= -->
+
 <div class="whatsapp">
+
   <a
     href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
     target="_blank"
     rel="noopener"
   >
-    📱 Join WhatsApp Channel
+    📱 Join PeganCSC WhatsApp Channel
   </a>
+
 </div>
 
-<!-- PUBLIC CATEGORY BUTTONS -->
+<!-- ================= CATEGORIES ================= -->
 
 <div class="category-grid">
 
@@ -597,53 +633,85 @@ footer{
 
 </div>
 
-<!-- PUBLIC UPDATE SECTIONS -->
+<!-- ================= UPDATE BOXES ================= -->
 
 <div class="update-grid">
 
   <div class="update-box" id="jobs">
-    <div class="box-title red">Latest Jobs</div>
-    <div class="update-list" id="latestJobs">Loading...</div>
+    <div class="box-title red">
+      🔴 Latest Jobs
+    </div>
+    <div class="update-list" id="latestJobs">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="results">
-    <div class="box-title green">Results</div>
-    <div class="update-list" id="resultList">Loading...</div>
+    <div class="box-title green">
+      🟢 Results
+    </div>
+    <div class="update-list" id="resultList">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="admit">
-    <div class="box-title blue">Admit Card</div>
-    <div class="update-list" id="admitList">Loading...</div>
+    <div class="box-title blue">
+      🔵 Admit Card
+    </div>
+    <div class="update-list" id="admitList">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="answer">
-    <div class="box-title orange">Answer Key</div>
-    <div class="update-list" id="answerList">Loading...</div>
+    <div class="box-title orange">
+      🟠 Answer Key
+    </div>
+    <div class="update-list" id="answerList">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="admission">
-    <div class="box-title purple">Admissions</div>
-    <div class="update-list" id="admissionList">Loading...</div>
+    <div class="box-title purple">
+      🟣 Admissions
+    </div>
+    <div class="update-list" id="admissionList">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="syllabus">
-    <div class="box-title teal">Syllabus</div>
-    <div class="update-list" id="syllabusList">Loading...</div>
+    <div class="box-title teal">
+      📚 Syllabus
+    </div>
+    <div class="update-list" id="syllabusList">
+      Loading...
+    </div>
   </div>
 
   <div class="update-box" id="schemes">
-    <div class="box-title pink">Government Schemes</div>
-    <div class="update-list" id="schemeList">Loading...</div>
+    <div class="box-title pink">
+      🏛️ Government Schemes
+    </div>
+    <div class="update-list" id="schemeList">
+      Loading...
+    </div>
   </div>
 
-  <div class="update-box">
-    <div class="box-title dark">CSC / Online Services</div>
-    <div class="update-list" id="onlineList">Loading...</div>
+  <div class="update-box" id="online">
+    <div class="box-title dark">
+      💻 CSC / Online Services
+    </div>
+    <div class="update-list" id="onlineList">
+      Loading...
+    </div>
   </div>
 
 </div>
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <h2 class="section-title" id="services">
   💻 Important Online Services
@@ -652,53 +720,117 @@ footer{
 <div class="services-grid">
 
   <div class="service-card">
-    <h3>Family ID</h3>
+    <h3>👨‍👩‍👧 Family ID</h3>
     <p>Haryana Parivar Pehchan Patra</p>
-    <a href="https://meraparivar.haryana.gov.in/"
-       target="_blank"
-       rel="noopener">
+
+    <a
+      href="https://meraparivar.haryana.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
       Open
     </a>
   </div>
 
   <div class="service-card">
-    <h3>Voter ID</h3>
+    <h3>🗳️ Voter ID</h3>
     <p>Election Commission Voter Services</p>
-    <a href="https://voters.eci.gov.in/"
-       target="_blank"
-       rel="noopener">
+
+    <a
+      href="https://voters.eci.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
       Open
     </a>
   </div>
 
   <div class="service-card">
-    <h3>SARAL Haryana</h3>
+    <h3>📄 SARAL Haryana</h3>
     <p>Haryana Government Services</p>
-    <a href="https://saralharyana.gov.in/"
-       target="_blank"
-       rel="noopener">
+
+    <a
+      href="https://saralharyana.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
       Open
     </a>
   </div>
 
   <div class="service-card">
-    <h3>HSSC</h3>
+    <h3>📚 HSSC</h3>
     <p>Haryana Staff Selection Commission</p>
-    <a href="https://www.hssc.gov.in/"
-       target="_blank"
-       rel="noopener">
+
+    <a
+      href="https://www.hssc.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
+      Open
+    </a>
+  </div>
+
+  <div class="service-card">
+    <h3>💳 Income Tax</h3>
+    <p>PAN & Income Tax Services</p>
+
+    <a
+      href="https://www.incometax.gov.in/iec/foportal/"
+      target="_blank"
+      rel="noopener"
+    >
+      Open
+    </a>
+  </div>
+
+  <div class="service-card">
+    <h3>👮 Haryana Police</h3>
+    <p>Haryana Police Online Services</p>
+
+    <a
+      href="https://haryanapolice.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
+      Open
+    </a>
+  </div>
+
+  <div class="service-card">
+    <h3>🏛️ Haryana Govt</h3>
+    <p>Official Haryana Government Portal</p>
+
+    <a
+      href="https://www.haryana.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
+      Open
+    </a>
+  </div>
+
+  <div class="service-card">
+    <h3>🇮🇳 Digital India</h3>
+    <p>Digital India Official Portal</p>
+
+    <a
+      href="https://www.digitalindia.gov.in/"
+      target="_blank"
+      rel="noopener"
+    >
       Open
     </a>
   </div>
 
 </div>
 
-<!-- ADMIN -->
+<!-- ================= ADMIN ================= -->
 
 <div class="admin-wrap" id="admin">
 
 <h2 class="section-title">
-  🔐 Admin Panel
+  🔐 PeganCSC Admin Panel
 </h2>
 
 <div class="admin-box">
@@ -708,7 +840,7 @@ footer{
 <div id="loginBox">
 
   <h2 style="margin-bottom:15px;">
-    Admin Login
+    🔐 Admin Login
   </h2>
 
   <input
@@ -737,13 +869,13 @@ footer{
 
 </div>
 
-<!-- ADMIN DASHBOARD -->
+<!-- ================= ADMIN DASHBOARD ================= -->
 
 <div id="adminPanel" class="hidden">
 
-  <h2>🔐 Admin Dashboard</h2>
+  <h2>⚙️ PeganCSC Admin Dashboard</h2>
 
-  <p style="color:green;margin:8px 0;">
+  <p style="color:green;margin:8px 0 15px;">
     ✅ Admin Login Successful
   </p>
 
@@ -802,7 +934,7 @@ footer{
       class="admin-menu pink"
       onclick="openAdminForm('Government Scheme','🏛️ Government Scheme')"
     >
-      🏛️ Govt Schemes
+      🏛️ Government Schemes
     </button>
 
     <button
@@ -821,7 +953,7 @@ footer{
 
   </div>
 
-  <!-- ADD FORM -->
+  <!-- ================= FORM ================= -->
 
   <div id="formBox" class="form-box hidden">
 
@@ -888,16 +1020,18 @@ footer{
 
   <hr style="margin:30px 0;">
 
-  <!-- MANAGE -->
+  <!-- ================= MANAGE ================= -->
 
-  <h2>🔎 Manage / Search Updates</h2>
+  <h2>
+    🔎 Manage / Search Updates
+  </h2>
 
   <div class="admin-search">
 
     <input
       id="adminSearchInput"
       type="text"
-      placeholder="Search all updates..."
+      placeholder="Search jobs, results, admit cards..."
       oninput="filterAdminUpdates()"
     >
 
@@ -921,13 +1055,16 @@ footer{
 
 </div>
 
-<!-- DETAIL MODAL -->
+<!-- ================= DETAILS MODAL ================= -->
 
 <div id="detailModal" class="modal">
 
   <div class="modal-content">
 
-    <span class="close" onclick="closeModal()">
+    <span
+      class="close"
+      onclick="closeModal()"
+    >
       &times;
     </span>
 
@@ -937,32 +1074,39 @@ footer{
 
 </div>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-  <p>© 2026 Digital Dreams Pega</p>
+  <p>
+    © 2026 PeganCSC
+  </p>
 
   <p>
     Government Jobs • Results • Admit Card • CSC Services
   </p>
 
   <p>
-    📍 Pega, Haryana | 📧 mayankhr82@gmail.com
+    📍 Pegan, Haryana | 📧 mayankhr82@gmail.com
   </p>
 
-  <p style="font-size:12px;color:#ccc;">
-    Disclaimer: यह कोई सरकारी वेबसाइट नहीं है।
-    आवेदन करने से पहले संबंधित विभाग की Official Website
-    और Notification जरूर देखें।
+  <p style="font-size:12px;color:#ccc;margin-top:8px;">
+    Disclaimer: PeganCSC कोई सरकारी वेबसाइट नहीं है।
+    किसी भी भर्ती या सरकारी सेवा के लिए आवेदन करने से पहले
+    संबंधित विभाग की Official Website और Notification जरूर देखें।
   </p>
 
 </footer>
 
+<!-- ================= FIREBASE ================= -->
+
 <script type="module">
 
-/* FIREBASE IMPORTS */
-
-import { initializeApp }
+import {
+  initializeApp
+}
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
 
 import {
   getFirestore,
@@ -975,6 +1119,7 @@ import {
 }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -984,11 +1129,13 @@ import {
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
-/* YOUR EXISTING FIREBASE */
+/* ================= FIREBASE CONFIG ================= */
+/* इसे change मत करना */
 
 const firebaseConfig = {
 
-  apiKey:"AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+  apiKey:
+  "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
 
   authDomain:
   "digital-dreams-pegan.firebaseapp.com",
@@ -1009,11 +1156,13 @@ const firebaseConfig = {
   "G-6EKZP1D3XQ"
 };
 
+
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
 const auth = getAuth(app);
+
 
 let allUpdates = [];
 
@@ -1022,25 +1171,33 @@ let selectedCategory = "";
 let editingId = null;
 
 
-/* LOAD DATA */
+/* ================= LOAD ================= */
 
 async function loadUpdates(){
 
   try{
 
     const snapshot =
-      await getDocs(collection(db,"updates"));
+      await getDocs(
+        collection(db,"updates")
+      );
+
 
     allUpdates = [];
+
 
     snapshot.forEach(item=>{
 
       allUpdates.push({
+
         id:item.id,
+
         ...item.data()
+
       });
 
     });
+
 
     allUpdates.sort(
       (a,b)=>
@@ -1048,29 +1205,31 @@ async function loadUpdates(){
       (a.createdAt || 0)
     );
 
+
     renderPublic(allUpdates);
 
     renderTicker();
 
+
     if(auth.currentUser){
+
       renderAdmin(allUpdates);
+
     }
+
 
   }catch(error){
 
     console.error(error);
 
-    alert(
-      "Updates load नहीं हुए: " +
-      error.message
-    );
+    showPublicError();
 
   }
 
 }
 
 
-/* PUBLIC RENDER */
+/* ================= PUBLIC RENDER ================= */
 
 function renderPublic(items){
 
@@ -1091,18 +1250,23 @@ function renderPublic(items){
     "Government Scheme":"schemeList",
 
     "Online Service":"onlineList"
+
   };
 
 
-  Object.values(categories).forEach(id=>{
+  Object.values(categories)
+  .forEach(id=>{
 
-    document.getElementById(id).innerHTML =
-      '<p style="color:#777;">अभी कोई Update नहीं है।</p>';
+    document
+    .getElementById(id)
+    .innerHTML =
+      '<p style="color:#777;">अभी कोई Update उपलब्ध नहीं है।</p>';
 
   });
 
 
-  Object.entries(categories).forEach(
+  Object.entries(categories)
+  .forEach(
     ([category,id])=>{
 
       const box =
@@ -1112,17 +1276,25 @@ function renderPublic(items){
       const filtered =
         items.filter(item=>{
 
+          /*
+          पुराने Firebase records में category
+          नहीं है तो Latest Job माना जाएगा।
+          */
+
           const cat =
             item.category ||
             "Latest Job";
+
 
           return cat === category;
 
         });
 
 
-      if(!filtered.length){
+      if(filtered.length === 0){
+
         return;
+
       }
 
 
@@ -1132,42 +1304,60 @@ function renderPublic(items){
       filtered.forEach(item=>{
 
         const div =
-          document.createElement("div");
+          document.createElement(
+            "div"
+          );
+
 
         div.className =
           "update-item";
 
 
-        const a =
-          document.createElement("a");
+        const link =
+          document.createElement(
+            "a"
+          );
 
-        a.href="#";
 
-        a.textContent =
+        link.href="#";
+
+
+        link.textContent =
           item.title ||
           "View Update";
 
 
-        a.onclick = function(e){
+        link.addEventListener(
+          "click",
+          function(event){
 
-          e.preventDefault();
+            event.preventDefault();
 
-          openDetails(item.id);
+            openDetails(
+              item.id
+            );
 
-        };
-
-
-        const span =
-          document.createElement("span");
-
-        span.className="new";
-
-        span.textContent="NEW";
+          }
+        );
 
 
-        div.appendChild(a);
+        const newTag =
+          document.createElement(
+            "span"
+          );
 
-        div.appendChild(span);
+
+        newTag.className =
+          "new";
+
+
+        newTag.textContent =
+          "NEW";
+
+
+        div.appendChild(link);
+
+        div.appendChild(newTag);
 
         box.appendChild(div);
 
@@ -1179,7 +1369,37 @@ function renderPublic(items){
 }
 
 
-/* TICKER */
+/* ================= ERROR ================= */
+
+function showPublicError(){
+
+  const ids = [
+
+    "latestJobs",
+    "resultList",
+    "admitList",
+    "answerList",
+    "admissionList",
+    "syllabusList",
+    "schemeList",
+    "onlineList"
+
+  ];
+
+
+  ids.forEach(id=>{
+
+    document
+    .getElementById(id)
+    .innerHTML =
+      '<p style="color:red;">❌ Updates load नहीं हो सके।</p>';
+
+  });
+
+}
+
+
+/* ================= TICKER ================= */
 
 function renderTicker(){
 
@@ -1197,10 +1417,12 @@ function renderTicker(){
     );
 
 
-  if(!tickerItems.length){
+  if(
+    tickerItems.length === 0
+  ){
 
     ticker.textContent =
-      "Digital Dreams Pega - Latest Government Jobs, Results, Admit Cards और Online Services";
+      "PeganCSC - Latest Government Jobs, Results, Admit Cards और CSC Online Services";
 
     return;
 
@@ -1209,19 +1431,31 @@ function renderTicker(){
 
   ticker.textContent =
     tickerItems
-    .map(item=>item.title)
-    .join("     ★     ");
+
+    .map(
+      item=>
+      item.title || ""
+    )
+
+    .filter(Boolean)
+
+    .join(
+      "     ★     "
+    );
 
 }
 
 
-/* PUBLIC SEARCH */
+/* ================= PUBLIC SEARCH ================= */
 
-window.searchPublic = function(){
+window.searchPublic =
+function(){
 
   const text =
     document
-    .getElementById("publicSearch")
+    .getElementById(
+      "publicSearch"
+    )
     .value
     .trim()
     .toLowerCase();
@@ -1229,7 +1463,9 @@ window.searchPublic = function(){
 
   if(!text){
 
-    renderPublic(allUpdates);
+    renderPublic(
+      allUpdates
+    );
 
     return;
 
@@ -1243,11 +1479,13 @@ window.searchPublic = function(){
         item.category ===
         "Latest Update"
       ){
+
         return false;
+
       }
 
 
-      const data = `
+      const content = `
 
         ${item.title || ""}
 
@@ -1262,32 +1500,67 @@ window.searchPublic = function(){
       `.toLowerCase();
 
 
-      return data.includes(text);
+      return content.includes(
+        text
+      );
 
     });
 
 
-  renderPublic(filtered);
+  renderPublic(
+    filtered
+  );
 
 };
 
 
-/* SCROLL */
+document
+.getElementById("publicSearch")
+.addEventListener(
+  "keyup",
+  event=>{
 
-window.goTo = function(id){
+    if(
+      event.key ===
+      "Enter"
+    ){
 
-  document
-  .getElementById(id)
-  ?.scrollIntoView({
-    behavior:"smooth"
-  });
+      window.searchPublic();
+
+    }
+
+  }
+);
+
+
+/* ================= SCROLL ================= */
+
+window.goTo =
+function(id){
+
+  const element =
+    document.getElementById(id);
+
+
+  if(element){
+
+    element.scrollIntoView({
+
+      behavior:"smooth",
+
+      block:"start"
+
+    });
+
+  }
 
 };
 
 
-/* LOGIN */
+/* ================= LOGIN ================= */
 
-window.login = async function(){
+window.login =
+async function(){
 
   const email =
     document
@@ -1304,13 +1577,18 @@ window.login = async function(){
 
   const message =
     document
-    .getElementById("loginMessage");
+    .getElementById(
+      "loginMessage"
+    );
 
 
-  if(!email || !password){
+  if(
+    !email ||
+    !password
+  ){
 
     message.textContent =
-      "Email और Password डालें।";
+      "⚠️ Email और Password डालें।";
 
     return;
 
@@ -1320,19 +1598,27 @@ window.login = async function(){
   try{
 
     await signInWithEmailAndPassword(
+
       auth,
+
       email,
+
       password
+
     );
 
 
     message.textContent =
-      "Login Successful";
+      "✅ Login Successful";
+
 
   }catch(error){
 
+    console.error(error);
+
+
     message.textContent =
-      "Login Failed: " +
+      "❌ Login Failed: " +
       error.message;
 
   }
@@ -1340,16 +1626,27 @@ window.login = async function(){
 };
 
 
-/* LOGOUT */
+/* ================= LOGOUT ================= */
 
-window.logout = async function(){
+window.logout =
+async function(){
 
-  await signOut(auth);
+  try{
+
+    await signOut(auth);
+
+  }catch(error){
+
+    alert(
+      error.message
+    );
+
+  }
 
 };
 
 
-/* AUTH */
+/* ================= AUTH STATE ================= */
 
 onAuthStateChanged(
   auth,
@@ -1358,27 +1655,47 @@ onAuthStateChanged(
     if(user){
 
       document
-      .getElementById("loginBox")
-      .classList.add("hidden");
+      .getElementById(
+        "loginBox"
+      )
+      .classList
+      .add("hidden");
 
 
       document
-      .getElementById("adminPanel")
-      .classList.remove("hidden");
+      .getElementById(
+        "adminPanel"
+      )
+      .classList
+      .remove("hidden");
 
 
-      renderAdmin(allUpdates);
+      renderAdmin(
+        allUpdates
+      );
+
 
     }else{
 
       document
-      .getElementById("loginBox")
-      .classList.remove("hidden");
+      .getElementById(
+        "loginBox"
+      )
+      .classList
+      .remove("hidden");
 
 
       document
-      .getElementById("adminPanel")
-      .classList.add("hidden");
+      .getElementById(
+        "adminPanel"
+      )
+      .classList
+      .add("hidden");
+
+
+      selectedCategory = "";
+
+      editingId = null;
 
     }
 
@@ -1386,7 +1703,7 @@ onAuthStateChanged(
 );
 
 
-/* OPEN CATEGORY FORM */
+/* ================= OPEN ADMIN CATEGORY ================= */
 
 window.openAdminForm =
 function(category,label){
@@ -1394,51 +1711,82 @@ function(category,label){
   selectedCategory =
     category;
 
+
   editingId = null;
+
 
   clearFormFields();
 
 
   document
-  .getElementById("formBox")
-  .classList.remove("hidden");
+  .getElementById(
+    "formBox"
+  )
+  .classList
+  .remove("hidden");
 
 
   document
-  .getElementById("selectedCategory")
+  .getElementById(
+    "selectedCategory"
+  )
   .textContent =
-    "Selected: " + label;
+    "Selected Section: " +
+    label;
 
 
   document
-  .getElementById("formTitle")
+  .getElementById(
+    "formTitle"
+  )
   .textContent =
-    "➕ Add " + label;
+    "➕ Add " +
+    label;
 
 
   document
-  .getElementById("cancelEdit")
-  .classList.add("hidden");
+  .getElementById(
+    "cancelEdit"
+  )
+  .classList
+  .add("hidden");
 
 
   document
-  .getElementById("formBox")
+  .getElementById(
+    "formBox"
+  )
   .scrollIntoView({
+
     behavior:"smooth"
+
   });
 
 };
 
 
-/* SAVE */
+/* ================= SAVE ================= */
 
 window.saveUpdate =
 async function(){
 
-  if(!selectedCategory){
+  if(!auth.currentUser){
 
     alert(
-      "पहले Admin Dashboard से Category चुनें।"
+      "Admin login required."
+    );
+
+    return;
+
+  }
+
+
+  if(
+    !selectedCategory
+  ){
+
+    alert(
+      "पहले Admin Dashboard से Section चुनें।"
     );
 
     return;
@@ -1448,49 +1796,63 @@ async function(){
 
   const title =
     document
-    .getElementById("jobTitle")
+    .getElementById(
+      "jobTitle"
+    )
     .value
     .trim();
 
 
   const post =
     document
-    .getElementById("post")
+    .getElementById(
+      "post"
+    )
     .value
     .trim();
 
 
   const lastDate =
     document
-    .getElementById("lastDate")
+    .getElementById(
+      "lastDate"
+    )
     .value
     .trim();
 
 
   const qualification =
     document
-    .getElementById("qualification")
+    .getElementById(
+      "qualification"
+    )
     .value
     .trim();
 
 
   const officialLink =
     document
-    .getElementById("officialLink")
+    .getElementById(
+      "officialLink"
+    )
     .value
     .trim();
 
 
   const description =
     document
-    .getElementById("description")
+    .getElementById(
+      "description"
+    )
     .value
     .trim();
 
 
   if(!title){
 
-    alert("Title डालें।");
+    alert(
+      "Title डालें।"
+    );
 
     return;
 
@@ -1499,11 +1861,13 @@ async function(){
 
   if(
     officialLink &&
-    safeUrl(officialLink) === "#"
+    safeUrl(
+      officialLink
+    ) === "#"
   ){
 
     alert(
-      "Official Link सही डालें। https:// से शुरू करें।"
+      "Official Link सही डालें। Link https:// से शुरू होना चाहिए।"
     );
 
     return;
@@ -1513,7 +1877,8 @@ async function(){
 
   const data = {
 
-    category:selectedCategory,
+    category:
+      selectedCategory,
 
     title,
 
@@ -1535,18 +1900,22 @@ async function(){
     if(editingId){
 
       await updateDoc(
+
         doc(
           db,
           "updates",
           editingId
         ),
+
         data
+
       );
 
 
       alert(
         "✅ Update Edited Successfully"
       );
+
 
     }else{
 
@@ -1555,11 +1924,14 @@ async function(){
 
 
       await addDoc(
+
         collection(
           db,
           "updates"
         ),
+
         data
+
       );
 
 
@@ -1576,12 +1948,16 @@ async function(){
 
     selectedCategory = "";
 
+
     clearFormFields();
 
 
     document
-    .getElementById("formBox")
-    .classList.add("hidden");
+    .getElementById(
+      "formBox"
+    )
+    .classList
+    .add("hidden");
 
 
     await loadUpdates();
@@ -1591,8 +1967,9 @@ async function(){
 
     console.error(error);
 
+
     alert(
-      "Error: " +
+      "❌ Error: " +
       error.message
     );
 
@@ -1601,7 +1978,7 @@ async function(){
 };
 
 
-/* ADMIN LIST */
+/* ================= ADMIN LIST ================= */
 
 function renderAdmin(items){
 
@@ -1611,7 +1988,9 @@ function renderAdmin(items){
     );
 
 
-  if(!items.length){
+  if(
+    items.length === 0
+  ){
 
     box.innerHTML =
       "<p>अभी कोई Update नहीं है।</p>";
@@ -1621,17 +2000,24 @@ function renderAdmin(items){
   }
 
 
-  box.innerHTML="";
+  box.innerHTML = "";
 
 
   items.forEach(item=>{
 
     const div =
-      document.createElement("div");
+      document.createElement(
+        "div"
+      );
 
 
     div.className =
       "admin-update";
+
+
+    const category =
+      item.category ||
+      "Latest Job";
 
 
     div.innerHTML = `
@@ -1647,8 +2033,7 @@ function renderAdmin(items){
       <small>
         Category:
         ${escapeHtml(
-          item.category ||
-          "Latest Job"
+          category
         )}
       </small>
 
@@ -1671,30 +2056,48 @@ function renderAdmin(items){
     `;
 
 
-    box.appendChild(div);
-
-  });
-
-
-  box
-  .querySelectorAll("[data-edit]")
-  .forEach(button=>{
-
-    button.onclick =
-    ()=>editUpdate(
-      button.dataset.edit
+    box.appendChild(
+      div
     );
 
   });
 
 
   box
-  .querySelectorAll("[data-delete]")
+  .querySelectorAll(
+    "[data-edit]"
+  )
   .forEach(button=>{
 
-    button.onclick =
-    ()=>deleteUpdate(
-      button.dataset.delete
+    button.addEventListener(
+      "click",
+      ()=>{
+
+        editUpdate(
+          button.dataset.edit
+        );
+
+      }
+    );
+
+  });
+
+
+  box
+  .querySelectorAll(
+    "[data-delete]"
+  )
+  .forEach(button=>{
+
+    button.addEventListener(
+      "click",
+      ()=>{
+
+        deleteUpdate(
+          button.dataset.delete
+        );
+
+      }
     );
 
   });
@@ -1702,7 +2105,7 @@ function renderAdmin(items){
 }
 
 
-/* ADMIN SEARCH */
+/* ================= ADMIN SEARCH ================= */
 
 window.filterAdminUpdates =
 function(){
@@ -1719,7 +2122,9 @@ function(){
 
   if(!text){
 
-    renderAdmin(allUpdates);
+    renderAdmin(
+      allUpdates
+    );
 
     return;
 
@@ -1729,7 +2134,7 @@ function(){
   const filtered =
     allUpdates.filter(item=>{
 
-      const data = `
+      const content = `
 
         ${item.title || ""}
 
@@ -1739,32 +2144,41 @@ function(){
 
         ${item.description || ""}
 
+        ${item.qualification || ""}
+
       `.toLowerCase();
 
 
-      return data.includes(text);
+      return content.includes(
+        text
+      );
 
     });
 
 
-  renderAdmin(filtered);
+  renderAdmin(
+    filtered
+  );
 
 };
 
 
-/* EDIT */
+/* ================= EDIT ================= */
 
 function editUpdate(id){
 
   const item =
     allUpdates.find(
-      x=>x.id === id
+      update=>
+      update.id === id
     );
 
 
   if(!item){
 
-    alert("Update नहीं मिला।");
+    alert(
+      "Update नहीं मिला।"
+    );
 
     return;
 
@@ -1781,8 +2195,11 @@ function editUpdate(id){
 
 
   document
-  .getElementById("formBox")
-  .classList.remove("hidden");
+  .getElementById(
+    "formBox"
+  )
+  .classList
+  .remove("hidden");
 
 
   document
@@ -1790,30 +2207,38 @@ function editUpdate(id){
     "selectedCategory"
   )
   .textContent =
-    "Editing Category: " +
+    "Editing Section: " +
     selectedCategory;
 
 
   document
-  .getElementById("formTitle")
+  .getElementById(
+    "formTitle"
+  )
   .textContent =
     "✏️ Edit Update";
 
 
   document
-  .getElementById("jobTitle")
+  .getElementById(
+    "jobTitle"
+  )
   .value =
     item.title || "";
 
 
   document
-  .getElementById("post")
+  .getElementById(
+    "post"
+  )
   .value =
     item.post || "";
 
 
   document
-  .getElementById("lastDate")
+  .getElementById(
+    "lastDate"
+  )
   .value =
     item.lastDate || "";
 
@@ -1846,19 +2271,24 @@ function editUpdate(id){
   .getElementById(
     "cancelEdit"
   )
-  .classList.remove("hidden");
+  .classList
+  .remove("hidden");
 
 
   document
-  .getElementById("formBox")
+  .getElementById(
+    "formBox"
+  )
   .scrollIntoView({
+
     behavior:"smooth"
+
   });
 
 }
 
 
-/* CANCEL */
+/* ================= CANCEL ================= */
 
 window.cancelEditing =
 function(){
@@ -1867,37 +2297,58 @@ function(){
 
   selectedCategory = "";
 
+
   clearFormFields();
 
 
   document
-  .getElementById("formBox")
-  .classList.add("hidden");
+  .getElementById(
+    "formBox"
+  )
+  .classList
+  .add("hidden");
 
 };
 
 
-/* DELETE */
+/* ================= DELETE ================= */
 
 async function deleteUpdate(id){
 
-  if(
-    !confirm(
-      "क्या आप इस Update को Delete करना चाहते हैं?"
-    )
-  ){
+  if(!auth.currentUser){
+
+    alert(
+      "Admin login required."
+    );
+
     return;
+
+  }
+
+
+  const confirmed =
+    confirm(
+      "क्या आप इस Update को Delete करना चाहते हैं?"
+    );
+
+
+  if(!confirmed){
+
+    return;
+
   }
 
 
   try{
 
     await deleteDoc(
+
       doc(
         db,
         "updates",
         id
       )
+
     );
 
 
@@ -1911,8 +2362,11 @@ async function deleteUpdate(id){
 
   }catch(error){
 
+    console.error(error);
+
+
     alert(
-      "Delete Failed: " +
+      "❌ Delete Failed: " +
       error.message
     );
 
@@ -1921,61 +2375,81 @@ async function deleteUpdate(id){
 }
 
 
-/* CLEAR FORM */
+/* ================= CLEAR FORM ================= */
 
 function clearFormFields(){
 
   document
-  .getElementById("jobTitle")
-  .value="";
+  .getElementById(
+    "jobTitle"
+  )
+  .value = "";
 
 
   document
-  .getElementById("post")
-  .value="";
+  .getElementById(
+    "post"
+  )
+  .value = "";
 
 
   document
-  .getElementById("lastDate")
-  .value="";
+  .getElementById(
+    "lastDate"
+  )
+  .value = "";
 
 
   document
-  .getElementById("qualification")
-  .value="";
+  .getElementById(
+    "qualification"
+  )
+  .value = "";
 
 
   document
-  .getElementById("officialLink")
-  .value="";
+  .getElementById(
+    "officialLink"
+  )
+  .value = "";
 
 
   document
-  .getElementById("description")
-  .value="";
+  .getElementById(
+    "description"
+  )
+  .value = "";
 
 }
 
 
-/* DETAILS */
+/* ================= DETAILS ================= */
 
 window.openDetails =
 function(id){
 
   const item =
     allUpdates.find(
-      x=>x.id === id
+      update=>
+      update.id === id
     );
 
 
   if(!item){
+
+    alert(
+      "Update नहीं मिला।"
+    );
+
     return;
+
   }
 
 
   const link =
     safeUrl(
-      item.officialLink || ""
+      item.officialLink ||
+      ""
     );
 
 
@@ -1998,7 +2472,10 @@ function(id){
     <table class="detail-table">
 
       <tr>
-        <td>Category</td>
+
+        <td>
+          Category
+        </td>
 
         <td>
           ${escapeHtml(
@@ -2006,33 +2483,45 @@ function(id){
             "Latest Job"
           )}
         </td>
+
       </tr>
 
 
       <tr>
-        <td>Post / Department</td>
+
+        <td>
+          Post / Department
+        </td>
 
         <td>
           ${escapeHtml(
             item.post || "-"
           )}
         </td>
+
       </tr>
 
 
       <tr>
-        <td>Important Date</td>
+
+        <td>
+          Important Date
+        </td>
 
         <td>
           ${escapeHtml(
             item.lastDate || "-"
           )}
         </td>
+
       </tr>
 
 
       <tr>
-        <td>Qualification</td>
+
+        <td>
+          Qualification
+        </td>
 
         <td>
           ${escapeHtml(
@@ -2040,6 +2529,7 @@ function(id){
             "-"
           )}
         </td>
+
       </tr>
 
     </table>
@@ -2064,7 +2554,9 @@ function(id){
 
     ${
       link !== "#"
+
       ?
+
       `
       <a
         class="official-btn"
@@ -2075,7 +2567,9 @@ function(id){
         🔗 Official Website
       </a>
       `
+
       :
+
       ""
     }
 
@@ -2091,6 +2585,8 @@ function(id){
 
 };
 
+
+/* ================= CLOSE MODAL ================= */
 
 window.closeModal =
 function(){
@@ -2115,7 +2611,10 @@ window.addEventListener(
       );
 
 
-    if(event.target === modal){
+    if(
+      event.target ===
+      modal
+    ){
 
       modal.style.display =
         "none";
@@ -2126,21 +2625,36 @@ window.addEventListener(
 );
 
 
-/* SECURITY */
+/* ================= SECURITY ================= */
 
 function escapeHtml(value){
 
   return String(value)
 
-  .replaceAll("&","&amp;")
+  .replaceAll(
+    "&",
+    "&amp;"
+  )
 
-  .replaceAll("<","&lt;")
+  .replaceAll(
+    "<",
+    "&lt;"
+  )
 
-  .replaceAll(">","&gt;")
+  .replaceAll(
+    ">",
+    "&gt;"
+  )
 
-  .replaceAll('"',"&quot;")
+  .replaceAll(
+    '"',
+    "&quot;"
+  )
 
-  .replaceAll("'","&#039;");
+  .replaceAll(
+    "'",
+    "&#039;"
+  );
 
 }
 
@@ -2162,7 +2676,7 @@ function safeUrl(url){
 
     }
 
-  }catch(e){}
+  }catch(error){}
 
 
   return "#";
@@ -2170,7 +2684,7 @@ function safeUrl(url){
 }
 
 
-/* START */
+/* ================= START ================= */
 
 loadUpdates();
 
