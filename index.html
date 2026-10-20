@@ -4,1541 +4,1650 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PeganCSC | Jobs, Results, Admit Card & CSC</title>
+<title>Digital Dreams Pega | Jobs, Results, Admit Card & CSC</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
-}
-
-html{
-  scroll-behavior:smooth;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-  background:#f5f5f5;
-  color:#222;
-}
-
-a{
-  text-decoration:none;
-}
-
-.topbar{
-  background:#7b0000;
-  color:white;
-  text-align:center;
-  padding:8px 10px;
-  font-size:14px;
+    font-family:Arial, sans-serif;
+    background:#f3f6fa;
+    color:#222;
 }
 
 header{
-  background:#b30000;
-  color:white;
-  text-align:center;
-  padding:22px 10px;
+    background:linear-gradient(135deg,#063970,#0b75c9);
+    color:white;
+    text-align:center;
+    padding:22px 10px;
 }
 
 header h1{
-  font-size:32px;
-  margin-bottom:5px;
+    font-size:30px;
+    margin-bottom:8px;
 }
 
 header p{
-  font-size:15px;
+    font-size:15px;
 }
 
 nav{
-  background:#111;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  position:sticky;
-  top:0;
-  z-index:1000;
+    background:#092b49;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav a{
-  color:white;
-  padding:14px 15px;
-  font-weight:bold;
-  font-size:14px;
+    color:white;
+    text-decoration:none;
+    padding:13px 17px;
+    font-weight:bold;
 }
 
 nav a:hover{
-  background:#b30000;
+    background:#0d6efd;
+}
+
+.ticker{
+    background:#fff3cd;
+    color:#8a4b00;
+    padding:11px;
+    font-weight:bold;
+    overflow:hidden;
 }
 
 .container{
-  width:94%;
-  max-width:1200px;
-  margin:auto;
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
 }
 
-.breaking{
-  background:white;
-  margin:18px auto;
-  border:1px solid #ddd;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
+.search{
+    background:white;
+    padding:18px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ccc;
+    margin-bottom:20px;
 }
 
-.breaking-title{
-  background:#b30000;
-  color:white;
-  padding:12px;
-  font-weight:bold;
-  white-space:nowrap;
-}
-
-.breaking marquee{
-  padding:10px;
-  color:#b30000;
-  font-weight:bold;
-}
-
-.search-box{
-  background:white;
-  padding:18px;
-  border:1px solid #ddd;
-  margin-bottom:20px;
-  display:flex;
-  gap:8px;
-}
-
-.search-box input{
-  flex:1;
-  padding:12px;
-  border:1px solid #aaa;
-  font-size:15px;
-}
-
-.search-box button{
-  border:0;
-  background:#b30000;
-  color:white;
-  padding:0 20px;
-  font-weight:bold;
-  cursor:pointer;
+.search input{
+    width:100%;
+    padding:13px;
+    border:1px solid #bbb;
+    border-radius:7px;
+    font-size:16px;
 }
 
 .whatsapp{
-  text-align:center;
-  margin:20px 0;
+    display:inline-block;
+    margin-top:12px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:7px;
+    font-weight:bold;
 }
 
-.whatsapp a{
-  display:inline-block;
-  background:#159447;
-  color:white;
-  padding:13px 25px;
-  border-radius:5px;
-  font-weight:bold;
+.categories{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:10px;
+    margin-bottom:25px;
 }
 
-.category-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  margin:20px 0;
+.categories button{
+    border:0;
+    padding:14px 8px;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background:#0d6efd;
 }
 
-.cat{
-  color:white;
-  padding:22px 10px;
-  text-align:center;
-  font-weight:bold;
-  font-size:17px;
-  border-radius:4px;
-  cursor:pointer;
+.categories button:hover{
+    opacity:.85;
 }
 
-.red{background:#c62828;}
-.green{background:#188038;}
-.blue{background:#1565c0;}
-.orange{background:#ef6c00;}
-.purple{background:#6a1b9a;}
-.teal{background:#00796b;}
-.pink{background:#ad1457;}
-.dark{background:#37474f;}
-
-.updates-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin:25px 0;
+.section{
+    background:white;
+    margin-bottom:22px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px #ddd;
 }
 
-.update-box{
-  background:white;
-  border:1px solid #ccc;
+.section h2{
+    background:#063970;
+    color:white;
+    padding:13px;
+    font-size:20px;
 }
 
-.update-heading{
-  color:white;
-  text-align:center;
-  padding:12px;
-  font-size:20px;
-  font-weight:bold;
+.list{
+    padding:10px;
 }
 
-.update-list{
-  padding:10px 18px 18px;
-  min-height:180px;
+.card{
+    border-bottom:1px solid #ddd;
+    padding:14px;
+    cursor:pointer;
 }
 
-.update-item{
-  padding:10px 2px;
-  border-bottom:1px dashed #ccc;
-  line-height:1.5;
+.card:last-child{
+    border-bottom:0;
 }
 
-.update-item a{
-  color:#0645ad;
-  font-weight:bold;
-  cursor:pointer;
+.card:hover{
+    background:#f5f9ff;
 }
 
-.update-item a:hover{
-  color:#b30000;
-  text-decoration:underline;
+.card h3{
+    color:#064f91;
+    margin-bottom:7px;
 }
 
-.new{
-  color:red;
-  font-size:11px;
-  font-weight:bold;
-  margin-left:5px;
-}
-
-.section-title{
-  background:#b30000;
-  color:white;
-  padding:12px;
-  text-align:center;
-  margin:30px 0 15px;
+.badge{
+    display:inline-block;
+    background:#dc3545;
+    color:white;
+    padding:4px 8px;
+    border-radius:4px;
+    font-size:12px;
+    margin-right:5px;
 }
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    padding:15px;
 }
 
-.service-card{
-  background:white;
-  border:1px solid #ddd;
-  text-align:center;
-  padding:22px 10px;
+.service{
+    background:#f7f9fc;
+    border:1px solid #ddd;
+    border-radius:9px;
+    padding:18px;
+    text-align:center;
 }
 
-.service-card h3{
-  color:#b30000;
-  margin-bottom:10px;
+.service a{
+    display:block;
+    margin-top:10px;
+    background:#0d6efd;
+    color:white;
+    padding:9px;
+    border-radius:6px;
+    text-decoration:none;
 }
 
-.service-card p{
-  color:#555;
-  font-size:14px;
-  min-height:35px;
+#adminPanel{
+    display:none;
 }
 
-.service-card a{
-  display:inline-block;
-  background:#1565c0;
-  color:white;
-  padding:9px 18px;
-  margin-top:12px;
-  border-radius:4px;
+.admin-login,
+.admin-dashboard{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ccc;
+    margin-bottom:20px;
 }
 
-.admin-section{
-  margin:40px auto;
-}
-
-.admin-box{
-  background:white;
-  max-width:800px;
-  margin:auto;
-  border:1px solid #ccc;
-  padding:25px;
-}
-
-.admin-box h2,
-.admin-box h3{
-  margin-bottom:15px;
-}
-
-input,
-textarea,
-select{
-  width:100%;
-  padding:12px;
-  margin:7px 0 14px;
-  border:1px solid #bbb;
-  font-size:15px;
+input,textarea,select{
+    width:100%;
+    padding:11px;
+    margin:6px 0 12px;
+    border:1px solid #bbb;
+    border-radius:6px;
 }
 
 textarea{
-  min-height:110px;
-  resize:vertical;
+    min-height:100px;
+    resize:vertical;
 }
 
-.blue-btn,
-.red-btn,
-.edit-btn{
-  border:0;
-  color:white;
-  padding:10px 16px;
-  cursor:pointer;
-  border-radius:4px;
-  font-weight:bold;
+.btn{
+    border:0;
+    padding:11px 17px;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    margin:4px;
 }
 
-.blue-btn{
-  background:#1565c0;
+.blue{background:#0d6efd;}
+.green{background:#198754;}
+.red{background:#dc3545;}
+.orange{background:#fd7e14;}
+.purple{background:#6f42c1;}
+.dark{background:#212529;}
+
+.dashboard-buttons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:10px;
+    margin-bottom:20px;
 }
 
-.red-btn{
-  background:#c62828;
+.dashboard-buttons button{
+    padding:15px;
+    border:0;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.edit-btn{
-  background:#ef6c00;
+.form-box{
+    display:none;
+    background:#f8f9fa;
+    padding:18px;
+    border-radius:8px;
+    margin-top:15px;
 }
 
-.hidden{
-  display:none !important;
+.admin-list{
+    margin-top:20px;
 }
 
-.admin-job{
-  background:#f7f7f7;
-  border-left:4px solid #b30000;
-  padding:15px;
-  margin:12px 0;
-}
-
-.admin-job button{
-  margin-top:8px;
-  margin-right:5px;
-}
-
-.modal{
-  display:none;
-  position:fixed;
-  z-index:2000;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  overflow:auto;
-  background:rgba(0,0,0,.65);
-}
-
-.modal-content{
-  background:white;
-  width:92%;
-  max-width:800px;
-  margin:50px auto;
-  padding:25px;
-  position:relative;
-  border-radius:5px;
-}
-
-.close{
-  position:absolute;
-  right:15px;
-  top:10px;
-  font-size:30px;
-  cursor:pointer;
-  color:#b30000;
-}
-
-.detail-title{
-  color:#b30000;
-  padding-right:35px;
-  margin-bottom:20px;
-}
-
-.detail-table{
-  width:100%;
-  border-collapse:collapse;
-  margin:15px 0;
-}
-
-.detail-table td{
-  border:1px solid #ccc;
-  padding:10px;
-}
-
-.detail-table td:first-child{
-  width:35%;
-  font-weight:bold;
-  background:#f3f3f3;
-}
-
-.official-btn{
-  display:inline-block;
-  background:#1565c0;
-  color:white;
-  padding:11px 18px;
-  margin-top:15px;
-}
-
-.about{
-  background:white;
-  border:1px solid #ddd;
-  padding:22px;
-  line-height:1.8;
-  margin-bottom:20px;
+.admin-item{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:13px;
+    margin:8px 0;
+    border-radius:7px;
 }
 
 footer{
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:25px 10px;
-  margin-top:35px;
-  line-height:1.8;
+    background:#092b49;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    margin-top:30px;
 }
 
-@media(max-width:900px){
-  .category-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    padding:20px;
+}
 
-  .updates-grid{
-    grid-template-columns:1fr 1fr;
-  }
+.modal-content{
+    background:white;
+    max-width:700px;
+    margin:40px auto;
+    padding:22px;
+    border-radius:10px;
+    max-height:85vh;
+    overflow:auto;
+}
 
-  .services{
-    grid-template-columns:repeat(2,1fr);
-  }
+.close{
+    float:right;
+    font-size:25px;
+    cursor:pointer;
+    color:red;
 }
 
 @media(max-width:600px){
-  header h1{
-    font-size:25px;
-  }
+    header h1{
+        font-size:24px;
+    }
 
-  nav a{
-    padding:11px 8px;
-    font-size:12px;
-  }
-
-  .updates-grid{
-    grid-template-columns:1fr;
-  }
-
-  .services{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .cat{
-    font-size:14px;
-    padding:17px 5px;
-  }
-
-  .search-box{
-    flex-direction:column;
-  }
-
-  .search-box button{
-    padding:12px;
-  }
+    nav a{
+        padding:10px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  Government Jobs • Results • Admit Cards • CSC & Online Services
-</div>
-
-<header id="home">
-  <h1>🇮🇳 PEGAN CSC</h1>
-  <p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • ऑनलाइन सेवाएँ</p>
+<header>
+    <h1>🇮🇳 DIGITAL DREAMS PEGA</h1>
+    <p>सरकारी नौकरी • रिजल्ट • एडमिट कार्ड • ऑनलाइन सेवाएँ</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#latest">Latest Jobs</a>
-  <a href="#results">Results</a>
-  <a href="#admit">Admit Card</a>
-  <a href="#answer">Answer Key</a>
-  <a href="#services">Services</a>
-  <a href="#admin">Admin</a>
+    <a href="#home">Home</a>
+    <a href="#jobs">Latest Jobs</a>
+    <a href="#results">Results</a>
+    <a href="#admit">Admit Card</a>
+    <a href="#answer">Answer Key</a>
+    <a href="#services">Services</a>
+    <a href="#admin">Admin</a>
 </nav>
 
-<div class="container">
-
-<div class="breaking">
-  <div class="breaking-title">🔥 Latest Update</div>
-  <marquee>
-    PeganCSC पर Government Jobs, Results, Admit Card, Answer Key और Online Services की Latest Updates प्राप्त करें।
-  </marquee>
+<div class="ticker">
+    🔥 Latest Update :
+    <span id="tickerText">Digital Dreams Pega पर सभी सरकारी अपडेट देखें</span>
 </div>
 
-<div class="search-box">
-  <input type="text" id="searchInput"
-  placeholder="Job, Result, Admit Card आदि Search करें...">
-  <button onclick="searchUpdates()">🔍 Search</button>
-</div>
-
-<div class="whatsapp">
-  <a href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
-  target="_blank" rel="noopener">
-    📱 Join PeganCSC WhatsApp Channel
-  </a>
-</div>
-
-<div class="category-grid">
-
-  <div class="cat red" onclick="scrollCategory('latest')">
-    📢 Latest Jobs
-  </div>
-
-  <div class="cat green" onclick="scrollCategory('results')">
-    📊 Results
-  </div>
-
-  <div class="cat blue" onclick="scrollCategory('admit')">
-    🎫 Admit Card
-  </div>
-
-  <div class="cat orange" onclick="scrollCategory('answer')">
-    📝 Answer Key
-  </div>
-
-  <div class="cat purple" onclick="scrollCategory('admission')">
-    🎓 Admission
-  </div>
-
-  <div class="cat teal" onclick="scrollCategory('syllabus')">
-    📚 Syllabus
-  </div>
-
-  <div class="cat pink" onclick="scrollCategory('schemes')">
-    🏛️ Govt Schemes
-  </div>
-
-  <div class="cat dark" onclick="scrollCategory('services')">
-    💻 Online Services
-  </div>
-
-</div>
-
-<div class="updates-grid">
-
-  <div class="update-box" id="latest">
-    <div class="update-heading red">Latest Jobs</div>
-    <div class="update-list" id="latestJobs">Loading...</div>
-  </div>
-
-  <div class="update-box" id="results">
-    <div class="update-heading green">Results</div>
-    <div class="update-list" id="resultList">Loading...</div>
-  </div>
+<div class="container" id="home">
+
+    <div class="search">
+        <h2>🔎 Search Latest Updates</h2>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Job, Result, Admit Card, Exam आदि खोजें..."
+            onkeyup="searchUpdates()"
+        >
+
+        <a
+            class="whatsapp"
+            href="https://whatsapp.com/channel/0029VbDqyNyKLaHf1QNC4p1R"
+            target="_blank">
+            📱 Join WhatsApp Channel
+        </a>
+    </div>
+
+    <div class="categories">
+        <button onclick="showCategory('Latest Job')">🔴 Latest Jobs</button>
+        <button onclick="showCategory('Result')">🟢 Results</button>
+        <button onclick="showCategory('Admit Card')">🔵 Admit Card</button>
+        <button onclick="showCategory('Answer Key')">🟠 Answer Key</button>
+        <button onclick="showCategory('Admission')">🟣 Admission</button>
+        <button onclick="showCategory('Syllabus')">📚 Syllabus</button>
+        <button onclick="showCategory('Government Scheme')">🏛️ Govt Schemes</button>
+        <button onclick="showCategory('Online Service')">💻 Online Services</button>
+    </div>
+
+    <div class="section" id="jobs">
+        <h2>🔴 Latest Government Jobs</h2>
+        <div class="list" id="latestJobs">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section" id="results">
+        <h2>🟢 Latest Results</h2>
+        <div class="list" id="resultList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section" id="admit">
+        <h2>🔵 Admit Card</h2>
+        <div class="list" id="admitList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section" id="answer">
+        <h2>🟠 Answer Key</h2>
+        <div class="list" id="answerList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🟣 Admissions</h2>
+        <div class="list" id="admissionList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📚 Syllabus</h2>
+        <div class="list" id="syllabusList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏛️ Government Schemes</h2>
+        <div class="list" id="schemeList">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="section" id="services">
+        <h2>💻 Important Online Services</h2>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Family ID</h3>
+                <p>Haryana Parivar Pehchan Patra</p>
+                <a href="https://meraparivar.haryana.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>Voter ID</h3>
+                <p>Election Commission Services</p>
+                <a href="https://voters.eci.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>SARAL Haryana</h3>
+                <p>Online Government Services</p>
+                <a href="https://saralharyana.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>HSSC</h3>
+                <p>Haryana Staff Selection Commission</p>
+                <a href="https://www.hssc.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>Income Tax</h3>
+                <p>Income Tax Department</p>
+                <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>Haryana Police</h3>
+                <p>Haryana Police Portal</p>
+                <a href="https://haryanapolice.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>Haryana Govt</h3>
+                <p>Government of Haryana</p>
+                <a href="https://www.haryana.gov.in/" target="_blank">Open</a>
+            </div>
+
+            <div class="service">
+                <h3>Digital India</h3>
+                <p>Digital India Portal</p>
+                <a href="https://www.digitalindia.gov.in/" target="_blank">Open</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ADMIN -->
+    <div class="section" id="admin">
+        <h2>🔐 Admin Panel</h2>
+
+        <div class="admin-login" id="loginBox">
+
+            <h3>Admin Login</h3>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Admin Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <button class="btn blue" onclick="loginAdmin()">
+                🔐 Login
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+        <div class="admin-dashboard" id="dashboard">
+
+            <h3>🎛️ Digital Dreams Pega Admin Dashboard</h3>
+
+            <button class="btn red" onclick="logoutAdmin()">
+                Logout
+            </button>
+
+            <div class="dashboard-buttons">
+
+                <button style="background:#dc3545"
+                    onclick="openForm('Latest Job')">
+                    🔴 Latest Jobs
+                </button>
+
+                <button style="background:#198754"
+                    onclick="openForm('Result')">
+                    🟢 Results
+                </button>
+
+                <button style="background:#0d6efd"
+                    onclick="openForm('Admit Card')">
+                    🔵 Admit Card
+                </button>
+
+                <button style="background:#fd7e14"
+                    onclick="openForm('Answer Key')">
+                    🟠 Answer Key
+                </button>
+
+                <button style="background:#6f42c1"
+                    onclick="openForm('Admission')">
+                    🟣 Admissions
+                </button>
+
+                <button style="background:#795548"
+                    onclick="openForm('Syllabus')">
+                    📚 Syllabus
+                </button>
+
+                <button style="background:#343a40"
+                    onclick="openForm('Government Scheme')">
+                    🏛️ Government Schemes
+                </button>
+
+                <button style="background:#20c997"
+                    onclick="openForm('Online Service')">
+                    💻 CSC / Online Services
+                </button>
+
+                <button style="background:#e83e8c"
+                    onclick="openForm('Latest Update')">
+                    🔥 Latest Update
+                </button>
+
+            </div>
+
+            <div class="form-box" id="formBox">
+
+                <h3 id="formTitle">Add Update</h3>
+
+                <input type="hidden" id="editId">
+                <input type="hidden" id="selectedCategory">
+
+                <label>Title</label>
+                <input
+                    type="text"
+                    id="jobTitle"
+                    placeholder="जैसे SSC GD Recruitment 2026"
+                >
+
+                <label>Post / Exam</label>
+                <input
+                    type="text"
+                    id="post"
+                    placeholder="Post / Exam Name"
+                >
+
+                <label>Last Date</label>
+                <input
+                    type="text"
+                    id="lastDate"
+                    placeholder="जैसे 30 October 2026"
+                >
+
+                <label>Qualification</label>
+                <input
+                    type="text"
+                    id="qualification"
+                    placeholder="10th / 12th / Graduation"
+                >
+
+                <label>Official Link</label>
+                <input
+                    type="url"
+                    id="officialLink"
+                    placeholder="https://..."
+                >
+
+                <label>Description</label>
+                <textarea
+                    id="description"
+                    placeholder="पूरी जानकारी यहां लिखें..."
+                ></textarea>
+
+                <button class="btn green" onclick="saveUpdate()">
+                    💾 Save Update
+                </button>
+
+                <button class="btn dark" onclick="closeForm()">
+                    Cancel
+                </button>
+
+            </div>
+
+            <div class="admin-list">
+                <h3>📋 All Updates</h3>
+                <div id="adminUpdates">
+                    Loading...
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
-  <div class="update-box" id="admit">
-    <div class="update-heading blue">Admit Card</div>
-    <div class="update-list" id="admitList">Loading...</div>
-  </div>
-
-  <div class="update-box" id="answer">
-    <div class="update-heading orange">Answer Key</div>
-    <div class="update-list" id="answerList">Loading...</div>
-  </div>
-
-  <div class="update-box" id="admission">
-    <div class="update-heading purple">Admission</div>
-    <div class="update-list" id="admissionList">Loading...</div>
-  </div>
-
-  <div class="update-box" id="syllabus">
-    <div class="update-heading teal">Syllabus</div>
-    <div class="update-list" id="syllabusList">Loading...</div>
-  </div>
-
-  <div class="update-box" id="schemes">
-    <div class="update-heading pink">Government Schemes</div>
-    <div class="update-list" id="schemeList">Loading...</div>
-  </div>
-
-</div>
-
-<h2 class="section-title" id="services">
-💻 Important Online Services
-</h2>
-
-<div class="services">
-
-<div class="service-card">
-<h3>👨‍👩‍👧 Family ID</h3>
-<p>Haryana Parivar Pehchan Patra</p>
-<a href="https://meraparivar.haryana.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>🗳️ Voter ID</h3>
-<p>Voter ID Online Services</p>
-<a href="https://voters.eci.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>📄 SARAL Haryana</h3>
-<p>Haryana Government Services</p>
-<a href="https://saralharyana.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>📚 HSSC</h3>
-<p>Haryana Staff Selection Commission</p>
-<a href="https://www.hssc.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>💳 Income Tax</h3>
-<p>PAN & Income Tax Services</p>
-<a href="https://www.incometax.gov.in/iec/foportal/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>👮 Haryana Police</h3>
-<p>Haryana Police Services</p>
-<a href="https://haryanapolice.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>🏛️ Haryana Govt</h3>
-<p>Official Haryana Portal</p>
-<a href="https://www.haryana.gov.in/" target="_blank">Open</a>
-</div>
-
-<div class="service-card">
-<h3>🇮🇳 Digital India</h3>
-<p>Digital India Portal</p>
-<a href="https://www.digitalindia.gov.in/" target="_blank">Open</a>
-</div>
-
-</div>
-
-<section class="admin-section" id="admin">
-
-<h2 class="section-title">🔐 PeganCSC Admin Panel</h2>
-
-<div class="admin-box">
-
-<div id="loginBox">
-
-<h2>Admin Login</h2>
-
-<input type="email" id="email" placeholder="Admin Email">
-
-<input type="password" id="password" placeholder="Password">
-
-<button class="blue-btn" onclick="login()">🔐 Login</button>
-
-<p id="loginMessage" style="margin-top:15px;"></p>
-
-</div>
-
-<div id="adminPanel" class="hidden">
-
-<h3 style="color:green;">✅ Admin Login Successful</h3>
-
-<button class="red-btn" onclick="logout()" style="margin-bottom:20px;">
-Logout
-</button>
-
-<hr style="margin-bottom:20px;">
-
-<h2 id="formTitle">➕ Add New Update</h2>
-
-<label>Category</label>
-
-<select id="category">
-<option value="Latest Job">Latest Job</option>
-<option value="Result">Result</option>
-<option value="Admit Card">Admit Card</option>
-<option value="Answer Key">Answer Key</option>
-<option value="Admission">Admission</option>
-<option value="Syllabus">Syllabus</option>
-<option value="Government Scheme">Government Scheme</option>
-</select>
-
-<input type="text" id="jobTitle" placeholder="Update / Job Title">
-
-<input type="text" id="post" placeholder="Post / Vacancy / Department">
-
-<input type="text" id="lastDate" placeholder="Last Date / Result Date">
-
-<input type="text" id="qualification" placeholder="Qualification / Eligibility">
-
-<input type="url" id="officialLink" placeholder="Official Link https://...">
-
-<textarea id="description" placeholder="Full Description"></textarea>
-
-<button class="blue-btn" onclick="saveJob()">💾 Save Update</button>
-
-<button id="cancelEditBtn" class="red-btn hidden" onclick="cancelEdit()">
-Cancel Edit
-</button>
-
-<hr style="margin:25px 0;">
-
-<h2>📋 All Updates</h2>
-
-<div id="adminJobs">Loading...</div>
-
-</div>
-</div>
-</section>
-
-<h2 class="section-title">ℹ️ About PeganCSC</h2>
-
-<div class="about">
-
-<p>
-<strong>PeganCSC</strong> एक information और digital services website है जहाँ Government Jobs,
-Results, Admit Cards, Answer Keys, Admissions, Government Schemes तथा CSC और Online Services
-से जुड़ी जानकारी उपलब्ध कराई जाती है।
-</p>
-
-<p>
-उम्मीदवार किसी भी भर्ती के लिए आवेदन करने से पहले संबंधित विभाग की Official Notification जरूर पढ़ें।
-</p>
-
-</div>
-
-</div>
-
-<div id="detailModal" class="modal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeModal()">&times;</span>
-
-<div id="modalData"></div>
-
-</div>
 </div>
 
 <footer>
+    <h3>🇮🇳 DIGITAL DREAMS PEGA</h3>
+    <p>Government Jobs • Results • CSC Services</p>
+    <p>📍 Pega, Haryana</p>
+    <p>📧 mayankhr82@gmail.com</p>
 
-<p>© 2026 PeganCSC</p>
+    <br>
 
-<p>Government Jobs • Results • CSC Services</p>
+    <p>
+        Disclaimer: Digital Dreams Pega is not a government website.
+        We provide information and links to official websites.
+    </p>
 
-<p>📍 Pegan, Haryana | 📧 mayankhr82@gmail.com</p>
+    <br>
 
-<p style="font-size:12px;margin-top:8px;color:#ccc;">
-Disclaimer: PeganCSC कोई सरकारी वेबसाइट नहीं है। जानकारी के लिए Official Website जरूर देखें।
-</p>
-
+    <p>© 2026 Digital Dreams Pega</p>
 </footer>
+
+<!-- DETAIL MODAL -->
+
+<div class="modal" id="detailModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <br>
+
+        <p>
+            <b>Post / Exam:</b>
+            <span id="modalPost"></span>
+        </p>
+
+        <br>
+
+        <p>
+            <b>Last Date:</b>
+            <span id="modalLastDate"></span>
+        </p>
+
+        <br>
+
+        <p>
+            <b>Qualification:</b>
+            <span id="modalQualification"></span>
+        </p>
+
+        <br>
+
+        <p>
+            <b>Category:</b>
+            <span id="modalCategory"></span>
+        </p>
+
+        <br>
+
+        <p>
+            <b>Description:</b>
+        </p>
+
+        <p id="modalDescription"></p>
+
+        <br>
+
+        <a
+            id="modalLink"
+            class="btn blue"
+            href="#"
+            target="_blank">
+            🔗 Official Website
+        </a>
+
+    </div>
+
+</div>
+
+<!-- FIREBASE -->
 
 <script type="module">
 
-import {initializeApp}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
-getFirestore,
-collection,
-addDoc,
-getDocs,
-updateDoc,
-deleteDoc,
-doc,
-orderBy,
-query
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 import {
-getAuth,
-signInWithEmailAndPassword,
-signOut,
-onAuthStateChanged
-}
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    doc,
+    updateDoc,
+    deleteDoc,
+    orderBy,
+    query,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
 const firebaseConfig = {
 
-apiKey:"AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+    apiKey: "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
 
-authDomain:"digital-dreams-pegan.firebaseapp.com",
+    authDomain: "digital-dreams-pegan.firebaseapp.com",
 
-projectId:"digital-dreams-pegan",
+    projectId: "digital-dreams-pegan",
 
-storageBucket:"digital-dreams-pegan.firebasestorage.app",
+    storageBucket: "digital-dreams-pegan.firebasestorage.app",
 
-messagingSenderId:"1053549608341",
+    messagingSenderId: "1053549608341",
 
-appId:"1:1053549608341:web:bb602038ebda2732830a9c",
+    appId: "1:1053549608341:web:bb602038ebda2732830a9c",
 
-measurementId:"G-6EKZP1D3XQ"
-
-};
-
-const app=initializeApp(firebaseConfig);
-
-const db=getFirestore(app);
-
-const auth=getAuth(app);
-
-let editingId=null;
-
-let allUpdates=[];
-
-
-async function loadUpdates(){
-
-try{
-
-const q=query(
-collection(db,"updates"),
-orderBy("createdAt","desc")
-);
-
-const snapshot=await getDocs(q);
-
-allUpdates=[];
-
-snapshot.forEach(item=>{
-
-allUpdates.push({
-id:item.id,
-...item.data()
-});
-
-});
-
-renderUpdates(allUpdates);
-
-}catch(error){
-
-try{
-
-const snapshot=
-await getDocs(collection(db,"updates"));
-
-allUpdates=[];
-
-snapshot.forEach(item=>{
-
-allUpdates.push({
-id:item.id,
-...item.data()
-});
-
-});
-
-allUpdates.sort(
-(a,b)=>
-(b.createdAt||0)-
-(a.createdAt||0)
-);
-
-renderUpdates(allUpdates);
-
-}catch(secondError){
-
-showLoadError();
-
-}
-
-}
-
-}
-
-
-function renderUpdates(items){
-
-const boxes={
-
-"Latest Job":"latestJobs",
-"Result":"resultList",
-"Admit Card":"admitList",
-"Answer Key":"answerList",
-"Admission":"admissionList",
-"Syllabus":"syllabusList",
-"Government Scheme":"schemeList"
+    measurementId: "G-6EKZP1D3XQ"
 
 };
 
-Object.values(boxes).forEach(id=>{
 
-document.getElementById(id).innerHTML=
-'<p style="color:#777;">अभी कोई Update नहीं है।</p>';
+const app = initializeApp(firebaseConfig);
 
-});
+const auth = getAuth(app);
 
-Object.entries(boxes).forEach(([category,elementId])=>{
+const db = getFirestore(app);
 
-const filtered=items.filter(item=>{
+const updatesCollection = collection(db,"updates");
 
-const itemCategory=item.category||"Latest Job";
-
-return itemCategory===category;
-
-});
-
-const box=document.getElementById(elementId);
-
-if(filtered.length===0)return;
-
-box.innerHTML="";
-
-filtered.forEach(item=>{
-
-const div=document.createElement("div");
-
-div.className="update-item";
-
-const link=document.createElement("a");
-
-link.href="#";
-
-link.textContent=item.title||"View Update";
-
-link.addEventListener("click",function(event){
-
-event.preventDefault();
-
-openDetails(item.id);
-
-});
-
-div.appendChild(link);
-
-const newTag=document.createElement("span");
-
-newTag.className="new";
-
-newTag.textContent="NEW";
-
-div.appendChild(newTag);
-
-box.appendChild(div);
-
-});
-
-});
-
-}
+let allUpdates = [];
 
 
-function showLoadError(){
+/* LOGIN */
 
-[
-"latestJobs",
-"resultList",
-"admitList",
-"answerList",
-"admissionList",
-"syllabusList",
-"schemeList"
-].forEach(id=>{
+window.loginAdmin = async function(){
 
-document.getElementById(id).innerHTML=
-'<p style="color:red;">Failed to load updates.</p>';
+    const email =
+        document.getElementById("email").value.trim();
 
-});
+    const password =
+        document.getElementById("password").value;
 
-}
+    const message =
+        document.getElementById("loginMessage");
 
+    if(!email || !password){
 
-window.openDetails=function(id){
+        message.innerText =
+            "Email aur password enter karein.";
 
-const item=allUpdates.find(x=>x.id===id);
+        return;
+    }
 
-if(!item){
+    try{
 
-alert("Update नहीं मिला।");
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
 
-return;
+        message.innerText =
+            "Login successful.";
 
-}
+    }catch(error){
 
-const officialUrl=safeUrl(item.officialLink||"");
+        message.innerText =
+            "Login failed: " + error.message;
 
-document.getElementById("modalData").innerHTML=`
-
-<h2 class="detail-title">
-${escapeHtml(item.title||"")}
-</h2>
-
-<table class="detail-table">
-
-<tr>
-<td>Category</td>
-<td>${escapeHtml(item.category||"Latest Job")}</td>
-</tr>
-
-<tr>
-<td>Post / Department</td>
-<td>${escapeHtml(item.post||"-")}</td>
-</tr>
-
-<tr>
-<td>Last Date / Date</td>
-<td>${escapeHtml(item.lastDate||"-")}</td>
-</tr>
-
-<tr>
-<td>Qualification</td>
-<td>${escapeHtml(item.qualification||"-")}</td>
-</tr>
-
-</table>
-
-<h3 style="margin-top:20px;">
-Important Information
-</h3>
-
-<p style="margin-top:10px;line-height:1.8;white-space:pre-wrap;">
-${escapeHtml(item.description||"No description available.")}
-</p>
-
-${
-officialUrl!=="#"
-?
-`
-<a class="official-btn"
-href="${officialUrl}"
-target="_blank"
-rel="noopener">
-🔗 Official Website
-</a>
-`
-:
-""
-}
-
-`;
-
-document.getElementById("detailModal").style.display="block";
+    }
 
 };
+
+
+/* LOGOUT */
+
+window.logoutAdmin = async function(){
+
+    await signOut(auth);
+
+};
+
+
+/* AUTH STATE */
+
+onAuthStateChanged(auth,(user)=>{
+
+    if(user){
+
+        document.getElementById("loginBox")
+            .style.display="none";
+
+        document.getElementById("dashboard")
+            .style.display="block";
+
+        loadAdminUpdates();
+
+    }else{
+
+        document.getElementById("loginBox")
+            .style.display="block";
+
+        document.getElementById("dashboard")
+            .style.display="none";
+
+    }
+
+});
+
+
+/* OPEN FORM */
+
+window.openForm = function(category){
+
+    document.getElementById("formBox")
+        .style.display="block";
+
+    document.getElementById("selectedCategory")
+        .value=category;
+
+    document.getElementById("formTitle")
+        .innerText="➕ Add " + category;
+
+    clearForm();
+
+    window.scrollTo({
+        top:document.getElementById("formBox")
+            .offsetTop,
+        behavior:"smooth"
+    });
+
+};
+
+
+/* CLOSE FORM */
+
+window.closeForm = function(){
+
+    document.getElementById("formBox")
+        .style.display="none";
+
+    clearForm();
+
+};
+
+
+/* CLEAR FORM */
+
+function clearForm(){
+
+    document.getElementById("editId").value="";
+
+    document.getElementById("jobTitle").value="";
+
+    document.getElementById("post").value="";
+
+    document.getElementById("lastDate").value="";
+
+    document.getElementById("qualification").value="";
+
+    document.getElementById("officialLink").value="";
+
+    document.getElementById("description").value="";
+
+}
+
+
+/* SAVE UPDATE */
+
+window.saveUpdate = async function(){
+
+    const category =
+        document.getElementById("selectedCategory").value;
+
+    const title =
+        document.getElementById("jobTitle").value.trim();
+
+    const post =
+        document.getElementById("post").value.trim();
+
+    const lastDate =
+        document.getElementById("lastDate").value.trim();
+
+    const qualification =
+        document.getElementById("qualification").value.trim();
+
+    const officialLink =
+        document.getElementById("officialLink").value.trim();
+
+    const description =
+        document.getElementById("description").value.trim();
+
+    const editId =
+        document.getElementById("editId").value;
+
+
+    if(!title){
+
+        alert("Title zaroor enter karein.");
+
+        return;
+
+    }
+
+
+    const data = {
+
+        category:category,
+
+        title:title,
+
+        post:post,
+
+        lastDate:lastDate,
+
+        qualification:qualification,
+
+        officialLink:officialLink,
+
+        description:description
+
+    };
+
+
+    try{
+
+        if(editId){
+
+            await updateDoc(
+                doc(db,"updates",editId),
+                data
+            );
+
+            alert("Update successfully edit ho gaya.");
+
+        }else{
+
+            data.createdAt =
+                serverTimestamp();
+
+            await addDoc(
+                updatesCollection,
+                data
+            );
+
+            alert("Update successfully add ho gaya.");
+
+        }
+
+
+        clearForm();
+
+        document.getElementById("formBox")
+            .style.display="none";
+
+        loadAdminUpdates();
+
+        loadPublicUpdates();
+
+    }catch(error){
+
+        alert(
+            "Error: " + error.message
+        );
+
+    }
+
+};
+
+
+/* LOAD ADMIN */
+
+async function loadAdminUpdates(){
+
+    const container =
+        document.getElementById("adminUpdates");
+
+    container.innerHTML="Loading...";
+
+    try{
+
+        let snapshot;
+
+        try{
+
+            const q =
+                query(
+                    updatesCollection,
+                    orderBy("createdAt","desc")
+                );
+
+            snapshot =
+                await getDocs(q);
+
+        }catch(e){
+
+            snapshot =
+                await getDocs(updatesCollection);
+
+        }
+
+
+        let html="";
+
+        snapshot.forEach((item)=>{
+
+            const data=item.data();
+
+            const category =
+                data.category || "Latest Job";
+
+            html += `
+
+            <div class="admin-item">
+
+                <h3>${escapeHTML(data.title || "")}</h3>
+
+                <p>
+                    <b>Category:</b>
+                    ${escapeHTML(category)}
+                </p>
+
+                <p>
+                    <b>Post:</b>
+                    ${escapeHTML(data.post || "")}
+                </p>
+
+                <p>
+                    <b>Last Date:</b>
+                    ${escapeHTML(data.lastDate || "")}
+                </p>
+
+                <button
+                    class="btn blue"
+                    onclick="editUpdate('${item.id}')">
+                    ✏️ Edit
+                </button>
+
+                <button
+                    class="btn red"
+                    onclick="deleteUpdate('${item.id}')">
+                    🗑️ Delete
+                </button>
+
+            </div>
+
+            `;
+
+        });
+
+
+        if(!html){
+
+            html =
+                "<p>Abhi koi update nahi hai.</p>";
+
+        }
+
+        container.innerHTML=html;
+
+    }catch(error){
+
+        container.innerHTML =
+            "Error loading updates: " +
+            error.message;
+
+    }
+
+}
+
+
+/* EDIT */
+
+window.editUpdate = async function(id){
+
+    const item =
+        allUpdates.find(x=>x.id===id);
+
+    if(!item){
+
+        await loadPublicUpdates();
+
+    }
+
+    const data =
+        allUpdates.find(x=>x.id===id);
+
+    if(!data){
+
+        alert("Update nahi mila.");
+
+        return;
+
+    }
+
+
+    document.getElementById("formBox")
+        .style.display="block";
+
+    document.getElementById("editId")
+        .value=id;
+
+    document.getElementById("selectedCategory")
+        .value=data.category || "Latest Job";
+
+    document.getElementById("formTitle")
+        .innerText="✏️ Edit Update";
+
+    document.getElementById("jobTitle")
+        .value=data.title || "";
+
+    document.getElementById("post")
+        .value=data.post || "";
+
+    document.getElementById("lastDate")
+        .value=data.lastDate || "";
+
+    document.getElementById("qualification")
+        .value=data.qualification || "";
+
+    document.getElementById("officialLink")
+        .value=data.officialLink || "";
+
+    document.getElementById("description")
+        .value=data.description || "";
+
+    window.scrollTo({
+        top:document.getElementById("formBox")
+            .offsetTop,
+        behavior:"smooth"
+    });
+
+};
+
+
+/* DELETE */
+
+window.deleteUpdate = async function(id){
+
+    if(!confirm(
+        "Kya aap is update ko delete karna chahte hain?"
+    )) return;
+
+    try{
+
+        await deleteDoc(
+            doc(db,"updates",id)
+        );
+
+        alert("Update delete ho gaya.");
+
+        loadAdminUpdates();
+
+        loadPublicUpdates();
+
+    }catch(error){
+
+        alert(
+            "Delete error: " +
+            error.message
+        );
+
+    }
+
+};
+
+
+/* PUBLIC UPDATES */
+
+async function loadPublicUpdates(){
+
+    try{
+
+        let snapshot;
+
+        try{
+
+            const q =
+                query(
+                    updatesCollection,
+                    orderBy("createdAt","desc")
+                );
+
+            snapshot =
+                await getDocs(q);
+
+        }catch(e){
+
+            snapshot =
+                await getDocs(updatesCollection);
+
+        }
+
+
+        allUpdates=[];
+
+        snapshot.forEach(item=>{
+
+            allUpdates.push({
+
+                id:item.id,
+
+                ...item.data(),
+
+                category:
+                    item.data().category ||
+                    "Latest Job"
+
+            });
+
+        });
+
+
+        renderPublicUpdates();
+
+        updateTicker();
+
+    }catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+
+/* RENDER */
+
+function renderPublicUpdates(){
+
+    const sections={
+
+        "Latest Job":
+            document.getElementById("latestJobs"),
+
+        "Result":
+            document.getElementById("resultList"),
+
+        "Admit Card":
+            document.getElementById("admitList"),
+
+        "Answer Key":
+            document.getElementById("answerList"),
+
+        "Admission":
+            document.getElementById("admissionList"),
+
+        "Syllabus":
+            document.getElementById("syllabusList"),
+
+        "Government Scheme":
+            document.getElementById("schemeList")
+
+    };
+
+
+    Object.values(sections).forEach(el=>{
+
+        if(el)
+            el.innerHTML="";
+
+    });
+
+
+    allUpdates.forEach(item=>{
+
+        const container =
+            sections[item.category];
+
+        if(!container) return;
+
+
+        const div =
+            document.createElement("div");
+
+        div.className="card";
+
+        div.onclick=()=>openModal(item);
+
+
+        div.innerHTML=`
+
+            <h3>
+                ${escapeHTML(item.title || "")}
+            </h3>
+
+            <span class="badge">
+                ${escapeHTML(item.category)}
+            </span>
+
+            ${
+                item.post
+                ?
+                `<p>
+                    <b>Post:</b>
+                    ${escapeHTML(item.post)}
+                </p>`
+                :""
+            }
+
+            ${
+                item.lastDate
+                ?
+                `<p>
+                    <b>Last Date:</b>
+                    ${escapeHTML(item.lastDate)}
+                </p>`
+                :""
+            }
+
+        `;
+
+
+        container.appendChild(div);
+
+    });
+
+
+    Object.entries(sections).forEach(
+        ([category,container])=>{
+
+            if(container &&
+               container.innerHTML.trim()===""){
+
+                container.innerHTML=
+                    "<p>No updates available.</p>";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* SEARCH */
+
+window.searchUpdates=function(){
+
+    const search =
+        document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    if(!search){
+
+        renderPublicUpdates();
+
+        return;
+
+    }
+
+
+    const results =
+        allUpdates.filter(item=>{
+
+            return (
+
+                (item.title || "")
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                (item.post || "")
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                (item.qualification || "")
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                (item.description || "")
+                    .toLowerCase()
+                    .includes(search)
+
+                ||
+
+                (item.category || "")
+                    .toLowerCase()
+                    .includes(search)
+
+            );
+
+        });
+
+
+    document.querySelectorAll(".list")
+        .forEach(el=>{
+
+            el.innerHTML="";
+
+        });
+
+
+    if(!results.length){
+
+        document.getElementById("latestJobs")
+            .innerHTML=
+            "<p>❌ Koi update nahi mila.</p>";
+
+        return;
+
+    }
+
+
+    results.forEach(item=>{
+
+        const div =
+            document.createElement("div");
+
+        div.className="card";
+
+        div.onclick=()=>openModal(item);
+
+        div.innerHTML=`
+
+            <h3>
+                ${escapeHTML(item.title || "")}
+            </h3>
+
+            <span class="badge">
+                ${escapeHTML(item.category || "")}
+            </span>
+
+            <p>
+                ${escapeHTML(item.post || "")}
+            </p>
+
+        `;
+
+        document.getElementById("latestJobs")
+            .appendChild(div);
+
+    });
+
+};
+
+
+/* CATEGORY */
+
+window.showCategory=function(category){
+
+    const item =
+        allUpdates.find(
+            x=>x.category===category
+        );
+
+    let target="";
+
+    if(category==="Latest Job")
+        target="jobs";
+
+    else if(category==="Result")
+        target="results";
+
+    else if(category==="Admit Card")
+        target="admit";
+
+    else if(category==="Answer Key")
+        target="answer";
+
+
+    if(target){
+
+        document.getElementById(target)
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+    }else{
+
+        const results =
+            allUpdates.filter(
+                x=>x.category===category
+            );
+
+        if(results.length){
+
+            openModal(results[0]);
+
+        }else{
+
+            alert(
+                "Is category mein abhi koi update nahi hai."
+            );
+
+        }
+
+    }
+
+};
+
+
+/* MODAL */
+
+function openModal(item){
+
+    document.getElementById("modalTitle")
+        .innerText=item.title || "";
+
+    document.getElementById("modalPost")
+        .innerText=item.post || "N/A";
+
+    document.getElementById("modalLastDate")
+        .innerText=item.lastDate || "N/A";
+
+    document.getElementById("modalQualification")
+        .innerText=item.qualification || "N/A";
+
+    document.getElementById("modalCategory")
+        .innerText=item.category || "Latest Job";
+
+    document.getElementById("modalDescription")
+        .innerText=item.description || "";
+
+    const link =
+        document.getElementById("modalLink");
+
+    if(item.officialLink){
+
+        link.href=item.officialLink;
+
+        link.style.display="inline-block";
+
+    }else{
+
+        link.style.display="none";
+
+    }
+
+
+    document.getElementById("detailModal")
+        .style.display="block";
+
+}
 
 
 window.closeModal=function(){
 
-document.getElementById("detailModal").style.display="none";
+    document.getElementById("detailModal")
+        .style.display="none";
 
 };
 
 
-window.addEventListener("click",function(event){
+window.onclick=function(event){
 
-const modal=document.getElementById("detailModal");
+    const modal =
+        document.getElementById("detailModal");
 
-if(event.target===modal){
+    if(event.target===modal){
 
-modal.style.display="none";
+        modal.style.display="none";
 
-}
-
-});
-
-
-window.searchUpdates=function(){
-
-const value=document
-.getElementById("searchInput")
-.value
-.trim()
-.toLowerCase();
-
-if(!value){
-
-renderUpdates(allUpdates);
-
-return;
-
-}
-
-const filtered=allUpdates.filter(item=>{
-
-const text=`
-${item.title||""}
-${item.post||""}
-${item.qualification||""}
-${item.description||""}
-${item.category||""}
-`.toLowerCase();
-
-return text.includes(value);
-
-});
-
-renderUpdates(filtered);
+    }
 
 };
 
 
-document.getElementById("searchInput")
-.addEventListener("keyup",function(event){
+/* TICKER */
 
-if(event.key==="Enter"){
+function updateTicker(){
 
-window.searchUpdates();
+    const ticker =
+        document.getElementById("tickerText");
 
-}
+    if(!allUpdates.length){
 
-});
+        ticker.innerText =
+            "Digital Dreams Pega पर सभी सरकारी अपडेट देखें";
 
+        return;
 
-window.scrollCategory=function(id){
-
-const element=document.getElementById(id);
-
-if(element){
-
-element.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-
-}
-
-};
+    }
 
 
-window.login=async function(){
-
-const email=document.getElementById("email").value.trim();
-
-const password=document.getElementById("password").value;
-
-const message=document.getElementById("loginMessage");
-
-if(!email||!password){
-
-message.textContent="⚠️ Email और Password डालें।";
-
-return;
+    ticker.innerText =
+        allUpdates
+            .slice(0,5)
+            .map(x=>x.title)
+            .join("  |  ");
 
 }
 
-try{
 
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
+/* SECURITY */
 
-message.textContent="✅ Login Successful";
+function escapeHTML(text){
 
-}catch(error){
+    const div =
+        document.createElement("div");
 
-message.textContent="❌ Login Failed: "+error.message;
+    div.textContent =
+        text == null ? "" : text;
 
-}
-
-};
-
-
-window.logout=async function(){
-
-try{
-
-await signOut(auth);
-
-}catch(error){
-
-alert(error.message);
-
-}
-
-};
-
-
-onAuthStateChanged(auth,user=>{
-
-if(user){
-
-document.getElementById("loginBox").classList.add("hidden");
-
-document.getElementById("adminPanel").classList.remove("hidden");
-
-loadAdminJobs();
-
-}else{
-
-document.getElementById("loginBox").classList.remove("hidden");
-
-document.getElementById("adminPanel").classList.add("hidden");
-
-}
-
-});
-
-
-window.saveJob=async function(){
-
-if(!auth.currentUser){
-
-alert("Admin login required.");
-
-return;
-
-}
-
-const category=document.getElementById("category").value;
-
-const title=document.getElementById("jobTitle").value.trim();
-
-const post=document.getElementById("post").value.trim();
-
-const lastDate=document.getElementById("lastDate").value.trim();
-
-const qualification=document.getElementById("qualification").value.trim();
-
-const officialLink=document.getElementById("officialLink").value.trim();
-
-const description=document.getElementById("description").value.trim();
-
-if(!title){
-
-alert("Update Title डालें।");
-
-return;
-
-}
-
-if(officialLink&&safeUrl(officialLink)==="#"){
-
-alert("Official Link सही डालें। Link https:// से शुरू होना चाहिए।");
-
-return;
-
-}
-
-try{
-
-const data={
-category,
-title,
-post,
-lastDate,
-qualification,
-officialLink,
-description
-};
-
-if(editingId){
-
-await updateDoc(
-doc(db,"updates",editingId),
-data
-);
-
-alert("✅ Update successfully edited.");
-
-}else{
-
-data.createdAt=Date.now();
-
-await addDoc(
-collection(db,"updates"),
-data
-);
-
-alert("✅ New Update Added.");
-
-}
-
-clearForm();
-
-await loadUpdates();
-
-await loadAdminJobs();
-
-}catch(error){
-
-alert("❌ Error: "+error.message);
-
-}
-
-};
-
-
-async function loadAdminJobs(){
-
-const box=document.getElementById("adminJobs");
-
-box.innerHTML="<p>⏳ Loading...</p>";
-
-try{
-
-const snapshot=
-await getDocs(collection(db,"updates"));
-
-let items=[];
-
-snapshot.forEach(item=>{
-
-items.push({
-id:item.id,
-...item.data()
-});
-
-});
-
-items.sort(
-(a,b)=>
-(b.createdAt||0)-
-(a.createdAt||0)
-);
-
-if(items.length===0){
-
-box.innerHTML="<p>अभी कोई Update नहीं है।</p>";
-
-return;
-
-}
-
-box.innerHTML="";
-
-items.forEach(item=>{
-
-const div=document.createElement("div");
-
-div.className="admin-job";
-
-div.innerHTML=`
-
-<strong>
-${escapeHtml(item.title||"")}
-</strong>
-
-<br>
-
-<small>
-Category:
-${escapeHtml(item.category||"Latest Job")}
-</small>
-
-<br>
-
-<button class="edit-btn" data-edit="${item.id}">
-✏️ Edit
-</button>
-
-<button class="red-btn" data-delete="${item.id}">
-🗑️ Delete
-</button>
-
-`;
-
-box.appendChild(div);
-
-});
-
-box.querySelectorAll("[data-edit]").forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-editJob(button.dataset.edit);
-
-});
-
-});
-
-box.querySelectorAll("[data-delete]").forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-deleteJob(button.dataset.delete);
-
-});
-
-});
-
-}catch(error){
-
-box.textContent="❌ "+error.message;
-
-}
+    return div.innerHTML;
 
 }
 
 
-async function editJob(id){
+/* START */
 
-let item=allUpdates.find(x=>x.id===id);
-
-if(!item){
-
-await loadUpdates();
-
-item=allUpdates.find(x=>x.id===id);
-
-}
-
-if(!item){
-
-alert("Update नहीं मिला।");
-
-return;
-
-}
-
-editingId=id;
-
-document.getElementById("category").value=
-item.category||"Latest Job";
-
-document.getElementById("jobTitle").value=
-item.title||"";
-
-document.getElementById("post").value=
-item.post||"";
-
-document.getElementById("lastDate").value=
-item.lastDate||"";
-
-document.getElementById("qualification").value=
-item.qualification||"";
-
-document.getElementById("officialLink").value=
-item.officialLink||"";
-
-document.getElementById("description").value=
-item.description||"";
-
-document.getElementById("formTitle").textContent=
-"✏️ Edit Update";
-
-document.getElementById("cancelEditBtn").classList.remove("hidden");
-
-document.getElementById("admin").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-async function deleteJob(id){
-
-if(!auth.currentUser){
-
-alert("Admin login required.");
-
-return;
-
-}
-
-const confirmed=
-confirm("क्या आप इस Update को Delete करना चाहते हैं?");
-
-if(!confirmed)return;
-
-try{
-
-await deleteDoc(
-doc(db,"updates",id)
-);
-
-alert("✅ Update Deleted.");
-
-await loadUpdates();
-
-await loadAdminJobs();
-
-}catch(error){
-
-alert("❌ Delete Failed: "+error.message);
-
-}
-
-}
-
-
-window.cancelEdit=function(){
-
-clearForm();
-
-};
-
-
-function clearForm(){
-
-editingId=null;
-
-document.getElementById("category").value="Latest Job";
-
-document.getElementById("jobTitle").value="";
-
-document.getElementById("post").value="";
-
-document.getElementById("lastDate").value="";
-
-document.getElementById("qualification").value="";
-
-document.getElementById("officialLink").value="";
-
-document.getElementById("description").value="";
-
-document.getElementById("formTitle").textContent=
-"➕ Add New Update";
-
-document.getElementById("cancelEditBtn").classList.add("hidden");
-
-}
-
-
-function escapeHtml(value){
-
-return String(value)
-
-.replaceAll("&","&amp;")
-
-.replaceAll("<","&lt;")
-
-.replaceAll(">","&gt;")
-
-.replaceAll('"',"&quot;")
-
-.replaceAll("'","&#039;");
-
-}
-
-
-function safeUrl(url){
-
-try{
-
-const parsed=new URL(url);
-
-if(
-parsed.protocol==="http:"||
-parsed.protocol==="https:"
-){
-
-return parsed.href;
-
-}
-
-}catch(error){}
-
-return "#";
-
-}
-
-
-loadUpdates();
+loadPublicUpdates();
 
 </script>
 
