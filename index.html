@@ -1,275 +1,166 @@
-```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Dreams CSC | Latest Jobs, Results & CSC Services</title>
-
-<meta name="description" content="Digital Dreams CSC - Latest Government Jobs, Results, Admit Cards, Haryana Updates and CSC Services.">
+<title>Digital Dreams CSC</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f3f3f3;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
     color:#222;
 }
 
-a{
-    text-decoration:none;
-}
+/* HEADER */
 
 header{
-    background:#8b0000;
-    color:#fff;
+    background:linear-gradient(135deg,#075eaa,#0088cc);
+    color:white;
     text-align:center;
-    padding:25px 10px;
+    padding:22px 10px;
 }
 
 header h1{
-    font-size:36px;
+    font-size:30px;
 }
 
 header p{
     margin-top:7px;
 }
 
-nav{
-    background:#222;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
+/* NAVIGATION */
 
-.nav{
-    max-width:1200px;
-    margin:auto;
+nav{
+    background:white;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+    gap:6px;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 8px #bbb;
 }
 
 nav a{
-    color:#fff;
-    padding:14px 16px;
+    text-decoration:none;
+    color:#075eaa;
+    padding:9px 13px;
     font-weight:bold;
+    border-radius:5px;
 }
 
 nav a:hover{
-    background:#8b0000;
+    background:#075eaa;
+    color:white;
 }
+
+/* CONTAINER */
 
 .container{
-    width:95%;
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
+    padding:15px;
 }
 
-.welcome{
-    background:#fff;
-    margin-top:18px;
-    padding:22px;
+/* HERO */
+
+.hero{
+    background:white;
     text-align:center;
-    border:1px solid #ddd;
-}
-
-.welcome h2{
-    color:#8b0000;
-    margin-bottom:8px;
-}
-
-.notice{
+    padding:30px 20px;
     margin-top:15px;
-    background:#fff3cd;
-    border:1px solid #ffc107;
-    display:flex;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ddd;
 }
 
-.notice-title{
-    background:#8b0000;
-    color:white;
-    padding:12px;
-    font-weight:bold;
+.hero h2{
+    color:#075eaa;
+    margin-bottom:10px;
 }
 
-.notice-text{
-    padding:12px;
-    color:#b00000;
-    font-weight:bold;
-    width:100%;
-}
+/* SECTION */
 
-.quick{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-top:18px;
-}
-
-.quick a{
-    color:white;
-    padding:18px 8px;
-    text-align:center;
-    font-weight:bold;
-    border-radius:4px;
-}
-
-.red{background:#c62828;}
-.blue{background:#1565c0;}
-.green{background:#2e7d32;}
-.orange{background:#ef6c00;}
-.purple{background:#6a1b9a;}
-.teal{background:#00796b;}
-.dark{background:#333;}
-.pink{background:#ad1457;}
-
-.main-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:20px;
-}
-
-.box{
-    background:#fff;
-    border:1px solid #ccc;
-}
-
-.box-title{
-    background:#8b0000;
-    color:white;
-    text-align:center;
-    padding:11px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.post-list{
-    padding:10px;
-}
-
-.post-item{
-    border-bottom:1px dashed #ccc;
-    padding:12px 5px;
-}
-
-.post-item:last-child{
-    border-bottom:none;
-}
-
-.post-item h3{
-    font-size:16px;
-    color:#0047ab;
-}
-
-.post-item p{
-    font-size:13px;
-    margin-top:5px;
-}
-
-.apply{
-    display:inline-block;
-    background:#006400;
-    color:#fff;
-    padding:6px 10px;
-    margin-top:8px;
-    border-radius:3px;
-    font-size:13px;
+.section{
+    margin-top:25px;
 }
 
 .section-title{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:12px;
-    margin-top:25px;
-    border-bottom:4px solid #8b0000;
+    background:#075eaa;
+    color:white;
+    padding:13px;
+    border-radius:6px;
+    font-size:20px;
 }
 
-.services{
+/* POSTS */
+
+.posts{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:15px;
     margin-top:15px;
 }
 
-.service{
-    background:#fff;
-    border:1px solid #ddd;
-    padding:20px 10px;
-    text-align:center;
-    font-weight:bold;
-}
-
-.service:hover{
-    background:#8b0000;
-    color:white;
-}
-
-.whatsapp{
-    background:#fff;
-    margin-top:20px;
-    padding:25px;
-    text-align:center;
-}
-
-.whatsapp a{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:13px 25px;
-    border-radius:5px;
-    font-weight:bold;
-    margin-top:10px;
-}
-
-footer{
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:25px;
-    margin-top:25px;
-}
-
-footer p{
-    margin-top:7px;
-    font-size:13px;
-}
-
-/* ADMIN */
-
-#adminSection{
-    display:none;
-}
-
-.admin-box{
+.post{
     background:white;
-    margin-top:25px;
-    padding:20px;
-    border:2px solid #8b0000;
+    padding:18px;
     border-radius:8px;
+    box-shadow:0 2px 7px #ddd;
 }
 
-.admin-box h2{
-    color:#8b0000;
+.post h3{
+    color:#075eaa;
+    margin-bottom:10px;
+}
+
+.post p{
+    line-height:1.5;
+}
+
+.post a{
+    display:inline-block;
+    margin-top:12px;
+    padding:9px 14px;
+    background:#075eaa;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* ADMIN LOGIN */
+
+.login-box{
+    max-width:500px;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ddd;
+}
+
+.login-box h2{
+    color:#075eaa;
     margin-bottom:15px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
     width:100%;
     padding:12px;
-    margin:7px 0 12px;
+    margin-top:7px;
+    margin-bottom:14px;
     border:1px solid #ccc;
     border-radius:5px;
     font-size:15px;
@@ -281,442 +172,472 @@ textarea{
 
 button{
     border:0;
-    padding:11px 18px;
-    border-radius:4px;
-    cursor:pointer;
-    background:#8b0000;
+    background:#075eaa;
     color:white;
+    padding:11px 18px;
+    border-radius:5px;
+    cursor:pointer;
     font-weight:bold;
-    margin:4px;
 }
 
 button:hover{
-    opacity:.85;
+    opacity:.9;
+}
+
+.message{
+    margin-top:12px;
+    font-weight:bold;
+}
+
+/* ADMIN PANEL */
+
+.admin-box{
+    background:white;
+    padding:25px;
+    margin-top:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ddd;
+}
+
+.admin-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
 }
 
 .logout{
-    background:#222;
-    float:right;
-}
-
-.edit{
-    background:#1565c0;
-}
-
-.delete{
-    background:#c62828;
+    background:#d62828;
 }
 
 .admin-post{
     border:1px solid #ddd;
     padding:15px;
+    margin-top:12px;
+    border-radius:7px;
+}
+
+.delete{
+    background:#d62828;
     margin-top:10px;
 }
 
-.admin-post h3{
-    color:#8b0000;
-}
-
-#loginSection{
+.hidden{
     display:none;
 }
 
-.login-box{
-    max-width:450px;
-    margin:30px auto;
-    background:#fff;
-    padding:25px;
-    border:1px solid #ddd;
-    box-shadow:0 2px 8px #ccc;
-}
+/* FOOTER */
 
-.login-box h2{
+footer{
+    background:#111;
+    color:white;
     text-align:center;
-    color:#8b0000;
-    margin-bottom:15px;
+    padding:25px;
+    margin-top:35px;
 }
 
-.message{
-    margin-top:10px;
-    font-weight:bold;
-}
-
-#adminButton{
-    background:#222;
-}
-
-@media(max-width:850px){
-
-    .main-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .quick{
-        grid-template-columns:repeat(2,1fr);
-    }
+hr{
+    border:0;
+    border-top:1px solid #ddd;
+    margin:25px 0;
 }
 
 @media(max-width:600px){
 
     header h1{
-        font-size:27px;
+        font-size:24px;
     }
 
     nav a{
-        padding:10px 7px;
-        font-size:12px;
+        font-size:13px;
+        padding:8px 9px;
     }
 
-    .main-grid{
+    .posts{
         grid-template-columns:1fr;
     }
 
-    .services{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .notice{
-        display:block;
-    }
-
-    .notice-title{
-        text-align:center;
-    }
 }
+
 </style>
 </head>
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
-    <h1>DIGITAL DREAMS CSC</h1>
-    <p>Latest Jobs • Results • Admit Cards • Haryana Updates • CSC Services</p>
+
+    <h1>💻 DIGITAL DREAMS CSC</h1>
+
+    <p>
+        Jobs • Results • Admit Card • Haryana • CSC Services
+    </p>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-<div class="nav">
+
     <a href="#home">Home</a>
+
     <a href="#jobs">Latest Jobs</a>
+
     <a href="#results">Results</a>
+
     <a href="#admit">Admit Card</a>
+
     <a href="#answer">Answer Key</a>
+
     <a href="#haryana">Haryana</a>
-    <a href="#csc">CSC</a>
-    <a href="#adminLogin">Admin</a>
-</div>
+
+    <a href="#csc">CSC Services</a>
+
+    <a href="#admin">Admin</a>
+
 </nav>
 
-<main class="container">
 
-<section class="welcome" id="home">
-    <h2>Digital Dreams CSC में आपका स्वागत है</h2>
+<div class="container">
+
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+    <h2>
+        Digital Dreams CSC में आपका स्वागत है
+    </h2>
+
     <p>
-        Latest Government Jobs, Results, Admit Cards,
-        Answer Keys, Haryana Updates और CSC Services की जानकारी।
+        Latest Government Jobs, Results, Admit Card,
+        Answer Key और Haryana की महत्वपूर्ण जानकारी
+        एक ही जगह।
     </p>
+
 </section>
 
-<div class="notice">
-    <div class="notice-title">LATEST UPDATE</div>
-    <div class="notice-text">
-        <marquee id="noticeText">
-            Latest updates जल्द ही यहां दिखाई देंगी।
-        </marquee>
+
+<!-- JOBS -->
+
+<section id="jobs" class="section">
+
+    <h2 class="section-title">
+        📢 Latest Jobs
+    </h2>
+
+    <div id="jobsList" class="posts">
+        <p>Loading...</p>
     </div>
-</div>
 
-<div class="quick">
-
-<a href="#jobs" class="red">Latest Jobs</a>
-<a href="#results" class="blue">Results</a>
-<a href="#admit" class="green">Admit Card</a>
-<a href="#answer" class="orange">Answer Key</a>
-
-<a href="#haryana" class="purple">Haryana Jobs</a>
-<a href="#csc" class="teal">CSC Services</a>
-<a href="#schemes" class="pink">Govt Schemes</a>
-<a href="#adminLogin" class="dark">Admin Login</a>
-
-</div>
+</section>
 
 
-<div class="main-grid">
+<!-- RESULTS -->
 
-<section class="box" id="jobs">
-    <div class="box-title">Latest Jobs</div>
-    <div class="post-list" id="jobsList">
-        Loading...
+<section id="results" class="section">
+
+    <h2 class="section-title">
+        📊 Results
+    </h2>
+
+    <div id="resultsList" class="posts">
+        <p>Loading...</p>
     </div>
+
 </section>
 
-<section class="box" id="results">
-    <div class="box-title">Results</div>
-    <div class="post-list" id="resultsList">
-        Loading...
+
+<!-- ADMIT CARD -->
+
+<section id="admit" class="section">
+
+    <h2 class="section-title">
+        🎫 Admit Card
+    </h2>
+
+    <div id="admitList" class="posts">
+        <p>Loading...</p>
     </div>
+
 </section>
 
-<section class="box" id="admit">
-    <div class="box-title">Admit Card</div>
-    <div class="post-list" id="admitList">
-        Loading...
+
+<!-- ANSWER KEY -->
+
+<section id="answer" class="section">
+
+    <h2 class="section-title">
+        📝 Answer Key
+    </h2>
+
+    <div id="answerList" class="posts">
+        <p>Loading...</p>
     </div>
+
 </section>
 
-<section class="box" id="answer">
-    <div class="box-title">Answer Key</div>
-    <div class="post-list" id="answerList">
-        Loading...
+
+<!-- HARYANA -->
+
+<section id="haryana" class="section">
+
+    <h2 class="section-title">
+        🏡 Haryana Updates
+    </h2>
+
+    <div id="haryanaList" class="posts">
+        <p>Loading...</p>
     </div>
+
 </section>
 
-<section class="box">
-    <div class="box-title">Haryana Updates</div>
-    <div class="post-list" id="haryanaList">
-        Loading...
+
+<!-- CSC -->
+
+<section id="csc" class="section">
+
+    <h2 class="section-title">
+        💻 CSC Services
+    </h2>
+
+    <div id="cscList" class="posts">
+        <p>Loading...</p>
     </div>
-</section>
-
-<section class="box">
-    <div class="box-title">CSC Updates</div>
-    <div class="post-list" id="cscList">
-        Loading...
-    </div>
-</section>
-
-</div>
-
-
-<h2 class="section-title" id="haryana">
-Haryana Online Services
-</h2>
-
-<div class="services">
-
-<div class="service">Family ID / PPP</div>
-<div class="service">Income Certificate</div>
-<div class="service">Caste Certificate</div>
-<div class="service">Resident Certificate</div>
-<div class="service">Saksham Yuva</div>
-<div class="service">Police Verification</div>
-<div class="service">Voter ID</div>
-<div class="service">Pension Services</div>
-
-</div>
-
-
-<h2 class="section-title" id="csc">
-CSC & Digital Services
-</h2>
-
-<div class="services">
-
-<div class="service">PAN Card</div>
-<div class="service">Voter Card</div>
-<div class="service">Ayushman Card</div>
-<div class="service">Online Forms</div>
-<div class="service">Exam Forms</div>
-<div class="service">Government Jobs</div>
-<div class="service">Document Services</div>
-<div class="service">Bill Payment</div>
-
-</div>
-
-
-<h2 class="section-title" id="schemes">
-Government Schemes
-</h2>
-
-<div class="services">
-
-<div class="service">PM Kisan</div>
-<div class="service">Ayushman Bharat</div>
-<div class="service">Saksham Yuva</div>
-<div class="service">Scholarship</div>
-<div class="service">Pension</div>
-<div class="service">Labour Scheme</div>
-<div class="service">Haryana Schemes</div>
-<div class="service">Other Schemes</div>
-
-</div>
-
-
-<section class="whatsapp">
-
-<h2>📲 WhatsApp Channel</h2>
-
-<p>
-Latest Jobs और Updates पाने के लिए हमारे WhatsApp Channel से जुड़ें।
-</p>
-
-<a href="#" target="_blank">
-Join WhatsApp Channel
-</a>
 
 </section>
+
+
+<!-- ADMIN -->
+
+<section id="admin" class="section">
 
 
 <!-- LOGIN -->
 
-<section id="loginSection">
+<div id="loginBox" class="login-box">
 
-<div class="login-box">
+    <h2>🔐 Admin Login</h2>
 
-<h2>🔐 Admin Login</h2>
+    <p style="margin-bottom:15px;">
+        केवल Admin के लिए
+    </p>
 
-<input
-type="email"
-id="loginEmail"
-placeholder="Admin Email">
 
-<input
-type="password"
-id="loginPassword"
-placeholder="Password">
+    <label>
+        Email
+    </label>
 
-<button onclick="loginAdmin()">
-Login
-</button>
+    <input
+        type="email"
+        id="email"
+        placeholder="Admin Email"
+    >
 
-<p id="loginMessage" class="message"></p>
+
+    <label>
+        Password
+    </label>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Admin Password"
+    >
+
+
+    <button onclick="login()">
+        🔐 Login
+    </button>
+
+
+    <div
+        id="loginMessage"
+        class="message">
+    </div>
+
+</div>
+
+
+<!-- ADMIN DASHBOARD -->
+
+<div
+    id="adminPanel"
+    class="admin-box hidden">
+
+
+    <div class="admin-header">
+
+        <h2>
+            ⚙️ Admin Dashboard
+        </h2>
+
+        <button
+            class="logout"
+            onclick="logout()">
+
+            🚪 Logout
+
+        </button>
+
+    </div>
+
+
+    <hr>
+
+
+    <h3>
+        ➕ नई जानकारी Add करें
+    </h3>
+
+
+    <label>
+        Category
+    </label>
+
+    <select id="category">
+
+        <option value="jobs">
+            Latest Jobs
+        </option>
+
+        <option value="results">
+            Results
+        </option>
+
+        <option value="admit">
+            Admit Card
+        </option>
+
+        <option value="answer">
+            Answer Key
+        </option>
+
+        <option value="haryana">
+            Haryana
+        </option>
+
+        <option value="csc">
+            CSC Services
+        </option>
+
+    </select>
+
+
+    <label>
+        Title
+    </label>
+
+    <input
+        type="text"
+        id="title"
+        placeholder="जैसे: SSC GD Recruitment 2026"
+    >
+
+
+    <label>
+        Description
+    </label>
+
+    <textarea
+        id="description"
+        placeholder="Post की पूरी जानकारी लिखें">
+    </textarea>
+
+
+    <label>
+        Link
+    </label>
+
+    <input
+        type="text"
+        id="link"
+        placeholder="https://example.com"
+    >
+
+
+    <button onclick="savePost()">
+        💾 Save Post
+    </button>
+
+
+    <div
+        id="saveMessage"
+        class="message">
+    </div>
+
+
+    <hr>
+
+
+    <h3>
+        📋 आपकी सभी Posts
+    </h3>
+
+
+    <div id="adminPosts">
+
+        Loading...
+
+    </div>
+
 
 </div>
 
 </section>
 
-
-<!-- ADMIN PANEL -->
-
-<section id="adminSection">
-
-<div class="admin-box">
-
-<button class="logout" onclick="logoutAdmin()">
-Logout
-</button>
-
-<h2>⚙️ Admin Dashboard</h2>
-
-<p>
-यहां से आप Website की Jobs, Results, Admit Cards,
-Answer Keys और Updates manage कर सकते हैं।
-</p>
-
-<br>
-
-<h2 id="formTitle">
-➕ New Update
-</h2>
-
-<input
-type="hidden"
-id="editId">
-
-<label>Category</label>
-
-<select id="postCategory">
-
-<option value="jobs">Latest Jobs</option>
-<option value="results">Results</option>
-<option value="admit">Admit Card</option>
-<option value="answer">Answer Key</option>
-<option value="haryana">Haryana</option>
-<option value="csc">CSC</option>
-
-</select>
-
-
-<label>Title</label>
-
-<input
-type="text"
-id="postTitle"
-placeholder="जैसे: Haryana Police Vacancy 2026">
-
-
-<label>Description</label>
-
-<textarea
-id="postDescription"
-placeholder="Post की जानकारी लिखें"></textarea>
-
-
-<label>Apply / Official Link</label>
-
-<input
-type="url"
-id="postLink"
-placeholder="https://example.com">
-
-
-<button onclick="savePost()">
-💾 Save Update
-</button>
-
-<button
-onclick="clearForm()"
-style="background:#555;">
-Clear
-</button>
-
-<p id="saveMessage" class="message"></p>
-
-<hr style="margin:20px 0;">
-
-
-<h2>📋 Manage Posts</h2>
-
-<div id="adminPosts">
-Loading...
 </div>
 
-</div>
 
-</section>
-
-</main>
-
+<!-- FOOTER -->
 
 <footer>
 
-<h2>DIGITAL DREAMS CSC</h2>
+    <p>
+        © 2026 Digital Dreams CSC
+    </p>
 
-<p>
-Jobs • Results • Admit Cards • Haryana Updates • CSC Services
-</p>
-
-<p>
-© 2026 Digital Dreams CSC. All Rights Reserved.
-</p>
-
-<p style="color:#bbb;">
-Disclaimer: Digital Dreams CSC कोई सरकारी वेबसाइट नहीं है।
-यह वेबसाइट केवल जानकारी के उद्देश्य से बनाई गई है।
-</p>
+    <p>
+        All Rights Reserved
+    </p>
 
 </footer>
 
 
-<!-- FIREBASE -->
+
+<!-- =====================================================
+     FIREBASE JAVASCRIPT
+===================================================== -->
 
 <script type="module">
 
+
+/* FIREBASE APP */
+
 import {
     initializeApp
-} from
+}
+from
 "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+
+
+/* AUTH */
 
 import {
     getAuth,
     signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
-} from
+    onAuthStateChanged,
+    signOut
+}
+from
 "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+
+/* FIRESTORE */
 
 import {
     getFirestore,
@@ -724,82 +645,103 @@ import {
     addDoc,
     getDocs,
     deleteDoc,
-    updateDoc,
     doc,
-    serverTimestamp,
     query,
     orderBy
-} from
+}
+from
 "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 
 
-/*
-====================================================
-YOUR FIREBASE CONFIG
-====================================================
 
-Firebase Console:
-Project Settings
-→ General
-→ Your apps
-→ Web App
-→ SDK setup and configuration
-→ Config
-
-नीचे अपनी values डालें.
-====================================================
-*/
+/* =====================================================
+   🔥 YOUR FIREBASE CONFIG
+===================================================== */
 
 const firebaseConfig = {
 
-    apiKey: "YOUR_API_KEY",
+    apiKey:
+    "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
 
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    authDomain:
+    "digital-dreams-pegan.firebaseapp.com",
 
-    projectId: "YOUR_PROJECT_ID",
+    projectId:
+    "digital-dreams-pegan",
 
-    storageBucket: "YOUR_PROJECT.firebasestorage.app",
+    storageBucket:
+    "digital-dreams-pegan.firebasestorage.app",
 
-    messagingSenderId: "YOUR_SENDER_ID",
+    messagingSenderId:
+    "1053549608341",
 
-    appId: "YOUR_APP_ID"
+    appId:
+    "1:1053549608341:web:bb602038ebda2732830a9c",
+
+    measurementId:
+    "G-6EKZP1D3XQ"
 
 };
 
 
+
+/* INITIALIZE FIREBASE */
+
 const app =
-initializeApp(firebaseConfig);
+    initializeApp(firebaseConfig);
+
+
+
+/* AUTH */
 
 const auth =
-getAuth(app);
+    getAuth(app);
+
+
+
+/* FIRESTORE */
 
 const db =
-getFirestore(app);
+    getFirestore(app);
 
 
-/* =========================
-ADMIN LOGIN SECTION
-========================= */
 
-window.loginAdmin = async function(){
+/* =====================================================
+   LOGIN
+===================================================== */
+
+window.login = async function(){
 
     const email =
-    document.getElementById("loginEmail").value.trim();
+        document
+        .getElementById("email")
+        .value
+        .trim();
+
 
     const password =
-    document.getElementById("loginPassword").value;
+        document
+        .getElementById("password")
+        .value;
+
 
     const message =
-    document.getElementById("loginMessage");
+        document
+        .getElementById("loginMessage");
 
 
     if(!email || !password){
 
         message.innerText =
-        "Email और Password डालें।";
+        "❌ Email और Password दोनों डालें।";
 
         return;
+
     }
+
+
+    message.innerText =
+    "Login हो रहा है...";
 
 
     try{
@@ -810,56 +752,85 @@ window.loginAdmin = async function(){
             password
         );
 
+
         message.innerText =
-        "Login successful.";
+        "✅ Login Successful";
+
 
     }
 
     catch(error){
 
-        console.error(error);
+        console.log(error);
+
 
         message.innerText =
-        "Login failed: " + error.message;
+        "❌ Login Failed: "
+        + error.message;
 
     }
 
 };
 
 
-/* =========================
-LOGOUT
-========================= */
 
-window.logoutAdmin = async function(){
+/* =====================================================
+   LOGOUT
+===================================================== */
 
-    await signOut(auth);
+window.logout = async function(){
+
+    try{
+
+        await signOut(auth);
+
+        alert(
+            "आप Logout हो गए हैं।"
+        );
+
+    }
+
+    catch(error){
+
+        alert(
+            error.message
+        );
+
+    }
 
 };
 
 
-/* =========================
-AUTH STATE
-========================= */
+
+/* =====================================================
+   CHECK LOGIN
+===================================================== */
 
 onAuthStateChanged(
     auth,
     function(user){
 
-        const loginSection =
-        document.getElementById("loginSection");
+        const loginBox =
+            document
+            .getElementById("loginBox");
 
-        const adminSection =
-        document.getElementById("adminSection");
+
+        const adminPanel =
+            document
+            .getElementById("adminPanel");
 
 
         if(user){
 
-            loginSection.style.display =
-            "none";
+            loginBox
+            .classList
+            .add("hidden");
 
-            adminSection.style.display =
-            "block";
+
+            adminPanel
+            .classList
+            .remove("hidden");
+
 
             loadAdminPosts();
 
@@ -867,11 +838,14 @@ onAuthStateChanged(
 
         else{
 
-            loginSection.style.display =
-            "block";
+            loginBox
+            .classList
+            .remove("hidden");
 
-            adminSection.style.display =
-            "none";
+
+            adminPanel
+            .classList
+            .add("hidden");
 
         }
 
@@ -879,537 +853,522 @@ onAuthStateChanged(
 );
 
 
-/* =========================
-LOAD PUBLIC POSTS
-========================= */
 
-async function loadPublicPosts(){
-
-    const lists = {
-
-        jobs:
-        document.getElementById("jobsList"),
-
-        results:
-        document.getElementById("resultsList"),
-
-        admit:
-        document.getElementById("admitList"),
-
-        answer:
-        document.getElementById("answerList"),
-
-        haryana:
-        document.getElementById("haryanaList"),
-
-        csc:
-        document.getElementById("cscList")
-
-    };
-
-
-    Object.values(lists).forEach(
-        list => list.innerHTML = ""
-    );
-
-
-    try{
-
-        const snapshot =
-        await getDocs(
-            collection(db,"posts")
-        );
-
-
-        snapshot.forEach(
-            item => {
-
-                const data =
-                item.data();
-
-
-                if(!lists[data.category]){
-                    return;
-                }
-
-
-                const div =
-                document.createElement("div");
-
-                div.className =
-                "post-item";
-
-
-                const title =
-                document.createElement("h3");
-
-                title.textContent =
-                data.title || "";
-
-
-                const description =
-                document.createElement("p");
-
-                description.textContent =
-                data.description || "";
-
-
-                div.appendChild(title);
-                div.appendChild(description);
-
-
-                if(data.link){
-
-                    const link =
-                    document.createElement("a");
-
-                    link.href =
-                    data.link;
-
-                    link.target =
-                    "_blank";
-
-                    link.rel =
-                    "noopener noreferrer";
-
-                    link.className =
-                    "apply";
-
-                    link.textContent =
-                    "Apply / Official Link";
-
-
-                    div.appendChild(link);
-
-                }
-
-
-                lists[data.category]
-                .appendChild(div);
-
-            }
-        );
-
-
-        Object.entries(lists).forEach(
-            ([category,list]) => {
-
-                if(!list.innerHTML){
-
-                    list.innerHTML =
-                    "<p style='padding:10px;'>अभी कोई update नहीं है।</p>";
-
-                }
-
-            }
-        );
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        Object.values(lists).forEach(
-            list =>
-            list.innerHTML =
-            "<p>Data load नहीं हो सका।</p>"
-        );
-
-    }
-
-}
-
-
-/* =========================
-LOAD ADMIN POSTS
-========================= */
-
-async function loadAdminPosts(){
-
-    const container =
-    document.getElementById("adminPosts");
-
-    container.innerHTML =
-    "Loading...";
-
-
-    try{
-
-        const snapshot =
-        await getDocs(
-            collection(db,"posts")
-        );
-
-
-        container.innerHTML =
-        "";
-
-
-        if(snapshot.empty){
-
-            container.innerHTML =
-            "<p>अभी कोई post नहीं है।</p>";
-
-            return;
-        }
-
-
-        snapshot.forEach(
-            item => {
-
-                const data =
-                item.data();
-
-
-                const div =
-                document.createElement("div");
-
-                div.className =
-                "admin-post";
-
-
-                const title =
-                document.createElement("h3");
-
-                title.textContent =
-                data.title || "";
-
-
-                const category =
-                document.createElement("p");
-
-                category.textContent =
-                "Category: " +
-                (data.category || "");
-
-
-                const description =
-                document.createElement("p");
-
-                description.textContent =
-                data.description || "";
-
-
-                const edit =
-                document.createElement("button");
-
-                edit.className =
-                "edit";
-
-                edit.textContent =
-                "✏️ Edit";
-
-
-                edit.onclick =
-                function(){
-
-                    editPost(
-                        item.id,
-                        data
-                    );
-
-                };
-
-
-                const del =
-                document.createElement("button");
-
-                del.className =
-                "delete";
-
-                del.textContent =
-                "🗑 Delete";
-
-
-                del.onclick =
-                function(){
-
-                    deletePost(
-                        item.id
-                    );
-
-                };
-
-
-                div.appendChild(title);
-
-                div.appendChild(category);
-
-                div.appendChild(description);
-
-                div.appendChild(edit);
-
-                div.appendChild(del);
-
-
-                container.appendChild(div);
-
-            }
-        );
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        container.innerHTML =
-        "<p>Posts load नहीं हुए: " +
-        error.message +
-        "</p>";
-
-    }
-
-}
-
-
-/* =========================
-SAVE POST
-========================= */
+/* =====================================================
+   ADD POST
+===================================================== */
 
 window.savePost = async function(){
 
-    const editId =
-    document.getElementById("editId").value;
-
-
     const category =
-    document.getElementById("postCategory").value;
+        document
+        .getElementById("category")
+        .value;
 
 
     const title =
-    document.getElementById("postTitle").value.trim();
+        document
+        .getElementById("title")
+        .value
+        .trim();
 
 
     const description =
-    document.getElementById("postDescription").value.trim();
+        document
+        .getElementById("description")
+        .value
+        .trim();
 
 
     const link =
-    document.getElementById("postLink").value.trim();
+        document
+        .getElementById("link")
+        .value
+        .trim();
 
 
     const message =
-    document.getElementById("saveMessage");
+        document
+        .getElementById("saveMessage");
 
 
     if(!title){
 
         message.innerText =
-        "Title डालना जरूरी है।";
+        "❌ Title डालना जरूरी है।";
 
         return;
+
     }
-
-
-    const data = {
-
-        category: category,
-
-        title: title,
-
-        description: description,
-
-        link: link,
-
-        updatedAt: serverTimestamp()
-
-    };
 
 
     try{
 
-        if(editId){
+        await addDoc(
+            collection(db,"posts"),
+            {
 
-            await updateDoc(
-                doc(db,"posts",editId),
-                data
-            );
+                category:
+                category,
 
-            message.innerText =
-            "Post successfully updated.";
+                title:
+                title,
 
-        }
+                description:
+                description,
 
-        else{
+                link:
+                link,
 
-            data.createdAt =
-            serverTimestamp();
+                createdAt:
+                Date.now()
 
-
-            await addDoc(
-                collection(db,"posts"),
-                data
-            );
-
-
-            message.innerText =
-            "Post successfully added.";
-
-        }
+            }
+        );
 
 
-        clearForm();
+        message.innerText =
+        "✅ Post Successfully Added";
 
-        await loadAdminPosts();
 
-        await loadPublicPosts();
+        document
+        .getElementById("title")
+        .value = "";
+
+
+        document
+        .getElementById("description")
+        .value = "";
+
+
+        document
+        .getElementById("link")
+        .value = "";
+
+
+        loadAdminPosts();
+
+        loadPublicPosts();
 
     }
 
     catch(error){
 
-        console.error(error);
+        console.log(error);
+
 
         message.innerText =
-        "Error: " + error.message;
+        "❌ Error: "
+        + error.message;
 
     }
 
 };
 
 
-/* =========================
-EDIT POST
-========================= */
 
-function editPost(id,data){
+/* =====================================================
+   ADMIN POSTS
+===================================================== */
 
-    document.getElementById(
-        "editId"
-    ).value = id;
+async function loadAdminPosts(){
 
-
-    document.getElementById(
-        "postCategory"
-    ).value =
-    data.category || "jobs";
+    const box =
+        document
+        .getElementById("adminPosts");
 
 
-    document.getElementById(
-        "postTitle"
-    ).value =
-    data.title || "";
+    box.innerHTML =
+    "Loading...";
 
 
-    document.getElementById(
-        "postDescription"
-    ).value =
-    data.description || "";
+    try{
+
+        const q =
+            query(
+                collection(db,"posts"),
+                orderBy(
+                    "createdAt",
+                    "desc"
+                )
+            );
 
 
-    document.getElementById(
-        "postLink"
-    ).value =
-    data.link || "";
+        const snapshot =
+            await getDocs(q);
 
 
-    document.getElementById(
-        "formTitle"
-    ).innerText =
-    "✏️ Edit Update";
+        box.innerHTML = "";
 
 
-    window.scrollTo({
-        top: document.getElementById(
-            "adminSection"
-        ).offsetTop,
-        behavior:"smooth"
-    });
+        if(snapshot.empty){
+
+            box.innerHTML =
+            "<p>अभी कोई post नहीं है।</p>";
+
+            return;
+
+        }
+
+
+        snapshot.forEach(
+            function(item){
+
+                const data =
+                    item.data();
+
+
+                const div =
+                    document.createElement("div");
+
+
+                div.className =
+                    "admin-post";
+
+
+                div.innerHTML = `
+
+                    <h3>
+                    ${escapeHTML(
+                        data.title || ""
+                    )}
+                    </h3>
+
+                    <p>
+                    <b>Category:</b>
+                    ${escapeHTML(
+                        data.category || ""
+                    )}
+                    </p>
+
+                    <p>
+                    ${escapeHTML(
+                        data.description || ""
+                    )}
+                    </p>
+
+                    ${
+                        data.link
+                        ?
+                        `
+                        <p>
+                        <a
+                        href="${safeURL(data.link)}"
+                        target="_blank">
+                        🔗 Open Link
+                        </a>
+                        </p>
+                        `
+                        :
+                        ""
+                    }
+
+                    <button
+                    class="delete"
+                    onclick="deletePost('${item.id}')">
+
+                    🗑️ Delete
+
+                    </button>
+
+                `;
+
+
+                box.appendChild(div);
+
+            }
+        );
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+
+        box.innerHTML =
+        "❌ Posts load नहीं हो रही हैं।";
+
+    }
 
 }
 
 
-/* =========================
-DELETE POST
-========================= */
 
-async function deletePost(id){
+/* =====================================================
+   DELETE
+===================================================== */
+
+window.deletePost =
+async function(id){
 
     const confirmDelete =
-    confirm(
-        "क्या आप इस post को delete करना चाहते हैं?"
-    );
+        confirm(
+            "क्या आप इस post को delete करना चाहते हैं?"
+        );
 
 
     if(!confirmDelete){
+
         return;
+
     }
 
 
     try{
 
         await deleteDoc(
-            doc(db,"posts",id)
+            doc(
+                db,
+                "posts",
+                id
+            )
         );
 
 
-        await loadAdminPosts();
+        alert(
+            "✅ Post Delete हो गई।"
+        );
 
-        await loadPublicPosts();
+
+        loadAdminPosts();
+
+        loadPublicPosts();
 
     }
 
     catch(error){
 
         alert(
-            "Delete Error: " +
-            error.message
+            "❌ Delete Error: "
+            + error.message
         );
+
+    }
+
+};
+
+
+
+/* =====================================================
+   PUBLIC POSTS
+===================================================== */
+
+async function loadPublicPosts(){
+
+    const categories = [
+
+        "jobs",
+        "results",
+        "admit",
+        "answer",
+        "haryana",
+        "csc"
+
+    ];
+
+
+    try{
+
+        const q =
+            query(
+                collection(db,"posts"),
+                orderBy(
+                    "createdAt",
+                    "desc"
+                )
+            );
+
+
+        const snapshot =
+            await getDocs(q);
+
+
+        categories.forEach(
+            function(category){
+
+                const box =
+                    document
+                    .getElementById(
+                        category + "List"
+                    );
+
+
+                box.innerHTML = "";
+
+
+                let found =
+                    false;
+
+
+                snapshot.forEach(
+                    function(item){
+
+                        const data =
+                            item.data();
+
+
+                        if(
+                            data.category
+                            ===
+                            category
+                        ){
+
+                            found =
+                            true;
+
+
+                            const div =
+                                document
+                                .createElement("div");
+
+
+                            div.className =
+                                "post";
+
+
+                            div.innerHTML = `
+
+                                <h3>
+                                ${escapeHTML(
+                                    data.title || ""
+                                )}
+                                </h3>
+
+                                <p>
+                                ${escapeHTML(
+                                    data.description || ""
+                                )}
+                                </p>
+
+                                ${
+                                    data.link
+                                    ?
+                                    `
+                                    <a
+                                    href="${safeURL(data.link)}"
+                                    target="_blank">
+
+                                    View Details →
+
+                                    </a>
+                                    `
+                                    :
+                                    ""
+                                }
+
+                            `;
+
+
+                            box.appendChild(div);
+
+                        }
+
+                    }
+                );
+
+
+                if(!found){
+
+                    box.innerHTML =
+                    "<p>अभी कोई जानकारी उपलब्ध नहीं है।</p>";
+
+                }
+
+            }
+        );
+
+    }
+
+    catch(error){
+
+        console.log(error);
 
     }
 
 }
 
 
-/* =========================
-CLEAR FORM
-========================= */
 
-window.clearForm = function(){
+/* =====================================================
+   SECURITY FUNCTIONS
+===================================================== */
 
-    document.getElementById(
-        "editId"
-    ).value = "";
+function escapeHTML(text){
 
+    return String(text)
 
-    document.getElementById(
-        "postTitle"
-    ).value = "";
+    .replace(
+        /&/g,
+        "&amp;"
+    )
 
+    .replace(
+        /</g,
+        "&lt;"
+    )
 
-    document.getElementById(
-        "postDescription"
-    ).value = "";
+    .replace(
+        />/g,
+        "&gt;"
+    )
 
+    .replace(
+        /"/g,
+        "&quot;"
+    )
 
-    document.getElementById(
-        "postLink"
-    ).value = "";
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
-
-    document.getElementById(
-        "formTitle"
-    ).innerText =
-    "➕ New Update";
-
-
-    document.getElementById(
-        "saveMessage"
-    ).innerText = "";
-
-};
+}
 
 
-/* =========================
-START WEBSITE
-========================= */
+function safeURL(url){
+
+    try{
+
+        const parsed =
+            new URL(url);
+
+
+        if(
+            parsed.protocol
+            === "http:"
+            ||
+            parsed.protocol
+            === "https:"
+        ){
+
+            return parsed.href;
+
+        }
+
+
+        return "#";
+
+    }
+
+    catch{
+
+        return "#";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START WEBSITE
+===================================================== */
 
 loadPublicPosts();
+
 
 </script>
 
 </body>
 </html>
-```
