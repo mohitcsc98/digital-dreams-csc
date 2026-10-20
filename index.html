@@ -5,103 +5,387 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Dreams CSC - Admin Panel</title>
+<title>Digital Dreams CSC | Latest Jobs, Results & CSC Services</title>
+
+<meta name="description" content="Digital Dreams CSC - Latest Government Jobs, Results, Admit Cards, Haryana Updates and CSC Services.">
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f4f4f4;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f3f3;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
 }
 
 header{
-  background:#8b0000;
-  color:white;
-  padding:20px;
-  text-align:center;
+    background:#8b0000;
+    color:#fff;
+    text-align:center;
+    padding:25px 10px;
+}
+
+header h1{
+    font-size:36px;
+}
+
+header p{
+    margin-top:7px;
+}
+
+nav{
+    background:#222;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#fff;
+    padding:14px 16px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    background:#8b0000;
 }
 
 .container{
-  max-width:900px;
-  margin:30px auto;
-  padding:15px;
+    width:95%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.card{
-  background:white;
-  padding:20px;
-  margin-bottom:20px;
-  border-radius:8px;
-  box-shadow:0 2px 8px #ccc;
+.welcome{
+    background:#fff;
+    margin-top:18px;
+    padding:22px;
+    text-align:center;
+    border:1px solid #ddd;
 }
 
-h2{
-  margin-bottom:15px;
-  color:#8b0000;
+.welcome h2{
+    color:#8b0000;
+    margin-bottom:8px;
+}
+
+.notice{
+    margin-top:15px;
+    background:#fff3cd;
+    border:1px solid #ffc107;
+    display:flex;
+}
+
+.notice-title{
+    background:#8b0000;
+    color:white;
+    padding:12px;
+    font-weight:bold;
+}
+
+.notice-text{
+    padding:12px;
+    color:#b00000;
+    font-weight:bold;
+    width:100%;
+}
+
+.quick{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:18px;
+}
+
+.quick a{
+    color:white;
+    padding:18px 8px;
+    text-align:center;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.red{background:#c62828;}
+.blue{background:#1565c0;}
+.green{background:#2e7d32;}
+.orange{background:#ef6c00;}
+.purple{background:#6a1b9a;}
+.teal{background:#00796b;}
+.dark{background:#333;}
+.pink{background:#ad1457;}
+
+.main-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.box{
+    background:#fff;
+    border:1px solid #ccc;
+}
+
+.box-title{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:11px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.post-list{
+    padding:10px;
+}
+
+.post-item{
+    border-bottom:1px dashed #ccc;
+    padding:12px 5px;
+}
+
+.post-item:last-child{
+    border-bottom:none;
+}
+
+.post-item h3{
+    font-size:16px;
+    color:#0047ab;
+}
+
+.post-item p{
+    font-size:13px;
+    margin-top:5px;
+}
+
+.apply{
+    display:inline-block;
+    background:#006400;
+    color:#fff;
+    padding:6px 10px;
+    margin-top:8px;
+    border-radius:3px;
+    font-size:13px;
+}
+
+.section-title{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:12px;
+    margin-top:25px;
+    border-bottom:4px solid #8b0000;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.service{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:20px 10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.service:hover{
+    background:#8b0000;
+    color:white;
+}
+
+.whatsapp{
+    background:#fff;
+    margin-top:20px;
+    padding:25px;
+    text-align:center;
+}
+
+.whatsapp a{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:13px 25px;
+    border-radius:5px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:25px;
+}
+
+footer p{
+    margin-top:7px;
+    font-size:13px;
+}
+
+/* ADMIN */
+
+#adminSection{
+    display:none;
+}
+
+.admin-box{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border:2px solid #8b0000;
+    border-radius:8px;
+}
+
+.admin-box h2{
+    color:#8b0000;
+    margin-bottom:15px;
 }
 
 input,select,textarea{
-  width:100%;
-  padding:12px;
-  margin:7px 0;
-  border:1px solid #ccc;
-  border-radius:5px;
+    width:100%;
+    padding:12px;
+    margin:7px 0 12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
 }
 
 textarea{
-  min-height:120px;
+    min-height:110px;
 }
 
 button{
-  padding:12px 20px;
-  background:#8b0000;
-  color:white;
-  border:0;
-  border-radius:5px;
-  cursor:pointer;
-  margin-top:8px;
+    border:0;
+    padding:11px 18px;
+    border-radius:4px;
+    cursor:pointer;
+    background:#8b0000;
+    color:white;
+    font-weight:bold;
+    margin:4px;
 }
 
 button:hover{
-  background:#600000;
+    opacity:.85;
 }
 
 .logout{
-  background:#222;
-  float:right;
-}
-
-.delete{
-  background:#d00000;
+    background:#222;
+    float:right;
 }
 
 .edit{
-  background:#1565c0;
+    background:#1565c0;
 }
 
-#adminPanel{
-  display:none;
+.delete{
+    background:#c62828;
 }
 
-.post{
-  border:1px solid #ddd;
-  padding:15px;
-  margin:10px 0;
-  border-radius:5px;
+.admin-post{
+    border:1px solid #ddd;
+    padding:15px;
+    margin-top:10px;
 }
 
-.post h3{
-  margin-bottom:5px;
+.admin-post h3{
+    color:#8b0000;
+}
+
+#loginSection{
+    display:none;
+}
+
+.login-box{
+    max-width:450px;
+    margin:30px auto;
+    background:#fff;
+    padding:25px;
+    border:1px solid #ddd;
+    box-shadow:0 2px 8px #ccc;
+}
+
+.login-box h2{
+    text-align:center;
+    color:#8b0000;
+    margin-bottom:15px;
 }
 
 .message{
-  margin-top:10px;
-  font-weight:bold;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+#adminButton{
+    background:#222;
+}
+
+@media(max-width:850px){
+
+    .main-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .quick{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        padding:10px 7px;
+        font-size:12px;
+    }
+
+    .main-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .notice{
+        display:block;
+    }
+
+    .notice-title{
+        text-align:center;
+    }
 }
 </style>
 </head>
@@ -109,62 +393,223 @@ button:hover{
 <body>
 
 <header>
-<h1>Digital Dreams CSC</h1>
-<p>Firebase Admin Panel</p>
+    <h1>DIGITAL DREAMS CSC</h1>
+    <p>Latest Jobs • Results • Admit Cards • Haryana Updates • CSC Services</p>
 </header>
 
-<div class="container">
+<nav>
+<div class="nav">
+    <a href="#home">Home</a>
+    <a href="#jobs">Latest Jobs</a>
+    <a href="#results">Results</a>
+    <a href="#admit">Admit Card</a>
+    <a href="#answer">Answer Key</a>
+    <a href="#haryana">Haryana</a>
+    <a href="#csc">CSC</a>
+    <a href="#adminLogin">Admin</a>
+</div>
+</nav>
+
+<main class="container">
+
+<section class="welcome" id="home">
+    <h2>Digital Dreams CSC में आपका स्वागत है</h2>
+    <p>
+        Latest Government Jobs, Results, Admit Cards,
+        Answer Keys, Haryana Updates और CSC Services की जानकारी।
+    </p>
+</section>
+
+<div class="notice">
+    <div class="notice-title">LATEST UPDATE</div>
+    <div class="notice-text">
+        <marquee id="noticeText">
+            Latest updates जल्द ही यहां दिखाई देंगी।
+        </marquee>
+    </div>
+</div>
+
+<div class="quick">
+
+<a href="#jobs" class="red">Latest Jobs</a>
+<a href="#results" class="blue">Results</a>
+<a href="#admit" class="green">Admit Card</a>
+<a href="#answer" class="orange">Answer Key</a>
+
+<a href="#haryana" class="purple">Haryana Jobs</a>
+<a href="#csc" class="teal">CSC Services</a>
+<a href="#schemes" class="pink">Govt Schemes</a>
+<a href="#adminLogin" class="dark">Admin Login</a>
+
+</div>
+
+
+<div class="main-grid">
+
+<section class="box" id="jobs">
+    <div class="box-title">Latest Jobs</div>
+    <div class="post-list" id="jobsList">
+        Loading...
+    </div>
+</section>
+
+<section class="box" id="results">
+    <div class="box-title">Results</div>
+    <div class="post-list" id="resultsList">
+        Loading...
+    </div>
+</section>
+
+<section class="box" id="admit">
+    <div class="box-title">Admit Card</div>
+    <div class="post-list" id="admitList">
+        Loading...
+    </div>
+</section>
+
+<section class="box" id="answer">
+    <div class="box-title">Answer Key</div>
+    <div class="post-list" id="answerList">
+        Loading...
+    </div>
+</section>
+
+<section class="box">
+    <div class="box-title">Haryana Updates</div>
+    <div class="post-list" id="haryanaList">
+        Loading...
+    </div>
+</section>
+
+<section class="box">
+    <div class="box-title">CSC Updates</div>
+    <div class="post-list" id="cscList">
+        Loading...
+    </div>
+</section>
+
+</div>
+
+
+<h2 class="section-title" id="haryana">
+Haryana Online Services
+</h2>
+
+<div class="services">
+
+<div class="service">Family ID / PPP</div>
+<div class="service">Income Certificate</div>
+<div class="service">Caste Certificate</div>
+<div class="service">Resident Certificate</div>
+<div class="service">Saksham Yuva</div>
+<div class="service">Police Verification</div>
+<div class="service">Voter ID</div>
+<div class="service">Pension Services</div>
+
+</div>
+
+
+<h2 class="section-title" id="csc">
+CSC & Digital Services
+</h2>
+
+<div class="services">
+
+<div class="service">PAN Card</div>
+<div class="service">Voter Card</div>
+<div class="service">Ayushman Card</div>
+<div class="service">Online Forms</div>
+<div class="service">Exam Forms</div>
+<div class="service">Government Jobs</div>
+<div class="service">Document Services</div>
+<div class="service">Bill Payment</div>
+
+</div>
+
+
+<h2 class="section-title" id="schemes">
+Government Schemes
+</h2>
+
+<div class="services">
+
+<div class="service">PM Kisan</div>
+<div class="service">Ayushman Bharat</div>
+<div class="service">Saksham Yuva</div>
+<div class="service">Scholarship</div>
+<div class="service">Pension</div>
+<div class="service">Labour Scheme</div>
+<div class="service">Haryana Schemes</div>
+<div class="service">Other Schemes</div>
+
+</div>
+
+
+<section class="whatsapp">
+
+<h2>📲 WhatsApp Channel</h2>
+
+<p>
+Latest Jobs और Updates पाने के लिए हमारे WhatsApp Channel से जुड़ें।
+</p>
+
+<a href="#" target="_blank">
+Join WhatsApp Channel
+</a>
+
+</section>
+
 
 <!-- LOGIN -->
 
-<div class="card" id="loginBox">
+<section id="loginSection">
+
+<div class="login-box">
 
 <h2>🔐 Admin Login</h2>
 
 <input
 type="email"
-id="email"
+id="loginEmail"
 placeholder="Admin Email">
 
 <input
 type="password"
-id="password"
+id="loginPassword"
 placeholder="Password">
 
-<button onclick="adminLogin()">
+<button onclick="loginAdmin()">
 Login
 </button>
 
-<p class="message" id="loginMessage"></p>
+<p id="loginMessage" class="message"></p>
 
 </div>
+
+</section>
 
 
 <!-- ADMIN PANEL -->
 
-<div id="adminPanel">
+<section id="adminSection">
 
-<div class="card">
+<div class="admin-box">
 
-<button class="logout" onclick="logout()">
+<button class="logout" onclick="logoutAdmin()">
 Logout
 </button>
 
-<h2>Admin Dashboard</h2>
+<h2>⚙️ Admin Dashboard</h2>
 
 <p>
-यहां से Digital Dreams CSC की updates manage करें।
+यहां से आप Website की Jobs, Results, Admit Cards,
+Answer Keys और Updates manage कर सकते हैं।
 </p>
 
-</div>
+<br>
 
-
-<!-- ADD / EDIT POST -->
-
-<div class="card">
-
-<h2 id="formHeading">
-➕ New Update Add करें
+<h2 id="formTitle">
+➕ New Update
 </h2>
 
 <input
@@ -173,35 +618,14 @@ id="editId">
 
 <label>Category</label>
 
-<select id="category">
+<select id="postCategory">
 
-<option value="jobs">
-Latest Jobs
-</option>
-
-<option value="results">
-Results
-</option>
-
-<option value="admit-card">
-Admit Card
-</option>
-
-<option value="answer-key">
-Answer Key
-</option>
-
-<option value="haryana">
-Haryana Updates
-</option>
-
-<option value="csc">
-CSC Services
-</option>
-
-<option value="notice">
-Latest Notice
-</option>
+<option value="jobs">Latest Jobs</option>
+<option value="results">Results</option>
+<option value="admit">Admit Card</option>
+<option value="answer">Answer Key</option>
+<option value="haryana">Haryana</option>
+<option value="csc">CSC</option>
 
 </select>
 
@@ -210,22 +634,22 @@ Latest Notice
 
 <input
 type="text"
-id="title"
+id="postTitle"
 placeholder="जैसे: Haryana Police Vacancy 2026">
 
 
 <label>Description</label>
 
 <textarea
-id="description"
-placeholder="Update की पूरी जानकारी लिखें"></textarea>
+id="postDescription"
+placeholder="Post की जानकारी लिखें"></textarea>
 
 
-<label>Official / Apply Link</label>
+<label>Apply / Official Link</label>
 
 <input
 type="url"
-id="link"
+id="postLink"
 placeholder="https://example.com">
 
 
@@ -234,579 +658,755 @@ placeholder="https://example.com">
 </button>
 
 <button
-type="button"
-onclick="resetForm()"
+onclick="clearForm()"
 style="background:#555;">
 Clear
 </button>
 
 <p id="saveMessage" class="message"></p>
 
-</div>
+<hr style="margin:20px 0;">
 
 
-<!-- ALL POSTS -->
+<h2>📋 Manage Posts</h2>
 
-<div class="card">
-
-<h2>📋 All Updates</h2>
-
-<div id="postList">
+<div id="adminPosts">
 Loading...
 </div>
 
 </div>
 
-</div>
+</section>
 
-</div>
+</main>
+
+
+<footer>
+
+<h2>DIGITAL DREAMS CSC</h2>
+
+<p>
+Jobs • Results • Admit Cards • Haryana Updates • CSC Services
+</p>
+
+<p>
+© 2026 Digital Dreams CSC. All Rights Reserved.
+</p>
+
+<p style="color:#bbb;">
+Disclaimer: Digital Dreams CSC कोई सरकारी वेबसाइट नहीं है।
+यह वेबसाइट केवल जानकारी के उद्देश्य से बनाई गई है।
+</p>
+
+</footer>
 
 
 <!-- FIREBASE -->
 
 <script type="module">
 
+import {
+    initializeApp
+} from
+"https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+
+import {
+    getAuth,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+} from
+"https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    deleteDoc,
+    updateDoc,
+    doc,
+    serverTimestamp,
+    query,
+    orderBy
+} from
+"https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+
+
 /*
-=================================================
-IMPORTANT
+====================================================
+YOUR FIREBASE CONFIG
+====================================================
 
-नीचे YOUR_... वाली values को अपने Firebase
-Project की firebaseConfig values से बदलना है.
-=================================================
+Firebase Console:
+Project Settings
+→ General
+→ Your apps
+→ Web App
+→ SDK setup and configuration
+→ Config
+
+नीचे अपनी values डालें.
+====================================================
 */
-
-
-import {
-initializeApp
-}
-from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-
-
-import {
-getAuth,
-signInWithEmailAndPassword,
-signOut,
-onAuthStateChanged
-}
-from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
-
-
-import {
-getFirestore,
-collection,
-addDoc,
-getDocs,
-deleteDoc,
-doc,
-updateDoc,
-serverTimestamp
-}
-from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
-
-
 
 const firebaseConfig = {
 
-apiKey:
-"YOUR_API_KEY",
+    apiKey: "YOUR_API_KEY",
 
-authDomain:
-"YOUR_PROJECT.firebaseapp.com",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
 
-projectId:
-"YOUR_PROJECT_ID",
+    projectId: "YOUR_PROJECT_ID",
 
-storageBucket:
-"YOUR_PROJECT.firebasestorage.app",
+    storageBucket: "YOUR_PROJECT.firebasestorage.app",
 
-messagingSenderId:
-"YOUR_SENDER_ID",
+    messagingSenderId: "YOUR_SENDER_ID",
 
-appId:
-"YOUR_APP_ID"
+    appId: "YOUR_APP_ID"
 
 };
-
 
 
 const app =
 initializeApp(firebaseConfig);
 
-
 const auth =
 getAuth(app);
-
 
 const db =
 getFirestore(app);
 
 
+/* =========================
+ADMIN LOGIN SECTION
+========================= */
 
-const loginBox =
-document.getElementById("loginBox");
+window.loginAdmin = async function(){
 
-const adminPanel =
-document.getElementById("adminPanel");
+    const email =
+    document.getElementById("loginEmail").value.trim();
 
-const loginMessage =
-document.getElementById("loginMessage");
+    const password =
+    document.getElementById("loginPassword").value;
 
-const saveMessage =
-document.getElementById("saveMessage");
-
-
-
-/* ==========================
-LOGIN
-========================== */
-
-window.adminLogin =
-async function(){
-
-const email =
-document.getElementById("email").value.trim();
-
-const password =
-document.getElementById("password").value;
+    const message =
+    document.getElementById("loginMessage");
 
 
-if(!email || !password){
+    if(!email || !password){
 
-loginMessage.innerText =
-"Email और Password डालें.";
+        message.innerText =
+        "Email और Password डालें।";
 
-return;
+        return;
+    }
 
-}
 
+    try{
 
-try{
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
 
-await signInWithEmailAndPassword(
-auth,
-email,
-password
-);
+        message.innerText =
+        "Login successful.";
 
-loginMessage.innerText =
-"Login Successful";
+    }
 
-}
-catch(error){
+    catch(error){
 
-console.error(error);
+        console.error(error);
 
-loginMessage.innerText =
-"Login Failed: " + error.message;
+        message.innerText =
+        "Login failed: " + error.message;
 
-}
+    }
 
 };
 
 
-
-/* ==========================
+/* =========================
 LOGOUT
-========================== */
+========================= */
 
-window.logout =
-async function(){
+window.logoutAdmin = async function(){
 
-await signOut(auth);
+    await signOut(auth);
 
 };
 
 
-
-/* ==========================
-AUTH STATUS
-========================== */
+/* =========================
+AUTH STATE
+========================= */
 
 onAuthStateChanged(
-auth,
-function(user){
+    auth,
+    function(user){
 
-if(user){
+        const loginSection =
+        document.getElementById("loginSection");
 
-loginBox.style.display =
-"none";
+        const adminSection =
+        document.getElementById("adminSection");
 
-adminPanel.style.display =
-"block";
 
-loadPosts();
+        if(user){
+
+            loginSection.style.display =
+            "none";
+
+            adminSection.style.display =
+            "block";
+
+            loadAdminPosts();
+
+        }
+
+        else{
+
+            loginSection.style.display =
+            "block";
+
+            adminSection.style.display =
+            "none";
+
+        }
+
+    }
+);
+
+
+/* =========================
+LOAD PUBLIC POSTS
+========================= */
+
+async function loadPublicPosts(){
+
+    const lists = {
+
+        jobs:
+        document.getElementById("jobsList"),
+
+        results:
+        document.getElementById("resultsList"),
+
+        admit:
+        document.getElementById("admitList"),
+
+        answer:
+        document.getElementById("answerList"),
+
+        haryana:
+        document.getElementById("haryanaList"),
+
+        csc:
+        document.getElementById("cscList")
+
+    };
+
+
+    Object.values(lists).forEach(
+        list => list.innerHTML = ""
+    );
+
+
+    try{
+
+        const snapshot =
+        await getDocs(
+            collection(db,"posts")
+        );
+
+
+        snapshot.forEach(
+            item => {
+
+                const data =
+                item.data();
+
+
+                if(!lists[data.category]){
+                    return;
+                }
+
+
+                const div =
+                document.createElement("div");
+
+                div.className =
+                "post-item";
+
+
+                const title =
+                document.createElement("h3");
+
+                title.textContent =
+                data.title || "";
+
+
+                const description =
+                document.createElement("p");
+
+                description.textContent =
+                data.description || "";
+
+
+                div.appendChild(title);
+                div.appendChild(description);
+
+
+                if(data.link){
+
+                    const link =
+                    document.createElement("a");
+
+                    link.href =
+                    data.link;
+
+                    link.target =
+                    "_blank";
+
+                    link.rel =
+                    "noopener noreferrer";
+
+                    link.className =
+                    "apply";
+
+                    link.textContent =
+                    "Apply / Official Link";
+
+
+                    div.appendChild(link);
+
+                }
+
+
+                lists[data.category]
+                .appendChild(div);
+
+            }
+        );
+
+
+        Object.entries(lists).forEach(
+            ([category,list]) => {
+
+                if(!list.innerHTML){
+
+                    list.innerHTML =
+                    "<p style='padding:10px;'>अभी कोई update नहीं है।</p>";
+
+                }
+
+            }
+        );
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        Object.values(lists).forEach(
+            list =>
+            list.innerHTML =
+            "<p>Data load नहीं हो सका।</p>"
+        );
+
+    }
 
 }
-else{
 
-loginBox.style.display =
-"block";
 
-adminPanel.style.display =
-"none";
+/* =========================
+LOAD ADMIN POSTS
+========================= */
+
+async function loadAdminPosts(){
+
+    const container =
+    document.getElementById("adminPosts");
+
+    container.innerHTML =
+    "Loading...";
+
+
+    try{
+
+        const snapshot =
+        await getDocs(
+            collection(db,"posts")
+        );
+
+
+        container.innerHTML =
+        "";
+
+
+        if(snapshot.empty){
+
+            container.innerHTML =
+            "<p>अभी कोई post नहीं है।</p>";
+
+            return;
+        }
+
+
+        snapshot.forEach(
+            item => {
+
+                const data =
+                item.data();
+
+
+                const div =
+                document.createElement("div");
+
+                div.className =
+                "admin-post";
+
+
+                const title =
+                document.createElement("h3");
+
+                title.textContent =
+                data.title || "";
+
+
+                const category =
+                document.createElement("p");
+
+                category.textContent =
+                "Category: " +
+                (data.category || "");
+
+
+                const description =
+                document.createElement("p");
+
+                description.textContent =
+                data.description || "";
+
+
+                const edit =
+                document.createElement("button");
+
+                edit.className =
+                "edit";
+
+                edit.textContent =
+                "✏️ Edit";
+
+
+                edit.onclick =
+                function(){
+
+                    editPost(
+                        item.id,
+                        data
+                    );
+
+                };
+
+
+                const del =
+                document.createElement("button");
+
+                del.className =
+                "delete";
+
+                del.textContent =
+                "🗑 Delete";
+
+
+                del.onclick =
+                function(){
+
+                    deletePost(
+                        item.id
+                    );
+
+                };
+
+
+                div.appendChild(title);
+
+                div.appendChild(category);
+
+                div.appendChild(description);
+
+                div.appendChild(edit);
+
+                div.appendChild(del);
+
+
+                container.appendChild(div);
+
+            }
+        );
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        container.innerHTML =
+        "<p>Posts load नहीं हुए: " +
+        error.message +
+        "</p>";
+
+    }
 
 }
 
-});
+
+/* =========================
+SAVE POST
+========================= */
+
+window.savePost = async function(){
+
+    const editId =
+    document.getElementById("editId").value;
 
 
-
-/* ==========================
-SAVE / UPDATE POST
-========================== */
-
-window.savePost =
-async function(){
-
-const editId =
-document.getElementById("editId").value;
-
-const category =
-document.getElementById("category").value;
-
-const title =
-document.getElementById("title").value.trim();
-
-const description =
-document.getElementById("description").value.trim();
-
-const link =
-document.getElementById("link").value.trim();
+    const category =
+    document.getElementById("postCategory").value;
 
 
-if(!title){
-
-saveMessage.innerText =
-"Title डालना जरूरी है.";
-
-return;
-
-}
+    const title =
+    document.getElementById("postTitle").value.trim();
 
 
-const data = {
+    const description =
+    document.getElementById("postDescription").value.trim();
 
-category:category,
 
-title:title,
+    const link =
+    document.getElementById("postLink").value.trim();
 
-description:description,
 
-link:link,
+    const message =
+    document.getElementById("saveMessage");
 
-updatedAt:
-serverTimestamp()
+
+    if(!title){
+
+        message.innerText =
+        "Title डालना जरूरी है।";
+
+        return;
+    }
+
+
+    const data = {
+
+        category: category,
+
+        title: title,
+
+        description: description,
+
+        link: link,
+
+        updatedAt: serverTimestamp()
+
+    };
+
+
+    try{
+
+        if(editId){
+
+            await updateDoc(
+                doc(db,"posts",editId),
+                data
+            );
+
+            message.innerText =
+            "Post successfully updated.";
+
+        }
+
+        else{
+
+            data.createdAt =
+            serverTimestamp();
+
+
+            await addDoc(
+                collection(db,"posts"),
+                data
+            );
+
+
+            message.innerText =
+            "Post successfully added.";
+
+        }
+
+
+        clearForm();
+
+        await loadAdminPosts();
+
+        await loadPublicPosts();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        message.innerText =
+        "Error: " + error.message;
+
+    }
 
 };
 
 
-try{
+/* =========================
+EDIT POST
+========================= */
+
+function editPost(id,data){
+
+    document.getElementById(
+        "editId"
+    ).value = id;
 
 
-if(editId){
-
-await updateDoc(
-doc(db,"posts",editId),
-data
-);
-
-saveMessage.innerText =
-"Update successfully edited.";
-
-}
-else{
-
-data.createdAt =
-serverTimestamp();
-
-await addDoc(
-collection(db,"posts"),
-data
-);
-
-saveMessage.innerText =
-"New update successfully added.";
-
-}
+    document.getElementById(
+        "postCategory"
+    ).value =
+    data.category || "jobs";
 
 
-resetForm();
-
-loadPosts();
-
-
-}
-catch(error){
-
-console.error(error);
-
-saveMessage.innerText =
-"Error: " + error.message;
-
-}
-
-};
+    document.getElementById(
+        "postTitle"
+    ).value =
+    data.title || "";
 
 
-
-/* ==========================
-LOAD POSTS
-========================== */
-
-async function loadPosts(){
-
-const postList =
-document.getElementById("postList");
-
-postList.innerHTML =
-"Loading...";
+    document.getElementById(
+        "postDescription"
+    ).value =
+    data.description || "";
 
 
-try{
-
-const snapshot =
-await getDocs(
-collection(db,"posts")
-);
+    document.getElementById(
+        "postLink"
+    ).value =
+    data.link || "";
 
 
-postList.innerHTML =
-"";
+    document.getElementById(
+        "formTitle"
+    ).innerText =
+    "✏️ Edit Update";
 
 
-if(snapshot.empty){
-
-postList.innerHTML =
-"<p>अभी कोई update नहीं है.</p>";
-
-return;
+    window.scrollTo({
+        top: document.getElementById(
+            "adminSection"
+        ).offsetTop,
+        behavior:"smooth"
+    });
 
 }
 
 
-snapshot.forEach(function(item){
-
-const data =
-item.data();
-
-
-const div =
-document.createElement("div");
-
-div.className =
-"post";
-
-
-const title =
-document.createElement("h3");
-
-title.textContent =
-data.title || "No Title";
-
-
-const category =
-document.createElement("p");
-
-category.textContent =
-"Category: " +
-(data.category || "");
-
-
-const description =
-document.createElement("p");
-
-description.textContent =
-data.description || "";
-
-
-const editButton =
-document.createElement("button");
-
-editButton.className =
-"edit";
-
-editButton.textContent =
-"✏️ Edit";
-
-
-editButton.onclick =
-function(){
-
-startEdit(
-item.id,
-data
-);
-
-};
-
-
-const deleteButton =
-document.createElement("button");
-
-deleteButton.className =
-"delete";
-
-deleteButton.textContent =
-"🗑 Delete";
-
-
-deleteButton.onclick =
-function(){
-
-deletePost(
-item.id
-);
-
-};
-
-
-div.appendChild(title);
-div.appendChild(category);
-div.appendChild(description);
-div.appendChild(editButton);
-div.appendChild(deleteButton);
-
-postList.appendChild(div);
-
-});
-
-}
-catch(error){
-
-console.error(error);
-
-postList.innerHTML =
-"Posts load नहीं हो पाए: " +
-error.message;
-
-}
-
-}
-
-
-
-/* ==========================
-EDIT
-========================== */
-
-function startEdit(id,data){
-
-document.getElementById(
-"editId"
-).value = id;
-
-
-document.getElementById(
-"category"
-).value =
-data.category || "jobs";
-
-
-document.getElementById(
-"title"
-).value =
-data.title || "";
-
-
-document.getElementById(
-"description"
-).value =
-data.description || "";
-
-
-document.getElementById(
-"link"
-).value =
-data.link || "";
-
-
-document.getElementById(
-"formHeading"
-).innerText =
-"✏️ Update Edit करें";
-
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-
-
-/* ==========================
-DELETE
-========================== */
+/* =========================
+DELETE POST
+========================= */
 
 async function deletePost(id){
 
-const confirmDelete =
-confirm(
-"क्या आप यह update delete करना चाहते हैं?"
-);
+    const confirmDelete =
+    confirm(
+        "क्या आप इस post को delete करना चाहते हैं?"
+    );
 
 
-if(!confirmDelete){
-return;
+    if(!confirmDelete){
+        return;
+    }
+
+
+    try{
+
+        await deleteDoc(
+            doc(db,"posts",id)
+        );
+
+
+        await loadAdminPosts();
+
+        await loadPublicPosts();
+
+    }
+
+    catch(error){
+
+        alert(
+            "Delete Error: " +
+            error.message
+        );
+
+    }
+
 }
 
 
-try{
+/* =========================
+CLEAR FORM
+========================= */
 
-await deleteDoc(
-doc(db,"posts",id)
-);
+window.clearForm = function(){
 
-loadPosts();
-
-}
-catch(error){
-
-alert(
-"Delete Error: " +
-error.message
-);
-
-}
-
-}
+    document.getElementById(
+        "editId"
+    ).value = "";
 
 
-
-/* ==========================
-RESET FORM
-========================== */
-
-window.resetForm =
-function(){
-
-document.getElementById(
-"editId"
-).value = "";
+    document.getElementById(
+        "postTitle"
+    ).value = "";
 
 
-document.getElementById(
-"title"
-).value = "";
+    document.getElementById(
+        "postDescription"
+    ).value = "";
 
 
-document.getElementById(
-"description"
-).value = "";
+    document.getElementById(
+        "postLink"
+    ).value = "";
 
 
-document.getElementById(
-"link"
-).value = "";
+    document.getElementById(
+        "formTitle"
+    ).innerText =
+    "➕ New Update";
 
 
-document.getElementById(
-"formHeading"
-).innerText =
-"➕ New Update Add करें";
+    document.getElementById(
+        "saveMessage"
+    ).innerText = "";
 
 };
+
+
+/* =========================
+START WEBSITE
+========================= */
+
+loadPublicPosts();
 
 </script>
 
