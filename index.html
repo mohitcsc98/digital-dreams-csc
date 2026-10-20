@@ -2,950 +2,813 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Digital Dreams Pega | Latest Jobs, Results, Admit Cards & CSC Services</title>
-
-  <meta name="description" content="Digital Dreams Pega - Latest Government Jobs, Haryana Jobs, Results, Admit Cards, Answer Keys, Government Schemes and CSC Services.">
-  <meta name="keywords" content="Digital Dreams Pega, Haryana Jobs, Sarkari Result, Latest Jobs, Admit Card, CSC Services, Haryana Vacancy">
-  <meta name="author" content="Digital Dreams Pega">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
-      color: #222;
-      line-height: 1.5;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    /* HEADER */
-
-    .topbar {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 7px 10px;
-      font-size: 14px;
-    }
-
-    header {
-      background: #8b0000;
-      color: white;
-      text-align: center;
-      padding: 25px 10px;
-    }
-
-    header h1 {
-      font-size: 38px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin-top: 6px;
-      font-size: 16px;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      background: #222;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      padding: 14px 16px;
-      display: block;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      background: #8b0000;
-      color: #fff;
-    }
-
-    /* MAIN */
-
-    .container {
-      width: 95%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* WELCOME */
-
-    .welcome {
-      background: white;
-      border: 1px solid #ddd;
-      margin-top: 18px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .welcome h2 {
-      color: #8b0000;
-      margin-bottom: 8px;
-    }
-
-    /* NOTICE */
-
-    .notice {
-      margin-top: 15px;
-      background: #fff3cd;
-      border: 1px solid #ffc107;
-      display: flex;
-      align-items: center;
-    }
-
-    .notice-title {
-      background: #8b0000;
-      color: white;
-      padding: 12px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .notice-text {
-      padding: 10px;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .notice-text marquee {
-      color: #c00000;
-      font-weight: bold;
-    }
-
-    /* QUICK BUTTONS */
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .quick-btn {
-      color: white;
-      padding: 18px 8px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: 3px;
-      font-size: 16px;
-      transition: 0.2s;
-    }
-
-    .quick-btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    .red { background: #c62828; }
-    .blue { background: #1565c0; }
-    .green { background: #2e7d32; }
-    .orange { background: #ef6c00; }
-    .purple { background: #6a1b9a; }
-    .teal { background: #00796b; }
-    .pink { background: #ad1457; }
-    .dark { background: #333; }
-
-    /* JOB BOXES */
-
-    .main-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .box {
-      background: white;
-      border: 1px solid #bbb;
-    }
-
-    .box-title {
-      background: #8b0000;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .box ul {
-      list-style: none;
-      padding: 8px 14px 15px;
-    }
-
-    .box li {
-      padding: 10px 3px;
-      border-bottom: 1px dashed #ccc;
-    }
-
-    .box li::before {
-      content: "➤";
-      color: #8b0000;
-      margin-right: 7px;
-    }
-
-    .box li:last-child {
-      border-bottom: none;
-    }
-
-    .box a {
-      color: #0046b8;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .box a:hover {
-      color: #d00000;
-      text-decoration: underline;
-    }
-
-    .view-more {
-      text-align: center;
-      padding: 10px;
-      border-top: 1px solid #ddd;
-    }
-
-    .view-more a {
-      background: #222;
-      color: white;
-      display: inline-block;
-      padding: 7px 15px;
-      border-radius: 3px;
-    }
-
-    /* SECTION TITLE */
-
-    .section-title {
-      margin-top: 25px;
-      background: #222;
-      color: white;
-      padding: 12px;
-      text-align: center;
-      font-size: 22px;
-      border-bottom: 4px solid #8b0000;
-    }
-
-    /* HARYANA SERVICES */
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .service-card {
-      background: white;
-      border: 1px solid #ddd;
-      padding: 20px 10px;
-      text-align: center;
-      font-weight: bold;
-      color: #222;
-      min-height: 85px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.2s;
-    }
-
-    .service-card:hover {
-      background: #8b0000;
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* INFORMATION */
-
-    .info-box {
-      background: white;
-      border: 1px solid #ddd;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    .info-box h2 {
-      color: #8b0000;
-      margin-bottom: 10px;
-    }
-
-    .info-box p {
-      margin-bottom: 10px;
-    }
-
-    /* WHATSAPP */
-
-    .whatsapp-section {
-      background: white;
-      margin-top: 20px;
-      padding: 25px 15px;
-      text-align: center;
-      border: 1px solid #ddd;
-    }
-
-    .whatsapp-section h2 {
-      margin-bottom: 8px;
-    }
-
-    .whatsapp-section p {
-      margin-bottom: 15px;
-    }
-
-    .whatsapp-btn {
-      background: #25D366;
-      color: white;
-      display: inline-block;
-      padding: 13px 25px;
-      font-size: 17px;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .whatsapp-btn:hover {
-      background: #128C7E;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: #fff;
-      padding: 20px;
-      margin-top: 20px;
-      border: 1px solid #ddd;
-      text-align: center;
-    }
-
-    .contact h2 {
-      color: #8b0000;
-      margin-bottom: 10px;
-    }
-
-    .contact a {
-      color: #0046b8;
-      font-weight: bold;
-    }
-
-    /* DISCLAIMER */
-
-    .disclaimer {
-      background: #fff8e1;
-      border: 1px solid #ffcc80;
-      margin-top: 20px;
-      padding: 18px;
-    }
-
-    .disclaimer h3 {
-      color: #b71c1c;
-      margin-bottom: 7px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      margin-top: 25px;
-      padding: 25px 10px;
-    }
-
-    footer h2 {
-      margin-bottom: 7px;
-    }
-
-    footer p {
-      margin: 5px;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      margin: 15px 0;
-    }
-
-    .footer-links a {
-      color: #ffd54f;
-      margin: 5px 8px;
-    }
-
-    /* BACK TO TOP */
-
-    #topBtn {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      background: #8b0000;
-      color: white;
-      border: none;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 20px;
-      display: none;
-      z-index: 999;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-      .main-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .quick-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 27px;
-      }
-
-      header p {
-        font-size: 14px;
-      }
-
-      nav a {
-        padding: 11px 8px;
-        font-size: 12px;
-      }
-
-      .main-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .quick-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .quick-btn {
-        padding: 14px 5px;
-        font-size: 14px;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .notice {
-        display: block;
-      }
-
-      .notice-title {
-        text-align: center;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Dreams CSC - Admin Panel</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f4f4;
+}
+
+header{
+  background:#8b0000;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.container{
+  max-width:900px;
+  margin:30px auto;
+  padding:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:8px;
+  box-shadow:0 2px 8px #ccc;
+}
+
+h2{
+  margin-bottom:15px;
+  color:#8b0000;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:12px;
+  margin:7px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+textarea{
+  min-height:120px;
+}
+
+button{
+  padding:12px 20px;
+  background:#8b0000;
+  color:white;
+  border:0;
+  border-radius:5px;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+button:hover{
+  background:#600000;
+}
+
+.logout{
+  background:#222;
+  float:right;
+}
+
+.delete{
+  background:#d00000;
+}
+
+.edit{
+  background:#1565c0;
+}
+
+#adminPanel{
+  display:none;
+}
+
+.post{
+  border:1px solid #ddd;
+  padding:15px;
+  margin:10px 0;
+  border-radius:5px;
+}
+
+.post h3{
+  margin-bottom:5px;
+}
+
+.message{
+  margin-top:10px;
+  font-weight:bold;
+}
+</style>
 </head>
 
-<body id="home">
-
-  <div class="topbar">
-    Digital Dreams Pega | Government Jobs & CSC Information Portal
-  </div>
-
-  <header>
-    <h1>DIGITAL DREAMS PEGA</h1>
-    <p>Latest Jobs • Results • Admit Cards • Haryana Updates • CSC Services</p>
-  </header>
-
-  <nav>
-    <div class="nav-container">
-      <a href="#home">Home</a>
-      <a href="#jobs">Latest Jobs</a>
-      <a href="#results">Results</a>
-      <a href="#admit">Admit Card</a>
-      <a href="#answerkey">Answer Key</a>
-      <a href="#haryana">Haryana</a>
-      <a href="#csc">CSC Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <main class="container">
-
-    <section class="welcome">
-      <h2>Digital Dreams Pega में आपका स्वागत है</h2>
-      <p>
-        यहां आपको Latest Government Jobs, Haryana Vacancies,
-        Results, Admit Cards, Answer Keys, Government Schemes और
-        CSC Services से जुड़ी जानकारी एक ही जगह मिलेगी।
-      </p>
-    </section>
-
-    <div class="notice">
-      <div class="notice-title">LATEST UPDATE</div>
-      <div class="notice-text">
-        <marquee>
-          नई सरकारी भर्ती, Result, Admit Card और Haryana Government Services की जानकारी के लिए Digital Dreams Pega को नियमित रूप से चेक करें।
-        </marquee>
-      </div>
-    </div>
-
-    <!-- QUICK LINKS -->
-
-    <div class="quick-grid">
-      <a href="#jobs" class="quick-btn red">Latest Jobs</a>
-      <a href="#results" class="quick-btn blue">Results</a>
-      <a href="#admit" class="quick-btn green">Admit Card</a>
-      <a href="#answerkey" class="quick-btn orange">Answer Key</a>
-
-      <a href="#haryana" class="quick-btn purple">Haryana Jobs</a>
-      <a href="#csc" class="quick-btn teal">CSC Services</a>
-      <a href="#schemes" class="quick-btn pink">Govt Schemes</a>
-      <a href="#contact" class="quick-btn dark">Contact Us</a>
-    </div>
-
-    <!-- MAIN BOXES -->
-
-    <div class="main-grid">
-
-      <!-- LATEST JOBS -->
-
-      <section class="box" id="jobs">
-        <div class="box-title">Latest Jobs</div>
-
-        <ul>
-          <li><a href="#">Haryana Latest Vacancy 2026</a></li>
-          <li><a href="#">SSC New Recruitment 2026</a></li>
-          <li><a href="#">Railway Recruitment 2026</a></li>
-          <li><a href="#">Bank Recruitment 2026</a></li>
-          <li><a href="#">Haryana Police Vacancy 2026</a></li>
-          <li><a href="#">Teaching Vacancy 2026</a></li>
-          <li><a href="#">10th Pass Government Jobs</a></li>
-          <li><a href="#">12th Pass Government Jobs</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-      <!-- RESULTS -->
-
-      <section class="box" id="results">
-        <div class="box-title">Results</div>
-
-        <ul>
-          <li><a href="#">Latest Sarkari Result 2026</a></li>
-          <li><a href="#">Haryana Exam Result 2026</a></li>
-          <li><a href="#">SSC Result 2026</a></li>
-          <li><a href="#">Railway Result 2026</a></li>
-          <li><a href="#">Bank Exam Result 2026</a></li>
-          <li><a href="#">Police Result 2026</a></li>
-          <li><a href="#">University Result</a></li>
-          <li><a href="#">Entrance Exam Result</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-      <!-- ADMIT CARD -->
-
-      <section class="box" id="admit">
-        <div class="box-title">Admit Card</div>
-
-        <ul>
-          <li><a href="#">Latest Admit Card 2026</a></li>
-          <li><a href="#">Haryana Admit Card 2026</a></li>
-          <li><a href="#">SSC Admit Card 2026</a></li>
-          <li><a href="#">Railway Admit Card 2026</a></li>
-          <li><a href="#">Police Admit Card 2026</a></li>
-          <li><a href="#">Bank Exam Admit Card</a></li>
-          <li><a href="#">University Admit Card</a></li>
-          <li><a href="#">Entrance Exam Admit Card</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-      <!-- ANSWER KEY -->
-
-      <section class="box" id="answerkey">
-        <div class="box-title">Answer Key</div>
-
-        <ul>
-          <li><a href="#">Latest Answer Key 2026</a></li>
-          <li><a href="#">Haryana Answer Key</a></li>
-          <li><a href="#">SSC Answer Key</a></li>
-          <li><a href="#">Police Answer Key</a></li>
-          <li><a href="#">Railway Answer Key</a></li>
-          <li><a href="#">Teaching Exam Answer Key</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-      <!-- IMPORTANT LINKS -->
-
-      <section class="box">
-        <div class="box-title">Important Links</div>
-
-        <ul>
-          <li><a href="#">Haryana Government Portal</a></li>
-          <li><a href="#">Family ID / PPP</a></li>
-          <li><a href="#">Saral Haryana</a></li>
-          <li><a href="#">Employment Department</a></li>
-          <li><a href="#">Voter Services</a></li>
-          <li><a href="#">Scholarship Portal</a></li>
-          <li><a href="#">Pension Services</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-      <!-- GOVT SCHEMES -->
-
-      <section class="box" id="schemes">
-        <div class="box-title">Government Schemes</div>
-
-        <ul>
-          <li><a href="#">Haryana Government Schemes</a></li>
-          <li><a href="#">Saksham Yuva Scheme</a></li>
-          <li><a href="#">Pension Scheme</a></li>
-          <li><a href="#">Ayushman Bharat Scheme</a></li>
-          <li><a href="#">PM Kisan Scheme</a></li>
-          <li><a href="#">Scholarship Schemes</a></li>
-          <li><a href="#">Labour Welfare Schemes</a></li>
-        </ul>
-
-        <div class="view-more">
-          <a href="#">View More</a>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- HARYANA -->
-
-    <h2 class="section-title" id="haryana">
-      Haryana Online Services
-    </h2>
-
-    <div class="service-grid">
-
-      <a href="#" class="service-card">
-        Family ID (PPP)
-      </a>
-
-      <a href="#" class="service-card">
-        Haryana Resident Certificate
-      </a>
-
-      <a href="#" class="service-card">
-        Income Certificate
-      </a>
-
-      <a href="#" class="service-card">
-        Caste Certificate
-      </a>
-
-      <a href="#" class="service-card">
-        Saksham Yuva
-      </a>
-
-      <a href="#" class="service-card">
-        Police Verification
-      </a>
-
-      <a href="#" class="service-card">
-        Voter ID Services
-      </a>
-
-      <a href="#" class="service-card">
-        Haryana Pension
-      </a>
-
-      <a href="#" class="service-card">
-        Labour Card
-      </a>
-
-      <a href="#" class="service-card">
-        Scholarship
-      </a>
-
-      <a href="#" class="service-card">
-        Employment Registration
-      </a>
-
-      <a href="#" class="service-card">
-        Haryana Government Schemes
-      </a>
-
-    </div>
-
-    <!-- CSC -->
-
-    <h2 class="section-title" id="csc">
-      CSC & Digital Services
-    </h2>
-
-    <div class="service-grid">
-
-      <a href="#" class="service-card">
-        PAN Card Services
-      </a>
-
-      <a href="#" class="service-card">
-        Voter Card Services
-      </a>
-
-      <a href="#" class="service-card">
-        Ayushman Card
-      </a>
-
-      <a href="#" class="service-card">
-        Online Government Forms
-      </a>
-
-      <a href="#" class="service-card">
-        Exam Forms
-      </a>
+<body>
 
-      <a href="#" class="service-card">
-        Government Job Forms
-      </a>
+<header>
+<h1>Digital Dreams CSC</h1>
+<p>Firebase Admin Panel</p>
+</header>
 
-      <a href="#" class="service-card">
-        Document Services
-      </a>
-
-      <a href="#" class="service-card">
-        Bill Payment
-      </a>
+<div class="container">
 
-      <a href="#" class="service-card">
-        Banking Services
-      </a>
+<!-- LOGIN -->
 
-      <a href="#" class="service-card">
-        Insurance Services
-      </a>
+<div class="card" id="loginBox">
 
-      <a href="#" class="service-card">
-        Passport Services
-      </a>
+<h2>🔐 Admin Login</h2>
 
-      <a href="#" class="service-card">
-        Other Online Services
-      </a>
+<input
+type="email"
+id="email"
+placeholder="Admin Email">
 
-    </div>
+<input
+type="password"
+id="password"
+placeholder="Password">
 
-    <!-- ABOUT -->
+<button onclick="adminLogin()">
+Login
+</button>
 
-    <section class="info-box">
-      <h2>About Digital Dreams Pega</h2>
+<p class="message" id="loginMessage"></p>
 
-      <p>
-        Digital Dreams Pega एक information website है जिसका उद्देश्य
-        Government Jobs, Haryana Jobs, Results, Admit Cards,
-        Government Schemes और CSC से जुड़ी उपयोगी जानकारी लोगों तक
-        आसान तरीके से पहुंचाना है।
-      </p>
+</div>
 
-      <p>
-        किसी भी सरकारी भर्ती या योजना के लिए आवेदन करने से पहले
-        संबंधित विभाग की official website पर notification जरूर पढ़ें।
-      </p>
-    </section>
 
-    <!-- WHATSAPP -->
+<!-- ADMIN PANEL -->
 
-    <section class="whatsapp-section">
-      <h2>📲 WhatsApp Channel Join करें</h2>
+<div id="adminPanel">
 
-      <p>
-        Latest Jobs, Results और Haryana Updates पाने के लिए हमारे
-        WhatsApp Channel से जुड़ें।
-      </p>
+<div class="card">
 
-      <!--
-        नीचे # की जगह अपने WhatsApp Channel का पूरा लिंक डालें
-      -->
+<button class="logout" onclick="logout()">
+Logout
+</button>
 
-      <a
-        class="whatsapp-btn"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer">
-        Join WhatsApp Channel
-      </a>
-    </section>
+<h2>Admin Dashboard</h2>
 
-    <!-- CONTACT -->
+<p>
+यहां से Digital Dreams CSC की updates manage करें।
+</p>
 
-    <section class="contact" id="contact">
+</div>
 
-      <h2>Contact Us</h2>
 
-      <p>
-        Digital Dreams Pega से संपर्क करने के लिए:
-      </p>
+<!-- ADD / EDIT POST -->
 
-      <p>
-        Email:
-        <a href="mailto:mayankhr82@gmail.com">
-          mayankhr82@gmail.com
-        </a>
-      </p>
+<div class="card">
 
-      <p>
-        Location: Pega, Jind, Haryana
-      </p>
+<h2 id="formHeading">
+➕ New Update Add करें
+</h2>
 
-    </section>
+<input
+type="hidden"
+id="editId">
 
-    <!-- DISCLAIMER -->
+<label>Category</label>
 
-    <section class="disclaimer">
+<select id="category">
 
-      <h3>Disclaimer</h3>
+<option value="jobs">
+Latest Jobs
+</option>
 
-      <p>
-        Digital Dreams Pega कोई सरकारी वेबसाइट नहीं है और न ही किसी
-        सरकारी विभाग का प्रतिनिधित्व करती है। इस वेबसाइट पर दी गई
-        जानकारी केवल सामान्य जानकारी और शैक्षणिक उद्देश्य के लिए है।
-        किसी भी नौकरी, Result, Admit Card, योजना या सरकारी सेवा से
-        संबंधित जानकारी की पुष्टि संबंधित सरकारी विभाग की official
-        website से अवश्य करें।
-      </p>
+<option value="results">
+Results
+</option>
 
-    </section>
+<option value="admit-card">
+Admit Card
+</option>
 
-  </main>
+<option value="answer-key">
+Answer Key
+</option>
 
-  <!-- FOOTER -->
+<option value="haryana">
+Haryana Updates
+</option>
 
-  <footer>
+<option value="csc">
+CSC Services
+</option>
 
-    <h2>DIGITAL DREAMS PEGA</h2>
+<option value="notice">
+Latest Notice
+</option>
 
-    <p>
-      Jobs • Results • Admit Cards • Haryana Updates • CSC Services
-    </p>
+</select>
 
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#jobs">Jobs</a>
-      <a href="#results">Results</a>
-      <a href="#csc">CSC</a>
-      <a href="#contact">Contact</a>
-    </div>
 
-    <p>
-      © 2026 Digital Dreams Pega. All Rights Reserved.
-    </p>
+<label>Title</label>
 
-  </footer>
+<input
+type="text"
+id="title"
+placeholder="जैसे: Haryana Police Vacancy 2026">
 
-  <!-- BACK TO TOP -->
 
-  <button id="topBtn" onclick="goTop()">↑</button>
+<label>Description</label>
 
-  <script>
+<textarea
+id="description"
+placeholder="Update की पूरी जानकारी लिखें"></textarea>
 
-    // Back To Top Button
 
-    const topButton = document.getElementById("topBtn");
+<label>Official / Apply Link</label>
 
-    window.addEventListener("scroll", function() {
+<input
+type="url"
+id="link"
+placeholder="https://example.com">
 
-      if (
-        document.body.scrollTop > 300 ||
-        document.documentElement.scrollTop > 300
-      ) {
-        topButton.style.display = "block";
-      } else {
-        topButton.style.display = "none";
-      }
 
-    });
+<button onclick="savePost()">
+💾 Save Update
+</button>
 
-    function goTop() {
+<button
+type="button"
+onclick="resetForm()"
+style="background:#555;">
+Clear
+</button>
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+<p id="saveMessage" class="message"></p>
 
-    }
+</div>
 
 
-    // Smooth Scroll
+<!-- ALL POSTS -->
 
-    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+<div class="card">
 
-      link.addEventListener("click", function(event) {
+<h2>📋 All Updates</h2>
 
-        const targetID = this.getAttribute("href");
+<div id="postList">
+Loading...
+</div>
 
-        // जिन links में सिर्फ # है उनको रोक दें
-        if (targetID === "#") {
-          event.preventDefault();
-          return;
-        }
+</div>
 
-        const target = document.querySelector(targetID);
+</div>
 
-        if (target) {
+</div>
 
-          event.preventDefault();
 
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
+<!-- FIREBASE -->
 
-        }
+<script type="module">
 
-      });
+/*
+=================================================
+IMPORTANT
 
-    });
+नीचे YOUR_... वाली values को अपने Firebase
+Project की firebaseConfig values से बदलना है.
+=================================================
+*/
 
-  </script>
+
+import {
+initializeApp
+}
+from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+
+
+import {
+getAuth,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+
+import {
+getFirestore,
+collection,
+addDoc,
+getDocs,
+deleteDoc,
+doc,
+updateDoc,
+serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+
+
+
+const firebaseConfig = {
+
+apiKey:
+"YOUR_API_KEY",
+
+authDomain:
+"YOUR_PROJECT.firebaseapp.com",
+
+projectId:
+"YOUR_PROJECT_ID",
+
+storageBucket:
+"YOUR_PROJECT.firebasestorage.app",
+
+messagingSenderId:
+"YOUR_SENDER_ID",
+
+appId:
+"YOUR_APP_ID"
+
+};
+
+
+
+const app =
+initializeApp(firebaseConfig);
+
+
+const auth =
+getAuth(app);
+
+
+const db =
+getFirestore(app);
+
+
+
+const loginBox =
+document.getElementById("loginBox");
+
+const adminPanel =
+document.getElementById("adminPanel");
+
+const loginMessage =
+document.getElementById("loginMessage");
+
+const saveMessage =
+document.getElementById("saveMessage");
+
+
+
+/* ==========================
+LOGIN
+========================== */
+
+window.adminLogin =
+async function(){
+
+const email =
+document.getElementById("email").value.trim();
+
+const password =
+document.getElementById("password").value;
+
+
+if(!email || !password){
+
+loginMessage.innerText =
+"Email और Password डालें.";
+
+return;
+
+}
+
+
+try{
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+loginMessage.innerText =
+"Login Successful";
+
+}
+catch(error){
+
+console.error(error);
+
+loginMessage.innerText =
+"Login Failed: " + error.message;
+
+}
+
+};
+
+
+
+/* ==========================
+LOGOUT
+========================== */
+
+window.logout =
+async function(){
+
+await signOut(auth);
+
+};
+
+
+
+/* ==========================
+AUTH STATUS
+========================== */
+
+onAuthStateChanged(
+auth,
+function(user){
+
+if(user){
+
+loginBox.style.display =
+"none";
+
+adminPanel.style.display =
+"block";
+
+loadPosts();
+
+}
+else{
+
+loginBox.style.display =
+"block";
+
+adminPanel.style.display =
+"none";
+
+}
+
+});
+
+
+
+/* ==========================
+SAVE / UPDATE POST
+========================== */
+
+window.savePost =
+async function(){
+
+const editId =
+document.getElementById("editId").value;
+
+const category =
+document.getElementById("category").value;
+
+const title =
+document.getElementById("title").value.trim();
+
+const description =
+document.getElementById("description").value.trim();
+
+const link =
+document.getElementById("link").value.trim();
+
+
+if(!title){
+
+saveMessage.innerText =
+"Title डालना जरूरी है.";
+
+return;
+
+}
+
+
+const data = {
+
+category:category,
+
+title:title,
+
+description:description,
+
+link:link,
+
+updatedAt:
+serverTimestamp()
+
+};
+
+
+try{
+
+
+if(editId){
+
+await updateDoc(
+doc(db,"posts",editId),
+data
+);
+
+saveMessage.innerText =
+"Update successfully edited.";
+
+}
+else{
+
+data.createdAt =
+serverTimestamp();
+
+await addDoc(
+collection(db,"posts"),
+data
+);
+
+saveMessage.innerText =
+"New update successfully added.";
+
+}
+
+
+resetForm();
+
+loadPosts();
+
+
+}
+catch(error){
+
+console.error(error);
+
+saveMessage.innerText =
+"Error: " + error.message;
+
+}
+
+};
+
+
+
+/* ==========================
+LOAD POSTS
+========================== */
+
+async function loadPosts(){
+
+const postList =
+document.getElementById("postList");
+
+postList.innerHTML =
+"Loading...";
+
+
+try{
+
+const snapshot =
+await getDocs(
+collection(db,"posts")
+);
+
+
+postList.innerHTML =
+"";
+
+
+if(snapshot.empty){
+
+postList.innerHTML =
+"<p>अभी कोई update नहीं है.</p>";
+
+return;
+
+}
+
+
+snapshot.forEach(function(item){
+
+const data =
+item.data();
+
+
+const div =
+document.createElement("div");
+
+div.className =
+"post";
+
+
+const title =
+document.createElement("h3");
+
+title.textContent =
+data.title || "No Title";
+
+
+const category =
+document.createElement("p");
+
+category.textContent =
+"Category: " +
+(data.category || "");
+
+
+const description =
+document.createElement("p");
+
+description.textContent =
+data.description || "";
+
+
+const editButton =
+document.createElement("button");
+
+editButton.className =
+"edit";
+
+editButton.textContent =
+"✏️ Edit";
+
+
+editButton.onclick =
+function(){
+
+startEdit(
+item.id,
+data
+);
+
+};
+
+
+const deleteButton =
+document.createElement("button");
+
+deleteButton.className =
+"delete";
+
+deleteButton.textContent =
+"🗑 Delete";
+
+
+deleteButton.onclick =
+function(){
+
+deletePost(
+item.id
+);
+
+};
+
+
+div.appendChild(title);
+div.appendChild(category);
+div.appendChild(description);
+div.appendChild(editButton);
+div.appendChild(deleteButton);
+
+postList.appendChild(div);
+
+});
+
+}
+catch(error){
+
+console.error(error);
+
+postList.innerHTML =
+"Posts load नहीं हो पाए: " +
+error.message;
+
+}
+
+}
+
+
+
+/* ==========================
+EDIT
+========================== */
+
+function startEdit(id,data){
+
+document.getElementById(
+"editId"
+).value = id;
+
+
+document.getElementById(
+"category"
+).value =
+data.category || "jobs";
+
+
+document.getElementById(
+"title"
+).value =
+data.title || "";
+
+
+document.getElementById(
+"description"
+).value =
+data.description || "";
+
+
+document.getElementById(
+"link"
+).value =
+data.link || "";
+
+
+document.getElementById(
+"formHeading"
+).innerText =
+"✏️ Update Edit करें";
+
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+
+/* ==========================
+DELETE
+========================== */
+
+async function deletePost(id){
+
+const confirmDelete =
+confirm(
+"क्या आप यह update delete करना चाहते हैं?"
+);
+
+
+if(!confirmDelete){
+return;
+}
+
+
+try{
+
+await deleteDoc(
+doc(db,"posts",id)
+);
+
+loadPosts();
+
+}
+catch(error){
+
+alert(
+"Delete Error: " +
+error.message
+);
+
+}
+
+}
+
+
+
+/* ==========================
+RESET FORM
+========================== */
+
+window.resetForm =
+function(){
+
+document.getElementById(
+"editId"
+).value = "";
+
+
+document.getElementById(
+"title"
+).value = "";
+
+
+document.getElementById(
+"description"
+).value = "";
+
+
+document.getElementById(
+"link"
+).value = "";
+
+
+document.getElementById(
+"formHeading"
+).innerText =
+"➕ New Update Add करें";
+
+};
+
+</script>
 
 </body>
 </html>
