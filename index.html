@@ -4,1369 +4,589 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Dreams CSC</title>
+<title>Digital Dreams Pega - Offline Form Updates</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
+    background:#f4f4f4;
     color:#222;
 }
 
 /* HEADER */
-
-header{
-    background:linear-gradient(135deg,#075eaa,#0088cc);
+.header{
+    background:#8b0000;
     color:white;
     text-align:center;
-    padding:22px 10px;
+    padding:20px 10px;
 }
 
-header h1{
-    font-size:30px;
+.header h1{
+    font-size:32px;
+    margin-bottom:5px;
 }
 
-header p{
-    margin-top:7px;
-}
-
-/* NAVIGATION */
-
-nav{
-    background:white;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:6px;
-    padding:12px;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 8px #bbb;
-}
-
-nav a{
-    text-decoration:none;
-    color:#075eaa;
-    padding:9px 13px;
-    font-weight:bold;
-    border-radius:5px;
-}
-
-nav a:hover{
-    background:#075eaa;
-    color:white;
-}
-
-/* CONTAINER */
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:15px;
-}
-
-/* HERO */
-
-.hero{
-    background:white;
-    text-align:center;
-    padding:30px 20px;
-    margin-top:15px;
-    border-radius:10px;
-    box-shadow:0 2px 8px #ddd;
-}
-
-.hero h2{
-    color:#075eaa;
-    margin-bottom:10px;
-}
-
-/* SECTION */
-
-.section{
-    margin-top:25px;
-}
-
-.section-title{
-    background:#075eaa;
-    color:white;
-    padding:13px;
-    border-radius:6px;
-    font-size:20px;
-}
-
-/* POSTS */
-
-.posts{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:15px;
-    margin-top:15px;
-}
-
-.post{
-    background:white;
-    padding:18px;
-    border-radius:8px;
-    box-shadow:0 2px 7px #ddd;
-}
-
-.post h3{
-    color:#075eaa;
-    margin-bottom:10px;
-}
-
-.post p{
-    line-height:1.5;
-}
-
-.post a{
-    display:inline-block;
-    margin-top:12px;
-    padding:9px 14px;
-    background:#075eaa;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-/* ADMIN LOGIN */
-
-.login-box{
-    max-width:500px;
-    margin:25px auto;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px #ddd;
-}
-
-.login-box h2{
-    color:#075eaa;
-    margin-bottom:15px;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:12px;
-    margin-top:7px;
-    margin-bottom:14px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.header p{
     font-size:15px;
 }
 
-textarea{
-    min-height:110px;
-}
-
-button{
-    border:0;
-    background:#075eaa;
-    color:white;
-    padding:11px 18px;
-    border-radius:5px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button:hover{
-    opacity:.9;
-}
-
-.message{
-    margin-top:12px;
-    font-weight:bold;
-}
-
-/* ADMIN PANEL */
-
-.admin-box{
-    background:white;
-    padding:25px;
-    margin-top:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px #ddd;
-}
-
-.admin-header{
+/* NAVBAR */
+.navbar{
+    background:#222;
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
+    justify-content:center;
     flex-wrap:wrap;
 }
 
-.logout{
-    background:#d62828;
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    font-weight:bold;
 }
 
-.admin-post{
+.navbar a:hover{
+    background:#8b0000;
+}
+
+/* NOTICE */
+.notice{
+    max-width:1100px;
+    margin:15px auto;
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    padding:12px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* MAIN */
+.container{
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 10px;
+}
+
+.section-title{
+    background:#8b0000;
+    color:white;
+    padding:12px;
+    font-size:20px;
+    text-align:center;
+}
+
+/* SEARCH */
+.search-box{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border:1px solid #aaa;
+    border-radius:4px;
+}
+
+/* JOB LIST */
+.job-list{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.job{
+    padding:16px;
+    border-bottom:1px solid #ddd;
+}
+
+.job:last-child{
+    border-bottom:none;
+}
+
+.job h2{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.job h2 a{
+    color:#004aad;
+    text-decoration:none;
+}
+
+.job h2 a:hover{
+    text-decoration:underline;
+}
+
+.job-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 25px;
+    font-size:14px;
+    margin:8px 0;
+}
+
+.last-date{
+    color:#c00000;
+    font-weight:bold;
+}
+
+.badge{
+    display:inline-block;
+    background:#198754;
+    color:white;
+    padding:4px 8px;
+    border-radius:3px;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 14px;
+    background:#8b0000;
+    color:white;
+    text-decoration:none;
+    border-radius:3px;
+}
+
+.btn:hover{
+    background:#600000;
+}
+
+/* DETAILS TABLE */
+.details{
+    background:white;
+    margin-top:25px;
     border:1px solid #ddd;
     padding:15px;
-    margin-top:12px;
-    border-radius:7px;
 }
 
-.delete{
-    background:#d62828;
-    margin-top:10px;
+.details h2{
+    text-align:center;
+    background:#8b0000;
+    color:white;
+    padding:10px;
+    margin-bottom:15px;
 }
 
-.hidden{
-    display:none;
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table td, table th{
+    border:1px solid #bbb;
+    padding:10px;
+}
+
+table th{
+    background:#eee;
+}
+
+.download-buttons{
+    text-align:center;
+    margin:20px 0;
+}
+
+.download-buttons a{
+    display:inline-block;
+    padding:10px 16px;
+    margin:5px;
+    text-decoration:none;
+    color:white;
+    border-radius:4px;
+}
+
+.notification{
+    background:#0066cc;
+}
+
+.form-download{
+    background:#198754;
+}
+
+/* IMPORTANT LINKS */
+.links{
+    background:white;
+    margin-top:20px;
+    border:1px solid #ddd;
+}
+
+.links h2{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+.links a{
+    display:block;
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    color:#004aad;
+    text-decoration:none;
+}
+
+.links a:hover{
+    background:#f1f1f1;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    background:white;
+    padding:15px;
+    margin-top:20px;
+    font-size:13px;
+    line-height:1.6;
+    border:1px solid #ddd;
 }
 
 /* FOOTER */
-
-footer{
-    background:#111;
+.footer{
+    background:#222;
     color:white;
     text-align:center;
-    padding:25px;
-    margin-top:35px;
+    padding:20px 10px;
+    margin-top:30px;
 }
 
-hr{
-    border:0;
-    border-top:1px solid #ddd;
-    margin:25px 0;
+.footer p{
+    margin:5px;
 }
 
+/* MOBILE */
 @media(max-width:600px){
 
-    header h1{
-        font-size:24px;
+    .header h1{
+        font-size:25px;
     }
 
-    nav a{
+    .navbar a{
+        padding:11px 10px;
+        font-size:14px;
+    }
+
+    .job h2{
+        font-size:16px;
+    }
+
+    table{
         font-size:13px;
-        padding:8px 9px;
     }
-
-    .posts{
-        grid-template-columns:1fr;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-
 <!-- HEADER -->
-
-<header>
-
-    <h1>💻 DIGITAL DREAMS CSC</h1>
-
-    <p>
-        Jobs • Results • Admit Card • Haryana • CSC Services
-    </p>
-
-</header>
-
+<div class="header">
+    <h1>DIGITAL DREAMS PEGA</h1>
+    <p>Latest Offline Form & Vacancy Updates</p>
+</div>
 
 <!-- NAVIGATION -->
-
-<nav>
-
+<div class="navbar">
     <a href="#home">Home</a>
-
-    <a href="#jobs">Latest Jobs</a>
-
-    <a href="#results">Results</a>
-
-    <a href="#admit">Admit Card</a>
-
-    <a href="#answer">Answer Key</a>
-
-    <a href="#haryana">Haryana</a>
-
-    <a href="#csc">CSC Services</a>
-
-    <a href="#admin">Admin</a>
-
-</nav>
-
-
-<div class="container">
-
-
-<!-- HOME -->
-
-<section id="home" class="hero">
-
-    <h2>
-        Digital Dreams CSC में आपका स्वागत है
-    </h2>
-
-    <p>
-        Latest Government Jobs, Results, Admit Card,
-        Answer Key और Haryana की महत्वपूर्ण जानकारी
-        एक ही जगह।
-    </p>
-
-</section>
-
-
-<!-- JOBS -->
-
-<section id="jobs" class="section">
-
-    <h2 class="section-title">
-        📢 Latest Jobs
-    </h2>
-
-    <div id="jobsList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- RESULTS -->
-
-<section id="results" class="section">
-
-    <h2 class="section-title">
-        📊 Results
-    </h2>
-
-    <div id="resultsList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- ADMIT CARD -->
-
-<section id="admit" class="section">
-
-    <h2 class="section-title">
-        🎫 Admit Card
-    </h2>
-
-    <div id="admitList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- ANSWER KEY -->
-
-<section id="answer" class="section">
-
-    <h2 class="section-title">
-        📝 Answer Key
-    </h2>
-
-    <div id="answerList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- HARYANA -->
-
-<section id="haryana" class="section">
-
-    <h2 class="section-title">
-        🏡 Haryana Updates
-    </h2>
-
-    <div id="haryanaList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- CSC -->
-
-<section id="csc" class="section">
-
-    <h2 class="section-title">
-        💻 CSC Services
-    </h2>
-
-    <div id="cscList" class="posts">
-        <p>Loading...</p>
-    </div>
-
-</section>
-
-
-<!-- ADMIN -->
-
-<section id="admin" class="section">
-
-
-<!-- LOGIN -->
-
-<div id="loginBox" class="login-box">
-
-    <h2>🔐 Admin Login</h2>
-
-    <p style="margin-bottom:15px;">
-        केवल Admin के लिए
-    </p>
-
-
-    <label>
-        Email
-    </label>
-
-    <input
-        type="email"
-        id="email"
-        placeholder="Admin Email"
-    >
-
-
-    <label>
-        Password
-    </label>
-
-    <input
-        type="password"
-        id="password"
-        placeholder="Admin Password"
-    >
-
-
-    <button onclick="login()">
-        🔐 Login
-    </button>
-
-
-    <div
-        id="loginMessage"
-        class="message">
-    </div>
-
+    <a href="#latest">Latest Forms</a>
+    <a href="#haryana">Haryana Jobs</a>
+    <a href="#central">Central Jobs</a>
+    <a href="#contact">Contact</a>
 </div>
 
-
-<!-- ADMIN DASHBOARD -->
-
-<div
-    id="adminPanel"
-    class="admin-box hidden">
-
-
-    <div class="admin-header">
-
-        <h2>
-            ⚙️ Admin Dashboard
-        </h2>
-
-        <button
-            class="logout"
-            onclick="logout()">
-
-            🚪 Logout
-
-        </button>
-
-    </div>
-
-
-    <hr>
-
-
-    <h3>
-        ➕ नई जानकारी Add करें
-    </h3>
-
-
-    <label>
-        Category
-    </label>
-
-    <select id="category">
-
-        <option value="jobs">
-            Latest Jobs
-        </option>
-
-        <option value="results">
-            Results
-        </option>
-
-        <option value="admit">
-            Admit Card
-        </option>
-
-        <option value="answer">
-            Answer Key
-        </option>
-
-        <option value="haryana">
-            Haryana
-        </option>
-
-        <option value="csc">
-            CSC Services
-        </option>
-
-    </select>
-
-
-    <label>
-        Title
-    </label>
-
-    <input
-        type="text"
-        id="title"
-        placeholder="जैसे: SSC GD Recruitment 2026"
-    >
-
-
-    <label>
-        Description
-    </label>
-
-    <textarea
-        id="description"
-        placeholder="Post की पूरी जानकारी लिखें">
-    </textarea>
-
-
-    <label>
-        Link
-    </label>
-
-    <input
-        type="text"
-        id="link"
-        placeholder="https://example.com"
-    >
-
-
-    <button onclick="savePost()">
-        💾 Save Post
-    </button>
-
-
-    <div
-        id="saveMessage"
-        class="message">
-    </div>
-
-
-    <hr>
-
-
-    <h3>
-        📋 आपकी सभी Posts
-    </h3>
-
-
-    <div id="adminPosts">
-
-        Loading...
-
-    </div>
-
-
+<!-- NOTICE -->
+<div class="notice">
+    📢 सभी नई Offline Vacancy और Application Form की जानकारी यहाँ मिलेगी।
 </div>
 
-</section>
+<div class="container" id="home">
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Offline Form..."
+            onkeyup="searchJobs()">
+    </div>
+
+    <div class="section-title" id="latest">
+        Latest Offline Form Updates
+    </div>
+
+    <div class="job-list" id="jobList">
+
+        <!-- JOB 1 -->
+        <div class="job">
+
+            <h2>
+                <a href="#job1">
+                    Haryana Offline Form Recruitment 2026
+                </a>
+            </h2>
+
+            <div class="job-info">
+                <span>📅 Start Date: 20-10-2026</span>
+                <span class="last-date">⏰ Last Date: 10-11-2026</span>
+            </div>
+
+            <span class="badge">OFFLINE FORM</span>
+
+            <br>
+
+            <a href="#job1" class="btn">
+                View Full Details
+            </a>
+
+        </div>
+
+        <!-- JOB 2 -->
+        <div class="job">
+
+            <h2>
+                <a href="#job2">
+                    District Court Offline Vacancy 2026
+                </a>
+            </h2>
+
+            <div class="job-info">
+                <span>📅 Start Date: 18-10-2026</span>
+                <span class="last-date">⏰ Last Date: 05-11-2026</span>
+            </div>
+
+            <span class="badge">OFFLINE FORM</span>
+
+            <br>
+
+            <a href="#job2" class="btn">
+                View Full Details
+            </a>
+
+        </div>
+
+        <!-- JOB 3 -->
+        <div class="job">
+
+            <h2>
+                <a href="#job3">
+                    Haryana Peon Offline Recruitment 2026
+                </a>
+            </h2>
+
+            <div class="job-info">
+                <span>📅 Start Date: 15-10-2026</span>
+                <span class="last-date">⏰ Last Date: 30-10-2026</span>
+            </div>
+
+            <span class="badge">OFFLINE FORM</span>
+
+            <br>
+
+            <a href="#job3" class="btn">
+                View Full Details
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXAMPLE FULL JOB DETAILS -->
+
+    <div class="details" id="job1">
+
+        <h2>Haryana Offline Form Recruitment 2026</h2>
+
+        <table>
+
+            <tr>
+                <th>Department</th>
+                <td>Example Department Haryana</td>
+            </tr>
+
+            <tr>
+                <th>Post Name</th>
+                <td>Clerk / Peon</td>
+            </tr>
+
+            <tr>
+                <th>Total Posts</th>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <th>Apply Mode</th>
+                <td><b>Offline</b></td>
+            </tr>
+
+            <tr>
+                <th>Start Date</th>
+                <td>20 October 2026</td>
+            </tr>
+
+            <tr>
+                <th>Last Date</th>
+                <td>
+                    <b style="color:red;">
+                        10 November 2026
+                    </b>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Qualification</th>
+                <td>10th / 12th / Graduation</td>
+            </tr>
+
+            <tr>
+                <th>Age Limit</th>
+                <td>18-42 Years</td>
+            </tr>
+
+            <tr>
+                <th>Application Fees</th>
+                <td>Check Official Notification</td>
+            </tr>
+
+            <tr>
+                <th>Selection Process</th>
+                <td>
+                    Written Exam / Skill Test /
+                    Document Verification
+                </td>
+            </tr>
+
+        </table>
+
+
+        <h3 style="margin-top:20px;">
+            📮 Form Send Address
+        </h3>
+
+        <p style="padding:10px 0; line-height:1.6;">
+            Application form को Official Notification में दिए गए
+            पते पर Last Date से पहले भेजें।
+        </p>
+
+
+        <div class="download-buttons">
+
+            <!-- YAHAN OFFICIAL NOTIFICATION LINK LAGAYE -->
+            <a href="#"
+               class="notification">
+                📄 Download Notification
+            </a>
+
+            <!-- YAHAN FORM PDF LINK LAGAYE -->
+            <a href="#"
+               class="form-download">
+                📥 Download Application Form
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT LINKS -->
+
+    <div class="links">
+
+        <h2>Important Links</h2>
+
+        <a href="#">
+            📄 Latest Offline Forms
+        </a>
+
+        <a href="#">
+            🏛 Haryana Government Jobs
+        </a>
+
+        <a href="#">
+            🇮🇳 Central Government Jobs
+        </a>
+
+        <a href="#">
+            📥 Download Application Forms
+        </a>
+
+    </div>
+
+
+    <!-- DISCLAIMER -->
+
+    <div class="disclaimer">
+
+        <b>Disclaimer:</b>
+
+        Digital Dreams Pega कोई सरकारी वेबसाइट नहीं है।
+        इस वेबसाइट का उद्देश्य केवल सरकारी एवं अन्य भर्तियों से
+        संबंधित जानकारी उपलब्ध कराना है। आवेदन करने से पहले
+        संबंधित विभाग की Official Notification अवश्य पढ़ें।
+
+    </div>
 
 </div>
 
 
 <!-- FOOTER -->
 
-<footer>
+<div class="footer" id="contact">
 
     <p>
-        © 2026 Digital Dreams CSC
+        © 2026 Digital Dreams Pega
     </p>
 
     <p>
-        All Rights Reserved
+        Offline Form & Vacancy Updates
     </p>
 
-</footer>
+</div>
 
 
+<script>
 
-<!-- =====================================================
-     FIREBASE JAVASCRIPT
-===================================================== -->
+/* SEARCH FUNCTION */
 
-<script type="module">
+function searchJobs(){
 
-
-/* FIREBASE APP */
-
-import {
-    initializeApp
-}
-from
-"https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-
-
-/* AUTH */
-
-import {
-    getAuth,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    signOut
-}
-from
-"https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
-
-
-/* FIRESTORE */
-
-import {
-    getFirestore,
-    collection,
-    addDoc,
-    getDocs,
-    deleteDoc,
-    doc,
-    query,
-    orderBy
-}
-from
-"https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
-
-
-
-/* =====================================================
-   🔥 YOUR FIREBASE CONFIG
-===================================================== */
-
-const firebaseConfig = {
-
-    apiKey:
-    "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
-
-    authDomain:
-    "digital-dreams-pegan.firebaseapp.com",
-
-    projectId:
-    "digital-dreams-pegan",
-
-    storageBucket:
-    "digital-dreams-pegan.firebasestorage.app",
-
-    messagingSenderId:
-    "1053549608341",
-
-    appId:
-    "1:1053549608341:web:bb602038ebda2732830a9c",
-
-    measurementId:
-    "G-6EKZP1D3XQ"
-
-};
-
-
-
-/* INITIALIZE FIREBASE */
-
-const app =
-    initializeApp(firebaseConfig);
-
-
-
-/* AUTH */
-
-const auth =
-    getAuth(app);
-
-
-
-/* FIRESTORE */
-
-const db =
-    getFirestore(app);
-
-
-
-/* =====================================================
-   LOGIN
-===================================================== */
-
-window.login = async function(){
-
-    const email =
-        document
-        .getElementById("email")
+    let input =
+        document.getElementById("search")
         .value
-        .trim();
+        .toLowerCase();
 
-
-    const password =
+    let jobs =
         document
-        .getElementById("password")
-        .value;
+        .getElementById("jobList")
+        .getElementsByClassName("job");
 
+    for(let i = 0; i < jobs.length; i++){
 
-    const message =
-        document
-        .getElementById("loginMessage");
+        let text =
+            jobs[i]
+            .innerText
+            .toLowerCase();
 
-
-    if(!email || !password){
-
-        message.innerText =
-        "❌ Email और Password दोनों डालें।";
-
-        return;
-
-    }
-
-
-    message.innerText =
-    "Login हो रहा है...";
-
-
-    try{
-
-        await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-        );
-
-
-        message.innerText =
-        "✅ Login Successful";
-
-
-    }
-
-    catch(error){
-
-        console.log(error);
-
-
-        message.innerText =
-        "❌ Login Failed: "
-        + error.message;
-
-    }
-
-};
-
-
-
-/* =====================================================
-   LOGOUT
-===================================================== */
-
-window.logout = async function(){
-
-    try{
-
-        await signOut(auth);
-
-        alert(
-            "आप Logout हो गए हैं।"
-        );
-
-    }
-
-    catch(error){
-
-        alert(
-            error.message
-        );
-
-    }
-
-};
-
-
-
-/* =====================================================
-   CHECK LOGIN
-===================================================== */
-
-onAuthStateChanged(
-    auth,
-    function(user){
-
-        const loginBox =
-            document
-            .getElementById("loginBox");
-
-
-        const adminPanel =
-            document
-            .getElementById("adminPanel");
-
-
-        if(user){
-
-            loginBox
-            .classList
-            .add("hidden");
-
-
-            adminPanel
-            .classList
-            .remove("hidden");
-
-
-            loadAdminPosts();
-
+        if(text.includes(input)){
+            jobs[i].style.display = "";
         }
-
         else{
-
-            loginBox
-            .classList
-            .remove("hidden");
-
-
-            adminPanel
-            .classList
-            .add("hidden");
-
+            jobs[i].style.display = "none";
         }
 
     }
-);
-
-
-
-/* =====================================================
-   ADD POST
-===================================================== */
-
-window.savePost = async function(){
-
-    const category =
-        document
-        .getElementById("category")
-        .value;
-
-
-    const title =
-        document
-        .getElementById("title")
-        .value
-        .trim();
-
-
-    const description =
-        document
-        .getElementById("description")
-        .value
-        .trim();
-
-
-    const link =
-        document
-        .getElementById("link")
-        .value
-        .trim();
-
-
-    const message =
-        document
-        .getElementById("saveMessage");
-
-
-    if(!title){
-
-        message.innerText =
-        "❌ Title डालना जरूरी है।";
-
-        return;
-
-    }
-
-
-    try{
-
-        await addDoc(
-            collection(db,"posts"),
-            {
-
-                category:
-                category,
-
-                title:
-                title,
-
-                description:
-                description,
-
-                link:
-                link,
-
-                createdAt:
-                Date.now()
-
-            }
-        );
-
-
-        message.innerText =
-        "✅ Post Successfully Added";
-
-
-        document
-        .getElementById("title")
-        .value = "";
-
-
-        document
-        .getElementById("description")
-        .value = "";
-
-
-        document
-        .getElementById("link")
-        .value = "";
-
-
-        loadAdminPosts();
-
-        loadPublicPosts();
-
-    }
-
-    catch(error){
-
-        console.log(error);
-
-
-        message.innerText =
-        "❌ Error: "
-        + error.message;
-
-    }
-
-};
-
-
-
-/* =====================================================
-   ADMIN POSTS
-===================================================== */
-
-async function loadAdminPosts(){
-
-    const box =
-        document
-        .getElementById("adminPosts");
-
-
-    box.innerHTML =
-    "Loading...";
-
-
-    try{
-
-        const q =
-            query(
-                collection(db,"posts"),
-                orderBy(
-                    "createdAt",
-                    "desc"
-                )
-            );
-
-
-        const snapshot =
-            await getDocs(q);
-
-
-        box.innerHTML = "";
-
-
-        if(snapshot.empty){
-
-            box.innerHTML =
-            "<p>अभी कोई post नहीं है।</p>";
-
-            return;
-
-        }
-
-
-        snapshot.forEach(
-            function(item){
-
-                const data =
-                    item.data();
-
-
-                const div =
-                    document.createElement("div");
-
-
-                div.className =
-                    "admin-post";
-
-
-                div.innerHTML = `
-
-                    <h3>
-                    ${escapeHTML(
-                        data.title || ""
-                    )}
-                    </h3>
-
-                    <p>
-                    <b>Category:</b>
-                    ${escapeHTML(
-                        data.category || ""
-                    )}
-                    </p>
-
-                    <p>
-                    ${escapeHTML(
-                        data.description || ""
-                    )}
-                    </p>
-
-                    ${
-                        data.link
-                        ?
-                        `
-                        <p>
-                        <a
-                        href="${safeURL(data.link)}"
-                        target="_blank">
-                        🔗 Open Link
-                        </a>
-                        </p>
-                        `
-                        :
-                        ""
-                    }
-
-                    <button
-                    class="delete"
-                    onclick="deletePost('${item.id}')">
-
-                    🗑️ Delete
-
-                    </button>
-
-                `;
-
-
-                box.appendChild(div);
-
-            }
-        );
-
-    }
-
-    catch(error){
-
-        console.log(error);
-
-
-        box.innerHTML =
-        "❌ Posts load नहीं हो रही हैं।";
-
-    }
 
 }
-
-
-
-/* =====================================================
-   DELETE
-===================================================== */
-
-window.deletePost =
-async function(id){
-
-    const confirmDelete =
-        confirm(
-            "क्या आप इस post को delete करना चाहते हैं?"
-        );
-
-
-    if(!confirmDelete){
-
-        return;
-
-    }
-
-
-    try{
-
-        await deleteDoc(
-            doc(
-                db,
-                "posts",
-                id
-            )
-        );
-
-
-        alert(
-            "✅ Post Delete हो गई।"
-        );
-
-
-        loadAdminPosts();
-
-        loadPublicPosts();
-
-    }
-
-    catch(error){
-
-        alert(
-            "❌ Delete Error: "
-            + error.message
-        );
-
-    }
-
-};
-
-
-
-/* =====================================================
-   PUBLIC POSTS
-===================================================== */
-
-async function loadPublicPosts(){
-
-    const categories = [
-
-        "jobs",
-        "results",
-        "admit",
-        "answer",
-        "haryana",
-        "csc"
-
-    ];
-
-
-    try{
-
-        const q =
-            query(
-                collection(db,"posts"),
-                orderBy(
-                    "createdAt",
-                    "desc"
-                )
-            );
-
-
-        const snapshot =
-            await getDocs(q);
-
-
-        categories.forEach(
-            function(category){
-
-                const box =
-                    document
-                    .getElementById(
-                        category + "List"
-                    );
-
-
-                box.innerHTML = "";
-
-
-                let found =
-                    false;
-
-
-                snapshot.forEach(
-                    function(item){
-
-                        const data =
-                            item.data();
-
-
-                        if(
-                            data.category
-                            ===
-                            category
-                        ){
-
-                            found =
-                            true;
-
-
-                            const div =
-                                document
-                                .createElement("div");
-
-
-                            div.className =
-                                "post";
-
-
-                            div.innerHTML = `
-
-                                <h3>
-                                ${escapeHTML(
-                                    data.title || ""
-                                )}
-                                </h3>
-
-                                <p>
-                                ${escapeHTML(
-                                    data.description || ""
-                                )}
-                                </p>
-
-                                ${
-                                    data.link
-                                    ?
-                                    `
-                                    <a
-                                    href="${safeURL(data.link)}"
-                                    target="_blank">
-
-                                    View Details →
-
-                                    </a>
-                                    `
-                                    :
-                                    ""
-                                }
-
-                            `;
-
-
-                            box.appendChild(div);
-
-                        }
-
-                    }
-                );
-
-
-                if(!found){
-
-                    box.innerHTML =
-                    "<p>अभी कोई जानकारी उपलब्ध नहीं है।</p>";
-
-                }
-
-            }
-        );
-
-    }
-
-    catch(error){
-
-        console.log(error);
-
-    }
-
-}
-
-
-
-/* =====================================================
-   SECURITY FUNCTIONS
-===================================================== */
-
-function escapeHTML(text){
-
-    return String(text)
-
-    .replace(
-        /&/g,
-        "&amp;"
-    )
-
-    .replace(
-        /</g,
-        "&lt;"
-    )
-
-    .replace(
-        />/g,
-        "&gt;"
-    )
-
-    .replace(
-        /"/g,
-        "&quot;"
-    )
-
-    .replace(
-        /'/g,
-        "&#039;"
-    );
-
-}
-
-
-function safeURL(url){
-
-    try{
-
-        const parsed =
-            new URL(url);
-
-
-        if(
-            parsed.protocol
-            === "http:"
-            ||
-            parsed.protocol
-            === "https:"
-        ){
-
-            return parsed.href;
-
-        }
-
-
-        return "#";
-
-    }
-
-    catch{
-
-        return "#";
-
-    }
-
-}
-
-
-
-/* =====================================================
-   START WEBSITE
-===================================================== */
-
-loadPublicPosts();
-
 
 </script>
 
