@@ -4,592 +4,844 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OFFLINE NAUKRI</title>
+<title>OFFLINE NAUKRI - Latest Job & Vacancy Updates</title>
+
+<meta name="description" content="OFFLINE NAUKRI - Latest Offline Form, Online Form, Result, Admit Card, Syllabus and Government Job Updates.">
+<meta name="keywords" content="offline naukri, government jobs, vacancy, offline form, online form, result, admit card, syllabus, Haryana jobs">
+<meta name="author" content="OFFLINE NAUKRI">
 
 <style>
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f3f4f6;
-    color:#111827;
+    background:#f3f6fa;
+    color:#222;
 }
 
-/* TOP NAVIGATION */
-.navbar{
-    background:#111827;
-    width:100%;
-    overflow-x:auto;
-    white-space:nowrap;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
-
-.navbar::-webkit-scrollbar{
-    height:4px;
-}
-
-.navbar-inner{
-    display:flex;
-    min-width:max-content;
-}
-
-.navbar a{
-    color:#fff;
+a{
     text-decoration:none;
-    padding:15px 17px;
-    font-size:14px;
-    font-weight:bold;
-    display:inline-block;
+    color:inherit;
 }
 
-.navbar a:hover{
-    background:#2563eb;
-}
-
-/* HEADER */
 header{
-    background:linear-gradient(135deg,#0f172a,#2563eb);
-    color:#fff;
-    padding:25px 15px;
+    background:linear-gradient(135deg,#0b3d91,#0756c9);
+    color:white;
 }
 
-.header-inner{
+.top{
     max-width:1200px;
     margin:auto;
+    padding:18px 15px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:20px;
+    align-items:center;
+    gap:15px;
 }
 
 .logo{
-    font-size:30px;
+    font-size:28px;
     font-weight:900;
 }
 
 .tagline{
-    margin-top:7px;
-    color:#dbeafe;
+    font-size:13px;
+    margin-top:4px;
+    opacity:.9;
+}
+
+.admin-btn{
+    background:#fff;
+    color:#0b3d91;
+    border:0;
+    padding:10px 16px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+nav{
+    background:#062c69;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.nav-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+}
+
+nav button{
+    border:0;
+    background:transparent;
+    color:white;
+    padding:13px 15px;
+    cursor:pointer;
+    font-weight:bold;
     font-size:14px;
 }
 
-.admin-login{
-    background:#f59e0b;
-    border:0;
-    padding:12px 18px;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
+nav button:hover,
+nav button.active{
+    background:#0b3d91;
 }
 
-.admin-login:hover{
-    background:#fbbf24;
-}
-
-/* MAIN */
 .container{
     max-width:1200px;
-    margin:25px auto;
-    padding:0 15px;
+    margin:auto;
+    padding:20px 15px;
 }
 
-/* SEARCH */
-.search-box{
-    background:#fff;
-    padding:18px;
+.hero{
+    background:white;
     border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    margin-bottom:22px;
-}
-
-.search-box input{
-    width:100%;
-    padding:14px;
-    border:1px solid #d1d5db;
-    border-radius:8px;
-    font-size:16px;
-    outline:none;
-}
-
-.search-box input:focus{
-    border-color:#2563eb;
-}
-
-/* ADMIN PANEL */
-#adminPanel{
-    display:none;
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    margin-bottom:25px;
-    box-shadow:0 2px 12px rgba(0,0,0,.1);
-    border-top:5px solid #f59e0b;
-}
-
-.admin-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    padding:25px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
     margin-bottom:20px;
 }
 
-.logout{
-    background:#dc2626;
-    color:#fff;
+.hero h1{
+    color:#0b3d91;
+    margin-bottom:8px;
+}
+
+.hero p{
+    color:#555;
+}
+
+.search-box{
+    margin-top:18px;
+    display:flex;
+    gap:10px;
+}
+
+.search-box input{
+    flex:1;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    font-size:15px;
+}
+
+.search-box button{
+    padding:13px 18px;
     border:0;
-    padding:10px 15px;
+    background:#0b3d91;
+    color:white;
     border-radius:7px;
     cursor:pointer;
 }
 
-.form-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:25px 0 12px;
 }
 
-.form-grid input,
-.form-grid textarea,
-.form-grid select{
-    width:100%;
-    padding:11px;
-    border:1px solid #d1d5db;
-    border-radius:7px;
+.section-title h2{
+    color:#0b3d91;
+}
+
+.count{
+    background:#0b3d91;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:17px;
+    box-shadow:0 2px 10px rgba(0,0,0,.07);
+    border-left:4px solid #0b3d91;
+}
+
+.card h3{
+    color:#0b3d91;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.info{
+    margin:6px 0;
+    color:#444;
     font-size:14px;
 }
 
-.form-grid textarea{
+.badge{
+    display:inline-block;
+    background:#e9f1ff;
+    color:#0b3d91;
+    padding:4px 8px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.card-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:13px;
+}
+
+.btn{
+    border:0;
+    padding:8px 11px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.btn-primary{
+    background:#0b3d91;
+    color:white;
+}
+
+.btn-success{
+    background:#198754;
+    color:white;
+}
+
+.btn-warning{
+    background:#f0ad4e;
+    color:white;
+}
+
+.btn-danger{
+    background:#dc3545;
+    color:white;
+}
+
+.empty{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    color:#777;
+}
+
+.info-section{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+    line-height:1.7;
+}
+
+footer{
+    margin-top:35px;
+    background:#062c69;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:1000;
+    overflow:auto;
+    padding:20px;
+}
+
+.modal-box{
+    max-width:650px;
+    margin:40px auto;
+    background:white;
+    border-radius:12px;
+    padding:22px;
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.close{
+    background:#dc3545;
+    color:white;
+    border:0;
+    border-radius:5px;
+    padding:7px 11px;
+    cursor:pointer;
+}
+
+.form-group{
+    margin-bottom:12px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.form-group textarea{
     min-height:90px;
     resize:vertical;
+}
+
+.admin-panel{
+    display:none;
+    background:#fff;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    margin-bottom:20px;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
 .full{
     grid-column:1/-1;
 }
 
-.save-btn{
-    background:#16a34a;
-    color:white;
-    border:0;
-    padding:13px;
-    border-radius:7px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.clear-btn{
-    background:#64748b;
-    color:white;
-    border:0;
-    padding:13px;
-    border-radius:7px;
-    cursor:pointer;
-}
-
-/* TITLE */
-.section-title{
+.admin-actions{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:15px;
-}
-
-.section-title h2{
-    color:#111827;
-}
-
-/* VACANCIES */
-.vacancy-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.vacancy-card{
-    background:#fff;
-    border-radius:12px;
-    padding:20px;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    border-left:5px solid #2563eb;
-}
-
-.vacancy-card h3{
-    color:#1d4ed8;
-    margin:8px 0 12px;
-}
-
-.badge{
-    display:inline-block;
-    background:#dcfce7;
-    color:#166534;
-    padding:5px 9px;
-    border-radius:5px;
-    font-size:12px;
-    font-weight:bold;
-}
-
-.info{
-    margin:7px 0;
-    font-size:14px;
-}
-
-.label{
-    font-weight:bold;
-}
-
-.buttons{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top:15px;
-}
-
-.btn{
-    padding:10px 13px;
-    border-radius:7px;
-    border:0;
-    text-decoration:none;
-    cursor:pointer;
-    font-weight:bold;
-    display:inline-block;
-}
-
-.details{
-    background:#2563eb;
-    color:#fff;
-}
-
-.apply{
-    background:#16a34a;
-    color:#fff;
-}
-
-.notification{
-    background:#7c3aed;
-    color:#fff;
-}
-
-/* ADMIN LIST */
-.admin-list{
-    margin-top:25px;
-}
-
-.admin-item{
-    background:#f8fafc;
-    border:1px solid #e5e7eb;
-    padding:12px;
-    border-radius:8px;
-    margin-top:10px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     gap:10px;
+    margin-top:15px;
+    flex-wrap:wrap;
 }
 
-.edit{
-    background:#2563eb;
-    color:#fff;
-    border:0;
-    padding:8px 12px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.delete{
-    background:#dc2626;
-    color:#fff;
-    border:0;
-    padding:8px 12px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    z-index:2000;
-    align-items:center;
-    justify-content:center;
-    padding:15px;
-}
-
-.modal-box{
-    background:#fff;
-    width:100%;
-    max-width:430px;
-    padding:25px;
-    border-radius:12px;
-}
-
-.close{
-    float:right;
-    background:none;
-    border:0;
-    font-size:24px;
-    cursor:pointer;
-}
-
-.modal-box h2{
+.login-info{
+    background:#eef5ff;
+    padding:12px;
+    border-radius:7px;
     margin-bottom:15px;
+    color:#0b3d91;
 }
 
-.modal-box input{
-    width:100%;
-    padding:13px;
-    border:1px solid #d1d5db;
-    border-radius:7px;
-    margin-bottom:12px;
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:20px;
 }
 
-.login-btn{
-    width:100%;
-    padding:13px;
-    border:0;
-    background:#2563eb;
-    color:#fff;
-    border-radius:7px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-    background:#111827;
-    color:#cbd5e1;
-    text-align:center;
-    padding:25px 15px;
-    margin-top:35px;
-}
-
-.empty{
-    background:#fff;
-    padding:30px;
+.stat{
+    background:#eef5ff;
+    padding:18px;
     border-radius:10px;
     text-align:center;
-    color:#64748b;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+.stat strong{
+    display:block;
+    font-size:25px;
+    color:#0b3d91;
+}
 
-    .header-inner{
+.notice{
+    background:#fff3cd;
+    color:#664d03;
+    padding:12px;
+    border-radius:7px;
+    margin-bottom:15px;
+}
+
+.hidden{
+    display:none!important;
+}
+
+@media(max-width:850px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .top{
         flex-direction:column;
-        align-items:flex-start;
+        text-align:center;
     }
 
-    .logo{
-        font-size:24px;
-    }
-
-    .admin-login{
-        width:100%;
-    }
-
-    .vacancy-grid{
+    .cards{
         grid-template-columns:1fr;
     }
 
-    .form-grid{
+    .admin-grid{
         grid-template-columns:1fr;
     }
 
-    .full{
-        grid-column:auto;
+    .dashboard{
+        grid-template-columns:1fr;
     }
 
-    .admin-item{
+    .search-box{
         flex-direction:column;
-        align-items:flex-start;
     }
 
+    nav button{
+        padding:11px 12px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar">
-<div class="navbar-inner">
+<header>
 
-<a href="https://www.vacancyform.com/" target="_blank">Home</a>
+<div class="top">
 
-<a href="https://www.vacancyform.com/pages/about_us" target="_blank">About Us</a>
+<div>
+<div class="logo">🔵 OFFLINE NAUKRI</div>
+<div class="tagline">Latest Job, Vacancy, Form, Result & Admit Card Updates</div>
+</div>
 
-<a href="https://www.vacancyform.com/pages/viewmoreonline" target="_blank">Online Form</a>
+<button class="admin-btn" onclick="openLogin()">🔐 ADMIN LOGIN</button>
 
-<a href="https://www.vacancyform.com/pages/offlinemore" target="_blank">Offline Form</a>
+</div>
 
-<a href="https://www.vacancyform.com/pages/onlinemore/8" target="_blank">Result</a>
+<nav>
+<div class="nav-inner">
 
-<a href="https://www.vacancyform.com/pages/onlinemore/9" target="_blank">Admit Card</a>
-
-<a href="https://www.vacancyform.com/pages/onlinemore/10" target="_blank">Syllabus</a>
-
-<a href="https://www.vacancyform.com/pages/downloadmore/2" target="_blank">DOWNLOAD</a>
-
-<a href="https://www.vacancyform.com/pages/downloadmore/4" target="_blank">Posters</a>
-
-<a href="https://www.vacancyform.com/pages/linkonline" target="_blank">Links</a>
-
-<a href="https://www.vacancyform.com/pages/contact_us" target="_blank">Contact</a>
+<button onclick="showSection('home')" class="active">🏠 Home</button>
+<button onclick="showSection('offline')">📋 Offline Form</button>
+<button onclick="showSection('online')">💻 Online Form</button>
+<button onclick="showSection('result')">📝 Result</button>
+<button onclick="showSection('admit')">🎫 Admit Card</button>
+<button onclick="showSection('syllabus')">📚 Syllabus</button>
+<button onclick="showSection('download')">📥 Download</button>
+<button onclick="showSection('links')">🔗 Important Links</button>
+<button onclick="showSection('about')">ℹ️ About</button>
+<button onclick="showSection('contact')">📞 Contact</button>
 
 </div>
 </nav>
 
-
-<header>
-
-<div class="header-inner">
-
-<div>
-<div class="logo">🔵 OFFLINE NAUKRI</div>
-
-<div class="tagline">
-Latest Offline Jobs, Vacancy, Form & Government Updates
-</div>
-</div>
-
-<button class="admin-login" onclick="openLogin()">
-🔐 ADMIN LOGIN
-</button>
-
-</div>
-
 </header>
 
 
-<div class="container">
+<main class="container">
 
+<section id="home" class="site-section">
 
-<!-- ADMIN PANEL -->
+<div class="hero">
 
-<section id="adminPanel">
+<h1>OFFLINE NAUKRI</h1>
 
-<div class="admin-top">
+<p>
+Latest Government Jobs, Offline Forms, Online Forms, Results,
+Admit Cards and Syllabus Updates.
+</p>
 
-<div>
-<h2>🔐 Admin Panel</h2>
-<p id="adminEmail"></p>
-</div>
+<div class="search-box">
 
-<button class="logout" onclick="logout()">
-Logout
-</button>
+<input
+type="text"
+id="searchInput"
+placeholder="Search vacancy, department, qualification..."
+oninput="renderVacancies()">
 
-</div>
-
-
-<form id="vacancyForm">
-
-<input type="hidden" id="editId">
-
-
-<div class="form-grid">
-
-<input id="post" placeholder="Post Name *" required>
-
-<input id="department" placeholder="Department">
-
-<input id="posts" placeholder="Total Posts">
-
-<input id="qualification" placeholder="Qualification">
-
-<input id="age" placeholder="Age Limit">
-
-<input id="fee" placeholder="Application Fee">
-
-<input id="start" type="date">
-
-<input id="last" type="date">
-
-<input id="selection" placeholder="Selection Process">
-
-<select id="mode">
-
-<option value="Offline">Offline</option>
-
-<option value="Online">Online</option>
-
-</select>
-
-<input id="address" placeholder="Application Address">
-
-<input id="notification" placeholder="Notification URL">
-
-<input id="application" placeholder="Application / Apply URL">
-
-<textarea id="details" class="full"
-placeholder="Other Important Details"></textarea>
-
-<button type="submit" class="save-btn">
-💾 Save Vacancy
-</button>
-
-<button type="button" class="clear-btn"
-onclick="clearForm()">
-Clear
-</button>
+<button onclick="renderVacancies()">🔍 Search</button>
 
 </div>
 
-</form>
+</div>
 
 
-<div class="admin-list">
+<div class="notice">
+<strong>Important:</strong>
+OFFLINE NAUKRI provides vacancy and recruitment information for educational and informational purposes.
+Always verify the official notification before applying.
+</div>
 
-<h3>📋 Manage Vacancies</h3>
 
-<div id="adminList"></div>
+<div class="section-title">
+
+<h2>🔥 Latest Vacancy</h2>
+
+<span class="count" id="totalCount">0 Jobs</span>
+
+</div>
+
+<div id="homeVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="offline" class="site-section hidden">
+
+<div class="section-title">
+<h2>📋 Offline Form</h2>
+</div>
+
+<div id="offlineVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="online" class="site-section hidden">
+
+<div class="section-title">
+<h2>💻 Online Form</h2>
+</div>
+
+<div id="onlineVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="result" class="site-section hidden">
+
+<div class="section-title">
+<h2>📝 Latest Results</h2>
+</div>
+
+<div id="resultVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="admit" class="site-section hidden">
+
+<div class="section-title">
+<h2>🎫 Admit Card</h2>
+</div>
+
+<div id="admitVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="syllabus" class="site-section hidden">
+
+<div class="section-title">
+<h2>📚 Syllabus</h2>
+</div>
+
+<div id="syllabusVacancies" class="cards"></div>
+
+</section>
+
+
+
+<section id="download" class="site-section hidden">
+
+<div class="section-title">
+<h2>📥 Downloads</h2>
+</div>
+
+<div class="info-section">
+
+<p>
+यहाँ आप अपनी वेबसाइट से संबंधित important notifications,
+application forms, syllabus और अन्य documents के links add कर सकते हैं।
+</p>
+
+<br>
+
+<p>
+Admin panel से vacancy में notification और application links जोड़ने के बाद
+वे यहाँ संबंधित vacancy में दिखाई देंगे।
+</p>
 
 </div>
 
 </section>
 
 
-<!-- SEARCH -->
 
-<div class="search-box">
-
-<input
-type="search"
-id="search"
-placeholder="🔎 Search Post, Department, Qualification..."
->
-
-</div>
-
-
-<!-- TITLE -->
+<section id="links" class="site-section hidden">
 
 <div class="section-title">
+<h2>🔗 Important Links</h2>
+</div>
 
-<h2>📢 Latest Vacancies</h2>
+<div class="info-section">
 
-<span id="count">0 Vacancy</span>
+<h3>OFFLINE NAUKRI Important Links</h3>
+
+<br>
+
+<p>• Latest Vacancy Updates</p>
+<p>• Government Job Updates</p>
+<p>• Admit Card Updates</p>
+<p>• Result Updates</p>
+<p>• Syllabus Updates</p>
+<p>• Online Form Updates</p>
+<p>• Offline Form Updates</p>
+
+<br>
+
+<p>
+सभी links Admin Panel से आपकी अपनी vacancy के अनुसार add किए जा सकते हैं।
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="about" class="site-section hidden">
+
+<div class="info-section">
+
+<h2>ℹ️ About OFFLINE NAUKRI</h2>
+
+<br>
+
+<p>
+<strong>OFFLINE NAUKRI</strong> एक job information platform है,
+जहाँ candidates को Government Jobs, Offline Forms, Online Forms,
+Results, Admit Cards और Syllabus से संबंधित जानकारी एक जगह उपलब्ध कराने
+का प्रयास किया जाता है।
+</p>
+
+<br>
+
+<p>
+हमारा उद्देश्य candidates को recruitment updates आसानी से उपलब्ध कराना है।
+</p>
+
+<br>
+
+<p>
+<strong>Disclaimer:</strong>
+OFFLINE NAUKRI किसी Government Department की official website नहीं है।
+किसी भी भर्ती के लिए आवेदन करने से पहले official notification जरूर check करें।
+</p>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="site-section hidden">
+
+<div class="info-section">
+
+<h2>📞 Contact Us</h2>
+
+<br>
+
+<p>
+अगर आपको website से संबंधित कोई समस्या, correction या suggestion देना है,
+तो website administrator से संपर्क करें।
+</p>
+
+<br>
+
+<p>
+<strong>Email:</strong> mayankhr80@gmail.com
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ADMIN PANEL -->
+
+<section id="adminPanel" class="admin-panel">
+
+<h2>🔐 Admin Dashboard</h2>
+
+<br>
+
+<div class="login-info">
+Logged in as: <strong id="adminEmail"></strong>
+</div>
+
+<div class="dashboard">
+
+<div class="stat">
+<strong id="adminTotal">0</strong>
+Total Vacancies
+</div>
+
+<div class="stat">
+<strong id="adminOffline">0</strong>
+Offline Forms
+</div>
+
+<div class="stat">
+<strong id="adminOnline">0</strong>
+Online Forms
+</div>
 
 </div>
 
 
-<!-- VACANCIES -->
+<h3 id="formTitle">➕ Add Vacancy</h3>
 
-<div id="vacancyList" class="vacancy-grid">
+<br>
 
-<div class="empty">
-Loading vacancies...
+<div class="admin-grid">
+
+<div class="form-group">
+<label>Post Name *</label>
+<input id="post" placeholder="Example: Clerk">
+</div>
+
+<div class="form-group">
+<label>Department</label>
+<input id="department" placeholder="Example: Haryana Govt">
+</div>
+
+<div class="form-group">
+<label>Total Posts</label>
+<input id="posts" placeholder="Example: 100">
+</div>
+
+<div class="form-group">
+<label>Qualification</label>
+<input id="qualification" placeholder="Example: 12th Pass">
+</div>
+
+<div class="form-group">
+<label>Age Limit</label>
+<input id="age" placeholder="Example: 18-42 Years">
+</div>
+
+<div class="form-group">
+<label>Application Fee</label>
+<input id="fee" placeholder="Example: ₹0">
+</div>
+
+<div class="form-group">
+<label>Start Date</label>
+<input id="start" type="date">
+</div>
+
+<div class="form-group">
+<label>Last Date</label>
+<input id="last" type="date">
+</div>
+
+<div class="form-group">
+<label>Selection Process</label>
+<input id="selection" placeholder="Example: Written Exam">
+</div>
+
+<div class="form-group">
+
+<label>Form Type</label>
+
+<select id="mode">
+
+<option value="offline">Offline Form</option>
+<option value="online">Online Form</option>
+<option value="result">Result</option>
+<option value="admit">Admit Card</option>
+<option value="syllabus">Syllabus</option>
+
+</select>
+
+</div>
+
+<div class="form-group full">
+<label>Address / Location</label>
+<input id="address" placeholder="Example: Haryana">
+</div>
+
+<div class="form-group full">
+<label>Notification Link</label>
+<input id="notification" placeholder="https://...">
+</div>
+
+<div class="form-group full">
+<label>Application Link</label>
+<input id="application" placeholder="https://...">
+</div>
+
+<div class="form-group full">
+<label>Details</label>
+<textarea id="details" placeholder="Vacancy की पूरी जानकारी..."></textarea>
 </div>
 
 </div>
 
+
+<div class="admin-actions">
+
+<button class="btn btn-success" onclick="saveVacancy()">
+💾 Save Vacancy
+</button>
+
+<button class="btn btn-warning" onclick="resetForm()">
+↩️ Reset
+</button>
+
+<button class="btn btn-danger" onclick="logout()">
+🚪 Logout
+</button>
+
 </div>
+
+<input type="hidden" id="editId">
+
+<br>
+
+<h3>📋 Manage Vacancies</h3>
+
+<br>
+
+<div id="adminVacancies"></div>
+
+</section>
+
+</main>
+
+
+
+<footer>
+
+<p><strong>OFFLINE NAUKRI</strong></p>
+
+<p>Latest Job & Vacancy Updates</p>
+
+<p style="margin-top:8px;font-size:13px;">
+© 2026 OFFLINE NAUKRI. All Rights Reserved.
+</p>
+
+</footer>
+
 
 
 <!-- LOGIN MODAL -->
@@ -598,46 +850,68 @@ Loading vacancies...
 
 <div class="modal-box">
 
-<button class="close" onclick="closeLogin()">×</button>
+<div class="modal-header">
 
 <h2>🔐 Admin Login</h2>
 
-<p style="margin-bottom:15px;color:#64748b;">
-Admin Email और Password डालें
-</p>
+<button class="close" onclick="closeLogin()">✕</button>
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
 
 <input
 type="email"
-id="email"
-placeholder="Admin Email"
->
+id="loginEmail"
+placeholder="Admin Email">
+
+</div>
+
+<div class="form-group">
+
+<label>Password</label>
 
 <input
 type="password"
-id="password"
-placeholder="Password"
->
+id="loginPassword"
+placeholder="Password">
 
-<button class="login-btn" onclick="login()">
-Login
+</div>
+
+<button
+class="btn btn-primary"
+style="width:100%;padding:12px;"
+onclick="login()">
+
+🔐 Login
+
 </button>
 
-<p id="loginMessage"
-style="margin-top:12px;text-align:center;">
+<p id="loginError"
+style="color:#dc3545;margin-top:10px;">
 </p>
 
 </div>
 
 </div>
+
 
 
 <!-- DETAILS MODAL -->
 
 <div id="detailsModal" class="modal">
 
-<div class="modal-box" style="max-width:700px;max-height:90vh;overflow:auto;">
+<div class="modal-box">
 
-<button class="close" onclick="closeDetails()">×</button>
+<div class="modal-header">
+
+<h2 id="detailsTitle">Vacancy Details</h2>
+
+<button class="close" onclick="closeDetails()">✕</button>
+
+</div>
 
 <div id="detailsContent"></div>
 
@@ -645,20 +919,6 @@ style="margin-top:12px;text-align:center;">
 
 </div>
 
-
-<footer>
-
-<h3>🔵 OFFLINE NAUKRI</h3>
-
-<p style="margin-top:8px;">
-Latest Vacancy & Government Job Updates
-</p>
-
-<p style="margin-top:10px;font-size:13px;">
-© 2026 OFFLINE NAUKRI. All Rights Reserved.
-</p>
-
-</footer>
 
 
 <script type="module">
@@ -669,8 +929,8 @@ from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import {
 getAuth,
 signInWithEmailAndPassword,
-signOut,
-onAuthStateChanged
+onAuthStateChanged,
+signOut
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
@@ -678,39 +938,31 @@ import {
 getFirestore,
 collection,
 addDoc,
+getDocs,
+doc,
 updateDoc,
 deleteDoc,
-doc,
-onSnapshot,
-serverTimestamp
+query,
+orderBy
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 
-/* FIREBASE CONFIG */
-
 const firebaseConfig = {
 
-apiKey:
-"AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+apiKey: "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
 
-authDomain:
-"digital-dreams-pegan.firebaseapp.com",
+authDomain: "digital-dreams-pegan.firebaseapp.com",
 
-projectId:
-"digital-dreams-pegan",
+projectId: "digital-dreams-pegan",
 
-storageBucket:
-"digital-dreams-pegan.firebasestorage.app",
+storageBucket: "digital-dreams-pegan.firebasestorage.app",
 
-messagingSenderId:
-"1053549608341",
+messagingSenderId: "1053549608341",
 
-appId:
-"1:1053549608341:web:bb602038ebda2732830a9c",
+appId: "1:1053549608341:web:bb602038ebda2732830a9c",
 
-measurementId:
-"G-6EKZP1D3XQ"
+measurementId: "G-6EKZP1D3XQ"
 
 };
 
@@ -721,69 +973,78 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
+const vacanciesRef = collection(db,"vacancies");
 
-const ADMIN_EMAIL =
-"mayankhr80@gmail.com";
+const ADMIN_EMAIL = "mayankhr80@gmail.com";
 
 
 let vacancies = [];
 
-let editId = null;
 
 
-/* LOGIN */
+window.showSection = function(section){
+
+document.querySelectorAll(".site-section").forEach(s=>{
+s.classList.add("hidden");
+});
+
+const selected = document.getElementById(section);
+
+if(selected){
+selected.classList.remove("hidden");
+}
+
+document.querySelectorAll("nav button").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+const buttons = document.querySelectorAll("nav button");
+
+buttons.forEach(btn=>{
+
+if(btn.getAttribute("onclick")?.includes("'" + section + "'")){
+btn.classList.add("active");
+}
+
+});
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+};
+
+
 
 window.openLogin = function(){
 
-document.getElementById("loginModal")
-.style.display="flex";
+document.getElementById("loginModal").style.display="block";
 
 };
+
 
 
 window.closeLogin = function(){
 
-document.getElementById("loginModal")
-.style.display="none";
+document.getElementById("loginModal").style.display="none";
 
 };
+
 
 
 window.login = async function(){
 
 const email =
-document.getElementById("email").value.trim();
+document.getElementById("loginEmail").value.trim();
 
 const password =
-document.getElementById("password").value;
+document.getElementById("loginPassword").value;
 
-const message =
-document.getElementById("loginMessage");
+const error =
+document.getElementById("loginError");
 
-
-if(!email || !password){
-
-message.style.color="red";
-
-message.textContent=
-"Email और Password डालें।";
-
-return;
-
-}
-
-
-if(email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()){
-
-message.style.color="red";
-
-message.textContent=
-"यह Admin Email नहीं है।";
-
-return;
-
-}
-
+error.textContent="";
 
 try{
 
@@ -793,101 +1054,484 @@ email,
 password
 );
 
-message.style.color="green";
+closeLogin();
 
-message.textContent=
-"Login Successful";
+}catch(errorObj){
 
-}
-catch(error){
+console.error(errorObj);
 
-console.error(error);
-
-message.style.color="red";
-
-message.textContent=
-"Login failed. Email या Password check करें।";
+error.textContent =
+"Login failed. Email या password check करें.";
 
 }
 
 };
 
 
-/* LOGOUT */
 
 window.logout = async function(){
 
-try{
-
 await signOut(auth);
-
-alert("Logout Successful");
-
-}
-catch(error){
-
-alert("Logout failed");
-
-}
 
 };
 
 
-/* AUTH */
 
 onAuthStateChanged(auth,(user)=>{
 
-if(
-user &&
-user.email &&
-user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()
-){
+const panel =
+document.getElementById("adminPanel");
 
-document.getElementById("adminPanel")
-.style.display="block";
+if(user && user.email === ADMIN_EMAIL){
 
-document.getElementById("adminEmail")
-.textContent=
-"Logged in: "+user.email;
+panel.style.display="block";
 
-closeLogin();
+document.getElementById("adminEmail").textContent =
+user.email;
 
-}
-else{
+}else{
 
-document.getElementById("adminPanel")
-.style.display="none";
+panel.style.display="none";
 
 }
 
 });
 
 
-/* SAVE VACANCY */
 
-document
-.getElementById("vacancyForm")
-.addEventListener("submit",async function(e){
+async function loadVacancies(){
 
-e.preventDefault();
+try{
+
+const q = query(
+vacanciesRef,
+orderBy("createdAt","desc")
+);
+
+const snapshot = await getDocs(q);
+
+vacancies=[];
+
+snapshot.forEach(item=>{
+
+vacancies.push({
+id:item.id,
+...item.data()
+});
+
+});
+
+renderVacancies();
+
+renderAdmin();
+
+updateStats();
+
+}catch(error){
+
+console.error(error);
+
+const snapshot = await getDocs(vacanciesRef);
+
+vacancies=[];
+
+snapshot.forEach(item=>{
+
+vacancies.push({
+id:item.id,
+...item.data()
+});
+
+});
+
+renderVacancies();
+
+renderAdmin();
+
+updateStats();
+
+}
+
+}
 
 
-const user=auth.currentUser;
 
+function escapeHTML(value){
+
+if(value === undefined || value === null)
+return "";
+
+return String(value)
+
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
+
+}
+
+
+
+function safeURL(url){
+
+if(!url) return "#";
+
+try{
+
+const parsed = new URL(url);
 
 if(
-!user ||
-user.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()
+parsed.protocol === "http:" ||
+parsed.protocol === "https:"
 ){
 
-alert("पहले Admin Login करें।");
+return parsed.href;
+
+}
+
+return "#";
+
+}catch{
+
+return "#";
+
+}
+
+}
+
+
+
+function formatDate(date){
+
+if(!date) return "-";
+
+const parts =
+String(date).split("-");
+
+if(parts.length === 3){
+
+return `${parts[2]}-${parts[1]}-${parts[0]}`;
+
+}
+
+return date;
+
+}
+
+
+
+function getFilteredVacancies(){
+
+const search =
+document.getElementById("searchInput")?.value
+.toLowerCase()
+.trim() || "";
+
+if(!search) return vacancies;
+
+return vacancies.filter(v=>{
+
+const text = [
+
+v.post,
+v.department,
+v.qualification,
+v.mode,
+v.details,
+v.address
+
+].join(" ").toLowerCase();
+
+return text.includes(search);
+
+});
+
+}
+
+
+
+window.renderVacancies = function(){
+
+const list = getFilteredVacancies();
+
+document.getElementById("totalCount").textContent =
+list.length + " Jobs";
+
+
+renderList("homeVacancies",list);
+
+renderList(
+"offlineVacancies",
+list.filter(v=>v.mode==="offline")
+);
+
+renderList(
+"onlineVacancies",
+list.filter(v=>v.mode==="online")
+);
+
+renderList(
+"resultVacancies",
+list.filter(v=>v.mode==="result")
+);
+
+renderList(
+"admitVacancies",
+list.filter(v=>v.mode==="admit")
+);
+
+renderList(
+"syllabusVacancies",
+list.filter(v=>v.mode==="syllabus")
+);
+
+};
+
+
+
+function renderList(containerId,list){
+
+const container =
+document.getElementById(containerId);
+
+if(!container) return;
+
+if(!list.length){
+
+container.innerHTML =
+`<div class="empty" style="grid-column:1/-1;">
+No vacancy found.
+</div>`;
+
+return;
+
+}
+
+container.innerHTML = list.map(v=>{
+
+const modeText = {
+
+offline:"📋 Offline Form",
+online:"💻 Online Form",
+result:"📝 Result",
+admit:"🎫 Admit Card",
+syllabus:"📚 Syllabus"
+
+}[v.mode] || "Job Update";
+
+return `
+
+<div class="card">
+
+<span class="badge">
+${escapeHTML(modeText)}
+</span>
+
+<h3>${escapeHTML(v.post || "New Vacancy")}</h3>
+
+<div class="info">
+<strong>Department:</strong>
+${escapeHTML(v.department || "-")}
+</div>
+
+<div class="info">
+<strong>Total Posts:</strong>
+${escapeHTML(v.posts || "-")}
+</div>
+
+<div class="info">
+<strong>Qualification:</strong>
+${escapeHTML(v.qualification || "-")}
+</div>
+
+<div class="info">
+<strong>Age:</strong>
+${escapeHTML(v.age || "-")}
+</div>
+
+<div class="info">
+<strong>Fee:</strong>
+${escapeHTML(v.fee || "-")}
+</div>
+
+<div class="info">
+<strong>Last Date:</strong>
+${escapeHTML(formatDate(v.last))}
+</div>
+
+<div class="card-buttons">
+
+<button class="btn btn-primary"
+onclick="showDetails('${v.id}')">
+📖 Details
+</button>
+
+${
+v.notification
+?
+`<a class="btn btn-warning"
+target="_blank"
+rel="noopener"
+href="${safeURL(v.notification)}">
+📄 Notification
+</a>`
+:""
+}
+
+${
+v.application
+?
+`<a class="btn btn-success"
+target="_blank"
+rel="noopener"
+href="${safeURL(v.application)}">
+📝 Apply
+</a>`
+:""
+}
+
+</div>
+
+</div>
+
+`;
+
+}).join("");
+
+}
+
+
+
+window.showDetails = function(id){
+
+const v =
+vacancies.find(x=>x.id===id);
+
+if(!v) return;
+
+document.getElementById("detailsTitle").textContent =
+v.post || "Vacancy Details";
+
+
+document.getElementById("detailsContent").innerHTML = `
+
+<div class="info">
+<strong>Department:</strong>
+${escapeHTML(v.department || "-")}
+</div>
+
+<div class="info">
+<strong>Total Posts:</strong>
+${escapeHTML(v.posts || "-")}
+</div>
+
+<div class="info">
+<strong>Qualification:</strong>
+${escapeHTML(v.qualification || "-")}
+</div>
+
+<div class="info">
+<strong>Age Limit:</strong>
+${escapeHTML(v.age || "-")}
+</div>
+
+<div class="info">
+<strong>Fee:</strong>
+${escapeHTML(v.fee || "-")}
+</div>
+
+<div class="info">
+<strong>Start Date:</strong>
+${escapeHTML(formatDate(v.start))}
+</div>
+
+<div class="info">
+<strong>Last Date:</strong>
+${escapeHTML(formatDate(v.last))}
+</div>
+
+<div class="info">
+<strong>Selection:</strong>
+${escapeHTML(v.selection || "-")}
+</div>
+
+<div class="info">
+<strong>Mode:</strong>
+${escapeHTML(v.mode || "-")}
+</div>
+
+<div class="info">
+<strong>Address:</strong>
+${escapeHTML(v.address || "-")}
+</div>
+
+<hr style="margin:15px 0;">
+
+<h3>Details</h3>
+
+<p style="margin-top:8px;white-space:pre-line;">
+${escapeHTML(v.details || "No additional details.")}
+</p>
+
+<div class="card-buttons" style="margin-top:20px;">
+
+${
+v.notification
+?
+`<a class="btn btn-warning"
+target="_blank"
+rel="noopener"
+href="${safeURL(v.notification)}">
+📄 Notification
+</a>`
+:""
+}
+
+${
+v.application
+?
+`<a class="btn btn-success"
+target="_blank"
+rel="noopener"
+href="${safeURL(v.application)}">
+📝 Apply Now
+</a>`
+:""
+}
+
+</div>
+
+`;
+
+document.getElementById("detailsModal").style.display="block";
+
+};
+
+
+
+window.closeDetails = function(){
+
+document.getElementById("detailsModal").style.display="none";
+
+};
+
+
+
+window.saveVacancy = async function(){
+
+const user = auth.currentUser;
+
+if(!user || user.email !== ADMIN_EMAIL){
+
+alert("Please login as admin.");
 
 return;
 
 }
 
 
-const data={
+const data = {
 
 post:document.getElementById("post").value.trim(),
 
@@ -917,12 +1561,25 @@ application:document.getElementById("application").value.trim(),
 
 details:document.getElementById("details").value.trim(),
 
-updatedAt:serverTimestamp()
+updatedAt:Date.now()
 
 };
 
 
+if(!data.post){
+
+alert("Post Name डालना जरूरी है.");
+
+return;
+
+}
+
+
 try{
+
+const editId =
+document.getElementById("editId").value;
+
 
 if(editId){
 
@@ -931,515 +1588,212 @@ doc(db,"vacancies",editId),
 data
 );
 
-alert("Vacancy Updated Successfully");
+alert("Vacancy updated successfully.");
 
-}
-else{
-
-data.createdAt=serverTimestamp();
+}else{
 
 await addDoc(
-collection(db,"vacancies"),
-data
+vacanciesRef,
+{
+...data,
+createdAt:Date.now()
+}
 );
 
-alert("Vacancy Added Successfully");
+alert("Vacancy added successfully.");
 
 }
 
+resetForm();
 
-clearForm();
+await loadVacancies();
 
-}
-catch(error){
+}catch(error){
 
 console.error(error);
 
 alert(
-"Save failed: "+error.message
+"Save failed. Firestore Rules check करें."
 );
 
 }
-
-});
-
-
-/* CLEAR */
-
-window.clearForm=function(){
-
-document.getElementById("vacancyForm").reset();
-
-document.getElementById("editId").value="";
-
-editId=null;
 
 };
 
 
-/* FIRESTORE */
 
-onSnapshot(
-collection(db,"vacancies"),
-(snapshot)=>{
+window.editVacancy = function(id){
 
-vacancies=[];
+const v =
+vacancies.find(x=>x.id===id);
 
-snapshot.forEach(item=>{
+if(!v) return;
 
-vacancies.push({
-id:item.id,
-...item.data()
+
+document.getElementById("editId").value=v.id;
+
+document.getElementById("formTitle").textContent =
+"✏️ Edit Vacancy";
+
+
+const fields = [
+
+"post",
+"department",
+"posts",
+"qualification",
+"age",
+"fee",
+"start",
+"last",
+"selection",
+"mode",
+"address",
+"notification",
+"application",
+"details"
+
+];
+
+fields.forEach(field=>{
+
+document.getElementById(field).value =
+v[field] || "";
+
 });
 
+window.scrollTo({
+top:document.getElementById("adminPanel").offsetTop - 20,
+behavior:"smooth"
 });
 
-
-vacancies.sort((a,b)=>{
-
-return (a.last||"9999-12-31")
-.localeCompare(b.last||"9999-12-31");
-
-});
+};
 
 
-showVacancies();
 
-showAdminList();
+window.deleteVacancy = async function(id){
 
-},
-(error)=>{
+const user=auth.currentUser;
 
-console.error(error);
+if(!user || user.email !== ADMIN_EMAIL){
 
-document.getElementById("vacancyList")
-.innerHTML=`
+alert("Admin login required.");
 
-<div class="empty">
-
-❌ Firebase data load नहीं हो रहा।
-
-<br><br>
-
-Firestore Rules check करें।
-
-</div>
-
-`;
-
-}
-);
-
-
-/* ESCAPE */
-
-function escapeHTML(text){
-
-if(text===undefined || text===null)
-return "";
-
-return String(text)
-.replaceAll("&","&amp;")
-.replaceAll("<","&lt;")
-.replaceAll(">","&gt;")
-.replaceAll('"',"&quot;")
-.replaceAll("'","&#039;");
+return;
 
 }
 
 
-/* URL */
+if(!confirm("क्या आप यह vacancy delete करना चाहते हैं?")){
 
-function safeURL(url){
+return;
 
-if(!url)
-return "#";
+}
+
 
 try{
 
-const u=new URL(url);
+await deleteDoc(
+doc(db,"vacancies",id)
+);
 
-if(
-u.protocol==="http:" ||
-u.protocol==="https:"
-){
+alert("Vacancy deleted.");
 
-return u.href;
+await loadVacancies();
 
-}
+}catch(error){
 
-}
-catch(e){}
+console.error(error);
 
-return "#";
+alert("Delete failed.");
 
 }
 
-
-/* DATE */
-
-function formatDate(date){
-
-if(!date)
-return "-";
-
-const p=date.split("-");
-
-if(p.length!==3)
-return date;
-
-return p[2]+"-"+p[1]+"-"+p[0];
-
-}
+};
 
 
-/* SHOW VACANCIES */
 
-function showVacancies(){
+window.resetForm = function(){
 
-const list=
-document.getElementById("vacancyList");
+document.getElementById("editId").value="";
 
-const keyword=
-document.getElementById("search")
-.value
-.toLowerCase()
-.trim();
+document.getElementById("formTitle").textContent =
+"➕ Add Vacancy";
 
 
-const filtered=
-vacancies.filter(v=>{
+const fields = [
 
-const text=[
+"post",
+"department",
+"posts",
+"qualification",
+"age",
+"fee",
+"start",
+"last",
+"selection",
+"address",
+"notification",
+"application",
+"details"
 
-v.post,
-v.department,
-v.qualification,
-v.selection,
-v.details,
-v.mode
+];
 
-].join(" ").toLowerCase();
+fields.forEach(field=>{
 
-return text.includes(keyword);
+document.getElementById(field).value="";
 
 });
 
-
-document.getElementById("count")
-.textContent=
-filtered.length+" Vacancy";
-
-
-if(filtered.length===0){
-
-list.innerHTML=`
-
-<div class="empty">
-🔎 कोई vacancy नहीं मिली।
-</div>
-
-`;
-
-return;
-
-}
-
-
-list.innerHTML=
-filtered.map(v=>{
-
-const notification=
-safeURL(v.notification);
-
-const application=
-safeURL(v.application);
-
-
-return`
-
-<article class="vacancy-card">
-
-<span class="badge">
-${escapeHTML(v.mode||"Offline")}
-</span>
-
-<h3>
-${escapeHTML(v.post||"Vacancy")}
-</h3>
-
-<div class="info">
-<span class="label">Department:</span>
-${escapeHTML(v.department||"-")}
-</div>
-
-<div class="info">
-<span class="label">Total Posts:</span>
-${escapeHTML(v.posts||"-")}
-</div>
-
-<div class="info">
-<span class="label">Qualification:</span>
-${escapeHTML(v.qualification||"-")}
-</div>
-
-<div class="info">
-<span class="label">Age:</span>
-${escapeHTML(v.age||"-")}
-</div>
-
-<div class="info">
-<span class="label">Fee:</span>
-${escapeHTML(v.fee||"-")}
-</div>
-
-<div class="info">
-<span class="label">Last Date:</span>
-${escapeHTML(formatDate(v.last))}
-</div>
-
-<div class="buttons">
-
-<button
-class="btn details"
-onclick="showDetails('${v.id}')">
-Details
-</button>
-
-${
-v.notification
-?
-`
-<a
-class="btn notification"
-href="${notification}"
-target="_blank"
-rel="noopener">
-Notification
-</a>
-`
-:
-""
-}
-
-${
-v.application
-?
-`
-<a
-class="btn apply"
-href="${application}"
-target="_blank"
-rel="noopener">
-Apply
-</a>
-`
-:
-""
-}
-
-</div>
-
-</article>
-
-`;
-
-}).join("");
-
-}
-
-
-/* SEARCH */
-
-document
-.getElementById("search")
-.addEventListener("input",showVacancies);
-
-
-/* DETAILS */
-
-window.showDetails=function(id){
-
-const v=
-vacancies.find(x=>x.id===id);
-
-if(!v)
-return;
-
-
-const notification=
-safeURL(v.notification);
-
-const application=
-safeURL(v.application);
-
-
-document.getElementById("detailsContent")
-.innerHTML=`
-
-<h2 style="color:#1d4ed8;margin-bottom:15px;">
-${escapeHTML(v.post||"Vacancy")}
-</h2>
-
-<div class="info">
-<span class="label">Department:</span>
-${escapeHTML(v.department||"-")}
-</div>
-
-<div class="info">
-<span class="label">Total Posts:</span>
-${escapeHTML(v.posts||"-")}
-</div>
-
-<div class="info">
-<span class="label">Qualification:</span>
-${escapeHTML(v.qualification||"-")}
-</div>
-
-<div class="info">
-<span class="label">Age Limit:</span>
-${escapeHTML(v.age||"-")}
-</div>
-
-<div class="info">
-<span class="label">Application Fee:</span>
-${escapeHTML(v.fee||"-")}
-</div>
-
-<div class="info">
-<span class="label">Start Date:</span>
-${escapeHTML(formatDate(v.start))}
-</div>
-
-<div class="info">
-<span class="label">Last Date:</span>
-${escapeHTML(formatDate(v.last))}
-</div>
-
-<div class="info">
-<span class="label">Selection Process:</span>
-${escapeHTML(v.selection||"-")}
-</div>
-
-<div class="info">
-<span class="label">Mode:</span>
-${escapeHTML(v.mode||"-")}
-</div>
-
-<div class="info">
-<span class="label">Address:</span>
-${escapeHTML(v.address||"-")}
-</div>
-
-<div class="info">
-<span class="label">Other Details:</span>
-<br>
-${escapeHTML(v.details||"-")}
-</div>
-
-<div class="buttons">
-
-${
-v.notification
-?
-`
-<a
-class="btn notification"
-href="${notification}"
-target="_blank">
-📄 Notification
-</a>
-`
-:
-""
-}
-
-${
-v.application
-?
-`
-<a
-class="btn apply"
-href="${application}"
-target="_blank">
-📝 Apply Now
-</a>
-`
-:
-""
-}
-
-</div>
-
-`;
-
-
-document.getElementById("detailsModal")
-.style.display="flex";
+document.getElementById("mode").value="offline";
 
 };
 
 
-window.closeDetails=function(){
 
-document.getElementById("detailsModal")
-.style.display="none";
+function renderAdmin(){
 
-};
+const container =
+document.getElementById("adminVacancies");
 
+if(!container) return;
 
-/* ADMIN LIST */
+if(!vacancies.length){
 
-function showAdminList(){
-
-const list=
-document.getElementById("adminList");
-
-
-if(vacancies.length===0){
-
-list.innerHTML=
-"<p style='margin-top:10px;color:#64748b;'>No vacancy added.</p>";
+container.innerHTML =
+"<div class='empty'>No vacancies added yet.</div>";
 
 return;
 
 }
 
+container.innerHTML = vacancies.map(v=>`
 
-list.innerHTML=
-vacancies.map(v=>`
+<div style="
+background:#f5f7fa;
+padding:14px;
+border-radius:8px;
+margin-bottom:10px;
+">
 
-<div class="admin-item">
+<strong>${escapeHTML(v.post || "Vacancy")}</strong>
 
-<div>
-
-<strong>
-${escapeHTML(v.post||"Vacancy")}
-</strong>
-
-<br>
-
-<small>
-${escapeHTML(v.department||"")}
- |
- Last Date:
- ${escapeHTML(formatDate(v.last))}
-</small>
-
+<div style="font-size:13px;color:#666;margin-top:5px;">
+${escapeHTML(v.department || "")}
+-
+${escapeHTML(v.mode || "")}
 </div>
 
-<div>
+<div style="margin-top:8px;display:flex;gap:7px;flex-wrap:wrap;">
 
-<button
-class="edit"
+<button class="btn btn-warning"
 onclick="editVacancy('${v.id}')">
-Edit
+✏️ Edit
 </button>
 
-<button
-class="delete"
+<button class="btn btn-danger"
 onclick="deleteVacancy('${v.id}')">
-Delete
+🗑️ Delete
 </button>
 
 </div>
@@ -1451,123 +1805,34 @@ Delete
 }
 
 
-/* EDIT */
 
-window.editVacancy=function(id){
+function updateStats(){
 
-const v=
-vacancies.find(x=>x.id===id);
+document.getElementById("adminTotal").textContent =
+vacancies.length;
 
-if(!v)
-return;
+document.getElementById("adminOffline").textContent =
+vacancies.filter(v=>v.mode==="offline").length;
 
-
-editId=id;
-
-
-document.getElementById("post").value=v.post||"";
-
-document.getElementById("department").value=v.department||"";
-
-document.getElementById("posts").value=v.posts||"";
-
-document.getElementById("qualification").value=v.qualification||"";
-
-document.getElementById("age").value=v.age||"";
-
-document.getElementById("fee").value=v.fee||"";
-
-document.getElementById("start").value=v.start||"";
-
-document.getElementById("last").value=v.last||"";
-
-document.getElementById("selection").value=v.selection||"";
-
-document.getElementById("mode").value=v.mode||"Offline";
-
-document.getElementById("address").value=v.address||"";
-
-document.getElementById("notification").value=v.notification||"";
-
-document.getElementById("application").value=v.application||"";
-
-document.getElementById("details").value=v.details||"";
-
-
-document.getElementById("adminPanel")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-};
-
-
-/* DELETE */
-
-window.deleteVacancy=async function(id){
-
-const user=auth.currentUser;
-
-
-if(
-!user ||
-user.email.toLowerCase()!==ADMIN_EMAIL.toLowerCase()
-){
-
-alert("Admin login required.");
-
-return;
+document.getElementById("adminOnline").textContent =
+vacancies.filter(v=>v.mode==="online").length;
 
 }
 
 
-if(!confirm("क्या आप vacancy delete करना चाहते हैं?"))
-return;
 
+window.addEventListener("click",(event)=>{
 
-try{
+if(event.target.classList.contains("modal")){
 
-await deleteDoc(
-doc(db,"vacancies",id)
-);
-
-alert("Vacancy Deleted");
-
-}
-catch(error){
-
-console.error(error);
-
-alert(
-"Delete failed: "+error.message
-);
-
-}
-
-};
-
-
-/* CLOSE MODALS */
-
-window.addEventListener("click",function(e){
-
-if(
-e.target===document.getElementById("loginModal")
-){
-
-closeLogin();
-
-}
-
-if(
-e.target===document.getElementById("detailsModal")
-){
-
-closeDetails();
+event.target.style.display="none";
 
 }
 
 });
+
+
+loadVacancies();
 
 </script>
 
