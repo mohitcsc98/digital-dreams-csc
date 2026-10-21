@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Offline Naukri - Latest Offline Form Updates 2026</title>
+<title>Offline Naukri - Latest Offline Form & Vacancy Updates</title>
 
-<meta name="description" content="Offline Naukri पर Latest Offline Form, Haryana Jobs, Central Government Jobs और Offline Vacancy Updates देखें।">
+<meta name="description" content="Offline Naukri - Latest Haryana Offline Form, Central Government Offline Vacancy, Application Form, Notification and Job Updates.">
 
 <style>
 *{
@@ -16,33 +16,34 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f3f3f3;
     color:#222;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
-header{
+.top-header{
     background:#8b0000;
-    color:white;
+    color:#fff;
     text-align:center;
     padding:22px 10px;
 }
 
-header h1{
-    font-size:36px;
-    margin-bottom:5px;
+.top-header h1{
+    font-size:38px;
+    letter-spacing:1px;
 }
 
-header p{
+.top-header p{
+    margin-top:6px;
     font-size:15px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 nav{
-    background:#222;
+    background:#202020;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
@@ -53,91 +54,115 @@ nav a{
     text-decoration:none;
     padding:14px 18px;
     font-weight:bold;
+    font-size:14px;
 }
 
 nav a:hover{
     background:#8b0000;
 }
 
-/* BREAKING UPDATE */
+/* ================= BREAKING ================= */
 
-.update{
+.breaking{
     max-width:1100px;
     margin:15px auto;
-    padding:12px;
     background:#fff3cd;
-    border:1px solid #ffe69c;
+    border:1px solid #ffd966;
+    padding:11px;
     text-align:center;
     font-weight:bold;
 }
 
-/* CONTAINER */
+/* ================= MAIN ================= */
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:10px;
+    padding:0 10px 30px;
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
 
-.search{
-    background:white;
-    padding:15px;
+.search-box{
+    background:#fff;
     border:1px solid #ddd;
+    padding:15px;
     margin-bottom:15px;
 }
 
-.search input{
+.search-box input{
     width:100%;
-    padding:12px;
+    padding:13px;
     border:1px solid #aaa;
     border-radius:4px;
     font-size:16px;
 }
 
-/* TITLE */
+/* ================= QUICK BOXES ================= */
 
-.title{
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.quick-box{
+    padding:18px 10px;
+    text-align:center;
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+.red{background:#b00020;}
+.blue{background:#005bbb;}
+.green{background:#16853b;}
+.orange{background:#e56b00;}
+
+/* ================= SECTION ================= */
+
+.section-title{
     background:#8b0000;
-    color:white;
+    color:#fff;
     text-align:center;
     padding:12px;
     font-size:21px;
     font-weight:bold;
 }
 
-/* JOB LIST */
+/* ================= JOB LIST ================= */
 
-.jobs{
-    background:white;
-    border:1px solid #ddd;
+.job-list{
+    background:#fff;
+    border:1px solid #ccc;
 }
 
-.job{
-    padding:16px;
+.job-card{
+    padding:17px;
     border-bottom:1px solid #ddd;
 }
 
-.job:last-child{
+.job-card:last-child{
     border-bottom:none;
 }
 
-.job h2{
+.job-card h2{
     font-size:18px;
-    margin-bottom:8px;
+    margin-bottom:9px;
 }
 
-.job h2 a{
+.job-card h2 a{
     color:#0645ad;
     text-decoration:none;
 }
 
-.job h2 a:hover{
+.job-card h2 a:hover{
     text-decoration:underline;
 }
 
-.info{
+.job-meta{
     display:flex;
     flex-wrap:wrap;
     gap:8px 25px;
@@ -145,45 +170,89 @@ nav a:hover{
     margin:8px 0;
 }
 
-.last{
-    color:#c00000;
+.last-date{
+    color:#d00000;
     font-weight:bold;
 }
 
-.badge{
+.offline{
     display:inline-block;
-    background:#198754;
-    color:white;
+    background:#16853b;
+    color:#fff;
     padding:5px 9px;
-    font-size:12px;
     border-radius:3px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.view{
+.view-btn{
     display:inline-block;
     margin-top:10px;
-    padding:8px 14px;
     background:#8b0000;
-    color:white;
+    color:#fff;
     text-decoration:none;
+    padding:8px 14px;
     border-radius:3px;
 }
 
-/* JOB DETAILS */
+/* ================= TWO COLUMN ================= */
 
-.details{
-    background:white;
+.columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:20px;
+}
+
+.box{
+    background:#fff;
+    border:1px solid #ccc;
+}
+
+.box h2{
+    background:#202020;
+    color:#fff;
+    padding:11px;
+    text-align:center;
+    font-size:18px;
+}
+
+.box a{
+    display:block;
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-decoration:none;
+    color:#0645ad;
+    font-size:14px;
+}
+
+.box a:hover{
+    background:#f5f5f5;
+}
+
+/* ================= JOB DETAILS ================= */
+
+.job-details{
     margin-top:25px;
+    background:#fff;
     border:1px solid #ccc;
     padding:15px;
 }
 
-.details h2{
+.job-details > h2{
     background:#8b0000;
-    color:white;
+    color:#fff;
     text-align:center;
-    padding:12px;
-    margin-bottom:15px;
+    padding:13px;
+    margin:-15px -15px 15px;
+}
+
+.sub-heading{
+    background:#202020;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    margin-top:18px;
 }
 
 table{
@@ -193,116 +262,96 @@ table{
 
 th,td{
     border:1px solid #bbb;
-    padding:10px;
+    padding:11px;
     text-align:left;
 }
 
 th{
-    background:#eee;
     width:35%;
+    background:#eee;
 }
 
-/* IMPORTANT DATES */
+.content{
+    padding:15px;
+    line-height:1.8;
+}
 
-.date-title{
-    background:#222;
-    color:white;
-    padding:10px;
+/* ================= DOWNLOAD ================= */
+
+.downloads{
     text-align:center;
-    margin-top:20px;
+    margin:20px 0 5px;
 }
 
-/* BUTTONS */
-
-.buttons{
-    text-align:center;
-    margin:20px 0;
-}
-
-.buttons a{
+.downloads a{
     display:inline-block;
-    margin:5px;
     padding:11px 16px;
+    margin:5px;
     color:white;
     text-decoration:none;
     border-radius:4px;
     font-weight:bold;
 }
 
-.notification{
-    background:#0066cc;
+.notification-btn{
+    background:#005bbb;
 }
 
-.form{
-    background:#198754;
+.form-btn{
+    background:#16853b;
 }
 
-/* LINKS */
-
-.links{
-    margin-top:25px;
-    background:white;
-    border:1px solid #ccc;
-}
-
-.links h2{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:11px;
-}
-
-.links a{
-    display:block;
-    padding:12px;
-    border-bottom:1px solid #ddd;
-    color:#0645ad;
-    text-decoration:none;
-}
-
-.links a:hover{
-    background:#eee;
-}
-
-/* DISCLAIMER */
+/* ================= DISCLAIMER ================= */
 
 .disclaimer{
-    margin-top:20px;
-    background:white;
-    border:1px solid #ddd;
+    background:#fff;
+    border:1px solid #ccc;
     padding:15px;
-    font-size:13px;
+    margin-top:20px;
     line-height:1.6;
+    font-size:13px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    margin-top:30px;
-    background:#222;
-    color:white;
+    background:#202020;
+    color:#fff;
     text-align:center;
-    padding:22px 10px;
+    padding:25px 10px;
+}
+
+footer h2{
+    margin-bottom:7px;
 }
 
 footer p{
-    margin:5px;
+    margin:6px;
+    font-size:13px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-    header h1{
-        font-size:27px;
+    .top-header h1{
+        font-size:28px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .columns{
+        grid-template-columns:1fr;
     }
 
     nav a{
-        font-size:13px;
         padding:11px 9px;
+        font-size:13px;
     }
 
-    .job h2{
+    .job-card h2{
         font-size:16px;
     }
 
@@ -315,6 +364,12 @@ footer p{
     }
 }
 
+@media(max-width:420px){
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 
@@ -322,559 +377,560 @@ footer p{
 
 <!-- HEADER -->
 
-<header>
+<header class="top-header">
 
-<h1>OFFLINE NAUKRI</h1>
+    <h1>OFFLINE NAUKRI</h1>
 
-<p>
-Latest Offline Form & Vacancy Updates
-</p>
+    <p>
+        Latest Offline Form & Government Vacancy Updates
+    </p>
 
 </header>
 
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 
 <nav>
 
-<a href="#home">Home</a>
+    <a href="#home">Home</a>
 
-<a href="#latest">
-Latest Forms
-</a>
+    <a href="#latest">Latest Forms</a>
 
-<a href="#haryana">
-Haryana Jobs
-</a>
+    <a href="#haryana">Haryana Jobs</a>
 
-<a href="#central">
-Central Jobs
-</a>
+    <a href="#central">Central Jobs</a>
 
-<a href="#contact">
-Contact
-</a>
+    <a href="#forms">Forms</a>
+
+    <a href="#contact">Contact</a>
 
 </nav>
 
 
-<!-- UPDATE -->
+<!-- BREAKING NEWS -->
 
-<div class="update">
+<div class="breaking">
 
-📢 Latest Offline Government Job Forms और Vacancy Updates यहाँ देखें।
+    📢 Latest Offline Government Job Forms और Vacancy Updates यहाँ देखें।
 
 </div>
 
 
-<div class="container" id="home">
+<main class="container" id="home">
 
 
 <!-- SEARCH -->
 
-<div class="search">
+<div class="search-box">
 
-<input
-type="text"
-id="searchInput"
-placeholder="🔎 Search Offline Vacancy..."
-onkeyup="searchJob()">
-
-</div>
-
-
-<!-- LATEST JOBS -->
-
-<div class="title" id="latest">
-
-Latest Offline Forms
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Vacancy Search करें..."
+        onkeyup="searchJobs()"
+    >
 
 </div>
 
 
-<div class="jobs" id="jobList">
+<!-- QUICK LINKS -->
 
+<div class="quick-grid">
 
-<!-- JOB 1 -->
+    <a href="#latest" class="quick-box red">
+        🔥 Latest Forms
+    </a>
 
-<div class="job">
+    <a href="#haryana" class="quick-box blue">
+        Haryana Jobs
+    </a>
 
-<h2>
+    <a href="#central" class="quick-box green">
+        Central Jobs
+    </a>
 
-<a href="#vacancy1">
-
-Haryana Offline Recruitment 2026
-
-</a>
-
-</h2>
-
-
-<div class="info">
-
-<span>
-📅 Start Date:
-20-10-2026
-</span>
-
-<span class="last">
-⏰ Last Date:
-10-11-2026
-</span>
+    <a href="#forms" class="quick-box orange">
+        Download Forms
+    </a>
 
 </div>
 
 
-<span class="badge">
-OFFLINE FORM
-</span>
+<!-- LATEST VACANCIES -->
 
-<br>
+<div class="section-title" id="latest">
 
-<a href="#vacancy1"
-class="view">
-
-View Details →
-
-</a>
+    Latest Offline Form Updates
 
 </div>
 
 
-
-<!-- JOB 2 -->
-
-<div class="job">
-
-<h2>
-
-<a href="#">
-
-District Court Offline Form 2026
-
-</a>
-
-</h2>
+<div class="job-list" id="jobList">
 
 
-<div class="info">
+    <!-- VACANCY 1 -->
 
-<span>
-📅 Start:
-18-10-2026
-</span>
+    <div class="job-card">
 
-<span class="last">
-⏰ Last:
-05-11-2026
-</span>
+        <h2>
+            <a href="#vacancy1">
+                Haryana Offline Recruitment 2026
+            </a>
+        </h2>
+
+        <div class="job-meta">
+
+            <span>
+                📅 Start Date: 20-10-2026
+            </span>
+
+            <span class="last-date">
+                ⏰ Last Date: 10-11-2026
+            </span>
+
+        </div>
+
+        <span class="offline">
+            OFFLINE FORM
+        </span>
+
+        <br>
+
+        <a href="#vacancy1" class="view-btn">
+            View Full Details →
+        </a>
+
+    </div>
+
+
+    <!-- VACANCY 2 -->
+
+    <div class="job-card">
+
+        <h2>
+            <a href="#">
+                District Court Offline Recruitment 2026
+            </a>
+        </h2>
+
+        <div class="job-meta">
+
+            <span>
+                📅 Start Date: 18-10-2026
+            </span>
+
+            <span class="last-date">
+                ⏰ Last Date: 05-11-2026
+            </span>
+
+        </div>
+
+        <span class="offline">
+            OFFLINE FORM
+        </span>
+
+        <br>
+
+        <a href="#" class="view-btn">
+            View Full Details →
+        </a>
+
+    </div>
+
+
+    <!-- VACANCY 3 -->
+
+    <div class="job-card">
+
+        <h2>
+            <a href="#">
+                Peon Offline Vacancy 2026
+            </a>
+        </h2>
+
+        <div class="job-meta">
+
+            <span>
+                📅 Start Date: 15-10-2026
+            </span>
+
+            <span class="last-date">
+                ⏰ Last Date: 30-10-2026
+            </span>
+
+        </div>
+
+        <span class="offline">
+            OFFLINE FORM
+        </span>
+
+        <br>
+
+        <a href="#" class="view-btn">
+            View Full Details →
+        </a>
+
+    </div>
+
+
+    <!-- VACANCY 4 -->
+
+    <div class="job-card">
+
+        <h2>
+            <a href="#">
+                Clerk Offline Form Recruitment 2026
+            </a>
+        </h2>
+
+        <div class="job-meta">
+
+            <span>
+                📅 Start Date: 12-10-2026
+            </span>
+
+            <span class="last-date">
+                ⏰ Last Date: 02-11-2026
+            </span>
+
+        </div>
+
+        <span class="offline">
+            OFFLINE FORM
+        </span>
+
+        <br>
+
+        <a href="#" class="view-btn">
+            View Full Details →
+        </a>
+
+    </div>
 
 </div>
 
 
-<span class="badge">
-OFFLINE FORM
-</span>
+<!-- JOB CATEGORIES -->
 
-<br>
+<div class="columns">
 
-<a href="#"
-class="view">
+    <div class="box" id="haryana">
 
-View Details →
+        <h2>Haryana Offline Jobs</h2>
 
-</a>
+        <a href="#">
+            Haryana Peon Vacancy 2026
+        </a>
 
-</div>
+        <a href="#">
+            Haryana Clerk Offline Form
+        </a>
 
+        <a href="#">
+            Haryana District Court Vacancy
+        </a>
 
+        <a href="#">
+            Haryana University Offline Jobs
+        </a>
 
-<!-- JOB 3 -->
-
-<div class="job">
-
-<h2>
-
-<a href="#">
-
-Peon Offline Vacancy 2026
-
-</a>
-
-</h2>
+    </div>
 
 
-<div class="info">
+    <div class="box" id="central">
 
-<span>
-📅 Start:
-15-10-2026
-</span>
+        <h2>Central Government Jobs</h2>
 
-<span class="last">
-⏰ Last:
-30-10-2026
-</span>
+        <a href="#">
+            Army Offline Recruitment
+        </a>
 
-</div>
+        <a href="#">
+            Central University Vacancy
+        </a>
 
+        <a href="#">
+            Ministry Offline Form
+        </a>
 
-<span class="badge">
-OFFLINE FORM
-</span>
+        <a href="#">
+            Central Government Group C Jobs
+        </a>
 
-<br>
-
-<a href="#"
-class="view">
-
-View Details →
-
-</a>
+    </div>
 
 </div>
-
-
-</div>
-
 
 
 <!-- FULL VACANCY DETAILS -->
 
-<div class="details"
-id="vacancy1">
+<section class="job-details" id="vacancy1">
 
-<h2>
+    <h2>
+        Haryana Offline Recruitment 2026
+    </h2>
 
-Haryana Offline Recruitment 2026
 
-</h2>
+    <table>
 
+        <tr>
+            <th>Organization</th>
+            <td>Example Government Department</td>
+        </tr>
 
-<table>
+        <tr>
+            <th>Post Name</th>
+            <td>Clerk / Peon</td>
+        </tr>
 
-<tr>
-<th>
-Organization
-</th>
+        <tr>
+            <th>Total Posts</th>
+            <td>25</td>
+        </tr>
 
-<td>
-Example Government Department
-</td>
-</tr>
+        <tr>
+            <th>Job Location</th>
+            <td>Haryana</td>
+        </tr>
 
+        <tr>
+            <th>Apply Mode</th>
+            <td>
+                <b>Offline</b>
+            </td>
+        </tr>
 
-<tr>
+        <tr>
+            <th>Qualification</th>
+            <td>
+                10th / 12th / Graduation
+            </td>
+        </tr>
 
-<th>
-Post Name
-</th>
+        <tr>
+            <th>Age Limit</th>
+            <td>
+                18-42 Years
+            </td>
+        </tr>
 
-<td>
-Clerk / Peon
-</td>
+        <tr>
+            <th>Application Fee</th>
+            <td>
+                Read Official Notification
+            </td>
+        </tr>
 
-</tr>
+    </table>
 
 
-<tr>
+    <!-- IMPORTANT DATES -->
 
-<th>
-Total Posts
-</th>
+    <h3 class="sub-heading">
+        Important Dates
+    </h3>
 
-<td>
-25
-</td>
 
-</tr>
+    <table>
 
+        <tr>
+            <th>Form Start Date</th>
+            <td>20 October 2026</td>
+        </tr>
 
-<tr>
+        <tr>
+            <th>Last Date</th>
 
-<th>
-Apply Mode
-</th>
+            <td style="color:red;font-weight:bold;">
+                10 November 2026
+            </td>
 
-<td>
-<b>
-Offline
-</b>
-</td>
+        </tr>
 
-</tr>
+    </table>
 
 
-<tr>
+    <!-- SELECTION -->
 
-<th>
-Qualification
-</th>
+    <h3 class="sub-heading">
+        Selection Process
+    </h3>
 
-<td>
-10th / 12th / Graduation
-</td>
+    <div class="content">
 
-</tr>
+        ✓ Written Exam (If Applicable)<br>
+        ✓ Skill Test (If Applicable)<br>
+        ✓ Document Verification<br>
+        ✓ Medical Examination
 
+    </div>
 
-<tr>
 
-<th>
-Age Limit
-</th>
+    <!-- DOCUMENTS -->
 
-<td>
-18-42 Years
-</td>
+    <h3 class="sub-heading">
+        Documents Required
+    </h3>
 
-</tr>
+    <div class="content">
 
+        ✓ Application Form<br>
+        ✓ Aadhaar Card Copy<br>
+        ✓ Educational Certificates<br>
+        ✓ Passport Size Photo<br>
+        ✓ Category Certificate (If Applicable)<br>
+        ✓ Other Documents as per Notification
 
-<tr>
+    </div>
 
-<th>
-Application Fee
-</th>
 
-<td>
-Check Official Notification
-</td>
+    <!-- HOW TO APPLY -->
 
-</tr>
+    <h3 class="sub-heading">
+        How To Apply Offline
+    </h3>
 
-</table>
+    <div class="content">
 
+        <b>Step 1:</b>
+        Official Notification को ध्यान से पढ़ें।
+        <br>
 
+        <b>Step 2:</b>
+        Application Form डाउनलोड करें।
+        <br>
 
-<div class="date-title">
+        <b>Step 3:</b>
+        Form में मांगी गई जानकारी सही भरें।
+        <br>
 
-Important Dates
+        <b>Step 4:</b>
+        जरूरी Documents की photocopy लगाएं।
+        <br>
 
-</div>
+        <b>Step 5:</b>
+        Form को दिए गए Postal Address पर Last Date से पहले भेजें।
 
+    </div>
 
-<table>
 
-<tr>
+    <!-- ADDRESS -->
 
-<th>
-Application Start
-</th>
+    <h3 class="sub-heading">
+        📮 Form Send Address
+    </h3>
 
-<td>
-20 October 2026
-</td>
+    <div class="content" style="text-align:center;">
 
-</tr>
+        <b>
+            Official Notification में दिए गए Address पर Application Form भेजें।
+        </b>
 
+    </div>
 
-<tr>
 
-<th>
-Last Date
-</th>
+    <!-- DOWNLOAD -->
 
-<td style="color:red;font-weight:bold;">
+    <h3 class="sub-heading" id="forms">
+        Important Links
+    </h3>
 
-10 November 2026
+    <div class="downloads">
 
-</td>
+        <!--
+        href="#" को Official Notification PDF link से बदलें
+        -->
 
-</tr>
+        <a
+            href="#"
+            class="notification-btn"
+            target="_blank"
+        >
+            📄 Official Notification
+        </a>
 
-</table>
 
+        <!--
+        href="#" को Application Form PDF link से बदलें
+        -->
 
+        <a
+            href="#"
+            class="form-btn"
+            target="_blank"
+        >
+            📥 Download Application Form
+        </a>
 
-<div class="date-title">
+    </div>
 
-Selection Process
-
-</div>
-
-
-<p style="padding:15px;line-height:1.8;">
-
-✓ Written Exam<br>
-
-✓ Skill Test (If Applicable)<br>
-
-✓ Document Verification<br>
-
-✓ Medical Examination
-
-</p>
-
-
-
-<div class="date-title">
-
-How To Apply Offline
-
-</div>
-
-
-<p style="padding:15px;line-height:1.8;">
-
-1. Official Notification ध्यान से पढ़ें।<br>
-
-2. Application Form डाउनलोड करें।<br>
-
-3. Form में सभी जानकारी सही भरें।<br>
-
-4. जरूरी Documents की photocopy लगाएं।<br>
-
-5. Form को Notification में दिए गए पते पर Last Date से पहले भेजें।
-
-</p>
-
-
-
-<div class="date-title">
-
-📮 Form Send Address
-
-</div>
-
-
-<p style="padding:15px;text-align:center;">
-
-Official Notification में दिए गए
-Postal Address पर Form भेजें।
-
-</p>
-
-
-
-<div class="buttons">
-
-<!-- OFFICIAL PDF LINK HERE -->
-
-<a href="#"
-class="notification">
-
-📄 Official Notification
-
-</a>
-
-
-<!-- APPLICATION FORM LINK HERE -->
-
-<a href="#"
-class="form">
-
-📥 Application Form
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- IMPORTANT LINKS -->
-
-<div class="links">
-
-<h2>
-Important Sections
-</h2>
-
-<a href="#latest">
-🔥 Latest Offline Forms
-</a>
-
-<a href="#haryana">
-🏛️ Haryana Offline Jobs
-</a>
-
-<a href="#central">
-🇮🇳 Central Government Jobs
-</a>
-
-<a href="#">
-📥 Application Form PDF
-</a>
-
-</div>
-
+</section>
 
 
 <!-- DISCLAIMER -->
 
 <div class="disclaimer">
 
-<b>Disclaimer:</b>
+    <b>Disclaimer:</b>
 
-Offline Naukri कोई सरकारी वेबसाइट नहीं है।
-यह वेबसाइट केवल Job और Offline Form से संबंधित
-जानकारी उपलब्ध कराने के उद्देश्य से बनाई गई है।
-किसी भी Vacancy के लिए आवेदन करने से पहले
-संबंधित विभाग की Official Notification जरूर पढ़ें।
-
-</div>
-
+    Offline Naukri कोई सरकारी वेबसाइट नहीं है।
+    यह वेबसाइट केवल सरकारी एवं अन्य भर्तियों से संबंधित
+    जानकारी उपलब्ध कराने के उद्देश्य से बनाई गई है।
+    किसी भी भर्ती के लिए आवेदन करने से पहले संबंधित
+    विभाग की Official Notification जरूर पढ़ें।
 
 </div>
+
+</main>
 
 
 <!-- FOOTER -->
 
 <footer id="contact">
 
-<p>
-<b>OFFLINE NAUKRI</b>
-</p>
+    <h2>OFFLINE NAUKRI</h2>
 
-<p>
-Latest Offline Form & Vacancy Updates
-</p>
+    <p>
+        Latest Offline Form & Vacancy Updates
+    </p>
 
-<p>
-© 2026 Offline Naukri. All Rights Reserved.
-</p>
+    <p>
+        Home | Haryana Jobs | Central Jobs | Contact
+    </p>
+
+    <p>
+        © 2026 Offline Naukri. All Rights Reserved.
+    </p>
 
 </footer>
 
 
-
 <script>
 
-/* JOB SEARCH */
+/* ================= SEARCH ================= */
 
-function searchJob(){
+function searchJobs(){
 
-let input =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase();
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
 
-let jobs =
-document
-.getElementById("jobList")
-.getElementsByClassName("job");
+    const jobs =
+        document.querySelectorAll(".job-card");
 
-for(let i=0;i<jobs.length;i++){
+    jobs.forEach(function(job){
 
-let text =
-jobs[i]
-.innerText
-.toLowerCase();
+        const text =
+            job.innerText.toLowerCase();
 
-if(text.includes(input)){
+        if(text.includes(input)){
+            job.style.display = "block";
+        }else{
+            job.style.display = "none";
+        }
 
-jobs[i].style.display="";
-
-}else{
-
-jobs[i].style.display="none";
-
-}
-
-}
+    });
 
 }
 
