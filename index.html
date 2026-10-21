@@ -5,35 +5,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OFFLINE NAUKRI - Offline Vacancy</title>
+<title>OFFLINE NAUKRI</title>
 
 <style>
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#f3f6fb;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f1f5f9;
     color:#222;
 }
 
 /* HEADER */
-header{
-    background:linear-gradient(135deg,#0d47a1,#1976d2);
+.header{
+    background:#0756a3;
     color:white;
-    padding:18px 5%;
+    padding:15px 20px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    flex-wrap:wrap;
-    gap:12px;
+    justify-content:space-between;
+    gap:15px;
 }
 
 .logo{
-    font-size:28px;
+    font-size:25px;
     font-weight:bold;
 }
 
@@ -41,169 +39,145 @@ header{
     color:#ffd600;
 }
 
-.admin-btn{
+.admin-button{
     background:#ff9800;
-    border:0;
     color:white;
-    padding:11px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:15px;
+    border:0;
+    padding:12px 18px;
+    border-radius:7px;
     font-weight:bold;
+    cursor:pointer;
 }
 
-.admin-btn:hover{
-    background:#f57c00;
+.admin-button:hover{
+    background:#e68900;
 }
 
 /* HERO */
 .hero{
     background:white;
     text-align:center;
-    padding:35px 15px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    padding:30px 15px;
 }
 
 .hero h1{
-    color:#0d47a1;
-    margin-bottom:10px;
+    margin:0 0 8px;
+    color:#0756a3;
 }
 
 .hero p{
+    margin:0;
     color:#666;
 }
 
 /* SEARCH */
-.search-box{
+.search-area{
     max-width:700px;
-    margin:25px auto;
+    margin:20px auto;
     padding:0 15px;
 }
 
-.search-box input{
+.search{
     width:100%;
     padding:15px;
-    border:1px solid #ddd;
-    border-radius:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
     font-size:16px;
-    outline:none;
 }
 
-/* CONTAINER */
+/* CONTENT */
 .container{
-    width:92%;
+    width:94%;
     max-width:1200px;
-    margin:25px auto;
+    margin:auto;
 }
 
-/* JOB CARD */
-.jobs{
+.job-list{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
 }
 
-.job-card{
+.job{
     background:white;
-    border-radius:12px;
     padding:20px;
-    box-shadow:0 3px 12px rgba(0,0,0,.09);
-    border-left:5px solid #1976d2;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    border-top:4px solid #0756a3;
 }
 
-.job-card h2{
-    color:#0d47a1;
+.job h2{
+    margin:0 0 8px;
+    color:#0756a3;
     font-size:21px;
-    margin-bottom:8px;
 }
 
-.department{
-    color:#555;
-    font-weight:bold;
-    margin-bottom:12px;
+.job p{
+    line-height:1.7;
+    margin:5px 0;
 }
 
-.info{
-    line-height:1.8;
-    font-size:14px;
-}
-
-.badge{
+.tag{
     display:inline-block;
     background:#e3f2fd;
-    color:#0d47a1;
+    color:#0756a3;
     padding:5px 9px;
     border-radius:5px;
-    margin:4px 0;
     font-size:12px;
     font-weight:bold;
+    margin-top:5px;
 }
 
 .buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:8px;
+    gap:7px;
     margin-top:15px;
 }
 
 .btn{
     border:0;
-    padding:10px 13px;
-    border-radius:7px;
-    cursor:pointer;
+    padding:9px 12px;
+    border-radius:6px;
+    color:white;
     text-decoration:none;
-    display:inline-block;
+    cursor:pointer;
     font-size:13px;
     font-weight:bold;
 }
 
-.details-btn{
-    background:#1976d2;
-    color:white;
+.details{
+    background:#0756a3;
 }
 
-.notification-btn{
-    background:#e53935;
-    color:white;
+.notification{
+    background:#d32f2f;
 }
 
-.form-btn{
+.form{
     background:#2e7d32;
-    color:white;
 }
 
-.no-jobs{
+.empty{
     background:white;
     padding:40px;
     text-align:center;
     border-radius:10px;
-    color:#777;
 }
 
-/* ADMIN OVERLAY */
-.admin-overlay{
+/* ADMIN */
+#adminArea{
     display:none;
-    position:fixed;
-    z-index:9999;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.65);
-    overflow:auto;
-}
-
-/* ADMIN BOX */
-.admin-box{
     background:white;
-    width:95%;
-    max-width:900px;
-    margin:30px auto;
-    border-radius:14px;
+    width:94%;
+    max-width:1000px;
+    margin:25px auto;
     padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.admin-header{
+.admin-title{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -212,149 +186,170 @@ header{
     margin-bottom:20px;
 }
 
-.admin-header h2{
-    color:#0d47a1;
+.admin-title h2{
+    color:#0756a3;
+    margin:0;
 }
 
-.close-btn{
-    background:#e53935;
+.close{
+    background:#d32f2f;
     color:white;
     border:0;
-    padding:8px 13px;
+    padding:9px 14px;
     border-radius:6px;
     cursor:pointer;
 }
 
-/* LOGIN */
-.login-box{
-    max-width:400px;
-    margin:50px auto;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-}
-
-.login-box h2{
-    text-align:center;
-    color:#0d47a1;
-    margin-bottom:20px;
-}
-
-.input{
-    width:100%;
-    padding:12px;
-    margin:7px 0 15px;
-    border:1px solid #ccc;
-    border-radius:7px;
-    font-size:15px;
-}
-
-.login-btn{
-    width:100%;
-    background:#1976d2;
-    color:white;
-    border:0;
-    padding:13px;
-    border-radius:7px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.error{
-    color:#e53935;
-    text-align:center;
-    margin-top:10px;
-}
-
-/* FORM */
+/* ADMIN FORM */
 .form-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
     gap:15px;
 }
 
-.form-group{
+.field{
     display:flex;
     flex-direction:column;
 }
 
-.form-group label{
+.field label{
     font-weight:bold;
-    margin-bottom:6px;
-    color:#444;
+    margin-bottom:5px;
 }
 
-.form-group input,
-.form-group textarea,
-.form-group select{
+.field input,
+.field textarea,
+.field select{
     padding:11px;
     border:1px solid #ccc;
-    border-radius:7px;
+    border-radius:6px;
     font-size:14px;
 }
 
-.form-group textarea{
+.field textarea{
     min-height:90px;
-    resize:vertical;
 }
 
 .full{
-    grid-column:1/-1;
+    grid-column:1 / -1;
 }
 
-.save-btn{
+.save{
     background:#2e7d32;
     color:white;
     border:0;
-    padding:13px 20px;
-    border-radius:7px;
+    padding:12px 20px;
+    border-radius:6px;
     cursor:pointer;
-    font-size:15px;
     font-weight:bold;
     margin-top:15px;
 }
 
-/* ADMIN LIST */
-.admin-list{
+.clear{
+    background:#777;
+    color:white;
+    border:0;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+/* ADMIN JOBS */
+.manage{
     margin-top:30px;
 }
 
-.admin-item{
-    background:#f5f7fa;
-    padding:15px;
-    border-radius:8px;
-    margin-bottom:10px;
+.manage-item{
+    background:#f1f5f9;
+    padding:12px;
+    margin:8px 0;
+    border-radius:7px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:10px;
 }
 
-.admin-item h3{
-    color:#0d47a1;
-}
-
-.admin-actions button{
-    border:0;
-    padding:8px 10px;
-    border-radius:5px;
-    color:white;
-    cursor:pointer;
-    margin:2px;
-}
-
 .edit{
-    background:#fb8c00;
+    background:#f57c00;
+    color:white;
+    border:0;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
 }
 
 .delete{
-    background:#e53935;
+    background:#d32f2f;
+    color:white;
+    border:0;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* LOGIN */
+#loginBox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+}
+
+.login{
+    background:white;
+    width:90%;
+    max-width:400px;
+    margin:100px auto;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.login h2{
+    color:#0756a3;
+}
+
+.login input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin:10px 0;
+}
+
+.login button{
+    width:100%;
+    padding:12px;
+    border:0;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.login-button{
+    background:#0756a3;
+    color:white;
+}
+
+.cancel-button{
+    background:#ddd;
+    margin-top:8px;
+}
+
+#error{
+    color:red;
+    margin-top:10px;
 }
 
 /* FOOTER */
 footer{
-    background:#0d47a1;
+    background:#0756a3;
     color:white;
     text-align:center;
     padding:20px;
@@ -363,13 +358,8 @@ footer{
 
 @media(max-width:650px){
 
-    header{
-        justify-content:center;
-        text-align:center;
-    }
-
-    .logo{
-        font-size:24px;
+    .header{
+        flex-direction:column;
     }
 
     .form-grid{
@@ -380,7 +370,7 @@ footer{
         grid-column:auto;
     }
 
-    .admin-item{
+    .manage-item{
         flex-direction:column;
         align-items:flex-start;
     }
@@ -391,234 +381,320 @@ footer{
 <body>
 
 <!-- HEADER -->
-<header>
+
+<div class="header">
 
     <div class="logo">
         OFFLINE <span>NAUKRI</span>
     </div>
 
-    <button class="admin-btn" onclick="openAdmin()">
-        🔐 Admin Panel
+    <!-- YE ADMIN BUTTON HAMESHA DIKHEGA -->
+    <button class="admin-button" onclick="openLogin()">
+        🔐 ADMIN LOGIN
     </button>
 
-</header>
+</div>
+
 
 <!-- HERO -->
-<section class="hero">
+
+<div class="hero">
 
     <h1>OFFLINE NAUKRI</h1>
 
     <p>
-        Latest Offline Vacancy, Government Job & Application Form Updates
+        Latest Offline Vacancy & Government Job Updates
     </p>
 
-</section>
+</div>
+
 
 <!-- SEARCH -->
-<div class="search-box">
+
+<div class="search-area">
 
     <input
-        type="text"
+        class="search"
         id="search"
-        placeholder="🔎 Vacancy, Department, Qualification search karein..."
+        type="text"
+        placeholder="🔎 Vacancy search karein..."
         onkeyup="searchJobs()"
     >
 
 </div>
 
-<!-- JOBS -->
+
+<!-- PUBLIC JOBS -->
+
 <div class="container">
 
-    <div id="jobs" class="jobs"></div>
+    <div id="jobList" class="job-list"></div>
 
 </div>
 
-<!-- ADMIN OVERLAY -->
-<div id="adminOverlay" class="admin-overlay">
 
-    <!-- LOGIN -->
-    <div id="loginBox" class="login-box">
+<!-- ========================= -->
+<!-- LOGIN POPUP -->
+<!-- ========================= -->
+
+<div id="loginBox">
+
+    <div class="login">
 
         <h2>🔐 Admin Login</h2>
 
+        <p>Admin Panel open karne ke liye PIN dalein</p>
+
         <input
             type="password"
-            id="adminPin"
-            class="input"
-            placeholder="Admin PIN"
+            id="pin"
+            placeholder="Enter PIN"
         >
-
-        <button class="login-btn" onclick="loginAdmin()">
-            Login
-        </button>
-
-        <div id="loginError" class="error"></div>
-
-        <br>
 
         <button
-            onclick="closeAdmin()"
-            style="width:100%;padding:10px;border:0;border-radius:7px;cursor:pointer;"
+            class="login-button"
+            onclick="login()"
         >
-            Close
+            LOGIN
+        </button>
+
+        <button
+            class="cancel-button"
+            onclick="closeLogin()"
+        >
+            CANCEL
+        </button>
+
+        <div id="error"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================= -->
+<!-- ADMIN AREA -->
+<!-- ========================= -->
+
+<div id="adminArea">
+
+    <div class="admin-title">
+
+        <h2>⚙️ ADMIN PANEL</h2>
+
+        <button
+            class="close"
+            onclick="closeAdmin()"
+        >
+            ✕ CLOSE
         </button>
 
     </div>
 
 
-    <!-- ADMIN PANEL -->
-    <div id="adminPanel" class="admin-box" style="display:none;">
+    <h3 id="formHeading">
+        ➕ Add New Vacancy
+    </h3>
 
-        <div class="admin-header">
 
-            <h2>⚙️ Admin Panel</h2>
+    <div class="form-grid">
 
-            <button class="close-btn" onclick="closeAdmin()">
-                ✕ Close
-            </button>
+        <div class="field">
+
+            <label>Post Name *</label>
+
+            <input
+                id="post"
+                placeholder="Example: Peon"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Department *</label>
+
+            <input
+                id="department"
+                placeholder="Example: Haryana Govt"
+            >
 
         </div>
 
 
-        <h3 id="formTitle">➕ Add New Vacancy</h3>
+        <div class="field">
 
-        <br>
+            <label>Total Posts</label>
 
-        <div class="form-grid">
-
-            <div class="form-group">
-                <label>Post Name *</label>
-                <input id="postName" class="input" placeholder="Peon / Clerk / Helper">
-            </div>
-
-            <div class="form-group">
-                <label>Department / Organization *</label>
-                <input id="department" class="input" placeholder="Department Name">
-            </div>
-
-            <div class="form-group">
-                <label>Total Posts</label>
-                <input id="totalPosts" class="input" placeholder="100">
-            </div>
-
-            <div class="form-group">
-                <label>Qualification</label>
-                <input id="qualification" class="input" placeholder="10th Pass / 12th Pass">
-            </div>
-
-            <div class="form-group">
-                <label>Age Limit</label>
-                <input id="ageLimit" class="input" placeholder="18-42 Years">
-            </div>
-
-            <div class="form-group">
-                <label>Start Date</label>
-                <input id="startDate" class="input" type="date">
-            </div>
-
-            <div class="form-group">
-                <label>Last Date</label>
-                <input id="lastDate" class="input" type="date">
-            </div>
-
-            <div class="form-group">
-                <label>Application Fee</label>
-                <input id="fee" class="input" placeholder="₹0 / ₹100 / As per rules">
-            </div>
-
-            <div class="form-group">
-                <label>Selection Process</label>
-                <input id="selection" class="input" placeholder="Merit / Interview / Test">
-            </div>
-
-            <div class="form-group">
-                <label>Apply Mode</label>
-
-                <select id="applyMode" class="input">
-
-                    <option value="Offline">
-                        Offline
-                    </option>
-
-                    <option value="Online">
-                        Online
-                    </option>
-
-                </select>
-
-            </div>
-
-            <div class="form-group full">
-
-                <label>Form Send Address</label>
-
-                <textarea
-                    id="sendAddress"
-                    placeholder="Application form kis address par bhejna hai..."
-                ></textarea>
-
-            </div>
-
-            <div class="form-group full">
-
-                <label>Official Notification PDF Link</label>
-
-                <input
-                    id="notification"
-                    class="input"
-                    placeholder="https://example.com/notification.pdf"
-                >
-
-            </div>
-
-            <div class="form-group full">
-
-                <label>Application Form PDF Link</label>
-
-                <input
-                    id="applicationForm"
-                    class="input"
-                    placeholder="https://example.com/application-form.pdf"
-                >
-
-            </div>
-
-            <div class="form-group full">
-
-                <label>Full Vacancy Details</label>
-
-                <textarea
-                    id="details"
-                    placeholder="Vacancy ki complete information..."
-                ></textarea>
-
-            </div>
+            <input
+                id="posts"
+                placeholder="100"
+            >
 
         </div>
 
-        <button class="save-btn" onclick="saveJob()">
-            💾 Save Vacancy
-        </button>
 
-        <button
-            onclick="clearForm()"
-            style="margin-top:15px;padding:13px 20px;border:0;border-radius:7px;cursor:pointer;"
-        >
-            Clear
-        </button>
+        <div class="field">
 
+            <label>Qualification</label>
 
-        <!-- ADMIN LIST -->
-
-        <div class="admin-list">
-
-            <h3>📋 Manage Vacancies</h3>
-
-            <br>
-
-            <div id="adminJobs"></div>
+            <input
+                id="qualification"
+                placeholder="10th / 12th / Graduate"
+            >
 
         </div>
+
+
+        <div class="field">
+
+            <label>Age Limit</label>
+
+            <input
+                id="age"
+                placeholder="18-42 Years"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Application Fee</label>
+
+            <input
+                id="fee"
+                placeholder="₹0"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Start Date</label>
+
+            <input
+                id="start"
+                type="date"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Last Date</label>
+
+            <input
+                id="last"
+                type="date"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Selection Process</label>
+
+            <input
+                id="selection"
+                placeholder="Merit / Interview / Exam"
+            >
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Apply Mode</label>
+
+            <select id="mode">
+
+                <option>Offline</option>
+
+                <option>Online</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>Form Send Address</label>
+
+            <textarea
+                id="address"
+                placeholder="Application form kis address par bhejna hai?"
+            ></textarea>
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>Official Notification Link</label>
+
+            <input
+                id="notification"
+                placeholder="https://example.com/notification.pdf"
+            >
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>Application Form Link</label>
+
+            <input
+                id="application"
+                placeholder="https://example.com/form.pdf"
+            >
+
+        </div>
+
+
+        <div class="field full">
+
+            <label>Full Details</label>
+
+            <textarea
+                id="details"
+                placeholder="Vacancy ki complete information..."
+            ></textarea>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="save"
+        onclick="saveJob()"
+    >
+        💾 SAVE VACANCY
+    </button>
+
+
+    <button
+        class="clear"
+        onclick="clearForm()"
+    >
+        CLEAR
+    </button>
+
+
+    <!-- MANAGE -->
+
+    <div class="manage">
+
+        <h3>📋 Manage Vacancies</h3>
+
+        <div id="manageList"></div>
 
     </div>
 
@@ -629,79 +705,222 @@ footer{
 
 <footer>
 
-    <p>© 2026 OFFLINE NAUKRI | All Rights Reserved</p>
+    © 2026 OFFLINE NAUKRI
 
 </footer>
 
 
 <script>
 
-/* =========================
-   ADMIN SETTINGS
-========================= */
+/* ==============================
+   ADMIN PIN
+============================== */
 
 const ADMIN_PIN = "1234";
 
-let editIndex = -1;
+
+/* ==============================
+   EDIT VARIABLE
+============================== */
+
+let editId = null;
 
 
-/* =========================
-   DEFAULT JOB DATA
-========================= */
+/* ==============================
+   LOAD JOBS
+============================== */
 
 let jobs = JSON.parse(
-    localStorage.getItem("offlineNaukriJobs")
-) || [
-
-    {
-        postName:"Example Peon Vacancy",
-        department:"Sample Department",
-        totalPosts:"10",
-        qualification:"10th Pass",
-        ageLimit:"18-40 Years",
-        startDate:"2026-10-01",
-        lastDate:"2026-10-30",
-        fee:"₹0",
-        selection:"Merit / Interview",
-        applyMode:"Offline",
-        sendAddress:"Example Address, Haryana",
-        notification:"#",
-        applicationForm:"#",
-        details:"Ye ek demo vacancy hai. Admin Panel se ise edit ya delete kar sakte hain."
-    }
-
-];
+    localStorage.getItem("OFFLINE_NAUKRI_JOBS")
+) || [];
 
 
-/* =========================
-   SAVE DATA
-========================= */
+/* ==============================
+   LOGIN POPUP
+============================== */
 
-function saveData(){
+function openLogin(){
 
-    localStorage.setItem(
-        "offlineNaukriJobs",
-        JSON.stringify(jobs)
-    );
+    document.getElementById("loginBox").style.display = "block";
+
+    document.getElementById("pin").value = "";
+
+    document.getElementById("error").innerText = "";
 
 }
 
 
-/* =========================
-   DISPLAY JOBS
-========================= */
+function closeLogin(){
+
+    document.getElementById("loginBox").style.display = "none";
+
+}
+
+
+/* ==============================
+   LOGIN
+============================== */
+
+function login(){
+
+    let pin =
+        document.getElementById("pin").value;
+
+    if(pin === ADMIN_PIN){
+
+        closeLogin();
+
+        document.getElementById("adminArea").style.display = "block";
+
+        displayManage();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }else{
+
+        document.getElementById("error").innerText =
+            "❌ Wrong PIN. PIN 1234 hai.";
+
+    }
+
+}
+
+
+/* ==============================
+   CLOSE ADMIN
+============================== */
+
+function closeAdmin(){
+
+    document.getElementById("adminArea").style.display = "none";
+
+}
+
+
+/* ==============================
+   SAVE JOB
+============================== */
+
+function saveJob(){
+
+    let job = {
+
+        post:
+            document.getElementById("post").value.trim(),
+
+        department:
+            document.getElementById("department").value.trim(),
+
+        posts:
+            document.getElementById("posts").value.trim(),
+
+        qualification:
+            document.getElementById("qualification").value.trim(),
+
+        age:
+            document.getElementById("age").value.trim(),
+
+        fee:
+            document.getElementById("fee").value.trim(),
+
+        start:
+            document.getElementById("start").value,
+
+        last:
+            document.getElementById("last").value,
+
+        selection:
+            document.getElementById("selection").value.trim(),
+
+        mode:
+            document.getElementById("mode").value,
+
+        address:
+            document.getElementById("address").value.trim(),
+
+        notification:
+            document.getElementById("notification").value.trim(),
+
+        application:
+            document.getElementById("application").value.trim(),
+
+        details:
+            document.getElementById("details").value.trim()
+
+    };
+
+
+    if(!job.post || !job.department){
+
+        alert("Post Name aur Department bharna zaroori hai.");
+
+        return;
+
+    }
+
+
+    if(editId === null){
+
+        jobs.unshift(job);
+
+        alert("✅ Vacancy Added Successfully!");
+
+    }else{
+
+        jobs[editId] = job;
+
+        editId = null;
+
+        document.getElementById("formHeading").innerText =
+            "➕ Add New Vacancy";
+
+        alert("✅ Vacancy Updated Successfully!");
+
+    }
+
+
+    localStorage.setItem(
+        "OFFLINE_NAUKRI_JOBS",
+        JSON.stringify(jobs)
+    );
+
+
+    clearForm();
+
+    displayJobs();
+
+    displayManage();
+
+}
+
+
+/* ==============================
+   DISPLAY PUBLIC JOBS
+============================== */
 
 function displayJobs(list = jobs){
 
-    const container = document.getElementById("jobs");
+    let box =
+        document.getElementById("jobList");
+
 
     if(list.length === 0){
 
-        container.innerHTML = `
-            <div class="no-jobs">
-                <h3>❌ Koi vacancy nahi mili</h3>
-                <p>Search dobara try karein.</p>
+        box.innerHTML = `
+
+            <div class="empty">
+
+                <h2>📭 अभी कोई vacancy नहीं है</h2>
+
+                <p>
+                    Admin Panel से पहली vacancy add करें।
+                </p>
+
             </div>
+
         `;
 
         return;
@@ -709,56 +928,59 @@ function displayJobs(list = jobs){
     }
 
 
-    container.innerHTML = list.map((job,index)=>`
+    box.innerHTML = list.map((job,index)=>`
 
-        <div class="job-card">
+        <div class="job">
 
-            <h2>${escapeHTML(job.postName)}</h2>
+            <h2>
+                ${escapeText(job.post)}
+            </h2>
 
-            <div class="department">
-                🏢 ${escapeHTML(job.department)}
-            </div>
+            <p>
+                🏢 <b>${escapeText(job.department)}</b>
+            </p>
 
-            <span class="badge">
-                📌 ${escapeHTML(job.applyMode || "Offline")}
+            <span class="tag">
+                ${escapeText(job.mode)}
             </span>
 
-            <div class="info">
+            <p>
+                📌 <b>Total Posts:</b>
+                ${escapeText(job.posts || "-")}
+            </p>
 
-                <b>Total Posts:</b>
-                ${escapeHTML(job.totalPosts || "-")}
-                <br>
+            <p>
+                🎓 <b>Qualification:</b>
+                ${escapeText(job.qualification || "-")}
+            </p>
 
-                <b>Qualification:</b>
-                ${escapeHTML(job.qualification || "-")}
-                <br>
+            <p>
+                🎂 <b>Age:</b>
+                ${escapeText(job.age || "-")}
+            </p>
 
-                <b>Age:</b>
-                ${escapeHTML(job.ageLimit || "-")}
-                <br>
-
-                <b>Last Date:</b>
-                ${formatDate(job.lastDate)}
-
-            </div>
+            <p>
+                📅 <b>Last Date:</b>
+                ${formatDate(job.last)}
+            </p>
 
 
             <div class="buttons">
 
                 <button
-                    class="btn details-btn"
+                    class="btn details"
                     onclick="showDetails(${index})"
                 >
-                    👁 Full Details
+                    👁 Details
                 </button>
 
 
                 ${
-                    job.notification && job.notification !== "#"
+                    job.notification
                     ?
                     `<a
-                        class="btn notification-btn"
-                        href="${safeURL(job.notification)}"
+                        class="btn notification"
+                        href="${job.notification}"
                         target="_blank"
                     >
                         📄 Notification
@@ -769,11 +991,11 @@ function displayJobs(list = jobs){
 
 
                 ${
-                    job.applicationForm && job.applicationForm !== "#"
+                    job.application
                     ?
                     `<a
-                        class="btn form-btn"
-                        href="${safeURL(job.applicationForm)}"
+                        class="btn form"
+                        href="${job.application}"
                         target="_blank"
                     >
                         📝 Application Form
@@ -791,223 +1013,61 @@ function displayJobs(list = jobs){
 }
 
 
-/* =========================
-   FULL DETAILS
-========================= */
+/* ==============================
+   DETAILS
+============================== */
 
 function showDetails(index){
 
-    const job = jobs[index];
+    let j = jobs[index];
 
     alert(
 
-        "POST: " + job.postName +
+        "POST: " + j.post +
 
-        "\n\nDEPARTMENT: " + job.department +
+        "\n\nDEPARTMENT: " + j.department +
 
-        "\n\nTOTAL POSTS: " + job.totalPosts +
+        "\n\nTOTAL POSTS: " + j.posts +
 
-        "\n\nQUALIFICATION: " + job.qualification +
+        "\n\nQUALIFICATION: " + j.qualification +
 
-        "\n\nAGE LIMIT: " + job.ageLimit +
+        "\n\nAGE LIMIT: " + j.age +
 
-        "\n\nSTART DATE: " + formatDate(job.startDate) +
+        "\n\nSTART DATE: " + formatDate(j.start) +
 
-        "\n\nLAST DATE: " + formatDate(job.lastDate) +
+        "\n\nLAST DATE: " + formatDate(j.last) +
 
-        "\n\nAPPLICATION FEE: " + job.fee +
+        "\n\nFEE: " + j.fee +
 
-        "\n\nSELECTION: " + job.selection +
+        "\n\nSELECTION: " + j.selection +
 
-        "\n\nAPPLY MODE: " + job.applyMode +
+        "\n\nAPPLY MODE: " + j.mode +
 
-        "\n\nFORM SEND ADDRESS:\n" + job.sendAddress +
+        "\n\nFORM SEND ADDRESS:\n" +
+        j.address +
 
-        "\n\nDETAILS:\n" + job.details
-
-    );
-
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-function searchJobs(){
-
-    const value =
-        document.getElementById("search")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const filtered = jobs.filter(job =>
-
-        JSON.stringify(job)
-        .toLowerCase()
-        .includes(value)
+        "\n\nDETAILS:\n" +
+        j.details
 
     );
 
-
-    displayJobs(filtered);
-
 }
 
 
-/* =========================
-   OPEN ADMIN
-========================= */
+/* ==============================
+   MANAGE LIST
+============================== */
 
-function openAdmin(){
+function displayManage(){
 
-    document.getElementById("adminOverlay").style.display="block";
-
-    document.getElementById("loginBox").style.display="block";
-
-    document.getElementById("adminPanel").style.display="none";
-
-    document.getElementById("adminPin").value="";
-
-    document.getElementById("loginError").innerText="";
-
-}
-
-
-/* =========================
-   CLOSE ADMIN
-========================= */
-
-function closeAdmin(){
-
-    document.getElementById("adminOverlay").style.display="none";
-
-}
-
-
-/* =========================
-   LOGIN
-========================= */
-
-function loginAdmin(){
-
-    const pin =
-        document.getElementById("adminPin").value;
-
-
-    if(pin === ADMIN_PIN){
-
-        document.getElementById("loginBox").style.display="none";
-
-        document.getElementById("adminPanel").style.display="block";
-
-        displayAdminJobs();
-
-    }else{
-
-        document.getElementById("loginError").innerText =
-            "❌ Wrong Admin PIN";
-
-    }
-
-}
-
-
-/* =========================
-   SAVE JOB
-========================= */
-
-function saveJob(){
-
-    const job = {
-
-        postName: document.getElementById("postName").value.trim(),
-
-        department: document.getElementById("department").value.trim(),
-
-        totalPosts: document.getElementById("totalPosts").value.trim(),
-
-        qualification: document.getElementById("qualification").value.trim(),
-
-        ageLimit: document.getElementById("ageLimit").value.trim(),
-
-        startDate: document.getElementById("startDate").value,
-
-        lastDate: document.getElementById("lastDate").value,
-
-        fee: document.getElementById("fee").value.trim(),
-
-        selection: document.getElementById("selection").value.trim(),
-
-        applyMode: document.getElementById("applyMode").value,
-
-        sendAddress: document.getElementById("sendAddress").value.trim(),
-
-        notification: document.getElementById("notification").value.trim(),
-
-        applicationForm: document.getElementById("applicationForm").value.trim(),
-
-        details: document.getElementById("details").value.trim()
-
-    };
-
-
-    if(!job.postName || !job.department){
-
-        alert("⚠️ Post Name aur Department bharna zaroori hai.");
-
-        return;
-
-    }
-
-
-    if(editIndex === -1){
-
-        jobs.unshift(job);
-
-        alert("✅ Vacancy successfully added!");
-
-    }else{
-
-        jobs[editIndex] = job;
-
-        editIndex = -1;
-
-        document.getElementById("formTitle").innerText =
-            "➕ Add New Vacancy";
-
-        alert("✅ Vacancy updated successfully!");
-
-    }
-
-
-    saveData();
-
-    clearForm();
-
-    displayJobs();
-
-    displayAdminJobs();
-
-}
-
-
-/* =========================
-   ADMIN JOB LIST
-========================= */
-
-function displayAdminJobs(){
-
-    const box =
-        document.getElementById("adminJobs");
+    let box =
+        document.getElementById("manageList");
 
 
     if(jobs.length === 0){
 
         box.innerHTML =
-            "<p>Abhi koi vacancy nahi hai.</p>";
+            "<p>अभी कोई vacancy add नहीं हुई है।</p>";
 
         return;
 
@@ -1016,35 +1076,37 @@ function displayAdminJobs(){
 
     box.innerHTML = jobs.map((job,index)=>`
 
-        <div class="admin-item">
+        <div class="manage-item">
 
             <div>
 
-                <h3>
-                    ${escapeHTML(job.postName)}
-                </h3>
+                <b>
+                    ${escapeText(job.post)}
+                </b>
+
+                <br>
 
                 <small>
-                    ${escapeHTML(job.department)}
+                    ${escapeText(job.department)}
                 </small>
 
             </div>
 
 
-            <div class="admin-actions">
+            <div>
 
                 <button
                     class="edit"
                     onclick="editJob(${index})"
                 >
-                    ✏️ Edit
+                    ✏️ EDIT
                 </button>
 
                 <button
                     class="delete"
                     onclick="deleteJob(${index})"
                 >
-                    🗑️ Delete
+                    🗑️ DELETE
                 </button>
 
             </div>
@@ -1056,162 +1118,202 @@ function displayAdminJobs(){
 }
 
 
-/* =========================
-   EDIT JOB
-========================= */
+/* ==============================
+   EDIT
+============================== */
 
 function editJob(index){
 
-    const job = jobs[index];
+    let j = jobs[index];
 
-    editIndex = index;
+    editId = index;
 
 
-    document.getElementById("formTitle").innerText =
+    document.getElementById("formHeading").innerText =
         "✏️ Edit Vacancy";
 
 
-    document.getElementById("postName").value =
-        job.postName || "";
+    document.getElementById("post").value =
+        j.post || "";
 
     document.getElementById("department").value =
-        job.department || "";
+        j.department || "";
 
-    document.getElementById("totalPosts").value =
-        job.totalPosts || "";
+    document.getElementById("posts").value =
+        j.posts || "";
 
     document.getElementById("qualification").value =
-        job.qualification || "";
+        j.qualification || "";
 
-    document.getElementById("ageLimit").value =
-        job.ageLimit || "";
-
-    document.getElementById("startDate").value =
-        job.startDate || "";
-
-    document.getElementById("lastDate").value =
-        job.lastDate || "";
+    document.getElementById("age").value =
+        j.age || "";
 
     document.getElementById("fee").value =
-        job.fee || "";
+        j.fee || "";
+
+    document.getElementById("start").value =
+        j.start || "";
+
+    document.getElementById("last").value =
+        j.last || "";
 
     document.getElementById("selection").value =
-        job.selection || "";
+        j.selection || "";
 
-    document.getElementById("applyMode").value =
-        job.applyMode || "Offline";
+    document.getElementById("mode").value =
+        j.mode || "Offline";
 
-    document.getElementById("sendAddress").value =
-        job.sendAddress || "";
+    document.getElementById("address").value =
+        j.address || "";
 
     document.getElementById("notification").value =
-        job.notification || "";
+        j.notification || "";
 
-    document.getElementById("applicationForm").value =
-        job.applicationForm || "";
+    document.getElementById("application").value =
+        j.application || "";
 
     document.getElementById("details").value =
-        job.details || "";
+        j.details || "";
 
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+    document.getElementById("adminArea")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
 }
 
 
-/* =========================
-   DELETE JOB
-========================= */
+/* ==============================
+   DELETE
+============================== */
 
 function deleteJob(index){
 
-    const confirmDelete =
-        confirm(
+    if(
+        !confirm(
             "Kya aap is vacancy ko delete karna chahte hain?"
-        );
+        )
+    ){
 
+        return;
 
-    if(!confirmDelete) return;
+    }
 
 
     jobs.splice(index,1);
 
-    saveData();
+
+    localStorage.setItem(
+        "OFFLINE_NAUKRI_JOBS",
+        JSON.stringify(jobs)
+    );
+
 
     displayJobs();
 
-    displayAdminJobs();
-
-    alert("🗑️ Vacancy deleted successfully!");
+    displayManage();
 
 }
 
 
-/* =========================
+/* ==============================
    CLEAR FORM
-========================= */
+============================== */
 
 function clearForm(){
 
-    editIndex = -1;
+    editId = null;
 
 
-    document.getElementById("formTitle").innerText =
+    document.getElementById("formHeading").innerText =
         "➕ Add New Vacancy";
 
 
-    document.getElementById("postName").value="";
-    document.getElementById("department").value="";
-    document.getElementById("totalPosts").value="";
-    document.getElementById("qualification").value="";
-    document.getElementById("ageLimit").value="";
-    document.getElementById("startDate").value="";
-    document.getElementById("lastDate").value="";
-    document.getElementById("fee").value="";
-    document.getElementById("selection").value="";
-    document.getElementById("applyMode").value="Offline";
-    document.getElementById("sendAddress").value="";
-    document.getElementById("notification").value="";
-    document.getElementById("applicationForm").value="";
-    document.getElementById("details").value="";
+    document.getElementById("post").value = "";
+
+    document.getElementById("department").value = "";
+
+    document.getElementById("posts").value = "";
+
+    document.getElementById("qualification").value = "";
+
+    document.getElementById("age").value = "";
+
+    document.getElementById("fee").value = "";
+
+    document.getElementById("start").value = "";
+
+    document.getElementById("last").value = "";
+
+    document.getElementById("selection").value = "";
+
+    document.getElementById("mode").value = "Offline";
+
+    document.getElementById("address").value = "";
+
+    document.getElementById("notification").value = "";
+
+    document.getElementById("application").value = "";
+
+    document.getElementById("details").value = "";
 
 }
 
 
-/* =========================
-   DATE FORMAT
-========================= */
+/* ==============================
+   SEARCH
+============================== */
+
+function searchJobs(){
+
+    let q =
+        document.getElementById("search")
+        .value
+        .toLowerCase();
+
+
+    let result =
+        jobs.filter(job =>
+            JSON.stringify(job)
+            .toLowerCase()
+            .includes(q)
+        );
+
+
+    displayJobs(result);
+
+}
+
+
+/* ==============================
+   DATE
+============================== */
 
 function formatDate(date){
 
-    if(!date) return "-";
+    if(!date){
+        return "-";
+    }
 
-    const d = new Date(date);
+    let d = new Date(date);
 
-    if(isNaN(d)) return date;
+    if(isNaN(d)){
+        return date;
+    }
 
-    return d.toLocaleDateString(
-        "en-IN",
-        {
-            day:"2-digit",
-            month:"2-digit",
-            year:"numeric"
-        }
-    );
+    return d.toLocaleDateString("en-IN");
 
 }
 
 
-/* =========================
-   SECURITY HELPERS
-========================= */
+/* ==============================
+   SAFE TEXT
+============================== */
 
-function escapeHTML(value){
+function escapeText(text){
 
-    return String(value || "")
+    return String(text || "")
         .replace(/&/g,"&amp;")
         .replace(/</g,"&lt;")
         .replace(/>/g,"&gt;")
@@ -1221,29 +1323,9 @@ function escapeHTML(value){
 }
 
 
-function safeURL(url){
-
-    const value = String(url || "").trim();
-
-    if(
-        value.startsWith("https://") ||
-        value.startsWith("http://") ||
-        value.startsWith("/") ||
-        value.startsWith("./")
-    ){
-
-        return value;
-
-    }
-
-    return "#";
-
-}
-
-
-/* =========================
-   INITIAL LOAD
-========================= */
+/* ==============================
+   START
+============================== */
 
 displayJobs();
 
