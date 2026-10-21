@@ -4,101 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Digital Dreams Pega - Offline Form Updates</title>
+<title>Offline Naukri - Latest Offline Form Updates 2026</title>
+
+<meta name="description" content="Offline Naukri पर Latest Offline Form, Haryana Jobs, Central Government Jobs और Offline Vacancy Updates देखें।">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f4f4f4;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
     color:#222;
 }
 
 /* HEADER */
-.header{
+
+header{
     background:#8b0000;
     color:white;
     text-align:center;
-    padding:20px 10px;
+    padding:22px 10px;
 }
 
-.header h1{
-    font-size:32px;
+header h1{
+    font-size:36px;
     margin-bottom:5px;
 }
 
-.header p{
+header p{
     font-size:15px;
 }
 
 /* NAVBAR */
-.navbar{
+
+nav{
     background:#222;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 }
 
-.navbar a{
+nav a{
     color:white;
     text-decoration:none;
-    padding:14px 20px;
+    padding:14px 18px;
     font-weight:bold;
 }
 
-.navbar a:hover{
+nav a:hover{
     background:#8b0000;
 }
 
-/* NOTICE */
-.notice{
+/* BREAKING UPDATE */
+
+.update{
     max-width:1100px;
     margin:15px auto;
+    padding:12px;
     background:#fff3cd;
     border:1px solid #ffe69c;
-    padding:12px;
     text-align:center;
     font-weight:bold;
 }
 
-/* MAIN */
+/* CONTAINER */
+
 .container{
     max-width:1100px;
-    margin:20px auto;
-    padding:0 10px;
-}
-
-.section-title{
-    background:#8b0000;
-    color:white;
-    padding:12px;
-    font-size:20px;
-    text-align:center;
+    margin:auto;
+    padding:10px;
 }
 
 /* SEARCH */
-.search-box{
+
+.search{
     background:white;
     padding:15px;
-    margin-bottom:15px;
     border:1px solid #ddd;
+    margin-bottom:15px;
 }
 
-.search-box input{
+.search input{
     width:100%;
     padding:12px;
-    font-size:16px;
     border:1px solid #aaa;
     border-radius:4px;
+    font-size:16px;
+}
+
+/* TITLE */
+
+.title{
+    background:#8b0000;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:21px;
+    font-weight:bold;
 }
 
 /* JOB LIST */
-.job-list{
+
+.jobs{
     background:white;
     border:1px solid #ddd;
 }
@@ -118,7 +129,7 @@ body{
 }
 
 .job h2 a{
-    color:#004aad;
+    color:#0645ad;
     text-decoration:none;
 }
 
@@ -126,15 +137,15 @@ body{
     text-decoration:underline;
 }
 
-.job-info{
+.info{
     display:flex;
     flex-wrap:wrap;
-    gap:10px 25px;
+    gap:8px 25px;
     font-size:14px;
     margin:8px 0;
 }
 
-.last-date{
+.last{
     color:#c00000;
     font-weight:bold;
 }
@@ -143,13 +154,12 @@ body{
     display:inline-block;
     background:#198754;
     color:white;
-    padding:4px 8px;
-    border-radius:3px;
+    padding:5px 9px;
     font-size:12px;
-    margin-top:5px;
+    border-radius:3px;
 }
 
-.btn{
+.view{
     display:inline-block;
     margin-top:10px;
     padding:8px 14px;
@@ -159,23 +169,20 @@ body{
     border-radius:3px;
 }
 
-.btn:hover{
-    background:#600000;
-}
+/* JOB DETAILS */
 
-/* DETAILS TABLE */
 .details{
     background:white;
     margin-top:25px;
-    border:1px solid #ddd;
+    border:1px solid #ccc;
     padding:15px;
 }
 
 .details h2{
-    text-align:center;
     background:#8b0000;
     color:white;
-    padding:10px;
+    text-align:center;
+    padding:12px;
     margin-bottom:15px;
 }
 
@@ -184,96 +191,115 @@ table{
     border-collapse:collapse;
 }
 
-table td, table th{
+th,td{
     border:1px solid #bbb;
     padding:10px;
+    text-align:left;
 }
 
-table th{
+th{
     background:#eee;
+    width:35%;
 }
 
-.download-buttons{
+/* IMPORTANT DATES */
+
+.date-title{
+    background:#222;
+    color:white;
+    padding:10px;
+    text-align:center;
+    margin-top:20px;
+}
+
+/* BUTTONS */
+
+.buttons{
     text-align:center;
     margin:20px 0;
 }
 
-.download-buttons a{
+.buttons a{
     display:inline-block;
-    padding:10px 16px;
     margin:5px;
-    text-decoration:none;
+    padding:11px 16px;
     color:white;
+    text-decoration:none;
     border-radius:4px;
+    font-weight:bold;
 }
 
 .notification{
     background:#0066cc;
 }
 
-.form-download{
+.form{
     background:#198754;
 }
 
-/* IMPORTANT LINKS */
+/* LINKS */
+
 .links{
+    margin-top:25px;
     background:white;
-    margin-top:20px;
-    border:1px solid #ddd;
+    border:1px solid #ccc;
 }
 
 .links h2{
     background:#222;
     color:white;
     text-align:center;
-    padding:10px;
+    padding:11px;
 }
 
 .links a{
     display:block;
     padding:12px;
     border-bottom:1px solid #ddd;
-    color:#004aad;
+    color:#0645ad;
     text-decoration:none;
 }
 
 .links a:hover{
-    background:#f1f1f1;
+    background:#eee;
 }
 
 /* DISCLAIMER */
+
 .disclaimer{
-    background:white;
-    padding:15px;
     margin-top:20px;
+    background:white;
+    border:1px solid #ddd;
+    padding:15px;
     font-size:13px;
     line-height:1.6;
-    border:1px solid #ddd;
 }
 
 /* FOOTER */
-.footer{
+
+footer{
+    margin-top:30px;
     background:#222;
     color:white;
     text-align:center;
-    padding:20px 10px;
-    margin-top:30px;
+    padding:22px 10px;
 }
 
-.footer p{
+footer p{
     margin:5px;
 }
 
 /* MOBILE */
+
 @media(max-width:600px){
 
-    .header h1{
-        font-size:25px;
+    header h1{
+        font-size:27px;
     }
 
-    .navbar a{
-        padding:11px 10px;
-        font-size:14px;
+    nav a{
+        font-size:13px;
+        padding:11px 9px;
     }
 
     .job h2{
@@ -283,308 +309,572 @@ table th{
     table{
         font-size:13px;
     }
+
+    th,td{
+        padding:8px;
+    }
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<div class="header">
-    <h1>DIGITAL DREAMS PEGA</h1>
-    <p>Latest Offline Form & Vacancy Updates</p>
-</div>
+
+<header>
+
+<h1>OFFLINE NAUKRI</h1>
+
+<p>
+Latest Offline Form & Vacancy Updates
+</p>
+
+</header>
+
 
 <!-- NAVIGATION -->
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#latest">Latest Forms</a>
-    <a href="#haryana">Haryana Jobs</a>
-    <a href="#central">Central Jobs</a>
-    <a href="#contact">Contact</a>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#latest">
+Latest Forms
+</a>
+
+<a href="#haryana">
+Haryana Jobs
+</a>
+
+<a href="#central">
+Central Jobs
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</nav>
+
+
+<!-- UPDATE -->
+
+<div class="update">
+
+📢 Latest Offline Government Job Forms और Vacancy Updates यहाँ देखें।
+
 </div>
 
-<!-- NOTICE -->
-<div class="notice">
-    📢 सभी नई Offline Vacancy और Application Form की जानकारी यहाँ मिलेगी।
-</div>
 
 <div class="container" id="home">
 
-    <!-- SEARCH -->
-    <div class="search-box">
-        <input
-            type="text"
-            id="search"
-            placeholder="Search Offline Form..."
-            onkeyup="searchJobs()">
-    </div>
 
-    <div class="section-title" id="latest">
-        Latest Offline Form Updates
-    </div>
+<!-- SEARCH -->
 
-    <div class="job-list" id="jobList">
+<div class="search">
 
-        <!-- JOB 1 -->
-        <div class="job">
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Search Offline Vacancy..."
+onkeyup="searchJob()">
 
-            <h2>
-                <a href="#job1">
-                    Haryana Offline Form Recruitment 2026
-                </a>
-            </h2>
+</div>
 
-            <div class="job-info">
-                <span>📅 Start Date: 20-10-2026</span>
-                <span class="last-date">⏰ Last Date: 10-11-2026</span>
-            </div>
 
-            <span class="badge">OFFLINE FORM</span>
+<!-- LATEST JOBS -->
 
-            <br>
+<div class="title" id="latest">
 
-            <a href="#job1" class="btn">
-                View Full Details
-            </a>
+Latest Offline Forms
 
-        </div>
+</div>
 
-        <!-- JOB 2 -->
-        <div class="job">
 
-            <h2>
-                <a href="#job2">
-                    District Court Offline Vacancy 2026
-                </a>
-            </h2>
+<div class="jobs" id="jobList">
 
-            <div class="job-info">
-                <span>📅 Start Date: 18-10-2026</span>
-                <span class="last-date">⏰ Last Date: 05-11-2026</span>
-            </div>
 
-            <span class="badge">OFFLINE FORM</span>
+<!-- JOB 1 -->
 
-            <br>
+<div class="job">
 
-            <a href="#job2" class="btn">
-                View Full Details
-            </a>
+<h2>
 
-        </div>
+<a href="#vacancy1">
 
-        <!-- JOB 3 -->
-        <div class="job">
+Haryana Offline Recruitment 2026
 
-            <h2>
-                <a href="#job3">
-                    Haryana Peon Offline Recruitment 2026
-                </a>
-            </h2>
+</a>
 
-            <div class="job-info">
-                <span>📅 Start Date: 15-10-2026</span>
-                <span class="last-date">⏰ Last Date: 30-10-2026</span>
-            </div>
+</h2>
 
-            <span class="badge">OFFLINE FORM</span>
 
-            <br>
+<div class="info">
 
-            <a href="#job3" class="btn">
-                View Full Details
-            </a>
+<span>
+📅 Start Date:
+20-10-2026
+</span>
 
-        </div>
+<span class="last">
+⏰ Last Date:
+10-11-2026
+</span>
 
-    </div>
+</div>
 
 
-    <!-- EXAMPLE FULL JOB DETAILS -->
+<span class="badge">
+OFFLINE FORM
+</span>
 
-    <div class="details" id="job1">
+<br>
 
-        <h2>Haryana Offline Form Recruitment 2026</h2>
+<a href="#vacancy1"
+class="view">
 
-        <table>
+View Details →
 
-            <tr>
-                <th>Department</th>
-                <td>Example Department Haryana</td>
-            </tr>
+</a>
 
-            <tr>
-                <th>Post Name</th>
-                <td>Clerk / Peon</td>
-            </tr>
+</div>
 
-            <tr>
-                <th>Total Posts</th>
-                <td>25</td>
-            </tr>
 
-            <tr>
-                <th>Apply Mode</th>
-                <td><b>Offline</b></td>
-            </tr>
 
-            <tr>
-                <th>Start Date</th>
-                <td>20 October 2026</td>
-            </tr>
+<!-- JOB 2 -->
 
-            <tr>
-                <th>Last Date</th>
-                <td>
-                    <b style="color:red;">
-                        10 November 2026
-                    </b>
-                </td>
-            </tr>
+<div class="job">
 
-            <tr>
-                <th>Qualification</th>
-                <td>10th / 12th / Graduation</td>
-            </tr>
+<h2>
 
-            <tr>
-                <th>Age Limit</th>
-                <td>18-42 Years</td>
-            </tr>
+<a href="#">
 
-            <tr>
-                <th>Application Fees</th>
-                <td>Check Official Notification</td>
-            </tr>
+District Court Offline Form 2026
 
-            <tr>
-                <th>Selection Process</th>
-                <td>
-                    Written Exam / Skill Test /
-                    Document Verification
-                </td>
-            </tr>
+</a>
 
-        </table>
+</h2>
 
 
-        <h3 style="margin-top:20px;">
-            📮 Form Send Address
-        </h3>
+<div class="info">
 
-        <p style="padding:10px 0; line-height:1.6;">
-            Application form को Official Notification में दिए गए
-            पते पर Last Date से पहले भेजें।
-        </p>
+<span>
+📅 Start:
+18-10-2026
+</span>
 
+<span class="last">
+⏰ Last:
+05-11-2026
+</span>
 
-        <div class="download-buttons">
+</div>
 
-            <!-- YAHAN OFFICIAL NOTIFICATION LINK LAGAYE -->
-            <a href="#"
-               class="notification">
-                📄 Download Notification
-            </a>
 
-            <!-- YAHAN FORM PDF LINK LAGAYE -->
-            <a href="#"
-               class="form-download">
-                📥 Download Application Form
-            </a>
+<span class="badge">
+OFFLINE FORM
+</span>
 
-        </div>
+<br>
 
-    </div>
+<a href="#"
+class="view">
 
+View Details →
 
-    <!-- IMPORTANT LINKS -->
+</a>
 
-    <div class="links">
+</div>
 
-        <h2>Important Links</h2>
 
-        <a href="#">
-            📄 Latest Offline Forms
-        </a>
 
-        <a href="#">
-            🏛 Haryana Government Jobs
-        </a>
+<!-- JOB 3 -->
 
-        <a href="#">
-            🇮🇳 Central Government Jobs
-        </a>
+<div class="job">
 
-        <a href="#">
-            📥 Download Application Forms
-        </a>
+<h2>
 
-    </div>
+<a href="#">
 
+Peon Offline Vacancy 2026
 
-    <!-- DISCLAIMER -->
+</a>
 
-    <div class="disclaimer">
+</h2>
 
-        <b>Disclaimer:</b>
 
-        Digital Dreams Pega कोई सरकारी वेबसाइट नहीं है।
-        इस वेबसाइट का उद्देश्य केवल सरकारी एवं अन्य भर्तियों से
-        संबंधित जानकारी उपलब्ध कराना है। आवेदन करने से पहले
-        संबंधित विभाग की Official Notification अवश्य पढ़ें।
+<div class="info">
 
-    </div>
+<span>
+📅 Start:
+15-10-2026
+</span>
+
+<span class="last">
+⏰ Last:
+30-10-2026
+</span>
+
+</div>
+
+
+<span class="badge">
+OFFLINE FORM
+</span>
+
+<br>
+
+<a href="#"
+class="view">
+
+View Details →
+
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<!-- FULL VACANCY DETAILS -->
+
+<div class="details"
+id="vacancy1">
+
+<h2>
+
+Haryana Offline Recruitment 2026
+
+</h2>
+
+
+<table>
+
+<tr>
+<th>
+Organization
+</th>
+
+<td>
+Example Government Department
+</td>
+</tr>
+
+
+<tr>
+
+<th>
+Post Name
+</th>
+
+<td>
+Clerk / Peon
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Total Posts
+</th>
+
+<td>
+25
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Apply Mode
+</th>
+
+<td>
+<b>
+Offline
+</b>
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Qualification
+</th>
+
+<td>
+10th / 12th / Graduation
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Age Limit
+</th>
+
+<td>
+18-42 Years
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Application Fee
+</th>
+
+<td>
+Check Official Notification
+</td>
+
+</tr>
+
+</table>
+
+
+
+<div class="date-title">
+
+Important Dates
+
+</div>
+
+
+<table>
+
+<tr>
+
+<th>
+Application Start
+</th>
+
+<td>
+20 October 2026
+</td>
+
+</tr>
+
+
+<tr>
+
+<th>
+Last Date
+</th>
+
+<td style="color:red;font-weight:bold;">
+
+10 November 2026
+
+</td>
+
+</tr>
+
+</table>
+
+
+
+<div class="date-title">
+
+Selection Process
+
+</div>
+
+
+<p style="padding:15px;line-height:1.8;">
+
+✓ Written Exam<br>
+
+✓ Skill Test (If Applicable)<br>
+
+✓ Document Verification<br>
+
+✓ Medical Examination
+
+</p>
+
+
+
+<div class="date-title">
+
+How To Apply Offline
+
+</div>
+
+
+<p style="padding:15px;line-height:1.8;">
+
+1. Official Notification ध्यान से पढ़ें।<br>
+
+2. Application Form डाउनलोड करें।<br>
+
+3. Form में सभी जानकारी सही भरें।<br>
+
+4. जरूरी Documents की photocopy लगाएं।<br>
+
+5. Form को Notification में दिए गए पते पर Last Date से पहले भेजें।
+
+</p>
+
+
+
+<div class="date-title">
+
+📮 Form Send Address
+
+</div>
+
+
+<p style="padding:15px;text-align:center;">
+
+Official Notification में दिए गए
+Postal Address पर Form भेजें।
+
+</p>
+
+
+
+<div class="buttons">
+
+<!-- OFFICIAL PDF LINK HERE -->
+
+<a href="#"
+class="notification">
+
+📄 Official Notification
+
+</a>
+
+
+<!-- APPLICATION FORM LINK HERE -->
+
+<a href="#"
+class="form">
+
+📥 Application Form
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- IMPORTANT LINKS -->
+
+<div class="links">
+
+<h2>
+Important Sections
+</h2>
+
+<a href="#latest">
+🔥 Latest Offline Forms
+</a>
+
+<a href="#haryana">
+🏛️ Haryana Offline Jobs
+</a>
+
+<a href="#central">
+🇮🇳 Central Government Jobs
+</a>
+
+<a href="#">
+📥 Application Form PDF
+</a>
+
+</div>
+
+
+
+<!-- DISCLAIMER -->
+
+<div class="disclaimer">
+
+<b>Disclaimer:</b>
+
+Offline Naukri कोई सरकारी वेबसाइट नहीं है।
+यह वेबसाइट केवल Job और Offline Form से संबंधित
+जानकारी उपलब्ध कराने के उद्देश्य से बनाई गई है।
+किसी भी Vacancy के लिए आवेदन करने से पहले
+संबंधित विभाग की Official Notification जरूर पढ़ें।
+
+</div>
+
 
 </div>
 
 
 <!-- FOOTER -->
 
-<div class="footer" id="contact">
+<footer id="contact">
 
-    <p>
-        © 2026 Digital Dreams Pega
-    </p>
+<p>
+<b>OFFLINE NAUKRI</b>
+</p>
 
-    <p>
-        Offline Form & Vacancy Updates
-    </p>
+<p>
+Latest Offline Form & Vacancy Updates
+</p>
 
-</div>
+<p>
+© 2026 Offline Naukri. All Rights Reserved.
+</p>
+
+</footer>
+
 
 
 <script>
 
-/* SEARCH FUNCTION */
+/* JOB SEARCH */
 
-function searchJobs(){
+function searchJob(){
 
-    let input =
-        document.getElementById("search")
-        .value
-        .toLowerCase();
+let input =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase();
 
-    let jobs =
-        document
-        .getElementById("jobList")
-        .getElementsByClassName("job");
+let jobs =
+document
+.getElementById("jobList")
+.getElementsByClassName("job");
 
-    for(let i = 0; i < jobs.length; i++){
+for(let i=0;i<jobs.length;i++){
 
-        let text =
-            jobs[i]
-            .innerText
-            .toLowerCase();
+let text =
+jobs[i]
+.innerText
+.toLowerCase();
 
-        if(text.includes(input)){
-            jobs[i].style.display = "";
-        }
-        else{
-            jobs[i].style.display = "none";
-        }
+if(text.includes(input)){
 
-    }
+jobs[i].style.display="";
+
+}else{
+
+jobs[i].style.display="none";
+
+}
+
+}
 
 }
 
