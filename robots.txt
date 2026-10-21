@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mohitcsc98.github.io/digital-dreams-pega/sitemap.xml
+Sitemap: https://mohitcsc98.github.io/offline-naukri/sitemap.xml
