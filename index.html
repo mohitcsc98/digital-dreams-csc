@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Offline Naukri - Latest Offline Form & Vacancy Updates</title>
-
-<meta name="description" content="Offline Naukri - Latest Haryana Offline Form, Central Government Offline Vacancy, Application Form, Notification and Job Updates.">
+<title>OFFLINE NAUKRI - Latest Offline Vacancy</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -16,923 +15,2032 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f3f3f3;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f1f3f6;
     color:#222;
 }
 
-/* ================= HEADER ================= */
-
-.top-header{
-    background:#8b0000;
+header{
+    background:linear-gradient(135deg,#8b0000,#d40000);
     color:#fff;
     text-align:center;
-    padding:22px 10px;
+    padding:25px 10px;
 }
 
-.top-header h1{
-    font-size:38px;
-    letter-spacing:1px;
+header h1{
+    font-size:34px;
+    font-weight:bold;
 }
 
-.top-header p{
-    margin-top:6px;
+header p{
+    margin-top:7px;
     font-size:15px;
 }
 
-/* ================= NAVBAR ================= */
-
 nav{
-    background:#202020;
+    background:#222;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     padding:14px 18px;
-    font-weight:bold;
-    font-size:14px;
+    font-size:15px;
 }
 
 nav a:hover{
     background:#8b0000;
 }
 
-/* ================= BREAKING ================= */
-
-.breaking{
-    max-width:1100px;
-    margin:15px auto;
-    background:#fff3cd;
-    border:1px solid #ffd966;
-    padding:11px;
-    text-align:center;
-    font-weight:bold;
-}
-
-/* ================= MAIN ================= */
-
 .container{
     max-width:1100px;
     margin:auto;
-    padding:0 10px 30px;
+    padding:15px;
 }
 
-/* ================= SEARCH ================= */
+.notice{
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    padding:13px;
+    text-align:center;
+    margin-bottom:15px;
+    border-radius:5px;
+    font-weight:bold;
+}
 
 .search-box{
     background:#fff;
-    border:1px solid #ddd;
     padding:15px;
-    margin-bottom:15px;
+    border-radius:5px;
+    margin-bottom:18px;
+    box-shadow:0 1px 5px #ddd;
 }
 
 .search-box input{
     width:100%;
-    padding:13px;
+    padding:14px;
     border:1px solid #aaa;
-    border-radius:4px;
+    border-radius:5px;
     font-size:16px;
+    outline:none;
 }
 
-/* ================= QUICK BOXES ================= */
-
-.quick-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-    margin-bottom:20px;
-}
-
-.quick-box{
-    padding:18px 10px;
-    text-align:center;
-    color:#fff;
-    font-weight:bold;
-    text-decoration:none;
-    border-radius:4px;
-}
-
-.red{background:#b00020;}
-.blue{background:#005bbb;}
-.green{background:#16853b;}
-.orange{background:#e56b00;}
-
-/* ================= SECTION ================= */
-
-.section-title{
+.heading{
     background:#8b0000;
     color:#fff;
     text-align:center;
-    padding:12px;
+    padding:13px;
     font-size:21px;
     font-weight:bold;
+    border-radius:5px 5px 0 0;
 }
 
-/* ================= JOB LIST ================= */
-
-.job-list{
+.job{
     background:#fff;
-    border:1px solid #ccc;
-}
-
-.job-card{
-    padding:17px;
+    padding:18px;
     border-bottom:1px solid #ddd;
+    box-shadow:0 1px 3px #ddd;
 }
 
-.job-card:last-child{
-    border-bottom:none;
-}
-
-.job-card h2{
-    font-size:18px;
-    margin-bottom:9px;
-}
-
-.job-card h2 a{
+.job h2{
     color:#0645ad;
-    text-decoration:none;
+    font-size:20px;
+    margin-bottom:12px;
 }
 
-.job-card h2 a:hover{
-    text-decoration:underline;
-}
-
-.job-meta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px 25px;
+.job-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
     font-size:14px;
-    margin:8px 0;
+    margin-bottom:12px;
 }
 
-.last-date{
-    color:#d00000;
-    font-weight:bold;
-}
-
-.offline{
+.badge{
     display:inline-block;
-    background:#16853b;
+    background:#198754;
     color:#fff;
-    padding:5px 9px;
+    padding:6px 10px;
     border-radius:3px;
     font-size:12px;
     font-weight:bold;
 }
 
+.last-date{
+    color:red;
+    font-weight:bold;
+}
+
 .view-btn{
     display:inline-block;
-    margin-top:10px;
+    margin-top:13px;
     background:#8b0000;
     color:#fff;
     text-decoration:none;
-    padding:8px 14px;
-    border-radius:3px;
+    padding:10px 16px;
+    border-radius:4px;
+    cursor:pointer;
 }
 
-/* ================= TWO COLUMN ================= */
-
-.columns{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:20px;
-}
-
-.box{
-    background:#fff;
-    border:1px solid #ccc;
-}
-
-.box h2{
-    background:#202020;
-    color:#fff;
-    padding:11px;
-    text-align:center;
-    font-size:18px;
-}
-
-.box a{
-    display:block;
-    padding:12px;
-    border-bottom:1px solid #ddd;
-    text-decoration:none;
-    color:#0645ad;
-    font-size:14px;
-}
-
-.box a:hover{
-    background:#f5f5f5;
-}
-
-/* ================= JOB DETAILS ================= */
-
-.job-details{
-    margin-top:25px;
-    background:#fff;
-    border:1px solid #ccc;
-    padding:15px;
-}
-
-.job-details > h2{
-    background:#8b0000;
-    color:#fff;
-    text-align:center;
-    padding:13px;
-    margin:-15px -15px 15px;
-}
-
-.sub-heading{
-    background:#202020;
-    color:#fff;
-    text-align:center;
-    padding:10px;
+.details{
+    display:none;
     margin-top:18px;
+    border-top:2px solid #8b0000;
+    padding-top:15px;
 }
 
-table{
+.details table{
     width:100%;
     border-collapse:collapse;
 }
 
-th,td{
-    border:1px solid #bbb;
-    padding:11px;
+.details th,
+.details td{
+    border:1px solid #ccc;
+    padding:10px;
     text-align:left;
+    font-size:14px;
 }
 
-th{
+.details th{
+    background:#f1f1f1;
     width:35%;
-    background:#eee;
 }
 
-.content{
-    padding:15px;
-    line-height:1.8;
-}
-
-/* ================= DOWNLOAD ================= */
-
-.downloads{
+.section-title{
+    background:#222;
+    color:#fff;
     text-align:center;
-    margin:20px 0 5px;
+    padding:10px;
+    margin-top:15px;
 }
 
-.downloads a{
+.download-buttons{
+    text-align:center;
+    margin-top:18px;
+}
+
+.download-buttons a{
     display:inline-block;
-    padding:11px 16px;
+    padding:11px 15px;
     margin:5px;
-    color:white;
+    color:#fff;
     text-decoration:none;
     border-radius:4px;
     font-weight:bold;
 }
 
 .notification-btn{
-    background:#005bbb;
+    background:#0066cc;
 }
 
 .form-btn{
-    background:#16853b;
+    background:#198754;
 }
 
-/* ================= DISCLAIMER ================= */
-
-.disclaimer{
+.empty{
     background:#fff;
-    border:1px solid #ccc;
-    padding:15px;
-    margin-top:20px;
-    line-height:1.6;
-    font-size:13px;
+    padding:30px;
+    text-align:center;
+    display:none;
 }
-
-/* ================= FOOTER ================= */
 
 footer{
-    background:#202020;
+    margin-top:30px;
+    background:#222;
     color:#fff;
     text-align:center;
     padding:25px 10px;
 }
 
-footer h2{
-    margin-bottom:7px;
-}
-
-footer p{
-    margin:6px;
+.admin-btn{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    background:#222;
+    color:#fff;
+    text-decoration:none;
+    padding:11px 15px;
+    border-radius:5px;
     font-size:13px;
+    cursor:pointer;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:768px){
+/* ================= ADMIN ================= */
 
-    .top-header h1{
+#adminPage{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    background:#f1f3f6;
+}
+
+.admin-header{
+    background:linear-gradient(135deg,#8b0000,#d40000);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.admin-header h2{
+    margin-bottom:5px;
+}
+
+.admin-container{
+    max-width:850px;
+    margin:auto;
+    padding:15px;
+}
+
+.admin-note{
+    background:#fff3cd;
+    border:1px solid #ffe69c;
+    padding:12px;
+    margin-bottom:15px;
+    line-height:1.6;
+    border-radius:5px;
+}
+
+.admin-form{
+    background:white;
+    padding:20px;
+    border-radius:6px;
+    box-shadow:0 2px 8px #ddd;
+}
+
+.admin-form h2{
+    text-align:center;
+    color:#8b0000;
+    margin-bottom:20px;
+}
+
+.admin-form label{
+    display:block;
+    margin-top:13px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.admin-form input,
+.admin-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #aaa;
+    border-radius:4px;
+    font-size:15px;
+}
+
+.admin-form textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.admin-form button{
+    border:0;
+    padding:12px 18px;
+    margin-top:18px;
+    border-radius:4px;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.add-btn{
+    background:#198754;
+}
+
+.clear-btn{
+    background:#555;
+}
+
+.update-btn{
+    background:#0066cc;
+}
+
+.cancel-btn{
+    background:#777;
+}
+
+.close-btn{
+    background:#222;
+}
+
+.admin-message{
+    display:none;
+    background:#d1e7dd;
+    color:#0f5132;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:4px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.admin-list-title{
+    background:#222;
+    color:white;
+    padding:13px;
+    text-align:center;
+    margin-top:25px;
+}
+
+.admin-job{
+    background:#fff;
+    padding:17px;
+    border-bottom:1px solid #ddd;
+}
+
+.admin-job h3{
+    color:#0645ad;
+    margin-bottom:8px;
+}
+
+.admin-job p{
+    margin:5px 0;
+}
+
+.admin-job button{
+    border:0;
+    color:#fff;
+    padding:9px 13px;
+    margin-top:8px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.edit-btn{
+    background:#0066cc;
+}
+
+.delete-btn{
+    background:#dc3545;
+}
+
+#loginBox{
+    max-width:400px;
+    margin:80px auto;
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 10px #ccc;
+    text-align:center;
+}
+
+#loginBox h2{
+    color:#8b0000;
+    margin-bottom:15px;
+}
+
+#adminPin{
+    width:100%;
+    padding:13px;
+    border:1px solid #aaa;
+    border-radius:4px;
+    font-size:18px;
+    text-align:center;
+}
+
+.login-btn{
+    width:100%;
+    background:#8b0000;
+    border:0;
+    padding:12px;
+    color:#fff;
+    margin-top:12px;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.login-home{
+    display:inline-block;
+    margin-top:15px;
+    color:#0645ad;
+    cursor:pointer;
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
         font-size:28px;
     }
 
-    .quick-grid{
-        grid-template-columns:1fr 1fr;
+    nav a{
+        padding:11px 8px;
+        font-size:13px;
     }
 
-    .columns{
+    .job-info{
         grid-template-columns:1fr;
     }
 
-    nav a{
-        padding:11px 9px;
+    .job h2{
+        font-size:17px;
+    }
+
+    .details th,
+    .details td{
         font-size:13px;
-    }
-
-    .job-card h2{
-        font-size:16px;
-    }
-
-    table{
-        font-size:13px;
-    }
-
-    th,td{
         padding:8px;
     }
-}
 
-@media(max-width:420px){
-
-    .quick-grid{
-        grid-template-columns:1fr;
+    .admin-form{
+        padding:15px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
 
-<header class="top-header">
+<!-- ================= WEBSITE ================= -->
 
-    <h1>OFFLINE NAUKRI</h1>
+<div id="websitePage">
 
-    <p>
-        Latest Offline Form & Government Vacancy Updates
-    </p>
+<header>
+
+<h1>OFFLINE NAUKRI</h1>
+
+<p>
+Latest Offline Form & Vacancy Updates
+</p>
 
 </header>
 
 
-<!-- NAVBAR -->
-
 <nav>
 
-    <a href="#home">Home</a>
+<a href="#" onclick="showWebsite()">
+Home
+</a>
 
-    <a href="#latest">Latest Forms</a>
+<a href="#latest">
+Latest Forms
+</a>
 
-    <a href="#haryana">Haryana Jobs</a>
-
-    <a href="#central">Central Jobs</a>
-
-    <a href="#forms">Forms</a>
-
-    <a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
 </nav>
 
 
-<!-- BREAKING NEWS -->
+<div class="container">
 
-<div class="breaking">
 
-    📢 Latest Offline Government Job Forms और Vacancy Updates यहाँ देखें।
+<div class="notice">
+
+📢 OFFLINE NAUKRI - Latest Offline Vacancy & Form Updates
 
 </div>
 
-
-<main class="container" id="home">
-
-
-<!-- SEARCH -->
 
 <div class="search-box">
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="🔎 Vacancy Search करें..."
-        onkeyup="searchJobs()"
-    >
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Vacancy / Department / Qualification Search करें..."
+onkeyup="searchJobs()">
 
 </div>
 
 
-<!-- QUICK LINKS -->
+<div class="heading" id="latest">
 
-<div class="quick-grid">
-
-    <a href="#latest" class="quick-box red">
-        🔥 Latest Forms
-    </a>
-
-    <a href="#haryana" class="quick-box blue">
-        Haryana Jobs
-    </a>
-
-    <a href="#central" class="quick-box green">
-        Central Jobs
-    </a>
-
-    <a href="#forms" class="quick-box orange">
-        Download Forms
-    </a>
+📋 Latest Offline Vacancy
 
 </div>
 
 
-<!-- LATEST VACANCIES -->
-
-<div class="section-title" id="latest">
-
-    Latest Offline Form Updates
-
-</div>
+<div id="jobsContainer"></div>
 
 
-<div class="job-list" id="jobList">
+<div id="empty" class="empty">
 
+<h3>
+❌ कोई Vacancy नहीं मिली
+</h3>
 
-    <!-- VACANCY 1 -->
-
-    <div class="job-card">
-
-        <h2>
-            <a href="#vacancy1">
-                Haryana Offline Recruitment 2026
-            </a>
-        </h2>
-
-        <div class="job-meta">
-
-            <span>
-                📅 Start Date: 20-10-2026
-            </span>
-
-            <span class="last-date">
-                ⏰ Last Date: 10-11-2026
-            </span>
-
-        </div>
-
-        <span class="offline">
-            OFFLINE FORM
-        </span>
-
-        <br>
-
-        <a href="#vacancy1" class="view-btn">
-            View Full Details →
-        </a>
-
-    </div>
-
-
-    <!-- VACANCY 2 -->
-
-    <div class="job-card">
-
-        <h2>
-            <a href="#">
-                District Court Offline Recruitment 2026
-            </a>
-        </h2>
-
-        <div class="job-meta">
-
-            <span>
-                📅 Start Date: 18-10-2026
-            </span>
-
-            <span class="last-date">
-                ⏰ Last Date: 05-11-2026
-            </span>
-
-        </div>
-
-        <span class="offline">
-            OFFLINE FORM
-        </span>
-
-        <br>
-
-        <a href="#" class="view-btn">
-            View Full Details →
-        </a>
-
-    </div>
-
-
-    <!-- VACANCY 3 -->
-
-    <div class="job-card">
-
-        <h2>
-            <a href="#">
-                Peon Offline Vacancy 2026
-            </a>
-        </h2>
-
-        <div class="job-meta">
-
-            <span>
-                📅 Start Date: 15-10-2026
-            </span>
-
-            <span class="last-date">
-                ⏰ Last Date: 30-10-2026
-            </span>
-
-        </div>
-
-        <span class="offline">
-            OFFLINE FORM
-        </span>
-
-        <br>
-
-        <a href="#" class="view-btn">
-            View Full Details →
-        </a>
-
-    </div>
-
-
-    <!-- VACANCY 4 -->
-
-    <div class="job-card">
-
-        <h2>
-            <a href="#">
-                Clerk Offline Form Recruitment 2026
-            </a>
-        </h2>
-
-        <div class="job-meta">
-
-            <span>
-                📅 Start Date: 12-10-2026
-            </span>
-
-            <span class="last-date">
-                ⏰ Last Date: 02-11-2026
-            </span>
-
-        </div>
-
-        <span class="offline">
-            OFFLINE FORM
-        </span>
-
-        <br>
-
-        <a href="#" class="view-btn">
-            View Full Details →
-        </a>
-
-    </div>
+<p>
+कृपया दूसरी Vacancy Search करें।
+</p>
 
 </div>
 
-
-<!-- JOB CATEGORIES -->
-
-<div class="columns">
-
-    <div class="box" id="haryana">
-
-        <h2>Haryana Offline Jobs</h2>
-
-        <a href="#">
-            Haryana Peon Vacancy 2026
-        </a>
-
-        <a href="#">
-            Haryana Clerk Offline Form
-        </a>
-
-        <a href="#">
-            Haryana District Court Vacancy
-        </a>
-
-        <a href="#">
-            Haryana University Offline Jobs
-        </a>
-
-    </div>
-
-
-    <div class="box" id="central">
-
-        <h2>Central Government Jobs</h2>
-
-        <a href="#">
-            Army Offline Recruitment
-        </a>
-
-        <a href="#">
-            Central University Vacancy
-        </a>
-
-        <a href="#">
-            Ministry Offline Form
-        </a>
-
-        <a href="#">
-            Central Government Group C Jobs
-        </a>
-
-    </div>
-
 </div>
 
-
-<!-- FULL VACANCY DETAILS -->
-
-<section class="job-details" id="vacancy1">
-
-    <h2>
-        Haryana Offline Recruitment 2026
-    </h2>
-
-
-    <table>
-
-        <tr>
-            <th>Organization</th>
-            <td>Example Government Department</td>
-        </tr>
-
-        <tr>
-            <th>Post Name</th>
-            <td>Clerk / Peon</td>
-        </tr>
-
-        <tr>
-            <th>Total Posts</th>
-            <td>25</td>
-        </tr>
-
-        <tr>
-            <th>Job Location</th>
-            <td>Haryana</td>
-        </tr>
-
-        <tr>
-            <th>Apply Mode</th>
-            <td>
-                <b>Offline</b>
-            </td>
-        </tr>
-
-        <tr>
-            <th>Qualification</th>
-            <td>
-                10th / 12th / Graduation
-            </td>
-        </tr>
-
-        <tr>
-            <th>Age Limit</th>
-            <td>
-                18-42 Years
-            </td>
-        </tr>
-
-        <tr>
-            <th>Application Fee</th>
-            <td>
-                Read Official Notification
-            </td>
-        </tr>
-
-    </table>
-
-
-    <!-- IMPORTANT DATES -->
-
-    <h3 class="sub-heading">
-        Important Dates
-    </h3>
-
-
-    <table>
-
-        <tr>
-            <th>Form Start Date</th>
-            <td>20 October 2026</td>
-        </tr>
-
-        <tr>
-            <th>Last Date</th>
-
-            <td style="color:red;font-weight:bold;">
-                10 November 2026
-            </td>
-
-        </tr>
-
-    </table>
-
-
-    <!-- SELECTION -->
-
-    <h3 class="sub-heading">
-        Selection Process
-    </h3>
-
-    <div class="content">
-
-        ✓ Written Exam (If Applicable)<br>
-        ✓ Skill Test (If Applicable)<br>
-        ✓ Document Verification<br>
-        ✓ Medical Examination
-
-    </div>
-
-
-    <!-- DOCUMENTS -->
-
-    <h3 class="sub-heading">
-        Documents Required
-    </h3>
-
-    <div class="content">
-
-        ✓ Application Form<br>
-        ✓ Aadhaar Card Copy<br>
-        ✓ Educational Certificates<br>
-        ✓ Passport Size Photo<br>
-        ✓ Category Certificate (If Applicable)<br>
-        ✓ Other Documents as per Notification
-
-    </div>
-
-
-    <!-- HOW TO APPLY -->
-
-    <h3 class="sub-heading">
-        How To Apply Offline
-    </h3>
-
-    <div class="content">
-
-        <b>Step 1:</b>
-        Official Notification को ध्यान से पढ़ें।
-        <br>
-
-        <b>Step 2:</b>
-        Application Form डाउनलोड करें।
-        <br>
-
-        <b>Step 3:</b>
-        Form में मांगी गई जानकारी सही भरें।
-        <br>
-
-        <b>Step 4:</b>
-        जरूरी Documents की photocopy लगाएं।
-        <br>
-
-        <b>Step 5:</b>
-        Form को दिए गए Postal Address पर Last Date से पहले भेजें।
-
-    </div>
-
-
-    <!-- ADDRESS -->
-
-    <h3 class="sub-heading">
-        📮 Form Send Address
-    </h3>
-
-    <div class="content" style="text-align:center;">
-
-        <b>
-            Official Notification में दिए गए Address पर Application Form भेजें।
-        </b>
-
-    </div>
-
-
-    <!-- DOWNLOAD -->
-
-    <h3 class="sub-heading" id="forms">
-        Important Links
-    </h3>
-
-    <div class="downloads">
-
-        <!--
-        href="#" को Official Notification PDF link से बदलें
-        -->
-
-        <a
-            href="#"
-            class="notification-btn"
-            target="_blank"
-        >
-            📄 Official Notification
-        </a>
-
-
-        <!--
-        href="#" को Application Form PDF link से बदलें
-        -->
-
-        <a
-            href="#"
-            class="form-btn"
-            target="_blank"
-        >
-            📥 Download Application Form
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- DISCLAIMER -->
-
-<div class="disclaimer">
-
-    <b>Disclaimer:</b>
-
-    Offline Naukri कोई सरकारी वेबसाइट नहीं है।
-    यह वेबसाइट केवल सरकारी एवं अन्य भर्तियों से संबंधित
-    जानकारी उपलब्ध कराने के उद्देश्य से बनाई गई है।
-    किसी भी भर्ती के लिए आवेदन करने से पहले संबंधित
-    विभाग की Official Notification जरूर पढ़ें।
-
-</div>
-
-</main>
-
-
-<!-- FOOTER -->
 
 <footer id="contact">
 
-    <h2>OFFLINE NAUKRI</h2>
+<h3>
+OFFLINE NAUKRI
+</h3>
 
-    <p>
-        Latest Offline Form & Vacancy Updates
-    </p>
+<p>
+Latest Offline Form & Vacancy Updates
+</p>
 
-    <p>
-        Home | Haryana Jobs | Central Jobs | Contact
-    </p>
+<br>
 
-    <p>
-        © 2026 Offline Naukri. All Rights Reserved.
-    </p>
+<p>
+© 2026 Offline Naukri
+</p>
 
 </footer>
 
 
+<a
+class="admin-btn"
+onclick="openAdmin()">
+
+🔐 Admin Panel
+
+</a>
+
+</div>
+
+
+
+<!-- ================= ADMIN PAGE ================= -->
+
+<div id="adminPage">
+
+
+<div class="admin-header">
+
+<h2>
+🔐 OFFLINE NAUKRI ADMIN PANEL
+</h2>
+
+<p>
+Vacancy Management System
+</p>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div id="loginBox">
+
+<h2>
+Admin Login
+</h2>
+
+<p style="margin-bottom:15px;">
+Admin Panel खोलने के लिए PIN डालें
+</p>
+
+<input
+type="password"
+id="adminPin"
+placeholder="Enter Admin PIN">
+
+<button
+class="login-btn"
+onclick="adminLogin()">
+
+🔐 Login
+
+</button>
+
+<br>
+
+<span
+class="login-home"
+onclick="closeAdmin()">
+
+← वापस Website पर जाएं
+
+</span>
+
+</div>
+
+
+
+<!-- ADMIN CONTENT -->
+
+<div
+id="adminContent"
+style="display:none;">
+
+<div class="admin-container">
+
+
+<div class="admin-note">
+
+<b>⚠️ ध्यान दें:</b>
+
+यह version Browser Storage पर काम करता है।
+Vacancy इसी Browser में save होगी।
+
+</div>
+
+
+<div
+id="adminMessage"
+class="admin-message">
+</div>
+
+
+<div class="admin-form">
+
+<h2 id="formTitle">
+
+➕ Add New Offline Vacancy
+
+</h2>
+
+
+<label>
+Post Name *
+</label>
+
+<input
+id="post"
+placeholder="जैसे Haryana Peon Recruitment 2026">
+
+
+<label>
+Department / Organization
+</label>
+
+<input
+id="department"
+placeholder="Department का नाम">
+
+
+<label>
+Total Posts
+</label>
+
+<input
+id="total"
+placeholder="जैसे 25">
+
+
+<label>
+Qualification
+</label>
+
+<input
+id="qualification"
+placeholder="जैसे 10th Pass">
+
+
+<label>
+Age Limit
+</label>
+
+<input
+id="age"
+placeholder="जैसे 18-42 Years">
+
+
+<label>
+Start Date
+</label>
+
+<input
+id="start"
+type="date">
+
+
+<label>
+Last Date
+</label>
+
+<input
+id="last"
+type="date">
+
+
+<label>
+Application Fee
+</label>
+
+<input
+id="fees"
+placeholder="जैसे ₹100 / No Fee">
+
+
+<label>
+Selection Process
+</label>
+
+<textarea
+id="selection"
+placeholder="Written Exam, Interview, Document Verification">
+</textarea>
+
+
+<label>
+Form Send Address
+</label>
+
+<textarea
+id="address"
+placeholder="Application Form भेजने का पूरा Address">
+</textarea>
+
+
+<label>
+Official Notification PDF Link
+</label>
+
+<input
+id="notification"
+placeholder="https://example.com/notification.pdf">
+
+
+<label>
+Application Form PDF Link
+</label>
+
+<input
+id="form"
+placeholder="https://example.com/application-form.pdf">
+
+
+<button
+id="saveButton"
+class="add-btn"
+onclick="saveVacancy()">
+
+➕ Add Vacancy
+
+</button>
+
+
+<button
+class="clear-btn"
+onclick="clearForm()">
+
+Clear
+
+</button>
+
+
+<button
+id="cancelButton"
+class="cancel-btn"
+onclick="cancelEdit()"
+style="display:none;">
+
+Cancel Edit
+
+</button>
+
+
+<br>
+
+
+<button
+class="close-btn"
+onclick="closeAdmin()">
+
+🏠 Website पर जाएं
+
+</button>
+
+</div>
+
+
+
+<div class="admin-list-title">
+
+📋 Added Vacancy List
+
+</div>
+
+
+<div id="adminVacancyList"></div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
 <script>
 
-/* ================= SEARCH ================= */
 
-function searchJobs(){
+// ======================================
+// ADMIN PIN
+// ======================================
 
-    const input =
-        document.getElementById("searchInput")
-        .value
-        .toLowerCase();
+const ADMIN_PIN = "1234";
 
-    const jobs =
-        document.querySelectorAll(".job-card");
+let editingId = null;
 
-    jobs.forEach(function(job){
 
-        const text =
-            job.innerText.toLowerCase();
+// ======================================
+// GET JOBS
+// ======================================
 
-        if(text.includes(input)){
-            job.style.display = "block";
-        }else{
-            job.style.display = "none";
+function getJobs(){
+
+    let data =
+    localStorage.getItem(
+        "offlineNaukriJobs"
+    );
+
+    if(data){
+
+        try{
+
+            return JSON.parse(data);
+
+        }catch(e){
+
+            return [];
+
         }
 
+    }
+
+    return [];
+
+}
+
+
+// ======================================
+// SAVE JOBS
+// ======================================
+
+function saveJobs(jobs){
+
+    localStorage.setItem(
+        "offlineNaukriJobs",
+        JSON.stringify(jobs)
+    );
+
+}
+
+
+// ======================================
+// OPEN ADMIN
+// ======================================
+
+function openAdmin(){
+
+    document.getElementById(
+        "websitePage"
+    ).style.display = "none";
+
+    document.getElementById(
+        "adminPage"
+    ).style.display = "block";
+
+    document.getElementById(
+        "loginBox"
+    ).style.display = "block";
+
+    document.getElementById(
+        "adminContent"
+    ).style.display = "none";
+
+    document.getElementById(
+        "adminPin"
+    ).value = "";
+
+}
+
+
+// ======================================
+// CLOSE ADMIN
+// ======================================
+
+function closeAdmin(){
+
+    document.getElementById(
+        "adminPage"
+    ).style.display = "none";
+
+    document.getElementById(
+        "websitePage"
+    ).style.display = "block";
+
+}
+
+
+// ======================================
+// LOGIN
+// ======================================
+
+function adminLogin(){
+
+    let pin =
+    document.getElementById(
+        "adminPin"
+    ).value;
+
+
+    if(pin === ADMIN_PIN){
+
+        document.getElementById(
+            "loginBox"
+        ).style.display = "none";
+
+        document.getElementById(
+            "adminContent"
+        ).style.display = "block";
+
+        displayAdminJobs();
+
+    }else{
+
+        alert(
+            "❌ गलत Admin PIN!"
+        );
+
+    }
+
+}
+
+
+// ======================================
+// ENTER KEY LOGIN
+// ======================================
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(
+            e.key === "Enter" &&
+            document.activeElement.id === "adminPin"
+        ){
+
+            adminLogin();
+
+        }
+
+    }
+);
+
+
+// ======================================
+// FORMAT DATE
+// ======================================
+
+function formatDate(date){
+
+    if(!date){
+
+        return "";
+
+    }
+
+    let parts =
+    date.split("-");
+
+    return parts[2] +
+    "-" +
+    parts[1] +
+    "-" +
+    parts[0];
+
+}
+
+
+// ======================================
+// REVERSE DATE
+// ======================================
+
+function reverseDate(date){
+
+    if(!date){
+
+        return "";
+
+    }
+
+    let parts =
+    date.split("-");
+
+    if(parts.length !== 3){
+
+        return "";
+
+    }
+
+    return parts[2] +
+    "-" +
+    parts[1] +
+    "-" +
+    parts[0];
+
+}
+
+
+// ======================================
+// SAVE / UPDATE VACANCY
+// ======================================
+
+function saveVacancy(){
+
+    let post =
+    document.getElementById(
+        "post"
+    ).value.trim();
+
+
+    if(!post){
+
+        alert(
+            "⚠️ Post Name जरूर भरें!"
+        );
+
+        return;
+
+    }
+
+
+    let job = {
+
+        id:
+        editingId ||
+        Date.now(),
+
+        post:
+        document.getElementById(
+            "post"
+        ).value.trim(),
+
+        department:
+        document.getElementById(
+            "department"
+        ).value.trim(),
+
+        total:
+        document.getElementById(
+            "total"
+        ).value.trim(),
+
+        qualification:
+        document.getElementById(
+            "qualification"
+        ).value.trim(),
+
+        age:
+        document.getElementById(
+            "age"
+        ).value.trim(),
+
+        start:
+        formatDate(
+            document.getElementById(
+                "start"
+            ).value
+        ),
+
+        last:
+        formatDate(
+            document.getElementById(
+                "last"
+            ).value
+        ),
+
+        fees:
+        document.getElementById(
+            "fees"
+        ).value.trim(),
+
+        selection:
+        document.getElementById(
+            "selection"
+        ).value.trim(),
+
+        address:
+        document.getElementById(
+            "address"
+        ).value.trim(),
+
+        notification:
+        document.getElementById(
+            "notification"
+        ).value.trim() || "#",
+
+        form:
+        document.getElementById(
+            "form"
+        ).value.trim() || "#"
+
+    };
+
+
+    let jobs =
+    getJobs();
+
+
+    if(editingId){
+
+        let index =
+        jobs.findIndex(
+            function(x){
+
+                return x.id === editingId;
+
+            }
+        );
+
+
+        if(index !== -1){
+
+            jobs[index] = job;
+
+        }
+
+
+        showAdminMessage(
+            "✅ Vacancy Successfully Updated!"
+        );
+
+    }else{
+
+        jobs.unshift(job);
+
+        showAdminMessage(
+            "✅ Vacancy Successfully Added!"
+        );
+
+    }
+
+
+    saveJobs(jobs);
+
+
+    editingId = null;
+
+
+    clearForm();
+
+
+    document.getElementById(
+        "formTitle"
+    ).innerText =
+    "➕ Add New Offline Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).innerText =
+    "➕ Add Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).className =
+    "add-btn";
+
+
+    document.getElementById(
+        "cancelButton"
+    ).style.display =
+    "none";
+
+
+    displayAdminJobs();
+
+    displayJobs();
+
+}
+
+
+// ======================================
+// CLEAR FORM
+// ======================================
+
+function clearForm(){
+
+    document.getElementById("post").value = "";
+
+    document.getElementById("department").value = "";
+
+    document.getElementById("total").value = "";
+
+    document.getElementById("qualification").value = "";
+
+    document.getElementById("age").value = "";
+
+    document.getElementById("start").value = "";
+
+    document.getElementById("last").value = "";
+
+    document.getElementById("fees").value = "";
+
+    document.getElementById("selection").value = "";
+
+    document.getElementById("address").value = "";
+
+    document.getElementById("notification").value = "";
+
+    document.getElementById("form").value = "";
+
+}
+
+
+// ======================================
+// EDIT VACANCY
+// ======================================
+
+function editVacancy(id){
+
+    let jobs =
+    getJobs();
+
+
+    let job =
+    jobs.find(
+        function(x){
+
+            return x.id === id;
+
+        }
+    );
+
+
+    if(!job){
+
+        return;
+
+    }
+
+
+    editingId = id;
+
+
+    document.getElementById("post").value =
+    job.post || "";
+
+
+    document.getElementById("department").value =
+    job.department || "";
+
+
+    document.getElementById("total").value =
+    job.total || "";
+
+
+    document.getElementById("qualification").value =
+    job.qualification || "";
+
+
+    document.getElementById("age").value =
+    job.age || "";
+
+
+    document.getElementById("start").value =
+    reverseDate(job.start);
+
+
+    document.getElementById("last").value =
+    reverseDate(job.last);
+
+
+    document.getElementById("fees").value =
+    job.fees || "";
+
+
+    document.getElementById("selection").value =
+    job.selection || "";
+
+
+    document.getElementById("address").value =
+    job.address || "";
+
+
+    document.getElementById("notification").value =
+    job.notification || "";
+
+
+    document.getElementById("form").value =
+    job.form || "";
+
+
+    document.getElementById(
+        "formTitle"
+    ).innerText =
+    "✏️ Edit Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).innerText =
+    "💾 Update Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).className =
+    "update-btn";
+
+
+    document.getElementById(
+        "cancelButton"
+    ).style.display =
+    "inline-block";
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
     });
 
 }
+
+
+// ======================================
+// CANCEL EDIT
+// ======================================
+
+function cancelEdit(){
+
+    editingId = null;
+
+    clearForm();
+
+
+    document.getElementById(
+        "formTitle"
+    ).innerText =
+    "➕ Add New Offline Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).innerText =
+    "➕ Add Vacancy";
+
+
+    document.getElementById(
+        "saveButton"
+    ).className =
+    "add-btn";
+
+
+    document.getElementById(
+        "cancelButton"
+    ).style.display =
+    "none";
+
+}
+
+
+// ======================================
+// DELETE VACANCY
+// ======================================
+
+function deleteVacancy(id){
+
+    let confirmDelete =
+    confirm(
+        "क्या आप इस Vacancy को Delete करना चाहते हैं?"
+    );
+
+
+    if(!confirmDelete){
+
+        return;
+
+    }
+
+
+    let jobs =
+    getJobs();
+
+
+    jobs =
+    jobs.filter(
+        function(job){
+
+            return job.id !== id;
+
+        }
+    );
+
+
+    saveJobs(jobs);
+
+
+    displayAdminJobs();
+
+    displayJobs();
+
+
+    showAdminMessage(
+        "🗑 Vacancy Successfully Deleted!"
+    );
+
+}
+
+
+// ======================================
+// ADMIN VACANCY LIST
+// ======================================
+
+function displayAdminJobs(){
+
+    let jobs =
+    getJobs();
+
+
+    let box =
+    document.getElementById(
+        "adminVacancyList"
+    );
+
+
+    box.innerHTML = "";
+
+
+    if(jobs.length === 0){
+
+        box.innerHTML = `
+
+        <div class="admin-job">
+
+        <p style="text-align:center">
+
+        अभी कोई Vacancy Add नहीं की गई।
+
+        </p>
+
+        </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    jobs.forEach(
+        function(job){
+
+            let div =
+            document.createElement(
+                "div"
+            );
+
+
+            div.className =
+            "admin-job";
+
+
+            div.innerHTML = `
+
+            <h3>
+            ${escapeHTML(job.post)}
+            </h3>
+
+            <p>
+            🏢 Department:
+            ${escapeHTML(job.department)}
+            </p>
+
+            <p>
+            👥 Total Posts:
+            ${escapeHTML(job.total)}
+            </p>
+
+            <p>
+            ⏰ Last Date:
+            <b>${escapeHTML(job.last)}</b>
+            </p>
+
+
+            <button
+            class="edit-btn"
+            onclick="editVacancy(${job.id})">
+
+            ✏️ Edit
+
+            </button>
+
+
+            <button
+            class="delete-btn"
+            onclick="deleteVacancy(${job.id})">
+
+            🗑 Delete
+
+            </button>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
+
+}
+
+
+// ======================================
+// ADMIN MESSAGE
+// ======================================
+
+function showAdminMessage(text){
+
+    let box =
+    document.getElementById(
+        "adminMessage"
+    );
+
+
+    box.innerText = text;
+
+    box.style.display =
+    "block";
+
+
+    setTimeout(
+        function(){
+
+            box.style.display =
+            "none";
+
+        },
+        3000
+    );
+
+}
+
+
+// ======================================
+// WEBSITE DISPLAY
+// ======================================
+
+function displayJobs(){
+
+    let jobs =
+    getJobs();
+
+
+    let container =
+    document.getElementById(
+        "jobsContainer"
+    );
+
+
+    container.innerHTML = "";
+
+
+    if(jobs.length === 0){
+
+        document.getElementById(
+            "empty"
+        ).style.display =
+        "block";
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "empty"
+    ).style.display =
+    "none";
+
+
+    jobs.forEach(
+        function(job){
+
+            let div =
+            document.createElement(
+                "div"
+            );
+
+
+            div.className =
+            "job";
+
+
+            div.innerHTML = `
+
+            <h2>
+            ${escapeHTML(job.post)}
+            </h2>
+
+
+            <div class="job-info">
+
+            <div>
+            🏢 Department:
+            <b>
+            ${escapeHTML(job.department)}
+            </b>
+            </div>
+
+
+            <div>
+            👥 Total Posts:
+            <b>
+            ${escapeHTML(job.total)}
+            </b>
+            </div>
+
+
+            <div>
+            🎓 Qualification:
+            <b>
+            ${escapeHTML(job.qualification)}
+            </b>
+            </div>
+
+
+            <div>
+            📅 Start Date:
+            <b>
+            ${escapeHTML(job.start)}
+            </b>
+            </div>
+
+
+            <div class="last-date">
+            ⏰ Last Date:
+            ${escapeHTML(job.last)}
+            </div>
+
+
+            <div>
+            📌 Apply Mode:
+            <b>
+            Offline
+            </b>
+            </div>
+
+            </div>
+
+
+            <span class="badge">
+            OFFLINE FORM
+            </span>
+
+
+            <br>
+
+
+            <a
+            class="view-btn"
+            onclick="showDetails(${job.id})">
+
+            View Full Details →
+
+            </a>
+
+
+            <div
+            class="details"
+            id="details-${job.id}">
+
+
+            <table>
+
+
+            <tr>
+
+            <th>
+            Post Name
+            </th>
+
+            <td>
+            ${escapeHTML(job.post)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Department
+            </th>
+
+            <td>
+            ${escapeHTML(job.department)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Total Posts
+            </th>
+
+            <td>
+            ${escapeHTML(job.total)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Qualification
+            </th>
+
+            <td>
+            ${escapeHTML(job.qualification)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Age Limit
+            </th>
+
+            <td>
+            ${escapeHTML(job.age)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Start Date
+            </th>
+
+            <td>
+            ${escapeHTML(job.start)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Last Date
+            </th>
+
+            <td class="last-date">
+            ${escapeHTML(job.last)}
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+            <th>
+            Application Fee
+            </th>
+
+            <td>
+            ${escapeHTML(job.fees)}
+            </td>
+
+            </tr>
+
+
+            </table>
+
+
+            <div class="section-title">
+            📝 Selection Process
+            </div>
+
+
+            <p style="padding:12px;line-height:1.7">
+
+            ${escapeHTML(job.selection)}
+
+            </p>
+
+
+            <div class="section-title">
+            📮 Form Send Address
+            </div>
+
+
+            <p style="padding:12px;line-height:1.7">
+
+            ${escapeHTML(job.address)}
+
+            </p>
+
+
+            <div class="download-buttons">
+
+
+            <a
+            class="notification-btn"
+            href="${safeLink(job.notification)}"
+            target="_blank">
+
+            📄 Official Notification
+
+            </a>
+
+
+            <a
+            class="form-btn"
+            href="${safeLink(job.form)}"
+            target="_blank">
+
+            📥 Application Form
+
+            </a>
+
+
+            </div>
+
+
+            </div>
+
+            `;
+
+
+            container.appendChild(div);
+
+        }
+    );
+
+}
+
+
+// ======================================
+// SHOW DETAILS
+// ======================================
+
+function showDetails(id){
+
+    let box =
+    document.getElementById(
+        "details-" + id
+    );
+
+
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+    }else{
+
+        box.style.display = "block";
+
+    }
+
+}
+
+
+// ======================================
+// SEARCH
+// ======================================
+
+function searchJobs(){
+
+    let value =
+    document.getElementById(
+        "searchInput"
+    ).value.toLowerCase();
+
+
+    let jobs =
+    document.querySelectorAll(
+        ".job"
+    );
+
+
+    let count = 0;
+
+
+    jobs.forEach(
+        function(job){
+
+            let text =
+            job.innerText.toLowerCase();
+
+
+            if(
+                text.includes(value)
+            ){
+
+                job.style.display =
+                "block";
+
+                count++;
+
+            }else{
+
+                job.style.display =
+                "none";
+
+            }
+
+        }
+    );
+
+
+    document.getElementById(
+        "empty"
+    ).style.display =
+    count === 0 ?
+    "block" :
+    "none";
+
+}
+
+
+// ======================================
+// SHOW WEBSITE
+// ======================================
+
+function showWebsite(){
+
+    document.getElementById(
+        "adminPage"
+    ).style.display =
+    "none";
+
+
+    document.getElementById(
+        "websitePage"
+    ).style.display =
+    "block";
+
+
+    displayJobs();
+
+}
+
+
+// ======================================
+// SAFE HTML
+// ======================================
+
+function escapeHTML(text){
+
+    return String(text || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+// ======================================
+// SAFE LINK
+// ======================================
+
+function safeLink(link){
+
+    if(
+        !link ||
+        link === "#"
+    ){
+
+        return "#";
+
+    }
+
+
+    return link;
+
+}
+
+
+// ======================================
+// START WEBSITE
+// ======================================
+
+displayJobs();
 
 </script>
 
