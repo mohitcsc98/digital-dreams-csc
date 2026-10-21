@@ -4,49 +4,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OFFLINE NAUKRI | Latest Offline Jobs</title>
+
+<title>OFFLINE NAUKRI | Latest Job Updates</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
 body{
-  font-family:Arial, sans-serif;
-  background:#f4f6f9;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f3f6fa;
   color:#222;
 }
-header{
-  background:linear-gradient(135deg,#0b5ed7,#063b8e);
-  color:white;
-  padding:15px;
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.top-nav{
+  width:100%;
+  background:#111827;
+  border-bottom:1px solid #374151;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:1000;
 }
+
+.nav-scroll{
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.nav-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+.nav-scroll a{
+  color:white;
+  text-decoration:none;
+  padding:13px 16px;
+  font-size:14px;
+  font-weight:600;
+  display:block;
+  transition:.2s;
+}
+
+.nav-scroll a:hover{
+  background:#0758c9;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  background:linear-gradient(135deg,#0758c9,#063b8e);
+  color:white;
+  padding:18px 15px;
+}
+
 .header-inner{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:10px;
+  gap:15px;
 }
+
 .logo{
-  font-size:25px;
+  font-size:28px;
   font-weight:bold;
 }
+
+.tagline{
+  font-size:13px;
+  margin-top:4px;
+  opacity:.9;
+}
+
 .admin-btn{
   background:#ff9800;
   border:0;
-  color:#fff;
-  padding:10px 15px;
+  color:white;
+  padding:11px 16px;
   border-radius:7px;
   cursor:pointer;
   font-weight:bold;
 }
+
+.admin-btn:hover{
+  background:#e68900;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container{
-  max-width:1100px;
+  max-width:1150px;
   margin:20px auto;
   padding:0 15px;
 }
+
+/* =========================
+   NOTICE
+========================= */
+
+.notice{
+  background:#fff3cd;
+  border-left:5px solid #ff9800;
+  padding:13px;
+  margin-bottom:18px;
+  border-radius:6px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
 .search{
   width:100%;
   padding:14px;
@@ -54,43 +139,53 @@ header{
   border-radius:8px;
   font-size:16px;
   margin-bottom:20px;
+  outline:none;
 }
-.notice{
-  background:#fff3cd;
-  border-left:5px solid #ff9800;
-  padding:12px;
-  margin-bottom:20px;
-  border-radius:6px;
+
+.search:focus{
+  border-color:#0758c9;
 }
+
+/* =========================
+   JOB CARDS
+========================= */
+
 .jobs{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
   gap:18px;
 }
+
 .card{
-  background:#fff;
+  background:white;
   border-radius:10px;
   padding:18px;
   box-shadow:0 3px 12px rgba(0,0,0,.08);
+  border:1px solid #eee;
 }
+
 .card h2{
   color:#0758c9;
   font-size:20px;
-  margin-bottom:8px;
+  margin-bottom:10px;
 }
+
 .card p{
   margin:7px 0;
   line-height:1.5;
 }
+
 .badge{
   display:inline-block;
   background:#e8f1ff;
   color:#0758c9;
-  padding:5px 8px;
+  padding:5px 9px;
   border-radius:5px;
-  font-size:13px;
+  font-size:12px;
+  font-weight:bold;
   margin-bottom:8px;
 }
+
 .btn{
   display:inline-block;
   padding:9px 13px;
@@ -98,67 +193,96 @@ header{
   border:0;
   cursor:pointer;
   text-decoration:none;
-  margin:5px 3px 0 0;
+  margin:6px 3px 0 0;
   font-weight:bold;
+  font-size:14px;
 }
+
 .details{
   background:#0758c9;
-  color:#fff;
+  color:white;
 }
+
 .apply{
   background:#198754;
-  color:#fff;
+  color:white;
 }
+
 .edit{
   background:#ffc107;
   color:#111;
 }
+
 .delete{
   background:#dc3545;
-  color:#fff;
+  color:white;
 }
+
 .empty{
   text-align:center;
   padding:40px;
   color:#777;
+  background:white;
+  border-radius:8px;
 }
-.modal{
+
+/* =========================
+   ADMIN PANEL
+========================= */
+
+.admin-panel{
   display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.65);
-  z-index:500;
-  overflow:auto;
-}
-.modal-box{
-  background:#fff;
-  width:95%;
-  max-width:600px;
-  margin:50px auto;
-  border-radius:10px;
+  background:white;
   padding:20px;
+  margin-bottom:25px;
+  border-radius:10px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
-.modal-box h2{
+
+.admin-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
   margin-bottom:15px;
+}
+
+.admin-panel h2{
   color:#0758c9;
 }
-.close{
-  float:right;
-  font-size:25px;
-  cursor:pointer;
+
+.admin-panel h3{
+  margin:15px 0;
 }
-input,textarea{
+
+.admin-panel label{
+  display:block;
+  font-weight:bold;
+  font-size:14px;
+  margin-top:8px;
+}
+
+input,
+textarea{
   width:100%;
   padding:11px;
-  margin:7px 0 12px;
+  margin:6px 0 10px;
   border:1px solid #ccc;
   border-radius:6px;
   font-size:15px;
+  outline:none;
 }
+
+input:focus,
+textarea:focus{
+  border-color:#0758c9;
+}
+
 textarea{
-  min-height:90px;
+  min-height:100px;
   resize:vertical;
 }
+
 .submit{
   background:#0758c9;
   color:white;
@@ -168,6 +292,7 @@ textarea{
   cursor:pointer;
   font-weight:bold;
 }
+
 .logout{
   background:#dc3545;
   color:white;
@@ -176,134 +301,419 @@ textarea{
   border-radius:6px;
   cursor:pointer;
 }
-.admin-panel{
-  display:none;
-  background:#fff;
-  padding:20px;
-  margin-bottom:25px;
-  border-radius:10px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-.admin-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:15px;
-}
+
 .admin-job{
   border:1px solid #ddd;
-  padding:12px;
+  padding:13px;
   margin:10px 0;
   border-radius:7px;
 }
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:2000;
+  overflow:auto;
+}
+
+.modal-box{
+  background:white;
+  width:95%;
+  max-width:600px;
+  margin:50px auto;
+  border-radius:10px;
+  padding:20px;
+}
+
+.modal-box h2{
+  margin-bottom:15px;
+  color:#0758c9;
+}
+
+.close{
+  float:right;
+  font-size:28px;
+  cursor:pointer;
+  color:#555;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
   background:#111827;
-  color:#fff;
+  color:white;
   text-align:center;
   padding:25px 10px;
   margin-top:40px;
 }
+
 .small{
   font-size:13px;
   color:#666;
 }
-@media(max-width:600px){
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .nav-scroll a{
+    padding:12px 13px;
+    font-size:13px;
+  }
+
   .header-inner{
     flex-direction:column;
     align-items:stretch;
+    text-align:center;
   }
+
   .admin-btn{
     width:100%;
   }
+
+  .logo{
+    font-size:24px;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">🔵 OFFLINE NAUKRI</div>
-    <button class="admin-btn" onclick="openLogin()">🔐 ADMIN LOGIN</button>
+
+<!-- =========================
+     TOP NAVIGATION
+========================= -->
+
+<nav class="top-nav">
+
+  <div class="nav-scroll">
+
+    <a href="https://www.vacancyform.com/">
+      Home
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/about_us">
+      About Us
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/viewmoreonline">
+      Online Form
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/offlinemore">
+      Offline Form
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/onlinemore/8">
+      Result
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/onlinemore/9">
+      Admit Card
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/onlinemore/10">
+      Syllabus
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/downloadmore/2">
+      DOWNLOAD
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/downloadmore/4">
+      Posters
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/linkonline">
+      Links
+    </a>
+
+    <a href="https://www.vacancyform.com/pages/contact_us">
+      Contact
+    </a>
+
   </div>
+
+</nav>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="header-inner">
+
+    <div>
+
+      <div class="logo">
+        🔵 OFFLINE NAUKRI
+      </div>
+
+      <div class="tagline">
+        Latest Offline Vacancy & Job Updates
+      </div>
+
+    </div>
+
+    <button
+      class="admin-btn"
+      onclick="openLogin()"
+    >
+      🔐 ADMIN LOGIN
+    </button>
+
+  </div>
+
 </header>
+
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <div class="container">
 
+
   <div class="notice">
-    📢 <b>OFFLINE NAUKRI</b> — Latest Offline Vacancy, Form & Recruitment Updates
+
+    📢 <b>OFFLINE NAUKRI</b>
+    — Latest Offline Vacancy, Form & Recruitment Updates
+
   </div>
 
-  <!-- ADMIN PANEL -->
-  <div class="admin-panel" id="adminPanel">
+
+  <!-- =========================
+       ADMIN PANEL
+  ========================= -->
+
+  <div
+    class="admin-panel"
+    id="adminPanel"
+  >
 
     <div class="admin-top">
-      <h2>⚙️ Admin Panel</h2>
-      <button class="logout" onclick="logout()">Logout</button>
+
+      <h2>
+        ⚙️ Admin Panel
+      </h2>
+
+      <button
+        class="logout"
+        onclick="logout()"
+      >
+        Logout
+      </button>
+
     </div>
 
+
     <p class="small">
-      Logged in as: <b id="adminEmail"></b>
+
+      Logged in as:
+      <b id="adminEmail"></b>
+
     </p>
+
 
     <hr style="margin:15px 0">
 
-    <h3>➕ Add / Edit Vacancy</h3>
 
-    <input type="hidden" id="editId">
+    <h3>
+      ➕ Add / Edit Vacancy
+    </h3>
 
-    <label>Post Name</label>
-    <input id="post" placeholder="Example: Clerk">
 
-    <label>Department</label>
-    <input id="department" placeholder="Example: Haryana Govt">
+    <input
+      type="hidden"
+      id="editId"
+    >
 
-    <label>Total Posts</label>
-    <input id="posts" placeholder="Example: 100">
 
-    <label>Qualification</label>
-    <input id="qualification" placeholder="Example: 12th Pass">
+    <label>
+      Post Name
+    </label>
 
-    <label>Age Limit</label>
-    <input id="age" placeholder="Example: 18-27 Years">
+    <input
+      id="post"
+      placeholder="Example: Clerk"
+    >
 
-    <label>Application Fee</label>
-    <input id="fee" placeholder="Example: ₹100">
 
-    <label>Start Date</label>
-    <input id="start" placeholder="Example: 01/10/2026">
+    <label>
+      Department
+    </label>
 
-    <label>Last Date</label>
-    <input id="last" placeholder="Example: 30/10/2026">
+    <input
+      id="department"
+      placeholder="Example: Haryana Govt"
+    >
 
-    <label>Selection Process</label>
-    <input id="selection" placeholder="Example: Written Exam + Interview">
 
-    <label>Job Mode</label>
-    <input id="mode" value="Offline">
+    <label>
+      Total Posts
+    </label>
 
-    <label>Address / Exam Location</label>
-    <input id="address" placeholder="Example: District Jind, Haryana">
+    <input
+      id="posts"
+      placeholder="Example: 100"
+    >
 
-    <label>Notification Link</label>
-    <input id="notification" placeholder="https://example.com/notification.pdf">
 
-    <label>Application Form Link</label>
-    <input id="application" placeholder="https://example.com/form">
+    <label>
+      Qualification
+    </label>
 
-    <label>Full Details</label>
-    <textarea id="details" placeholder="Vacancy की पूरी जानकारी लिखें..."></textarea>
+    <input
+      id="qualification"
+      placeholder="Example: 12th Pass"
+    >
 
-    <button class="submit" onclick="saveJob()">💾 Save Vacancy</button>
-    <button class="btn" onclick="clearForm()">Clear</button>
+
+    <label>
+      Age Limit
+    </label>
+
+    <input
+      id="age"
+      placeholder="Example: 18-27 Years"
+    >
+
+
+    <label>
+      Application Fee
+    </label>
+
+    <input
+      id="fee"
+      placeholder="Example: ₹100"
+    >
+
+
+    <label>
+      Start Date
+    </label>
+
+    <input
+      id="start"
+      placeholder="Example: 01/10/2026"
+    >
+
+
+    <label>
+      Last Date
+    </label>
+
+    <input
+      id="last"
+      placeholder="Example: 30/10/2026"
+    >
+
+
+    <label>
+      Selection Process
+    </label>
+
+    <input
+      id="selection"
+      placeholder="Example: Written Exam + Interview"
+    >
+
+
+    <label>
+      Job Mode
+    </label>
+
+    <input
+      id="mode"
+      value="Offline"
+    >
+
+
+    <label>
+      Address / Location
+    </label>
+
+    <input
+      id="address"
+      placeholder="Example: Jind, Haryana"
+    >
+
+
+    <label>
+      Notification Link
+    </label>
+
+    <input
+      id="notification"
+      placeholder="https://example.com/notification.pdf"
+    >
+
+
+    <label>
+      Application Form Link
+    </label>
+
+    <input
+      id="application"
+      placeholder="https://example.com/form"
+    >
+
+
+    <label>
+      Full Details
+    </label>
+
+    <textarea
+      id="details"
+      placeholder="Vacancy की पूरी जानकारी लिखें..."
+    ></textarea>
+
+
+    <button
+      class="submit"
+      onclick="saveJob()"
+    >
+      💾 Save Vacancy
+    </button>
+
+
+    <button
+      class="btn"
+      onclick="clearForm()"
+    >
+      Clear
+    </button>
+
 
     <hr style="margin:20px 0">
 
-    <h3>📋 Manage Vacancies</h3>
+
+    <h3>
+      📋 Manage Vacancies
+    </h3>
+
+
     <div id="adminJobs"></div>
 
   </div>
+
+
+  <!-- SEARCH -->
 
   <input
     type="text"
@@ -313,72 +723,149 @@ footer{
     oninput="searchJobs()"
   >
 
-  <div id="jobs" class="jobs">
-    <div class="empty">⏳ Vacancies loading...</div>
+
+  <!-- JOBS -->
+
+  <div
+    id="jobs"
+    class="jobs"
+  >
+
+    <div class="empty">
+      ⏳ Vacancies loading...
+    </div>
+
   </div>
+
 
 </div>
 
-<!-- LOGIN MODAL -->
-<div class="modal" id="loginModal">
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="loginModal"
+>
+
   <div class="modal-box">
 
-    <span class="close" onclick="closeLogin()">×</span>
+    <span
+      class="close"
+      onclick="closeLogin()"
+    >
+      ×
+    </span>
 
-    <h2>🔐 Admin Login</h2>
 
-    <label>Email</label>
+    <h2>
+      🔐 Admin Login
+    </h2>
+
+
+    <label>
+      Email
+    </label>
+
     <input
       type="email"
       id="loginEmail"
       placeholder="Admin Email"
     >
 
-    <label>Password</label>
+
+    <label>
+      Password
+    </label>
+
     <input
       type="password"
       id="loginPassword"
       placeholder="Password"
     >
 
-    <button class="submit" onclick="login()">
+
+    <button
+      class="submit"
+      onclick="login()"
+    >
       Login
     </button>
 
-    <p id="loginMessage" style="margin-top:12px;color:red;"></p>
+
+    <p
+      id="loginMessage"
+      style="margin-top:12px;color:red;"
+    ></p>
 
   </div>
+
 </div>
 
-<!-- DETAILS MODAL -->
-<div class="modal" id="detailsModal">
+
+<!-- =========================
+     DETAILS MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="detailsModal"
+>
+
   <div class="modal-box">
 
-    <span class="close" onclick="closeDetails()">×</span>
+    <span
+      class="close"
+      onclick="closeDetails()"
+    >
+      ×
+    </span>
+
 
     <h2 id="detailTitle"></h2>
+
 
     <div id="detailContent"></div>
 
   </div>
+
 </div>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <b>OFFLINE NAUKRI</b>
+
+  <b>
+    OFFLINE NAUKRI
+  </b>
+
   <p style="margin-top:8px;">
     Offline Vacancy & Job Updates
   </p>
+
   <p style="margin-top:8px;font-size:13px;">
     © 2026 OFFLINE NAUKRI
   </p>
+
 </footer>
 
 
-<!-- FIREBASE -->
+<!-- =========================
+     FIREBASE
+========================= -->
+
 <script type="module">
 
-import { initializeApp }
+import {
+  initializeApp
+}
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
 
 import {
   getAuth,
@@ -387,6 +874,7 @@ import {
   onAuthStateChanged
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
 
 import {
   getFirestore,
@@ -401,87 +889,128 @@ import {
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 
-/* ==============================
+/* =========================
    FIREBASE CONFIG
-================================ */
+========================= */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
-  authDomain: "digital-dreams-pegan.firebaseapp.com",
-  projectId: "digital-dreams-pegan",
-  storageBucket: "digital-dreams-pegan.firebasestorage.app",
-  messagingSenderId: "1053549608341",
-  appId: "1:1053549608341:web:bb602038ebda2732830a9c",
-  measurementId: "G-6EKZP1D3XQ"
+
+  apiKey:
+  "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+
+  authDomain:
+  "digital-dreams-pegan.firebaseapp.com",
+
+  projectId:
+  "digital-dreams-pegan",
+
+  storageBucket:
+  "digital-dreams-pegan.firebasestorage.app",
+
+  messagingSenderId:
+  "1053549608341",
+
+  appId:
+  "1:1053549608341:web:bb602038ebda2732830a9c",
+
+  measurementId:
+  "G-6EKZP1D3XQ3"
+
 };
 
 
-/* ==============================
-   INITIALIZE FIREBASE
-================================ */
+/* =========================
+   INITIALIZE
+========================= */
 
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-
-const db = getFirestore(app);
+const app =
+  initializeApp(firebaseConfig);
 
 
-/* ==============================
-   ADMIN EMAIL
-================================ */
-
-const ADMIN_EMAIL = "mayankhr80@gmail.com";
+const auth =
+  getAuth(app);
 
 
-/* ==============================
-   GLOBAL DATA
-================================ */
+const db =
+  getFirestore(app);
+
+
+/* =========================
+   ADMIN
+========================= */
+
+const ADMIN_EMAIL =
+  "mayankhr80@gmail.com";
+
 
 let allJobs = [];
 
 
-/* ==============================
+const vacanciesRef =
+  collection(
+    db,
+    "vacancies"
+  );
+
+
+/* =========================
    LOGIN MODAL
-================================ */
+========================= */
 
 window.openLogin = function(){
 
-  document.getElementById("loginModal").style.display = "block";
+  document
+    .getElementById("loginModal")
+    .style.display = "block";
 
 };
+
 
 window.closeLogin = function(){
 
-  document.getElementById("loginModal").style.display = "none";
+  document
+    .getElementById("loginModal")
+    .style.display = "none";
 
 };
 
 
-/* ==============================
-   ADMIN LOGIN
-================================ */
+/* =========================
+   LOGIN
+========================= */
 
 window.login = async function(){
 
   const email =
-    document.getElementById("loginEmail").value.trim();
+    document
+      .getElementById("loginEmail")
+      .value
+      .trim();
+
 
   const password =
-    document.getElementById("loginPassword").value;
+    document
+      .getElementById("loginPassword")
+      .value;
+
 
   const message =
-    document.getElementById("loginMessage");
+    document
+      .getElementById("loginMessage");
 
-  message.style.color = "red";
 
-  if(email !== ADMIN_EMAIL){
+  if(
+    email.toLowerCase() !==
+    ADMIN_EMAIL.toLowerCase()
+  ){
 
     message.innerText =
       "❌ यह Admin Email नहीं है।";
 
     return;
+
   }
+
 
   if(!password){
 
@@ -489,7 +1018,9 @@ window.login = async function(){
       "❌ Password डालें।";
 
     return;
+
   }
+
 
   try{
 
@@ -499,31 +1030,39 @@ window.login = async function(){
       password
     );
 
-    message.style.color = "green";
+
+    message.style.color =
+      "green";
+
     message.innerText =
       "✅ Login successful";
 
-    setTimeout(() => {
 
-      closeLogin();
+    setTimeout(
+      closeLogin,
+      500
+    );
 
-    }, 500);
 
   }catch(error){
 
     console.error(error);
 
+    message.style.color =
+      "red";
+
     message.innerText =
-      "❌ Login failed: " + error.message;
+      "❌ Login failed: " +
+      error.message;
 
   }
 
 };
 
 
-/* ==============================
+/* =========================
    LOGOUT
-================================ */
+========================= */
 
 window.logout = async function(){
 
@@ -532,45 +1071,52 @@ window.logout = async function(){
 };
 
 
-/* ==============================
+/* =========================
    AUTH STATE
-================================ */
+========================= */
 
-onAuthStateChanged(auth, user => {
+onAuthStateChanged(
+  auth,
+  user => {
 
-  const panel =
-    document.getElementById("adminPanel");
+    const panel =
+      document
+        .getElementById("adminPanel");
 
-  const email =
-    document.getElementById("adminEmail");
 
-  if(
-    user &&
-    user.email &&
-    user.email.toLowerCase() ===
-    ADMIN_EMAIL.toLowerCase()
-  ){
+    const email =
+      document
+        .getElementById("adminEmail");
 
-    panel.style.display = "block";
 
-    email.innerText = user.email;
+    if(
+      user &&
+      user.email &&
+      user.email.toLowerCase() ===
+      ADMIN_EMAIL.toLowerCase()
+    ){
 
-  }else{
+      panel.style.display =
+        "block";
 
-    panel.style.display = "none";
+
+      email.innerText =
+        user.email;
+
+    }else{
+
+      panel.style.display =
+        "none";
+
+    }
 
   }
+);
 
-});
 
-
-/* ==============================
-   LOAD VACANCIES
-================================ */
-
-const vacanciesRef =
-  collection(db, "vacancies");
-
+/* =========================
+   FIRESTORE DATA
+========================= */
 
 onSnapshot(
   vacanciesRef,
@@ -579,111 +1125,188 @@ onSnapshot(
 
     allJobs = [];
 
-    snapshot.forEach(item => {
 
-      allJobs.push({
+    snapshot.forEach(
+      item => {
 
-        id: item.id,
-        ...item.data()
+        allJobs.push({
 
-      });
+          id:item.id,
+          ...item.data()
 
-    });
+        });
+
+      }
+    );
+
 
     renderJobs(allJobs);
+
     renderAdminJobs(allJobs);
 
   },
+
 
   error => {
 
     console.error(error);
 
-    document.getElementById("jobs").innerHTML =
-      `<div class="empty">
-        ❌ Data load नहीं हो पाया।
-        <br><br>
-        Firebase Firestore Rules और Database check करें।
-      </div>`;
+
+    document
+      .getElementById("jobs")
+      .innerHTML = `
+
+        <div class="empty">
+
+          ❌ Data load नहीं हो पाया।
+
+          <br><br>
+
+          Firebase Firestore Rules
+          और Database check करें।
+
+        </div>
+
+      `;
 
   }
 
 );
 
 
-/* ==============================
-   RENDER PUBLIC JOBS
-================================ */
+/* =========================
+   PUBLIC JOBS
+========================= */
 
 function renderJobs(jobs){
 
   const container =
-    document.getElementById("jobs");
+    document
+      .getElementById("jobs");
+
 
   if(jobs.length === 0){
 
-    container.innerHTML =
-      `<div class="empty">
+    container.innerHTML = `
+
+      <div class="empty">
+
         अभी कोई vacancy उपलब्ध नहीं है।
-      </div>`;
+
+      </div>
+
+    `;
 
     return;
+
   }
 
+
   container.innerHTML =
+
     jobs.map(job => `
 
       <div class="card">
 
         <span class="badge">
-          ${escapeHTML(job.mode || "Offline")}
+
+          ${escapeHTML(
+            job.mode ||
+            "Offline"
+          )}
+
         </span>
 
+
         <h2>
-          ${escapeHTML(job.post || "Vacancy")}
+
+          ${escapeHTML(
+            job.post ||
+            "Vacancy"
+          )}
+
         </h2>
 
+
         <p>
+
           🏢 <b>Department:</b>
-          ${escapeHTML(job.department || "-")}
+
+          ${escapeHTML(
+            job.department ||
+            "-"
+          )}
+
         </p>
 
+
         <p>
+
           👥 <b>Total Posts:</b>
-          ${escapeHTML(job.posts || "-")}
+
+          ${escapeHTML(
+            job.posts ||
+            "-"
+          )}
+
         </p>
 
+
         <p>
+
           🎓 <b>Qualification:</b>
-          ${escapeHTML(job.qualification || "-")}
+
+          ${escapeHTML(
+            job.qualification ||
+            "-"
+          )}
+
         </p>
 
+
         <p>
+
           📅 <b>Last Date:</b>
-          ${escapeHTML(job.last || "-")}
+
+          ${escapeHTML(
+            job.last ||
+            "-"
+          )}
+
         </p>
+
 
         <button
           class="btn details"
           onclick="showDetails('${job.id}')"
         >
+
           View Details
+
         </button>
+
 
         ${
           job.application
           ?
-          `<a
+          `
+
+          <a
             class="btn apply"
             href="${safeURL(job.application)}"
             target="_blank"
             rel="noopener"
           >
+
             Apply
-          </a>`
+
+          </a>
+
+          `
           :
           ""
         }
+
 
       </div>
 
@@ -692,9 +1315,9 @@ function renderJobs(jobs){
 }
 
 
-/* ==============================
+/* =========================
    SEARCH
-================================ */
+========================= */
 
 window.searchJobs = function(){
 
@@ -705,171 +1328,270 @@ window.searchJobs = function(){
       .toLowerCase()
       .trim();
 
+
   const filtered =
-    allJobs.filter(job => {
+    allJobs.filter(
+      job => {
 
-      const text = `
+        const text = `
 
-        ${job.post || ""}
-        ${job.department || ""}
-        ${job.qualification || ""}
-        ${job.mode || ""}
-        ${job.address || ""}
+          ${job.post || ""}
 
-      `.toLowerCase();
+          ${job.department || ""}
 
-      return text.includes(value);
+          ${job.qualification || ""}
 
-    });
+          ${job.mode || ""}
+
+          ${job.address || ""}
+
+        `.toLowerCase();
+
+
+        return text.includes(value);
+
+      }
+    );
+
 
   renderJobs(filtered);
 
 };
 
 
-/* ==============================
+/* =========================
    DETAILS
-================================ */
+========================= */
 
 window.showDetails = function(id){
 
   const job =
-    allJobs.find(item => item.id === id);
+    allJobs.find(
+      item => item.id === id
+    );
 
-  if(!job) return;
 
-  document.getElementById("detailTitle").innerText =
-    job.post || "Vacancy Details";
+  if(!job)
+    return;
 
-  document.getElementById("detailContent").innerHTML = `
 
-    <p>🏢 <b>Department:</b>
-    ${escapeHTML(job.department || "-")}</p>
+  document
+    .getElementById("detailTitle")
+    .innerText =
+      job.post ||
+      "Vacancy Details";
 
-    <p>👥 <b>Total Posts:</b>
-    ${escapeHTML(job.posts || "-")}</p>
 
-    <p>🎓 <b>Qualification:</b>
-    ${escapeHTML(job.qualification || "-")}</p>
+  document
+    .getElementById("detailContent")
+    .innerHTML = `
 
-    <p>🎂 <b>Age Limit:</b>
-    ${escapeHTML(job.age || "-")}</p>
+      <p>
+        🏢 <b>Department:</b>
+        ${escapeHTML(job.department || "-")}
+      </p>
 
-    <p>💰 <b>Application Fee:</b>
-    ${escapeHTML(job.fee || "-")}</p>
 
-    <p>📅 <b>Start Date:</b>
-    ${escapeHTML(job.start || "-")}</p>
+      <p>
+        👥 <b>Total Posts:</b>
+        ${escapeHTML(job.posts || "-")}
+      </p>
 
-    <p>📅 <b>Last Date:</b>
-    ${escapeHTML(job.last || "-")}</p>
 
-    <p>📝 <b>Selection:</b>
-    ${escapeHTML(job.selection || "-")}</p>
+      <p>
+        🎓 <b>Qualification:</b>
+        ${escapeHTML(job.qualification || "-")}
+      </p>
 
-    <p>📍 <b>Address:</b>
-    ${escapeHTML(job.address || "-")}</p>
 
-    <p style="margin-top:12px;">
-      ${escapeHTML(job.details || "No details available.")}
-    </p>
+      <p>
+        🎂 <b>Age Limit:</b>
+        ${escapeHTML(job.age || "-")}
+      </p>
 
-    <div style="margin-top:15px;">
 
-      ${
-        job.notification
-        ?
-        `<a
-          class="btn details"
-          href="${safeURL(job.notification)}"
-          target="_blank"
-          rel="noopener"
-        >
-          📄 Notification
-        </a>`
-        :
-        ""
-      }
+      <p>
+        💰 <b>Application Fee:</b>
+        ${escapeHTML(job.fee || "-")}
+      </p>
 
-      ${
-        job.application
-        ?
-        `<a
-          class="btn apply"
-          href="${safeURL(job.application)}"
-          target="_blank"
-          rel="noopener"
-        >
-          📝 Application Form
-        </a>`
-        :
-        ""
-      }
 
-    </div>
+      <p>
+        📅 <b>Start Date:</b>
+        ${escapeHTML(job.start || "-")}
+      </p>
 
-  `;
 
-  document.getElementById("detailsModal").style.display =
-    "block";
+      <p>
+        📅 <b>Last Date:</b>
+        ${escapeHTML(job.last || "-")}
+      </p>
+
+
+      <p>
+        📝 <b>Selection:</b>
+        ${escapeHTML(job.selection || "-")}
+      </p>
+
+
+      <p>
+        📍 <b>Address:</b>
+        ${escapeHTML(job.address || "-")}
+      </p>
+
+
+      <p style="margin-top:12px;white-space:pre-line;">
+
+        ${escapeHTML(
+          job.details ||
+          "No details available."
+        )}
+
+      </p>
+
+
+      <div style="margin-top:15px;">
+
+        ${
+          job.notification
+          ?
+          `
+
+          <a
+            class="btn details"
+            href="${safeURL(job.notification)}"
+            target="_blank"
+            rel="noopener"
+          >
+
+            📄 Notification
+
+          </a>
+
+          `
+          :
+          ""
+        }
+
+
+        ${
+          job.application
+          ?
+          `
+
+          <a
+            class="btn apply"
+            href="${safeURL(job.application)}"
+            target="_blank"
+            rel="noopener"
+          >
+
+            📝 Application Form
+
+          </a>
+
+          `
+          :
+          ""
+        }
+
+      </div>
+
+    `;
+
+
+  document
+    .getElementById("detailsModal")
+    .style.display =
+      "block";
 
 };
 
 
 window.closeDetails = function(){
 
-  document.getElementById("detailsModal").style.display =
-    "none";
+  document
+    .getElementById("detailsModal")
+    .style.display =
+      "none";
 
 };
 
 
-/* ==============================
-   ADMIN JOB LIST
-================================ */
+/* =========================
+   ADMIN JOBS
+========================= */
 
 function renderAdminJobs(jobs){
 
   const container =
-    document.getElementById("adminJobs");
+    document
+      .getElementById("adminJobs");
+
 
   if(jobs.length === 0){
 
-    container.innerHTML =
-      `<p class="small">अभी कोई vacancy नहीं है।</p>`;
+    container.innerHTML = `
+
+      <p class="small">
+
+        अभी कोई vacancy नहीं है।
+
+      </p>
+
+    `;
 
     return;
+
   }
 
+
   container.innerHTML =
+
     jobs.map(job => `
 
       <div class="admin-job">
 
         <b>
-          ${escapeHTML(job.post || "Vacancy")}
+
+          ${escapeHTML(
+            job.post ||
+            "Vacancy"
+          )}
+
         </b>
 
         <br>
 
         <span class="small">
-          ${escapeHTML(job.department || "")}
+
+          ${escapeHTML(
+            job.department ||
+            ""
+          )}
+
         </span>
 
         <br><br>
+
 
         <button
           class="btn edit"
           onclick="editJob('${job.id}')"
         >
+
           ✏️ Edit
+
         </button>
+
 
         <button
           class="btn delete"
           onclick="deleteJob('${job.id}')"
         >
+
           🗑️ Delete
+
         </button>
 
       </div>
@@ -879,13 +1601,15 @@ function renderAdminJobs(jobs){
 }
 
 
-/* ==============================
-   SAVE / UPDATE JOB
-================================ */
+/* =========================
+   SAVE JOB
+========================= */
 
 window.saveJob = async function(){
 
-  const user = auth.currentUser;
+  const user =
+    auth.currentUser;
+
 
   if(
     !user ||
@@ -893,7 +1617,9 @@ window.saveJob = async function(){
     ADMIN_EMAIL.toLowerCase()
   ){
 
-    alert("❌ Admin login required");
+    alert(
+      "❌ Admin login required"
+    );
 
     return;
 
@@ -903,46 +1629,102 @@ window.saveJob = async function(){
   const data = {
 
     post:
-      document.getElementById("post").value.trim(),
+      document
+        .getElementById("post")
+        .value
+        .trim(),
+
 
     department:
-      document.getElementById("department").value.trim(),
+      document
+        .getElementById("department")
+        .value
+        .trim(),
+
 
     posts:
-      document.getElementById("posts").value.trim(),
+      document
+        .getElementById("posts")
+        .value
+        .trim(),
+
 
     qualification:
-      document.getElementById("qualification").value.trim(),
+      document
+        .getElementById("qualification")
+        .value
+        .trim(),
+
 
     age:
-      document.getElementById("age").value.trim(),
+      document
+        .getElementById("age")
+        .value
+        .trim(),
+
 
     fee:
-      document.getElementById("fee").value.trim(),
+      document
+        .getElementById("fee")
+        .value
+        .trim(),
+
 
     start:
-      document.getElementById("start").value.trim(),
+      document
+        .getElementById("start")
+        .value
+        .trim(),
+
 
     last:
-      document.getElementById("last").value.trim(),
+      document
+        .getElementById("last")
+        .value
+        .trim(),
+
 
     selection:
-      document.getElementById("selection").value.trim(),
+      document
+        .getElementById("selection")
+        .value
+        .trim(),
+
 
     mode:
-      document.getElementById("mode").value.trim(),
+      document
+        .getElementById("mode")
+        .value
+        .trim(),
+
 
     address:
-      document.getElementById("address").value.trim(),
+      document
+        .getElementById("address")
+        .value
+        .trim(),
+
 
     notification:
-      document.getElementById("notification").value.trim(),
+      document
+        .getElementById("notification")
+        .value
+        .trim(),
+
 
     application:
-      document.getElementById("application").value.trim(),
+      document
+        .getElementById("application")
+        .value
+        .trim(),
+
 
     details:
-      document.getElementById("details").value.trim(),
+      document
+        .getElementById("details")
+        .value
+        .trim(),
+
 
     updatedAt:
       serverTimestamp()
@@ -952,7 +1734,9 @@ window.saveJob = async function(){
 
   if(!data.post){
 
-    alert("Post Name डालना जरूरी है.");
+    alert(
+      "Post Name डालना जरूरी है।"
+    );
 
     return;
 
@@ -960,7 +1744,9 @@ window.saveJob = async function(){
 
 
   const editId =
-    document.getElementById("editId").value;
+    document
+      .getElementById("editId")
+      .value;
 
 
   try{
@@ -968,34 +1754,58 @@ window.saveJob = async function(){
     if(editId){
 
       await updateDoc(
-        doc(db, "vacancies", editId),
+
+        doc(
+          db,
+          "vacancies",
+          editId
+        ),
+
         data
+
       );
 
-      alert("✅ Vacancy updated successfully.");
+
+      alert(
+        "✅ Vacancy updated successfully."
+      );
 
     }else{
 
       await addDoc(
+
         vacanciesRef,
+
         {
+
           ...data,
-          createdAt: serverTimestamp()
+
+          createdAt:
+            serverTimestamp()
+
         }
+
       );
 
-      alert("✅ Vacancy added successfully.");
+
+      alert(
+        "✅ Vacancy added successfully."
+      );
 
     }
 
+
     clearForm();
+
 
   }catch(error){
 
     console.error(error);
 
+
     alert(
-      "❌ Save failed: " + error.message
+      "❌ Save failed: " +
+      error.message
     );
 
   }
@@ -1003,78 +1813,133 @@ window.saveJob = async function(){
 };
 
 
-/* ==============================
+/* =========================
    EDIT JOB
-================================ */
+========================= */
 
 window.editJob = function(id){
 
   const job =
-    allJobs.find(item => item.id === id);
+    allJobs.find(
+      item => item.id === id
+    );
 
-  if(!job) return;
+
+  if(!job)
+    return;
 
 
-  document.getElementById("editId").value =
-    job.id;
+  document
+    .getElementById("editId")
+    .value =
+      job.id;
 
-  document.getElementById("post").value =
-    job.post || "";
 
-  document.getElementById("department").value =
-    job.department || "";
+  document
+    .getElementById("post")
+    .value =
+      job.post || "";
 
-  document.getElementById("posts").value =
-    job.posts || "";
 
-  document.getElementById("qualification").value =
-    job.qualification || "";
+  document
+    .getElementById("department")
+    .value =
+      job.department || "";
 
-  document.getElementById("age").value =
-    job.age || "";
 
-  document.getElementById("fee").value =
-    job.fee || "";
+  document
+    .getElementById("posts")
+    .value =
+      job.posts || "";
 
-  document.getElementById("start").value =
-    job.start || "";
 
-  document.getElementById("last").value =
-    job.last || "";
+  document
+    .getElementById("qualification")
+    .value =
+      job.qualification || "";
 
-  document.getElementById("selection").value =
-    job.selection || "";
 
-  document.getElementById("mode").value =
-    job.mode || "Offline";
+  document
+    .getElementById("age")
+    .value =
+      job.age || "";
 
-  document.getElementById("address").value =
-    job.address || "";
 
-  document.getElementById("notification").value =
-    job.notification || "";
+  document
+    .getElementById("fee")
+    .value =
+      job.fee || "";
 
-  document.getElementById("application").value =
-    job.application || "";
 
-  document.getElementById("details").value =
-    job.details || "";
+  document
+    .getElementById("start")
+    .value =
+      job.start || "";
+
+
+  document
+    .getElementById("last")
+    .value =
+      job.last || "";
+
+
+  document
+    .getElementById("selection")
+    .value =
+      job.selection || "";
+
+
+  document
+    .getElementById("mode")
+    .value =
+      job.mode ||
+      "Offline";
+
+
+  document
+    .getElementById("address")
+    .value =
+      job.address || "";
+
+
+  document
+    .getElementById("notification")
+    .value =
+      job.notification || "";
+
+
+  document
+    .getElementById("application")
+    .value =
+      job.application || "";
+
+
+  document
+    .getElementById("details")
+    .value =
+      job.details || "";
+
 
   window.scrollTo({
+
     top:0,
+
     behavior:"smooth"
+
   });
 
 };
 
 
-/* ==============================
+/* =========================
    DELETE JOB
-================================ */
+========================= */
 
 window.deleteJob = async function(id){
 
-  const user = auth.currentUser;
+  const user =
+    auth.currentUser;
+
 
   if(
     !user ||
@@ -1082,7 +1947,9 @@ window.deleteJob = async function(id){
     ADMIN_EMAIL.toLowerCase()
   ){
 
-    alert("❌ Admin login required");
+    alert(
+      "❌ Admin login required"
+    );
 
     return;
 
@@ -1094,23 +1961,37 @@ window.deleteJob = async function(id){
       "क्या आप इस vacancy को delete करना चाहते हैं?"
     );
 
-  if(!ok) return;
+
+  if(!ok)
+    return;
 
 
   try{
 
     await deleteDoc(
-      doc(db, "vacancies", id)
+
+      doc(
+        db,
+        "vacancies",
+        id
+      )
+
     );
 
-    alert("✅ Vacancy deleted.");
+
+    alert(
+      "✅ Vacancy deleted."
+    );
+
 
   }catch(error){
 
     console.error(error);
 
+
     alert(
-      "❌ Delete failed: " + error.message
+      "❌ Delete failed: " +
+      error.message
     );
 
   }
@@ -1118,44 +1999,103 @@ window.deleteJob = async function(id){
 };
 
 
-/* ==============================
+/* =========================
    CLEAR FORM
-================================ */
+========================= */
 
 window.clearForm = function(){
 
-  document.getElementById("editId").value = "";
+  document
+    .getElementById("editId")
+    .value = "";
 
-  document.getElementById("post").value = "";
-  document.getElementById("department").value = "";
-  document.getElementById("posts").value = "";
-  document.getElementById("qualification").value = "";
-  document.getElementById("age").value = "";
-  document.getElementById("fee").value = "";
-  document.getElementById("start").value = "";
-  document.getElementById("last").value = "";
-  document.getElementById("selection").value = "";
-  document.getElementById("mode").value = "Offline";
-  document.getElementById("address").value = "";
-  document.getElementById("notification").value = "";
-  document.getElementById("application").value = "";
-  document.getElementById("details").value = "";
+
+  document
+    .getElementById("post")
+    .value = "";
+
+
+  document
+    .getElementById("department")
+    .value = "";
+
+
+  document
+    .getElementById("posts")
+    .value = "";
+
+
+  document
+    .getElementById("qualification")
+    .value = "";
+
+
+  document
+    .getElementById("age")
+    .value = "";
+
+
+  document
+    .getElementById("fee")
+    .value = "";
+
+
+  document
+    .getElementById("start")
+    .value = "";
+
+
+  document
+    .getElementById("last")
+    .value = "";
+
+
+  document
+    .getElementById("selection")
+    .value = "";
+
+
+  document
+    .getElementById("mode")
+    .value = "Offline";
+
+
+  document
+    .getElementById("address")
+    .value = "";
+
+
+  document
+    .getElementById("notification")
+    .value = "";
+
+
+  document
+    .getElementById("application")
+    .value = "";
+
+
+  document
+    .getElementById("details")
+    .value = "";
 
 };
 
 
-/* ==============================
+/* =========================
    SECURITY HELPERS
-================================ */
+========================= */
 
 function escapeHTML(value){
 
-  return String(value ?? "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+  return String(
+    value ?? ""
+  )
+  .replace(/&/g,"&amp;")
+  .replace(/</g,"&lt;")
+  .replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;")
+  .replace(/'/g,"&#039;");
 
 }
 
@@ -1166,6 +2106,7 @@ function safeURL(value){
 
     const url =
       new URL(value);
+
 
     if(
       url.protocol === "https:" ||
@@ -1178,32 +2119,44 @@ function safeURL(value){
 
   }catch(e){}
 
+
   return "#";
 
 }
 
 
-/* ==============================
-   CLOSE MODAL ON OUTSIDE CLICK
-================================ */
+/* =========================
+   MODAL CLOSE
+========================= */
 
 window.onclick = function(event){
 
   const loginModal =
-    document.getElementById("loginModal");
+    document
+      .getElementById("loginModal");
+
 
   const detailsModal =
-    document.getElementById("detailsModal");
+    document
+      .getElementById("detailsModal");
 
-  if(event.target === loginModal){
 
-    loginModal.style.display = "none";
+  if(
+    event.target === loginModal
+  ){
+
+    loginModal.style.display =
+      "none";
 
   }
 
-  if(event.target === detailsModal){
 
-    detailsModal.style.display = "none";
+  if(
+    event.target === detailsModal
+  ){
+
+    detailsModal.style.display =
+      "none";
 
   }
 
