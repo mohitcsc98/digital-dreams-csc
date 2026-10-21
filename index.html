@@ -1,693 +1,688 @@
-```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>OFFLINE NAUKRI | Latest Vacancy Updates</title>
+<title>OFFLINE NAUKRI</title>
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f6f9;
-  color:#222;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f3f4f6;
+    color:#111827;
 }
 
-/* TOP NAVBAR */
+/* TOP NAVIGATION */
 .navbar{
-  width:100%;
-  background:#111827;
-  overflow-x:auto;
-  white-space:nowrap;
-  position:sticky;
-  top:0;
-  z-index:1000;
+    background:#111827;
+    width:100%;
+    overflow-x:auto;
+    white-space:nowrap;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
 .navbar::-webkit-scrollbar{
-  height:4px;
+    height:4px;
 }
 
 .navbar-inner{
-  display:flex;
-  align-items:center;
-  min-width:max-content;
+    display:flex;
+    min-width:max-content;
 }
 
 .navbar a{
-  color:white;
-  text-decoration:none;
-  padding:15px 17px;
-  display:inline-block;
-  font-size:14px;
-  font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 17px;
+    font-size:14px;
+    font-weight:bold;
+    display:inline-block;
 }
 
 .navbar a:hover{
-  background:#2563eb;
+    background:#2563eb;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(135deg,#0f172a,#2563eb);
-  color:white;
-  padding:25px 15px;
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:#fff;
+    padding:25px 15px;
 }
 
 .header-inner{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-  font-size:30px;
-  font-weight:900;
+    font-size:30px;
+    font-weight:900;
 }
 
 .tagline{
-  margin-top:7px;
-  color:#dbeafe;
-  font-size:14px;
+    margin-top:7px;
+    color:#dbeafe;
+    font-size:14px;
 }
 
-.admin-btn{
-  border:none;
-  background:#f59e0b;
-  color:#111827;
-  padding:12px 18px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
+.admin-login{
+    background:#f59e0b;
+    border:0;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.admin-btn:hover{
-  background:#fbbf24;
+.admin-login:hover{
+    background:#fbbf24;
 }
 
-/* CONTAINER */
+/* MAIN */
 .container{
-  max-width:1200px;
-  margin:25px auto;
-  padding:0 15px;
+    max-width:1200px;
+    margin:25px auto;
+    padding:0 15px;
 }
 
 /* SEARCH */
 .search-box{
-  background:white;
-  padding:18px;
-  border-radius:12px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-  margin-bottom:20px;
+    background:#fff;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    margin-bottom:22px;
 }
 
 .search-box input{
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:16px;
-  outline:none;
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
 }
 
 .search-box input:focus{
-  border-color:#2563eb;
+    border-color:#2563eb;
 }
 
-/* SECTION TITLE */
+/* ADMIN PANEL */
+#adminPanel{
+    display:none;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 2px 12px rgba(0,0,0,.1);
+    border-top:5px solid #f59e0b;
+}
+
+.admin-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.logout{
+    background:#dc2626;
+    color:#fff;
+    border:0;
+    padding:10px 15px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.form-grid input,
+.form-grid textarea,
+.form-grid select{
+    width:100%;
+    padding:11px;
+    border:1px solid #d1d5db;
+    border-radius:7px;
+    font-size:14px;
+}
+
+.form-grid textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.save-btn{
+    background:#16a34a;
+    color:white;
+    border:0;
+    padding:13px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.clear-btn{
+    background:#64748b;
+    color:white;
+    border:0;
+    padding:13px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+/* TITLE */
 .section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin:20px 0 12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
 }
 
 .section-title h2{
-  color:#111827;
+    color:#111827;
 }
 
 /* VACANCIES */
 .vacancy-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
 }
 
 .vacancy-card{
-  background:white;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-  border-left:5px solid #2563eb;
+    background:#fff;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    border-left:5px solid #2563eb;
 }
 
 .vacancy-card h3{
-  color:#1d4ed8;
-  margin-bottom:10px;
-}
-
-.info{
-  margin:7px 0;
-  font-size:14px;
-}
-
-.label{
-  font-weight:bold;
+    color:#1d4ed8;
+    margin:8px 0 12px;
 }
 
 .badge{
-  display:inline-block;
-  background:#dcfce7;
-  color:#166534;
-  padding:4px 8px;
-  border-radius:5px;
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:8px;
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:5px 9px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.card-buttons{
-  display:flex;
-  gap:8px;
-  margin-top:15px;
-  flex-wrap:wrap;
+.info{
+    margin:7px 0;
+    font-size:14px;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:15px;
 }
 
 .btn{
-  border:none;
-  padding:10px 14px;
-  border-radius:7px;
-  cursor:pointer;
-  font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
+    padding:10px 13px;
+    border-radius:7px;
+    border:0;
+    text-decoration:none;
+    cursor:pointer;
+    font-weight:bold;
+    display:inline-block;
 }
 
-.details-btn{
-  background:#2563eb;
-  color:white;
+.details{
+    background:#2563eb;
+    color:#fff;
 }
 
-.apply-btn{
-  background:#16a34a;
-  color:white;
+.apply{
+    background:#16a34a;
+    color:#fff;
 }
 
-.notify-btn{
-  background:#7c3aed;
-  color:white;
+.notification{
+    background:#7c3aed;
+    color:#fff;
 }
 
-/* ADMIN */
-#adminPanel{
-  display:none;
-  background:white;
-  margin-bottom:25px;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 2px 12px rgba(0,0,0,.1);
-  border-top:5px solid #f59e0b;
-}
-
-.admin-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:20px;
-}
-
-.logout-btn{
-  background:#dc2626;
-  color:white;
-  border:none;
-  padding:9px 13px;
-  border-radius:7px;
-  cursor:pointer;
-}
-
-.admin-form{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.admin-form input,
-.admin-form textarea,
-.admin-form select{
-  width:100%;
-  padding:11px;
-  border:1px solid #ddd;
-  border-radius:7px;
-  font-size:14px;
-}
-
-.admin-form textarea{
-  min-height:80px;
-  resize:vertical;
-}
-
-.full{
-  grid-column:1/-1;
-}
-
-.save-btn{
-  background:#16a34a;
-  color:white;
-  border:none;
-  padding:13px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-.cancel-btn{
-  background:#64748b;
-  color:white;
-  border:none;
-  padding:13px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-}
-
+/* ADMIN LIST */
 .admin-list{
-  margin-top:25px;
+    margin-top:25px;
 }
 
 .admin-item{
-  background:#f8fafc;
-  border:1px solid #e2e8f0;
-  padding:12px;
-  border-radius:8px;
-  margin-top:10px;
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  align-items:center;
+    background:#f8fafc;
+    border:1px solid #e5e7eb;
+    padding:12px;
+    border-radius:8px;
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
 }
 
-.admin-actions{
-  display:flex;
-  gap:6px;
+.edit{
+    background:#2563eb;
+    color:#fff;
+    border:0;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-.edit-btn{
-  background:#2563eb;
-  color:white;
-  border:none;
-  padding:8px 11px;
-  border-radius:6px;
-  cursor:pointer;
+.delete{
+    background:#dc2626;
+    color:#fff;
+    border:0;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
 }
 
-.delete-btn{
-  background:#dc2626;
-  color:white;
-  border:none;
-  padding:8px 11px;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-/* LOGIN MODAL */
+/* MODAL */
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.65);
-  z-index:2000;
-  align-items:center;
-  justify-content:center;
-  padding:15px;
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
 }
 
 .modal-box{
-  background:white;
-  width:100%;
-  max-width:420px;
-  border-radius:12px;
-  padding:25px;
+    background:#fff;
+    width:100%;
+    max-width:430px;
+    padding:25px;
+    border-radius:12px;
+}
+
+.close{
+    float:right;
+    background:none;
+    border:0;
+    font-size:24px;
+    cursor:pointer;
 }
 
 .modal-box h2{
-  margin-bottom:15px;
+    margin-bottom:15px;
 }
 
 .modal-box input{
-  width:100%;
-  padding:13px;
-  border:1px solid #ddd;
-  border-radius:7px;
-  margin-bottom:12px;
+    width:100%;
+    padding:13px;
+    border:1px solid #d1d5db;
+    border-radius:7px;
+    margin-bottom:12px;
 }
 
 .login-btn{
-  width:100%;
-  padding:13px;
-  border:none;
-  border-radius:7px;
-  background:#2563eb;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.close-btn{
-  float:right;
-  border:none;
-  background:none;
-  font-size:22px;
-  cursor:pointer;
-}
-
-/* DETAILS MODAL */
-.details-box{
-  max-width:700px;
-  max-height:90vh;
-  overflow-y:auto;
+    width:100%;
+    padding:13px;
+    border:0;
+    background:#2563eb;
+    color:#fff;
+    border-radius:7px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 /* FOOTER */
 footer{
-  background:#111827;
-  color:#cbd5e1;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:35px;
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:35px;
 }
 
 .empty{
-  background:white;
-  padding:30px;
-  border-radius:10px;
-  text-align:center;
-  color:#64748b;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    color:#64748b;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-  .header-inner{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+    .header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-  .logo{
-    font-size:24px;
-  }
+    .logo{
+        font-size:24px;
+    }
 
-  .admin-btn{
-    width:100%;
-  }
+    .admin-login{
+        width:100%;
+    }
 
-  .vacancy-grid{
-    grid-template-columns:1fr;
-  }
+    .vacancy-grid{
+        grid-template-columns:1fr;
+    }
 
-  .admin-form{
-    grid-template-columns:1fr;
-  }
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
-  .full{
-    grid-column:auto;
-  }
+    .full{
+        grid-column:auto;
+    }
 
-  .admin-item{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+    .admin-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-  .admin-actions{
-    width:100%;
-  }
-
-  .admin-actions button{
-    flex:1;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="navbar-inner">
+<div class="navbar-inner">
 
-    <a href="https://www.vacancyform.com/" target="_blank">Home</a>
+<a href="https://www.vacancyform.com/" target="_blank">Home</a>
 
-    <a href="https://www.vacancyform.com/pages/about_us" target="_blank">About Us</a>
+<a href="https://www.vacancyform.com/pages/about_us" target="_blank">About Us</a>
 
-    <a href="https://www.vacancyform.com/pages/viewmoreonline" target="_blank">Online Form</a>
+<a href="https://www.vacancyform.com/pages/viewmoreonline" target="_blank">Online Form</a>
 
-    <a href="https://www.vacancyform.com/pages/offlinemore" target="_blank">Offline Form</a>
+<a href="https://www.vacancyform.com/pages/offlinemore" target="_blank">Offline Form</a>
 
-    <a href="https://www.vacancyform.com/pages/onlinemore/8" target="_blank">Result</a>
+<a href="https://www.vacancyform.com/pages/onlinemore/8" target="_blank">Result</a>
 
-    <a href="https://www.vacancyform.com/pages/onlinemore/9" target="_blank">Admit Card</a>
+<a href="https://www.vacancyform.com/pages/onlinemore/9" target="_blank">Admit Card</a>
 
-    <a href="https://www.vacancyform.com/pages/onlinemore/10" target="_blank">Syllabus</a>
+<a href="https://www.vacancyform.com/pages/onlinemore/10" target="_blank">Syllabus</a>
 
-    <a href="https://www.vacancyform.com/pages/downloadmore/2" target="_blank">DOWNLOAD</a>
+<a href="https://www.vacancyform.com/pages/downloadmore/2" target="_blank">DOWNLOAD</a>
 
-    <a href="https://www.vacancyform.com/pages/downloadmore/4" target="_blank">Posters</a>
+<a href="https://www.vacancyform.com/pages/downloadmore/4" target="_blank">Posters</a>
 
-    <a href="https://www.vacancyform.com/pages/linkonline" target="_blank">Links</a>
+<a href="https://www.vacancyform.com/pages/linkonline" target="_blank">Links</a>
 
-    <a href="https://www.vacancyform.com/pages/contact_us" target="_blank">Contact</a>
+<a href="https://www.vacancyform.com/pages/contact_us" target="_blank">Contact</a>
 
-  </div>
+</div>
 </nav>
 
-<!-- HEADER -->
+
 <header>
-  <div class="header-inner">
 
-    <div>
-      <div class="logo">🔵 OFFLINE NAUKRI</div>
-      <div class="tagline">
-        Latest Offline Jobs, Vacancy, Form & Government Updates
-      </div>
-    </div>
+<div class="header-inner">
 
-    <button class="admin-btn" onclick="openLogin()">
-      🔐 ADMIN LOGIN
-    </button>
+<div>
+<div class="logo">🔵 OFFLINE NAUKRI</div>
 
-  </div>
+<div class="tagline">
+Latest Offline Jobs, Vacancy, Form & Government Updates
+</div>
+</div>
+
+<button class="admin-login" onclick="openLogin()">
+🔐 ADMIN LOGIN
+</button>
+
+</div>
+
 </header>
 
-<!-- MAIN -->
+
 <div class="container">
 
-  <!-- ADMIN PANEL -->
-  <section id="adminPanel">
 
-    <div class="admin-header">
-      <div>
-        <h2>🔐 Admin Panel</h2>
-        <p id="adminEmailText"></p>
-      </div>
+<!-- ADMIN PANEL -->
 
-      <button class="logout-btn" onclick="logoutAdmin()">
-        Logout
-      </button>
-    </div>
+<section id="adminPanel">
 
-    <form id="vacancyForm">
+<div class="admin-top">
 
-      <input type="hidden" id="editId">
+<div>
+<h2>🔐 Admin Panel</h2>
+<p id="adminEmail"></p>
+</div>
 
-      <div class="admin-form">
-
-        <input id="post" placeholder="Post Name *" required>
-
-        <input id="department" placeholder="Department">
-
-        <input id="posts" placeholder="Total Posts">
-
-        <input id="qualification" placeholder="Qualification">
-
-        <input id="age" placeholder="Age Limit">
-
-        <input id="fee" placeholder="Application Fee">
-
-        <input id="start" type="date">
-
-        <input id="last" type="date">
-
-        <input id="selection" placeholder="Selection Process">
-
-        <select id="mode">
-          <option value="Offline">Offline</option>
-          <option value="Online">Online</option>
-        </select>
-
-        <input id="address" placeholder="Application Address">
-
-        <input id="notification" placeholder="Notification PDF/URL">
-
-        <input id="application" placeholder="Application/Apply URL">
-
-        <textarea id="details" class="full"
-          placeholder="Other Important Details"></textarea>
-
-        <button type="submit" class="save-btn">
-          💾 Save Vacancy
-        </button>
-
-        <button type="button" class="cancel-btn"
-          onclick="clearForm()">
-          Clear
-        </button>
-
-      </div>
-
-    </form>
-
-    <div class="admin-list">
-
-      <h3>📋 Manage Vacancies</h3>
-
-      <div id="adminVacancyList"></div>
-
-    </div>
-
-  </section>
-
-  <!-- SEARCH -->
-  <div class="search-box">
-
-    <input
-      type="search"
-      id="searchInput"
-      placeholder="🔎 Search vacancy, post, department, qualification..."
-    >
-
-  </div>
-
-  <!-- VACANCIES -->
-  <div class="section-title">
-
-    <h2>📢 Latest Vacancies</h2>
-
-    <span id="vacancyCount">
-      0 Vacancy
-    </span>
-
-  </div>
-
-  <div id="vacancyList" class="vacancy-grid">
-
-    <div class="empty">
-      Loading vacancies...
-    </div>
-
-  </div>
+<button class="logout" onclick="logout()">
+Logout
+</button>
 
 </div>
+
+
+<form id="vacancyForm">
+
+<input type="hidden" id="editId">
+
+
+<div class="form-grid">
+
+<input id="post" placeholder="Post Name *" required>
+
+<input id="department" placeholder="Department">
+
+<input id="posts" placeholder="Total Posts">
+
+<input id="qualification" placeholder="Qualification">
+
+<input id="age" placeholder="Age Limit">
+
+<input id="fee" placeholder="Application Fee">
+
+<input id="start" type="date">
+
+<input id="last" type="date">
+
+<input id="selection" placeholder="Selection Process">
+
+<select id="mode">
+
+<option value="Offline">Offline</option>
+
+<option value="Online">Online</option>
+
+</select>
+
+<input id="address" placeholder="Application Address">
+
+<input id="notification" placeholder="Notification URL">
+
+<input id="application" placeholder="Application / Apply URL">
+
+<textarea id="details" class="full"
+placeholder="Other Important Details"></textarea>
+
+<button type="submit" class="save-btn">
+💾 Save Vacancy
+</button>
+
+<button type="button" class="clear-btn"
+onclick="clearForm()">
+Clear
+</button>
+
+</div>
+
+</form>
+
+
+<div class="admin-list">
+
+<h3>📋 Manage Vacancies</h3>
+
+<div id="adminList"></div>
+
+</div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+type="search"
+id="search"
+placeholder="🔎 Search Post, Department, Qualification..."
+>
+
+</div>
+
+
+<!-- TITLE -->
+
+<div class="section-title">
+
+<h2>📢 Latest Vacancies</h2>
+
+<span id="count">0 Vacancy</span>
+
+</div>
+
+
+<!-- VACANCIES -->
+
+<div id="vacancyList" class="vacancy-grid">
+
+<div class="empty">
+Loading vacancies...
+</div>
+
+</div>
+
+</div>
+
 
 <!-- LOGIN MODAL -->
+
 <div id="loginModal" class="modal">
 
-  <div class="modal-box">
+<div class="modal-box">
 
-    <button class="close-btn" onclick="closeLogin()">×</button>
+<button class="close" onclick="closeLogin()">×</button>
 
-    <h2>🔐 Admin Login</h2>
+<h2>🔐 Admin Login</h2>
 
-    <p style="margin-bottom:15px;color:#64748b;">
-      Admin email और password से login करें।
-    </p>
+<p style="margin-bottom:15px;color:#64748b;">
+Admin Email और Password डालें
+</p>
 
-    <input
-      type="email"
-      id="loginEmail"
-      placeholder="Admin Email"
-      autocomplete="username"
-    >
+<input
+type="email"
+id="email"
+placeholder="Admin Email"
+>
 
-    <input
-      type="password"
-      id="loginPassword"
-      placeholder="Password"
-      autocomplete="current-password"
-    >
+<input
+type="password"
+id="password"
+placeholder="Password"
+>
 
-    <button class="login-btn" onclick="loginAdmin()">
-      Login
-    </button>
+<button class="login-btn" onclick="login()">
+Login
+</button>
 
-    <p id="loginMessage"
-       style="margin-top:12px;text-align:center;"></p>
-
-  </div>
+<p id="loginMessage"
+style="margin-top:12px;text-align:center;">
+</p>
 
 </div>
+
+</div>
+
 
 <!-- DETAILS MODAL -->
+
 <div id="detailsModal" class="modal">
 
-  <div class="modal-box details-box">
+<div class="modal-box" style="max-width:700px;max-height:90vh;overflow:auto;">
 
-    <button class="close-btn" onclick="closeDetails()">×</button>
+<button class="close" onclick="closeDetails()">×</button>
 
-    <div id="detailsContent"></div>
-
-  </div>
+<div id="detailsContent"></div>
 
 </div>
 
-<!-- FOOTER -->
+</div>
+
+
 <footer>
 
-  <h3>🔵 OFFLINE NAUKRI</h3>
+<h3>🔵 OFFLINE NAUKRI</h3>
 
-  <p style="margin-top:8px;">
-    Latest Vacancy & Government Job Updates
-  </p>
+<p style="margin-top:8px;">
+Latest Vacancy & Government Job Updates
+</p>
 
-  <p style="margin-top:10px;font-size:13px;">
-    © 2026 OFFLINE NAUKRI. All Rights Reserved.
-  </p>
+<p style="margin-top:10px;font-size:13px;">
+© 2026 OFFLINE NAUKRI. All Rights Reserved.
+</p>
 
 </footer>
 
 
-<!-- FIREBASE -->
 <script type="module">
 
 import { initializeApp }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
 import {
-  getAuth,
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged
+getAuth,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 import {
-  getFirestore,
-  collection,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-  onSnapshot,
-  serverTimestamp
+getFirestore,
+collection,
+addDoc,
+updateDoc,
+deleteDoc,
+doc,
+onSnapshot,
+serverTimestamp
 }
 from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
@@ -696,31 +691,29 @@ from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
 
-  apiKey:
-    "AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
+apiKey:
+"AIzaSyCQvbOg7ih_ixj5qed_uuuTBcERvTuVkZ0",
 
-  authDomain:
-    "digital-dreams-pegan.firebaseapp.com",
+authDomain:
+"digital-dreams-pegan.firebaseapp.com",
 
-  projectId:
-    "digital-dreams-pegan",
+projectId:
+"digital-dreams-pegan",
 
-  storageBucket:
-    "digital-dreams-pegan.firebasestorage.app",
+storageBucket:
+"digital-dreams-pegan.firebasestorage.app",
 
-  messagingSenderId:
-    "1053549608341",
+messagingSenderId:
+"1053549608341",
 
-  appId:
-    "1:1053549608341:web:bb602038ebda2732830a9c",
+appId:
+"1:1053549608341:web:bb602038ebda2732830a9c",
 
-  measurementId:
-    "G-6EKZP1D3XQ"
+measurementId:
+"G-6EKZP1D3XQ"
 
 };
 
-
-/* INITIALIZE */
 
 const app = initializeApp(firebaseConfig);
 
@@ -729,584 +722,529 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 
-/* ADMIN EMAIL */
-
 const ADMIN_EMAIL =
-  "mayankhr80@gmail.com";
+"mayankhr80@gmail.com";
 
-
-/* DATA */
 
 let vacancies = [];
 
-let editingId = null;
-
-
-/* HTML ESCAPE */
-
-function escapeHTML(value){
-
-  if(value === null || value === undefined){
-    return "";
-  }
-
-  return String(value)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-}
-
-
-/* SAFE URL */
-
-function safeURL(value){
-
-  if(!value){
-    return "#";
-  }
-
-  try{
-
-    const url = new URL(value);
-
-    if(
-      url.protocol === "http:" ||
-      url.protocol === "https:"
-    ){
-      return url.href;
-    }
-
-  }catch(e){}
-
-  return "#";
-}
-
-
-/* DATE FORMAT */
-
-function formatDate(value){
-
-  if(!value){
-    return "-";
-  }
-
-  const parts = value.split("-");
-
-  if(parts.length !== 3){
-    return value;
-  }
-
-  return `${parts[2]}-${parts[1]}-${parts[0]}`;
-}
-
-
-/* LOGIN MODAL */
-
-window.openLogin = function(){
-
-  document.getElementById("loginModal")
-    .style.display = "flex";
-
-  document.getElementById("loginMessage")
-    .textContent = "";
-
-};
-
-
-/* CLOSE LOGIN */
-
-window.closeLogin = function(){
-
-  document.getElementById("loginModal")
-    .style.display = "none";
-
-};
+let editId = null;
 
 
 /* LOGIN */
 
-window.loginAdmin = async function(){
+window.openLogin = function(){
 
-  const email =
-    document.getElementById("loginEmail").value.trim();
+document.getElementById("loginModal")
+.style.display="flex";
 
-  const password =
-    document.getElementById("loginPassword").value;
-
-  const message =
-    document.getElementById("loginMessage");
+};
 
 
-  if(!email || !password){
+window.closeLogin = function(){
 
-    message.style.color = "#dc2626";
+document.getElementById("loginModal")
+.style.display="none";
 
-    message.textContent =
-      "Email और password डालें।";
-
-    return;
-  }
+};
 
 
-  if(email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()){
+window.login = async function(){
 
-    message.style.color = "#dc2626";
+const email =
+document.getElementById("email").value.trim();
 
-    message.textContent =
-      "यह admin email authorized नहीं है।";
+const password =
+document.getElementById("password").value;
 
-    return;
-  }
+const message =
+document.getElementById("loginMessage");
 
 
-  try{
+if(!email || !password){
 
-    await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
+message.style.color="red";
 
-    message.style.color = "#16a34a";
+message.textContent=
+"Email और Password डालें।";
 
-    message.textContent =
-      "Login successful.";
+return;
 
-  }
-  catch(error){
+}
 
-    console.error(error);
 
-    message.style.color = "#dc2626";
+if(email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()){
 
-    if(error.code === "auth/invalid-credential"){
+message.style.color="red";
 
-      message.textContent =
-        "Email या password गलत है।";
+message.textContent=
+"यह Admin Email नहीं है।";
 
-    }
-    else if(error.code === "auth/too-many-requests"){
+return;
 
-      message.textContent =
-        "बहुत ज्यादा कोशिश हुई है। थोड़ी देर बाद फिर कोशिश करें।";
+}
 
-    }
-    else{
 
-      message.textContent =
-        "Login failed: " + error.message;
+try{
 
-    }
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
 
-  }
+message.style.color="green";
+
+message.textContent=
+"Login Successful";
+
+}
+catch(error){
+
+console.error(error);
+
+message.style.color="red";
+
+message.textContent=
+"Login failed. Email या Password check करें।";
+
+}
 
 };
 
 
 /* LOGOUT */
 
-window.logoutAdmin = async function(){
+window.logout = async function(){
 
-  try{
+try{
 
-    await signOut(auth);
+await signOut(auth);
 
-    alert("Admin logout हो गया।");
+alert("Logout Successful");
 
-  }
-  catch(error){
+}
+catch(error){
 
-    console.error(error);
+alert("Logout failed");
 
-    alert("Logout failed.");
-
-  }
+}
 
 };
 
 
-/* AUTH STATE */
+/* AUTH */
 
 onAuthStateChanged(auth,(user)=>{
 
-  const panel =
-    document.getElementById("adminPanel");
+if(
+user &&
+user.email &&
+user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()
+){
 
-  if(
-    user &&
-    user.email &&
-    user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()
-  ){
+document.getElementById("adminPanel")
+.style.display="block";
 
-    panel.style.display = "block";
+document.getElementById("adminEmail")
+.textContent=
+"Logged in: "+user.email;
 
-    document.getElementById("adminEmailText")
-      .textContent =
-      "Logged in: " + user.email;
+closeLogin();
 
-    closeLogin();
+}
+else{
 
-  }
-  else{
+document.getElementById("adminPanel")
+.style.display="none";
 
-    panel.style.display = "none";
-
-  }
+}
 
 });
 
 
-/* ADD / UPDATE VACANCY */
+/* SAVE VACANCY */
 
 document
-  .getElementById("vacancyForm")
-  .addEventListener("submit",async(event)=>{
+.getElementById("vacancyForm")
+.addEventListener("submit",async function(e){
 
-    event.preventDefault();
-
-
-    const user = auth.currentUser;
+e.preventDefault();
 
 
-    if(
-      !user ||
-      user.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()
-    ){
-
-      alert("पहले Admin Login करें।");
-
-      return;
-
-    }
+const user=auth.currentUser;
 
 
-    const data = {
+if(
+!user ||
+user.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()
+){
 
-      post:
-        document.getElementById("post").value.trim(),
+alert("पहले Admin Login करें।");
 
-      department:
-        document.getElementById("department").value.trim(),
+return;
 
-      posts:
-        document.getElementById("posts").value.trim(),
-
-      qualification:
-        document.getElementById("qualification").value.trim(),
-
-      age:
-        document.getElementById("age").value.trim(),
-
-      fee:
-        document.getElementById("fee").value.trim(),
-
-      start:
-        document.getElementById("start").value,
-
-      last:
-        document.getElementById("last").value,
-
-      selection:
-        document.getElementById("selection").value.trim(),
-
-      mode:
-        document.getElementById("mode").value,
-
-      address:
-        document.getElementById("address").value.trim(),
-
-      notification:
-        document.getElementById("notification").value.trim(),
-
-      application:
-        document.getElementById("application").value.trim(),
-
-      details:
-        document.getElementById("details").value.trim(),
-
-      updatedAt:
-        serverTimestamp()
-
-    };
+}
 
 
-    if(!data.post){
+const data={
 
-      alert("Post Name डालना जरूरी है।");
+post:document.getElementById("post").value.trim(),
 
-      return;
+department:document.getElementById("department").value.trim(),
 
-    }
+posts:document.getElementById("posts").value.trim(),
 
+qualification:document.getElementById("qualification").value.trim(),
 
-    try{
+age:document.getElementById("age").value.trim(),
 
-      if(editingId){
+fee:document.getElementById("fee").value.trim(),
 
-        await updateDoc(
-          doc(db,"vacancies",editingId),
-          data
-        );
+start:document.getElementById("start").value,
 
-        alert("Vacancy successfully updated.");
+last:document.getElementById("last").value,
 
-      }
-      else{
+selection:document.getElementById("selection").value.trim(),
 
-        data.createdAt =
-          serverTimestamp();
+mode:document.getElementById("mode").value,
 
-        await addDoc(
-          collection(db,"vacancies"),
-          data
-        );
+address:document.getElementById("address").value.trim(),
 
-        alert("Vacancy successfully added.");
+notification:document.getElementById("notification").value.trim(),
 
-      }
+application:document.getElementById("application").value.trim(),
 
+details:document.getElementById("details").value.trim(),
 
-      clearForm();
-
-    }
-    catch(error){
-
-      console.error(error);
-
-      alert(
-        "Save failed: " + error.message
-      );
-
-    }
-
-});
-
-
-/* CLEAR FORM */
-
-window.clearForm = function(){
-
-  document
-    .getElementById("vacancyForm")
-    .reset();
-
-  document
-    .getElementById("editId")
-    .value = "";
-
-  editingId = null;
+updatedAt:serverTimestamp()
 
 };
 
 
-/* FIRESTORE LISTENER */
+try{
+
+if(editId){
+
+await updateDoc(
+doc(db,"vacancies",editId),
+data
+);
+
+alert("Vacancy Updated Successfully");
+
+}
+else{
+
+data.createdAt=serverTimestamp();
+
+await addDoc(
+collection(db,"vacancies"),
+data
+);
+
+alert("Vacancy Added Successfully");
+
+}
+
+
+clearForm();
+
+}
+catch(error){
+
+console.error(error);
+
+alert(
+"Save failed: "+error.message
+);
+
+}
+
+});
+
+
+/* CLEAR */
+
+window.clearForm=function(){
+
+document.getElementById("vacancyForm").reset();
+
+document.getElementById("editId").value="";
+
+editId=null;
+
+};
+
+
+/* FIRESTORE */
 
 onSnapshot(
-  collection(db,"vacancies"),
-  (snapshot)=>{
+collection(db,"vacancies"),
+(snapshot)=>{
 
-    vacancies = [];
+vacancies=[];
 
-    snapshot.forEach((item)=>{
+snapshot.forEach(item=>{
 
-      vacancies.push({
+vacancies.push({
+id:item.id,
+...item.data()
+});
 
-        id:item.id,
-        ...item.data()
-
-      });
-
-    });
+});
 
 
-    vacancies.sort((a,b)=>{
+vacancies.sort((a,b)=>{
 
-      const dateA =
-        a.last || "9999-12-31";
+return (a.last||"9999-12-31")
+.localeCompare(b.last||"9999-12-31");
 
-      const dateB =
-        b.last || "9999-12-31";
-
-      return dateA.localeCompare(dateB);
-
-    });
+});
 
 
-    renderVacancies();
+showVacancies();
 
-    renderAdminList();
+showAdminList();
 
-  },
-  (error)=>{
+},
+(error)=>{
 
-    console.error(error);
+console.error(error);
 
-    document.getElementById("vacancyList")
-      .innerHTML = `
-        <div class="empty">
-          ❌ Vacancy data load नहीं हो सका।<br><br>
-          Firebase Firestore Rules check करें।
-        </div>
-      `;
+document.getElementById("vacancyList")
+.innerHTML=`
 
-  }
+<div class="empty">
+
+❌ Firebase data load नहीं हो रहा।
+
+<br><br>
+
+Firestore Rules check करें।
+
+</div>
+
+`;
+
+}
 );
 
 
-/* PUBLIC VACANCIES */
+/* ESCAPE */
 
-function renderVacancies(){
+function escapeHTML(text){
 
-  const list =
-    document.getElementById("vacancyList");
+if(text===undefined || text===null)
+return "";
 
-  const search =
-    document.getElementById("searchInput")
-      .value
-      .trim()
-      .toLowerCase();
+return String(text)
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;");
 
-
-  const filtered =
-    vacancies.filter(v=>{
-
-      const text = [
-
-        v.post,
-        v.department,
-        v.qualification,
-        v.mode,
-        v.selection,
-        v.details
-
-      ]
-      .join(" ")
-      .toLowerCase();
-
-      return text.includes(search);
-
-    });
+}
 
 
-  document.getElementById("vacancyCount")
-    .textContent =
-    `${filtered.length} Vacancy`;
+/* URL */
+
+function safeURL(url){
+
+if(!url)
+return "#";
+
+try{
+
+const u=new URL(url);
+
+if(
+u.protocol==="http:" ||
+u.protocol==="https:"
+){
+
+return u.href;
+
+}
+
+}
+catch(e){}
+
+return "#";
+
+}
 
 
-  if(filtered.length === 0){
+/* DATE */
 
-    list.innerHTML = `
-      <div class="empty">
-        🔎 कोई vacancy नहीं मिली।
-      </div>
-    `;
+function formatDate(date){
 
-    return;
+if(!date)
+return "-";
 
-  }
+const p=date.split("-");
 
+if(p.length!==3)
+return date;
 
-  list.innerHTML =
-    filtered.map(v=>{
+return p[2]+"-"+p[1]+"-"+p[0];
 
-      const notification =
-        safeURL(v.notification);
-
-      const application =
-        safeURL(v.application);
+}
 
 
-      return `
+/* SHOW VACANCIES */
 
-        <article class="vacancy-card">
+function showVacancies(){
 
-          <span class="badge">
-            ${escapeHTML(v.mode || "Offline")}
-          </span>
+const list=
+document.getElementById("vacancyList");
 
-          <h3>
-            ${escapeHTML(v.post || "Vacancy")}
-          </h3>
+const keyword=
+document.getElementById("search")
+.value
+.toLowerCase()
+.trim();
 
-          <div class="info">
-            <span class="label">Department:</span>
-            ${escapeHTML(v.department || "-")}
-          </div>
 
-          <div class="info">
-            <span class="label">Total Posts:</span>
-            ${escapeHTML(v.posts || "-")}
-          </div>
+const filtered=
+vacancies.filter(v=>{
 
-          <div class="info">
-            <span class="label">Qualification:</span>
-            ${escapeHTML(v.qualification || "-")}
-          </div>
+const text=[
 
-          <div class="info">
-            <span class="label">Age:</span>
-            ${escapeHTML(v.age || "-")}
-          </div>
+v.post,
+v.department,
+v.qualification,
+v.selection,
+v.details,
+v.mode
 
-          <div class="info">
-            <span class="label">Fee:</span>
-            ${escapeHTML(v.fee || "-")}
-          </div>
+].join(" ").toLowerCase();
 
-          <div class="info">
-            <span class="label">Last Date:</span>
-            ${escapeHTML(formatDate(v.last))}
-          </div>
+return text.includes(keyword);
 
-          <div class="card-buttons">
+});
 
-            <button
-              class="btn details-btn"
-              onclick="showDetails('${v.id}')">
-              Details
-            </button>
 
-            ${
-              v.notification
-              ?
-              `
-              <a
-                class="btn notify-btn"
-                href="${notification}"
-                target="_blank"
-                rel="noopener">
-                Notification
-              </a>
-              `
-              :
-              ""
-            }
+document.getElementById("count")
+.textContent=
+filtered.length+" Vacancy";
 
-            ${
-              v.application
-              ?
-              `
-              <a
-                class="btn apply-btn"
-                href="${application}"
-                target="_blank"
-                rel="noopener">
-                Apply
-              </a>
-              `
-              :
-              ""
-            }
 
-          </div>
+if(filtered.length===0){
 
-        </article>
+list.innerHTML=`
 
-      `;
+<div class="empty">
+🔎 कोई vacancy नहीं मिली।
+</div>
 
-    }).join("");
+`;
+
+return;
+
+}
+
+
+list.innerHTML=
+filtered.map(v=>{
+
+const notification=
+safeURL(v.notification);
+
+const application=
+safeURL(v.application);
+
+
+return`
+
+<article class="vacancy-card">
+
+<span class="badge">
+${escapeHTML(v.mode||"Offline")}
+</span>
+
+<h3>
+${escapeHTML(v.post||"Vacancy")}
+</h3>
+
+<div class="info">
+<span class="label">Department:</span>
+${escapeHTML(v.department||"-")}
+</div>
+
+<div class="info">
+<span class="label">Total Posts:</span>
+${escapeHTML(v.posts||"-")}
+</div>
+
+<div class="info">
+<span class="label">Qualification:</span>
+${escapeHTML(v.qualification||"-")}
+</div>
+
+<div class="info">
+<span class="label">Age:</span>
+${escapeHTML(v.age||"-")}
+</div>
+
+<div class="info">
+<span class="label">Fee:</span>
+${escapeHTML(v.fee||"-")}
+</div>
+
+<div class="info">
+<span class="label">Last Date:</span>
+${escapeHTML(formatDate(v.last))}
+</div>
+
+<div class="buttons">
+
+<button
+class="btn details"
+onclick="showDetails('${v.id}')">
+Details
+</button>
+
+${
+v.notification
+?
+`
+<a
+class="btn notification"
+href="${notification}"
+target="_blank"
+rel="noopener">
+Notification
+</a>
+`
+:
+""
+}
+
+${
+v.application
+?
+`
+<a
+class="btn apply"
+href="${application}"
+target="_blank"
+rel="noopener">
+Apply
+</a>
+`
+:
+""
+}
+
+</div>
+
+</article>
+
+`;
+
+}).join("");
 
 }
 
@@ -1314,348 +1252,320 @@ function renderVacancies(){
 /* SEARCH */
 
 document
-  .getElementById("searchInput")
-  .addEventListener("input",renderVacancies);
+.getElementById("search")
+.addEventListener("input",showVacancies);
 
 
 /* DETAILS */
 
-window.showDetails = function(id){
+window.showDetails=function(id){
 
-  const v =
-    vacancies.find(item=>item.id === id);
+const v=
+vacancies.find(x=>x.id===id);
 
-  if(!v){
-    return;
-  }
-
-
-  const notification =
-    safeURL(v.notification);
-
-  const application =
-    safeURL(v.application);
+if(!v)
+return;
 
 
-  document.getElementById("detailsContent")
-    .innerHTML = `
+const notification=
+safeURL(v.notification);
 
-      <h2 style="color:#1d4ed8;margin-bottom:15px;">
-        ${escapeHTML(v.post || "Vacancy")}
-      </h2>
-
-      <p class="info">
-        <span class="label">Department:</span>
-        ${escapeHTML(v.department || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Total Posts:</span>
-        ${escapeHTML(v.posts || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Qualification:</span>
-        ${escapeHTML(v.qualification || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Age Limit:</span>
-        ${escapeHTML(v.age || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Application Fee:</span>
-        ${escapeHTML(v.fee || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Start Date:</span>
-        ${escapeHTML(formatDate(v.start))}
-      </p>
-
-      <p class="info">
-        <span class="label">Last Date:</span>
-        ${escapeHTML(formatDate(v.last))}
-      </p>
-
-      <p class="info">
-        <span class="label">Selection Process:</span>
-        ${escapeHTML(v.selection || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Mode:</span>
-        ${escapeHTML(v.mode || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Application Address:</span>
-        ${escapeHTML(v.address || "-")}
-      </p>
-
-      <p class="info">
-        <span class="label">Other Details:</span><br>
-        ${escapeHTML(v.details || "-")}
-      </p>
-
-      <div class="card-buttons">
-
-        ${
-          v.notification
-          ?
-          `
-          <a
-            class="btn notify-btn"
-            href="${notification}"
-            target="_blank"
-            rel="noopener">
-            📄 Notification
-          </a>
-          `
-          :
-          ""
-        }
-
-        ${
-          v.application
-          ?
-          `
-          <a
-            class="btn apply-btn"
-            href="${application}"
-            target="_blank"
-            rel="noopener">
-            📝 Apply Now
-          </a>
-          `
-          :
-          ""
-        }
-
-      </div>
-    `;
+const application=
+safeURL(v.application);
 
 
-  document.getElementById("detailsModal")
-    .style.display = "flex";
+document.getElementById("detailsContent")
+.innerHTML=`
 
-};
+<h2 style="color:#1d4ed8;margin-bottom:15px;">
+${escapeHTML(v.post||"Vacancy")}
+</h2>
+
+<div class="info">
+<span class="label">Department:</span>
+${escapeHTML(v.department||"-")}
+</div>
+
+<div class="info">
+<span class="label">Total Posts:</span>
+${escapeHTML(v.posts||"-")}
+</div>
+
+<div class="info">
+<span class="label">Qualification:</span>
+${escapeHTML(v.qualification||"-")}
+</div>
+
+<div class="info">
+<span class="label">Age Limit:</span>
+${escapeHTML(v.age||"-")}
+</div>
+
+<div class="info">
+<span class="label">Application Fee:</span>
+${escapeHTML(v.fee||"-")}
+</div>
+
+<div class="info">
+<span class="label">Start Date:</span>
+${escapeHTML(formatDate(v.start))}
+</div>
+
+<div class="info">
+<span class="label">Last Date:</span>
+${escapeHTML(formatDate(v.last))}
+</div>
+
+<div class="info">
+<span class="label">Selection Process:</span>
+${escapeHTML(v.selection||"-")}
+</div>
+
+<div class="info">
+<span class="label">Mode:</span>
+${escapeHTML(v.mode||"-")}
+</div>
+
+<div class="info">
+<span class="label">Address:</span>
+${escapeHTML(v.address||"-")}
+</div>
+
+<div class="info">
+<span class="label">Other Details:</span>
+<br>
+${escapeHTML(v.details||"-")}
+</div>
+
+<div class="buttons">
+
+${
+v.notification
+?
+`
+<a
+class="btn notification"
+href="${notification}"
+target="_blank">
+📄 Notification
+</a>
+`
+:
+""
+}
+
+${
+v.application
+?
+`
+<a
+class="btn apply"
+href="${application}"
+target="_blank">
+📝 Apply Now
+</a>
+`
+:
+""
+}
+
+</div>
+
+`;
 
 
-/* CLOSE DETAILS */
-
-window.closeDetails = function(){
-
-  document.getElementById("detailsModal")
-    .style.display = "none";
+document.getElementById("detailsModal")
+.style.display="flex";
 
 };
 
 
-/* EDIT */
+window.closeDetails=function(){
 
-window.editVacancy = function(id){
-
-  const v =
-    vacancies.find(item=>item.id === id);
-
-  if(!v){
-    return;
-  }
-
-
-  editingId = id;
-
-
-  document.getElementById("post").value =
-    v.post || "";
-
-  document.getElementById("department").value =
-    v.department || "";
-
-  document.getElementById("posts").value =
-    v.posts || "";
-
-  document.getElementById("qualification").value =
-    v.qualification || "";
-
-  document.getElementById("age").value =
-    v.age || "";
-
-  document.getElementById("fee").value =
-    v.fee || "";
-
-  document.getElementById("start").value =
-    v.start || "";
-
-  document.getElementById("last").value =
-    v.last || "";
-
-  document.getElementById("selection").value =
-    v.selection || "";
-
-  document.getElementById("mode").value =
-    v.mode || "Offline";
-
-  document.getElementById("address").value =
-    v.address || "";
-
-  document.getElementById("notification").value =
-    v.notification || "";
-
-  document.getElementById("application").value =
-    v.application || "";
-
-  document.getElementById("details").value =
-    v.details || "";
-
-
-  document
-    .getElementById("adminPanel")
-    .scrollIntoView({
-      behavior:"smooth"
-    });
+document.getElementById("detailsModal")
+.style.display="none";
 
 };
 
 
 /* ADMIN LIST */
 
-function renderAdminList(){
+function showAdminList(){
 
-  const list =
-    document.getElementById("adminVacancyList");
-
-
-  if(vacancies.length === 0){
-
-    list.innerHTML = `
-      <p style="margin-top:10px;color:#64748b;">
-        अभी कोई vacancy नहीं है।
-      </p>
-    `;
-
-    return;
-
-  }
+const list=
+document.getElementById("adminList");
 
 
-  list.innerHTML =
-    vacancies.map(v=>`
+if(vacancies.length===0){
 
-      <div class="admin-item">
+list.innerHTML=
+"<p style='margin-top:10px;color:#64748b;'>No vacancy added.</p>";
 
-        <div>
-
-          <strong>
-            ${escapeHTML(v.post || "Vacancy")}
-          </strong>
-
-          <br>
-
-          <small>
-            ${escapeHTML(v.department || "")}
-            |
-            Last Date:
-            ${escapeHTML(formatDate(v.last))}
-          </small>
-
-        </div>
-
-        <div class="admin-actions">
-
-          <button
-            class="edit-btn"
-            onclick="editVacancy('${v.id}')">
-            Edit
-          </button>
-
-          <button
-            class="delete-btn"
-            onclick="deleteVacancy('${v.id}')">
-            Delete
-          </button>
-
-        </div>
-
-      </div>
-
-    `).join("");
+return;
 
 }
 
 
-/* DELETE */
+list.innerHTML=
+vacancies.map(v=>`
 
-window.deleteVacancy = async function(id){
+<div class="admin-item">
 
-  const user =
-    auth.currentUser;
+<div>
+
+<strong>
+${escapeHTML(v.post||"Vacancy")}
+</strong>
+
+<br>
+
+<small>
+${escapeHTML(v.department||"")}
+ |
+ Last Date:
+ ${escapeHTML(formatDate(v.last))}
+</small>
+
+</div>
+
+<div>
+
+<button
+class="edit"
+onclick="editVacancy('${v.id}')">
+Edit
+</button>
+
+<button
+class="delete"
+onclick="deleteVacancy('${v.id}')">
+Delete
+</button>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
 
 
-  if(
-    !user ||
-    user.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()
-  ){
+/* EDIT */
 
-    alert("Admin login required.");
+window.editVacancy=function(id){
 
-    return;
+const v=
+vacancies.find(x=>x.id===id);
 
-  }
-
-
-  const confirmDelete =
-    confirm(
-      "क्या आप इस vacancy को delete करना चाहते हैं?"
-    );
+if(!v)
+return;
 
 
-  if(!confirmDelete){
-    return;
-  }
+editId=id;
 
 
-  try{
+document.getElementById("post").value=v.post||"";
 
-    await deleteDoc(
-      doc(db,"vacancies",id)
-    );
+document.getElementById("department").value=v.department||"";
 
-    alert("Vacancy deleted.");
+document.getElementById("posts").value=v.posts||"";
 
-  }
-  catch(error){
+document.getElementById("qualification").value=v.qualification||"";
 
-    console.error(error);
+document.getElementById("age").value=v.age||"";
 
-    alert(
-      "Delete failed: " + error.message
-    );
+document.getElementById("fee").value=v.fee||"";
 
-  }
+document.getElementById("start").value=v.start||"";
+
+document.getElementById("last").value=v.last||"";
+
+document.getElementById("selection").value=v.selection||"";
+
+document.getElementById("mode").value=v.mode||"Offline";
+
+document.getElementById("address").value=v.address||"";
+
+document.getElementById("notification").value=v.notification||"";
+
+document.getElementById("application").value=v.application||"";
+
+document.getElementById("details").value=v.details||"";
+
+
+document.getElementById("adminPanel")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 };
 
 
-/* CLOSE MODALS ON BACKGROUND CLICK */
+/* DELETE */
 
-window.addEventListener("click",(event)=>{
+window.deleteVacancy=async function(id){
 
-  if(event.target ===
-     document.getElementById("loginModal")){
+const user=auth.currentUser;
 
-    closeLogin();
 
-  }
+if(
+!user ||
+user.email.toLowerCase()!==ADMIN_EMAIL.toLowerCase()
+){
 
-  if(event.target ===
-     document.getElementById("detailsModal")){
+alert("Admin login required.");
 
-    closeDetails();
+return;
 
-  }
+}
+
+
+if(!confirm("क्या आप vacancy delete करना चाहते हैं?"))
+return;
+
+
+try{
+
+await deleteDoc(
+doc(db,"vacancies",id)
+);
+
+alert("Vacancy Deleted");
+
+}
+catch(error){
+
+console.error(error);
+
+alert(
+"Delete failed: "+error.message
+);
+
+}
+
+};
+
+
+/* CLOSE MODALS */
+
+window.addEventListener("click",function(e){
+
+if(
+e.target===document.getElementById("loginModal")
+){
+
+closeLogin();
+
+}
+
+if(
+e.target===document.getElementById("detailsModal")
+){
+
+closeDetails();
+
+}
 
 });
 
@@ -1663,4 +1573,3 @@ window.addEventListener("click",(event)=>{
 
 </body>
 </html>
-```
